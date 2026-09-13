@@ -1,0 +1,191 @@
+import type { ReactNode } from 'react';
+import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+import { useAppPalette } from '../hooks/useAppPalette';
+import { cardEdgeStyle } from '../theme/chrome';
+import { RADIUS, SPACING } from '../theme/tokens';
+import { TYPE } from '../theme/typography';
+
+/**
+ * ConfirmModal — a themed two-button confirmation dialog.
+ *
+ * Replaces the platform `Alert.alert` for in-app confirmations so the
+ * prompt matches the app's palette, radii and typography instead of the
+ * dated stock Material/UIKit dialog. Fully theme-aware (light / dark /
+ * OLED / dynamic) via `useAppPalette`.
+ */
+type ConfirmModalProps = {
+  visible: boolean;
+  title: string;
+  message?: string;
+  confirmLabel: string;
+  cancelLabel: string;
+  /** Tints the confirm button with the danger colour for risky actions. */
+  destructive?: boolean;
+  /**
+   * Extra body, under `message`. For prompts whose substance is figures
+   * rather than a sentence — "how many days, which days, how many are
+   * being left alone" reads far better as a small table than as a
+   * paragraph the user has to parse before agreeing to it.
+   */
+  children?: ReactNode;
+  /**
+   * One button instead of two, for a dialog that reports rather than asks.
+   * There is nothing to cancel when the answer is "nothing happened".
+   */
+  hideCancel?: boolean;
+  onConfirm: () => void;
+  onCancel: () => void;
+};
+
+export function ConfirmModal({
+  visible,
+  title,
+  message,
+  confirmLabel,
+  cancelLabel,
+  destructive = false,
+  children,
+  hideCancel = false,
+  onConfirm,
+  onCancel,
+}: ConfirmModalProps) {
+  const { palette } = useAppPalette();
+  const confirmBg = destructive ? palette.danger : palette.accent;
+
+  return (
+    <Modal
+      visible={visible}
+      transparent
+      animationType="fade"
+      statusBarTranslucent
+      onRequestClose={onCancel}
+    >
+      {/*
+        `accessible={false}` on both. A Pressable is an accessibility
+        element and on iOS one with children swallows them, so without this
+        VoiceOver reads the title, the message, the figures and both buttons
+        as a single label and neither button can be reached. The dialog most
+        affected is the one that clears someone's prayer log.
+      */}
+      <Pressable
+        accessible={false}
+        style={[styles.scrim, { backgroundColor: palette.overlay }]}
+        onPress={onCancel}
+      >
+        {/* Inner press is swallowed so taps on the sheet don't dismiss. */}
+        <Pressable
+          accessible={false}
+          style={[
+            styles.sheet,
+            { backgroundColor: palette.card, ...cardEdgeStyle(palette) },
+          ]}
+          onPress={() => {}}
+        >
+          <Text style={[styles.title, { color: palette.text }]}>{title}</Text>
+          {message ? (
+            <Text
+              style={[
+                styles.message,
+                { color: palette.muted },
+                // The body below carries its own top spacing; without this
+                // the message and the figures sit twice as far apart as
+                // either does from anything else.
+                children ? styles.messageWithBody : null,
+              ]}
+            >
+              {message}
+            </Text>
+          ) : null}
+          {children}
+          <View style={styles.buttonRow}>
+            {hideCancel ? null : (
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={cancelLabel}
+                onPress={onCancel}
+                style={({ pressed }) => [
+                  styles.btn,
+                  styles.cancelBtn,
+                  pressed && { opacity: 0.6 },
+                ]}
+              >
+                <Text style={[styles.cancelLabel, { color: palette.muted }]}>
+                  {cancelLabel}
+                </Text>
+              </Pressable>
+            )}
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={confirmLabel}
+              onPress={onConfirm}
+              style={({ pressed }) => [
+                styles.btn,
+                styles.confirmBtn,
+                { backgroundColor: confirmBg },
+                pressed && { opacity: 0.85 },
+              ]}
+            >
+              <Text style={styles.confirmLabel}>{confirmLabel}</Text>
+            </Pressable>
+          </View>
+        </Pressable>
+      </Pressable>
+    </Modal>
+  );
+}
+
+const styles = StyleSheet.create({
+  scrim: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: SPACING.xxl,
+  },
+  sheet: {
+    width: '100%',
+    maxWidth: 380,
+    borderRadius: RADIUS.xl,
+    paddingHorizontal: SPACING.xl,
+    paddingTop: SPACING.xl,
+    paddingBottom: SPACING.lg,
+  },
+  title: {
+    fontSize: TYPE.title3.fontSize,
+    fontWeight: '700',
+    marginBottom: SPACING.sm,
+  },
+  message: {
+    fontSize: TYPE.callout.fontSize,
+    lineHeight: 21,
+    marginBottom: SPACING.lg,
+  },
+  messageWithBody: { marginBottom: SPACING.md },
+  buttonRow: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    gap: SPACING.sm,
+  },
+  btn: {
+    minHeight: 44,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  cancelBtn: {
+    paddingHorizontal: SPACING.lg,
+    borderRadius: RADIUS.xl,
+  },
+  cancelLabel: {
+    fontSize: TYPE.callout.fontSize,
+    fontWeight: '600',
+  },
+  confirmBtn: {
+    paddingHorizontal: SPACING.xl,
+    borderRadius: RADIUS.xl,
+  },
+  confirmLabel: {
+    fontSize: TYPE.callout.fontSize,
+    fontWeight: '700',
+    color: '#ffffff',
+  },
+});

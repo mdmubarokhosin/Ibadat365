@@ -1,0 +1,603 @@
+/**
+ * One round of sync through a shared folder.
+ *
+ * Everything above this is already built and already proved: `snapshot.ts`
+ * makes the document, `merge.ts` merges in any order, `envelope.ts` seals it
+ * and `peers.ts` says to whom. This is the loop that puts them together, and
+ * it is deliberately given a folder rather than finding one — see
+ * `SyncFolder` below.
+ *
+ * ── READ FIRST, THEN WRITE. THE ORDER IS THE DESIGN ───────────────────
+ *
+ * A round reads every other device's file, merges what it finds, and only
+ * then writes its own. That means the file this device leaves behind
+ * already contains what it just learned, so a third device that reads only
+ * one file still ends up with everything. With the order reversed, a phone
+ * that syncs while a tablet is switched off would leave a file missing the
+ * tablet's day, and the set would take an extra round to agree.
+ *
+ * It also means the write goes out to peers learned in the same round: a
+ * device that has only just announced itself is a recipient by the time we
+ * seal, which is what closes the loop from one code carried one way.
+ *
+ * ── A DEVICE WITH NO PEERS STILL READS ────────────────────────────────
+ *
+ * It has to. When the user carries A's code to B, B knows A and A knows
+ * nothing — so if A refused to read until it had a peer, the pair could
+ * never form and the user would have to carry a second code back. Reading
+ * is safe with an empty list because an envelope only opens if it was
+ * sealed to this device's key, which the sender could only do having been
+ * given this device's code. The write is the half that needs recipients,
+ * and it is skipped when there are none.
+ *
+ * ── NOTHING IS DELETED, EVER ──────────────────────────────────────────
+ *
+ * Not the other devices' files — they are not ours — and not our own. A
+ * device that stops syncing leaves its last file behind, which is a stale
+ * record rather than a lost one: reading it again merges the same entries
+ * and changes nothing, because the merge is idempotent. Cleaning up would
+ * mean deciding when a device is gone rather than merely quiet, and getting
+ * that wrong loses data.
+ *
+ * ── WHAT IT DOES NOT DO ───────────────────────────────────────────────
+ *
+ * No locking, no ordering, no retry-until-consistent. The merge is
+ * commutative, idempotent and associative, so a half-written file fails to
+ * parse and is skipped, a file read twice costs nothing, and two devices
+ * writing at once cannot corrupt each other — they write different
+ * filenames. This is the whole reason the transport can be a folder that
+ * somebody else's software synchronises on its own schedule.
+ */
+import {
+  everything,
+  emptyData,
+  nothing,
+  buildSnapshot,
+  readSnapshot,
+  type SyncSelection,
+} from './snapshot';
+import { applySnapshot, collectData } from './snapshotStore';
+import type { MergeSummary } from './merge';
+import { encode, KEY_BYTES } from './pairingCode';
+import { fromBase64, toBase64 } from './secureRandom';
+import { getDeviceIdentity } from './deviceIdentity';
+import { getDeviceName } from './deviceName';
+import { forgetPeer, listPeers, notePeerSeen, recipientKeys } from './peers';
+import { listRemovals } from './removedPeers';
+import { open, seal } from './envelope';
+
+/**
+ * The folder, as this module needs it.
+ *
+ * Three methods, no paths, no permissions, no platform. Android reaches a
+ * user-chosen folder through the Storage Access Framework and iOS through a
+ * security-scoped bookmark, and neither of those belongs anywhere near the
+ * merge logic. Injecting the folder is also what lets the tests run two
+ * whole devices against an in-memory one and check that a log written on A
+ * arrives on B — which is the behaviour that actually matters and is
+ * unreachable if the transport is hard-wired.
+ */
+export type SyncFolder = {
+  /** File names in the folder. Not paths, and order does not matter. */
+  list(): Promise<string[]>;
+  read(name: string): Promise<string>;
+  write(name: string, contents: string): Promise<void>;
+  /**
+   * Delete one file. Optional, and never called by a round.
+   *
+   * A ROUND STILL DELETES NOTHING — see below. This exists for the one
+   * moment when somebody has actually decided a device is gone: the user
+   * removing it on the Sync screen. `forgetDeparted` is the only caller.
+   */
+  remove?(name: string): Promise<boolean>;
+};
+
+/**
+ * Clear a removed device's files out of the folder.
+ *
+ * ── WHY THE "NOTHING IS DELETED" RULE DOES NOT COVER THIS ─────────────
+ *
+ * The rule above is about a round: it must not decide, on its own, that a
+ * quiet device is a gone device, because getting that wrong loses someone's
+ * record. That reasoning does not apply to a person tapping Remove. They
+ * have made exactly the judgement the algorithm must not make.
+ *
+ * And leaving the file costs more than untidiness. Nothing rewrites it, so
+ * it is frozen — and a frozen snapshot is a device that keeps asserting a
+ * day that has since been edited elsewhere. That is not hypothetical: on
+ * 2026-08-27 a Mac whose sync identity had been replaced left
+ * `mihrab-ASWPFJBG07HZ.sync.json` behind, and it spent a day putting a
+ * cleared sunnah back on a phone, several times an hour. `syncWithFolder`
+ * now steps over a snapshot it has already merged, which stops the bleeding
+ * — but the corpse is still there to be read once by every device that has
+ * not met it yet. Removing the device should remove its file.
+ *
+ * Both names, because a peer leaves two: its snapshot and, until it is
+ * acknowledged, an invite addressed to us.
+ *
+ * Never throws. A folder that will not delete — a read-only provider, a
+ * file already gone, an older build with no `remove` — must not turn
+ * "forget this device" into an error, because the pairing IS forgotten
+ * either way. Returns what it managed, so a screen can say so if it wants.
+ */
+export async function forgetDeparted(
+  folder: SyncFolder,
+  publicKey: Uint8Array,
+): Promise<{ removed: string[] }> {
+  if (!folder.remove) return { removed: [] };
+  const removed: string[] = [];
+  for (const name of [
+    syncFileNameFor(publicKey),
+    inviteFileNameFor(publicKey),
+  ]) {
+    try {
+      if (await folder.remove(name)) removed.push(name);
+    } catch {
+      // Untidy, not broken. The peer is gone from the list regardless.
+    }
+  }
+  return { removed };
+}
+
+/**
+ * `mihrab-XXXXXXXXXXXX.sync.json`.
+ *
+ * The middle is the first twelve characters of this device's own pairing
+ * code, which is public by construction, so the filename gives away nothing
+ * the folder's contents do not. Twelve base32 characters is sixty bits —
+ * two of your own devices colliding is not a thing that happens.
+ *
+ * `.json` rather than a private extension because the file IS json; the
+ * secret parts are base64 inside it. A file manager that shows it as text
+ * is telling the truth, and a file manager that refuses to sync an unknown
+ * extension is a real problem this avoids.
+ */
+export const SYNC_FILE_PREFIX = 'mihrab-';
+export const SYNC_FILE_SUFFIX = '.sync.json';
+
+export function syncFileNameFor(publicKey: Uint8Array): string {
+  if (publicKey.length !== KEY_BYTES) {
+    throw new Error('syncFileNameFor needs a 32-byte public key');
+  }
+  const flat = encode(publicKey).replace(/-/g, '').slice(4, 16);
+  return `${SYNC_FILE_PREFIX}${flat}${SYNC_FILE_SUFFIX}`;
+}
+
+export function isSyncFileName(name: string): boolean {
+  return name.startsWith(SYNC_FILE_PREFIX) && name.endsWith(SYNC_FILE_SUFFIX);
+}
+
+/**
+ * `mihrab-XXXXXXXXXXXX.invite.json` — named after the RECIPIENT, not the
+ * sender, and that is the whole point.
+ *
+ * ── WHY AN INVITE FILE EXISTS AT ALL ──────────────────────────────────
+ *
+ * Pairing is one-directional: the user carries A's code to B, so B knows A
+ * and A has never heard of B. B announces itself by leaving a file, and A
+ * used to find that file by listing the folder — which works right up until
+ * it doesn't. An Android 16 emulator returns an empty cursor for a directory
+ * holding seven files, and on such a provider the pair could never form: A
+ * has no name to ask for, because not knowing B's key is exactly the problem
+ * being solved.
+ *
+ * Naming the invite after A fixes that. A knows its OWN id, so it can ask
+ * for `mihrab-<A>.invite.json` by name, every round, without enumerating
+ * anything. Listing is now needed for nothing at all.
+ *
+ * ── THE COLLISION, AND WHY IT HEALS ───────────────────────────────────
+ *
+ * Two devices inviting A at the same time write the same filename and one
+ * overwrites the other. Nothing is lost: an invite is rewritten every round
+ * until the sender has actually heard back from A, so the loser's invite
+ * reappears on the next pass and is picked up then.
+ */
+export const INVITE_FILE_SUFFIX = '.invite.json';
+
+export function inviteFileNameFor(publicKey: Uint8Array): string {
+  if (publicKey.length !== KEY_BYTES) {
+    throw new Error('inviteFileNameFor needs a 32-byte public key');
+  }
+  const flat = encode(publicKey).replace(/-/g, '').slice(4, 16);
+  return `${SYNC_FILE_PREFIX}${flat}${INVITE_FILE_SUFFIX}`;
+}
+
+export type SyncSkipped = {
+  /** Not one of ours: a stray file, or something half-written. */
+  notOurs: number;
+  /** Sealed for devices we are not. Someone else's pair sharing a folder. */
+  notForUs: number;
+  /** Ours by name, addressed to us, and would not open. Worth surfacing. */
+  unreadable: number;
+  /**
+   * Opened, understood, and already merged in an earlier round.
+   *
+   * The normal case for a peer that has not written since we last looked —
+   * and the permanent case for one that never will again. Counted rather
+   * than silent because "we read three files and learned nothing from any
+   * of them" is the difference between a healthy quiet folder and a dead
+   * one, and the Sync screen should be able to tell the user which.
+   */
+  alreadySeen: number;
+};
+
+/**
+ * The peer keys a sealed body is announcing as removed.
+ *
+ * Read off the raw JSON rather than through `readSnapshot`, which knows
+ * only about the snapshot and would drop the field — and deliberately not
+ * added to the snapshot type, so `exportFile` cannot ever carry one. See
+ * where it is written for why that separation is the point.
+ *
+ * Anything malformed is no removals. This is the one message in the
+ * protocol that destroys state, so it fails closed.
+ */
+function removalsIn(json: string): string[] {
+  try {
+    const parsed = JSON.parse(json) as { removedPeers?: unknown };
+    if (!Array.isArray(parsed.removedPeers)) return [];
+    return parsed.removedPeers
+      .map(row =>
+        row && typeof row === 'object'
+          ? (row as { pk?: unknown }).pk
+          : undefined,
+      )
+      .filter((pk): pk is string => typeof pk === 'string' && pk.length > 0);
+  } catch {
+    return [];
+  }
+}
+
+export type SyncOutcome = {
+  /** The file we left behind, or null if there was no one to write for. */
+  wrote: string | null;
+  /** How many envelopes were opened and merged. */
+  read: number;
+  /** Devices that announced themselves this round and are now paired. */
+  learned: number;
+  /** Devices dropped this round because a peer announced their removal. */
+  forgotten: number;
+  /** What changed locally, or null if nothing was read. */
+  merged: MergeSummary | null;
+  skipped: SyncSkipped;
+};
+
+/**
+ * Read everything addressed to us, merge it, then write our own file.
+ *
+ * Throws only when the folder itself is unusable — an individual file that
+ * cannot be read or parsed is counted and stepped over, because one corrupt
+ * file must not stop the other three devices getting through.
+ */
+export async function syncWithFolder(
+  folder: SyncFolder,
+  options: { selection?: SyncSelection; now?: Date } = {},
+): Promise<SyncOutcome> {
+  const me = await getDeviceIdentity();
+  const mine = syncFileNameFor(me.publicKey);
+  const known = await listPeers();
+  const skipped: SyncSkipped = {
+    notOurs: 0,
+    notForUs: 0,
+    unreadable: 0,
+    alreadySeen: 0,
+  };
+  let read = 0;
+  let learned = 0;
+  let forgotten = 0;
+  let merged: MergeSummary | null = null;
+  /**
+   * Senders already heard from this round.
+   *
+   * A device can leave two readable files: its own, and an invite addressed
+   * to us while it is still waiting to be acknowledged. Both carry the same
+   * snapshot, so merging the second is harmless — the merge is idempotent —
+   * but it is a second decrypt and a second pass over every store for
+   * nothing, and it would report two files read where the user has one
+   * other device.
+   */
+  const heard = new Set<string>();
+
+  const listed = (await folder.list()).filter(
+    name => isSyncFileName(name) && name !== mine,
+  );
+
+  // ASK FOR KNOWN DEVICES BY NAME, don't only take what the listing gives.
+  //
+  // Every device's filename is derived from its public key, so for a device
+  // already paired we know exactly what to ask for. That matters because
+  // directory listing is the one part of the Storage Access Framework a
+  // provider is allowed to be useless at: one Android build returns an empty
+  // cursor for a folder it will happily create and open files in. Enumerating
+  // is then only needed for devices we have NOT met — the announcement case.
+  const derived = known
+    .map(peer => syncFileNameFor(fromBase64(peer.pk)))
+    .filter(name => name !== mine && !listed.includes(name));
+
+  // The one file addressed to us by name rather than by ours: a device we
+  // have never heard of, introducing itself. Read on every round, because
+  // that is the only way a pair forms from a single code — see
+  // `inviteFileNameFor`.
+  const invite = inviteFileNameFor(me.publicKey);
+  if (!listed.includes(invite) && !derived.includes(invite)) {
+    derived.push(invite);
+  }
+
+  for (const name of [...listed, ...derived]) {
+    // A derived name is a guess: the device may never have written yet, and
+    // its absence is the normal case rather than something to report.
+    const guessed = !listed.includes(name);
+    let parsed: unknown;
+    try {
+      parsed = JSON.parse(await folder.read(name));
+    } catch {
+      // Unreadable or half-written. The writer will finish and we will see
+      // it next round; there is nothing useful to do now and nothing to
+      // tell the user, who did not put this file here by hand.
+      if (!guessed) skipped.notOurs++;
+      continue;
+    }
+
+    const result = open({
+      envelope: parsed,
+      mySecretKey: me.secretKey,
+      myPublicKey: me.publicKey,
+    });
+    if (!result.ok) {
+      if (result.reason === 'not-for-us') skipped.notForUs++;
+      else if (result.reason === 'undecryptable') skipped.unreadable++;
+      else skipped.notOurs++;
+      continue;
+    }
+
+    const from = toBase64(result.senderPublicKey);
+
+    // ── REMOVALS THE SENDER IS ANNOUNCING ──────────────────────────────
+    //
+    // Acted on BEFORE the sender is recorded, so a file announcing that WE
+    // were removed does not add its sender back on the way past.
+    //
+    // Two cases, and the second is the one the user asked for. A removal of
+    // some third device is carried out here as if the user had pressed
+    // Remove on this device — that is what makes "remove the tablet" mean
+    // the same thing on every phone. A removal of THIS device means we have
+    // been ejected from the set, so the sender is dropped in turn: a device
+    // that keeps writing files nobody will open is the confusing state, not
+    // a safe one.
+    //
+    // Only a device already paired with us can say any of this — the
+    // envelope opened, which means it was sealed to our key by someone
+    // holding our code. Someone with write access to the folder and no
+    // pairing cannot reach this line.
+    const announced = removalsIn(result.json);
+    if (announced.length > 0) {
+      const mineKey = toBase64(me.publicKey);
+      for (const pk of announced) {
+        if (pk === mineKey) {
+          if (await forgetPeer(from)) forgotten++;
+          continue;
+        }
+        if (await forgetPeer(pk)) {
+          forgotten++;
+          try {
+            await forgetDeparted(folder, fromBase64(pk));
+          } catch {
+            // The file stays; the pairing is still gone. `alreadySeen`
+            // keeps it inert either way.
+          }
+        }
+      }
+      // Ejected: nothing this sender says is ours to merge any more.
+      if (announced.includes(mineKey)) continue;
+    }
+
+    // DEDUPED FOR THE MERGE, NOT FOR THE REMOVALS ABOVE.
+    //
+    // A device leaves two readable files — its snapshot and, until it is
+    // acknowledged, a file addressed to us by name — and merging the second
+    // costs a decrypt and a pass over every store for nothing. But an
+    // eviction notice arrives on precisely that second channel, and the
+    // sender's stale snapshot is read first, so checking this any earlier
+    // threw the notice away. That is why the last removal never arrived.
+    if (heard.has(from)) continue;
+    heard.add(from);
+
+    // PARSED BEFORE THE PEER IS RECORDED, for the sake of one field.
+    //
+    // `notePeerSeen` wants the snapshot's `createdAt` so the peer can carry
+    // how old its RECORD is and not merely when we last opened one of its
+    // files — see `dataAt` on `Peer`, and the reason it had to exist. A
+    // payload that will not parse still records the peer, because a device
+    // that sealed to our key is a real device whether or not this build can
+    // read what it sent.
+    let snapshot;
+    try {
+      snapshot = readSnapshot(JSON.parse(result.json));
+    } catch {
+      snapshot = null;
+    }
+
+    // WHAT WE ALREADY MERGED FROM THIS SENDER, read BEFORE noting them —
+    // `notePeerSeen` is about to move the stamp forward.
+    const knownAt = (await listPeers()).find(p => p.pk === from)?.dataAt;
+
+    // The announcement. A device we already know gets its last-seen and its
+    // name; one we do not is added, which is how a pairing made in one
+    // direction becomes a pair. See `envelope.ts` for what that does and
+    // does not prove.
+    const before = (await listPeers()).length;
+    await notePeerSeen({
+      publicKey: result.senderPublicKey,
+      name: result.senderName,
+      now: options.now,
+      ...(snapshot ? { dataAt: snapshot.createdAt } : {}),
+    });
+    if ((await listPeers()).length > before) learned++;
+
+    if (!snapshot) {
+      // Decrypted cleanly and is not a snapshot: a version of the app that
+      // writes something else, or a genuinely corrupt payload. Either way
+      // this is the case worth counting separately — the sender is a device
+      // we trust, so silence would hide a real incompatibility.
+      skipped.unreadable++;
+      continue;
+    }
+
+    // ── A SNAPSHOT WE HAVE ALREADY MERGED IS NOT MERGED AGAIN ───────────
+    //
+    // Re-merging is harmless in a vacuum — the merge is idempotent against
+    // ITSELF. It is not harmless against a local record that has changed
+    // since, and this is the failure that took two attempts to see.
+    //
+    // Nothing in the shared folder is ever deleted, so a device that stops
+    // writing leaves its last file there for ever. Reported 2026-08-27: a
+    // Mac's sync identity was replaced, orphaning `mihrab-ASWPFJBG07HZ`, a
+    // file frozen at 15:18 the previous day and written by a build old
+    // enough that its sunnah days carried no timestamps. Every round, the
+    // phone opened that corpse, and every round the undated rule in
+    // `mergeSunnah` re-asserted the counts it held — so a sunnah cleared on
+    // the phone came back, for ever, from a device that no longer existed.
+    //
+    // The general statement is the one that matters: a file we have already
+    // read carries NO new information, and no-new-information must never
+    // outrank something the user has since done. So compare the snapshot's
+    // own build time against the newest we have merged from this sender and
+    // step over anything at or behind it. It costs nothing when peers are
+    // healthy — a live device stamps every round it writes — and it makes a
+    // dead device's file inert instead of eternally loud.
+    //
+    // `<=` rather than `===` so an older INVITE, which a peer leaves beside
+    // its snapshot until it is acknowledged, cannot drag the record back
+    // either. The price is a peer whose clock is set backwards: its files
+    // are ignored until the clock passes the stamp we recorded. That is a
+    // machine with a broken clock going quiet, against a dead machine
+    // silently undoing live edits, and it is not a close call.
+    if (knownAt && Date.parse(snapshot.createdAt) <= Date.parse(knownAt)) {
+      skipped.alreadySeen++;
+      continue;
+    }
+
+    // Accept every category the file carries. The sending device already
+    // made that choice once; asking again on the receiving side would mean
+    // a setting that has to agree on two devices to do anything.
+    const applied = await applySnapshot(snapshot, everything());
+    merged = merged ? mergeSummaries(merged, applied.summary) : applied.summary;
+    read++;
+  }
+
+  const now = options.now ?? new Date();
+  const removals = await listRemovals(now.getTime());
+
+  // ── EVICTION NOTICES, BEFORE ANYTHING ELSE ──────────────────────────
+  //
+  // A removed device has to be told, and it cannot be told through our own
+  // file: that one is sealed to our PEERS, and it is no longer one. Worse,
+  // removing the only peer leaves nothing to seal to at all, so the round
+  // would return below without writing a byte and the last removal could
+  // never be announced.
+  //
+  // So each removed device gets a file addressed to it by name, on the
+  // channel it already reads every round for exactly this reason — see
+  // `inviteFileNameFor`, which exists because a device that knows nothing
+  // still has to be reachable.
+  //
+  // THE BODY CARRIES NO RECORD. An empty snapshot plus the removal, which
+  // is all the recipient needs and the only thing it is still entitled to.
+  // Sealing our journal to a device the user has just ejected, so that it
+  // can be told it was ejected, would be an odd way to honour the request.
+  for (const removal of removals) {
+    try {
+      const key = fromBase64(removal.pk);
+      const notice = await seal({
+        json: JSON.stringify({
+          ...buildSnapshot(emptyData(), nothing(), now.toISOString()),
+          removedPeers: [removal],
+        }),
+        senderSecretKey: me.secretKey,
+        senderPublicKey: me.publicKey,
+        senderName: await getDeviceName(),
+        recipients: [key],
+        now,
+      });
+      await folder.write(inviteFileNameFor(key), JSON.stringify(notice));
+    } catch {
+      // A notice that cannot be written costs that device the news, not the
+      // sync. It stops being a peer here either way, and the notice is
+      // rewritten every round until the removal expires.
+    }
+  }
+
+  // Recipients are read AFTER the merge, so a device that announced itself
+  // in this same round is sealed to rather than waiting for the next one.
+  const recipients = await recipientKeys();
+  if (recipients.length === 0) {
+    return { wrote: null, read, learned, forgotten, merged, skipped };
+  }
+
+  // Strict as well: a snapshot is what the other devices merge from, and
+  // one that says "no journal" because ours could not be read is a claim
+  // we cannot stand behind.
+  const snapshot = buildSnapshot(
+    await collectData({ strict: true }),
+    options.selection ?? everything(),
+    now.toISOString(),
+  );
+  // REMOVALS RIDE BESIDE THE SNAPSHOT, NOT INSIDE IT.
+  //
+  // `exportFile` builds a plain snapshot, so a backup someone mails to a
+  // friend cannot unpair the friend's phones — which is the same hazard
+  // `peers.ts` refuses to take with the peer list, answered the same way.
+  // Here it is one extra key in the sealed body, read back below by the
+  // devices this file is addressed to and by nobody else.
+  const envelope = await seal({
+    json: JSON.stringify({
+      ...snapshot,
+      removedPeers: removals,
+    }),
+    senderSecretKey: me.secretKey,
+    senderPublicKey: me.publicKey,
+    senderName: await getDeviceName(),
+    recipients,
+    now,
+  });
+  const body = JSON.stringify(envelope);
+  await folder.write(mine, body);
+
+  // AND AN INVITE FOR ANYONE WHO HAS NEVER ANSWERED.
+  //
+  // A peer with no `lastSeenAt` has never had a file of theirs opened here,
+  // which means either they have not synced yet or they do not know about
+  // this device at all. The second is the case that needs help, and the
+  // first costs one extra write of a file that is already in hand.
+  //
+  // It stops by itself: the moment a file from that peer is opened, they
+  // demonstrably know us — they sealed it to our key — and `lastSeenAt` is
+  // set, so no further invite is written.
+  const strangers = (await listPeers()).filter(peer => !peer.lastSeenAt);
+  for (const stranger of strangers) {
+    try {
+      await folder.write(inviteFileNameFor(fromBase64(stranger.pk)), body);
+    } catch {
+      // An invite that cannot be written costs the automatic introduction,
+      // not the sync. The user can still carry the second code by hand.
+    }
+  }
+
+  return { wrote: mine, read, learned, forgotten, merged, skipped };
+}
+
+/**
+ * Fold two summaries into one, keeping the first `before` and the last
+ * `after` — which is what "this round changed X to Y" means when several
+ * files were merged in sequence.
+ */
+function mergeSummaries(first: MergeSummary, second: MergeSummary): MergeSummary {
+  const out = {} as MergeSummary;
+  for (const key of Object.keys(second) as Array<keyof MergeSummary>) {
+    out[key] = {
+      before: first[key]?.before ?? second[key].before,
+      after: second[key].after,
+    };
+  }
+  return out;
+}

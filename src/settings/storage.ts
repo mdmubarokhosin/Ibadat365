@@ -1,0 +1,433 @@
+import { MADHABS, madhabMatches, type Madhab } from '../prayer/madhab';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { resolveDeviceLanguage } from '../i18n/deviceLanguage';
+import { coerceNotificationSoundId } from '../notifications/notificationSounds';
+import { coerceClockFormat } from '../utils/clockFormat';
+import { coerceDhikrReminders } from '../dhikr/dhikrReminders';
+import { coerceDaruriAlerts } from '../prayer/daruriTimes';
+import { coercePrePrayerReminderMinutes } from './prePrayerReminder';
+import {
+  extractSecureFields,
+  hasSecureFields,
+  loadSecureSettings,
+  saveSecureSettings,
+  stripSecureFields,
+  type SecureSettings,
+} from './secureStorage';
+import {
+  DEFAULT_SETTINGS,
+  type AppLanguage,
+  type PrayerAppSettings,
+  type WidgetHighlightId,
+} from './types';
+
+const KEY = 'prayerapp.settings.v1';
+
+const LANGUAGES: AppLanguage[] = ['en', 'sv', 'ar', 'bn', 'ur', 'hi', 'fr', 'es', 'de', 'tr', 'id', 'ru', 'zh'];
+
+// No 'dynamic': removed 2026-08-27. A stored 'dynamic' from an older
+// build falls through to the default, which is the colour that build was
+// already drawing — this is the migration, and it needs no other code.
+const WIDGET_HIGHLIGHT_IDS: WidgetHighlightId[] = [
+  'green',
+  'teal',
+  'blue',
+  'amber',
+  'custom',
+];
+
+function coerceLanguage(value: unknown): AppLanguage {
+  if (typeof value === 'string' && LANGUAGES.includes(value as AppLanguage)) {
+    return value as AppLanguage;
+  }
+  return DEFAULT_SETTINGS.language;
+}
+
+/**
+ * The language to open in when the user has never chosen one.
+ *
+ * Consulted on every load rather than once, so a phone switched to Arabic
+ * brings the app with it — right up until the moment someone picks a
+ * language in Settings, after which their choice is the only thing that
+ * decides.
+ */
+function deviceLanguage(): AppLanguage {
+  return resolveDeviceLanguage(LANGUAGES, DEFAULT_SETTINGS.language);
+}
+
+/**
+ * Whether a stored blob represents a language the user actually chose.
+ *
+ * v2.8.4 and earlier had no way to record the difference: the default was
+ * 'en' and the picker wrote the same field. So for a blob from before this
+ * flag existed, anything other than 'en' can only have come from the
+ * picker, and 'en' is indistinguishable from never having been asked —
+ * which is exactly the install that should have been following the phone
+ * all along.
+ */
+function coerceLanguagePicked(
+  parsed: Record<string, unknown>,
+): boolean {
+  if (typeof parsed.languagePicked === 'boolean') return parsed.languagePicked;
+  return 'language' in parsed && coerceLanguage(parsed.language) !== 'en';
+}
+
+function coerceWidgetHighlightId(value: unknown): WidgetHighlightId {
+  if (
+    typeof value === 'string' &&
+    WIDGET_HIGHLIGHT_IDS.includes(value as WidgetHighlightId)
+  ) {
+    return value as WidgetHighlightId;
+  }
+  return DEFAULT_SETTINGS.widgetHighlightId;
+}
+
+function coerceWidgetHighlightHex(value: unknown): string {
+  if (typeof value === 'string' && /^#[0-9A-Fa-f]{6}$/.test(value.trim())) {
+    return value.trim();
+  }
+  return DEFAULT_SETTINGS.widgetHighlightCustomHex;
+}
+
+function coerceWidgetOpacity(value: unknown): number {
+  if (typeof value === 'number' && Number.isFinite(value)) {
+    return Math.round(Math.min(100, Math.max(0, value)));
+  }
+  return DEFAULT_SETTINGS.androidWidgetBackgroundOpacity;
+}
+
+/**
+ * Load settings — task #16.
+ *
+ * Settings live in TWO stores:
+ *   • Plaintext AsyncStorage (`prayerapp.settings.v1`): theme, language,
+ *     notifications, calculation method, widget appearance — non-sensitive.
+ *   • Encrypted Keychain/Keystore (`prayerapp.location.v1`): coordinates and
+ *     manual-location label — PII, never plaintext on disk.
+ *
+ * Migration: if an old plaintext blob still contains coordinate fields
+ * (a pre-task-#16 install), this function copies them to the encrypted
+ * store and re-saves the plaintext blob WITHOUT them. The migration runs
+ * inline on every `loadSettings()` call but is idempotent — once the
+ * plaintext blob no longer carries coordinates, subsequent loads no-op.
+ */
+export async function loadSettings(): Promise<PrayerAppSettings> {
+  let plaintextRaw: string | null = null;
+  try {
+    plaintextRaw = await AsyncStorage.getItem(KEY);
+  } catch {
+    return DEFAULT_SETTINGS;
+  }
+
+  let secure: SecureSettings = {};
+  try {
+    secure = await loadSecureSettings();
+  } catch {
+    // Already logged inside loadSecureSettings. Fall through with empty.
+  }
+
+  if (!plaintextRaw) {
+    // First-ever launch (no plaintext blob). Encrypted store may still
+    // hold coordinates from a partially-completed prior session — merge.
+    // The UI language follows the device here, not the 'en' default.
+    return { ...DEFAULT_SETTINGS, language: deviceLanguage(), ...secure };
+  }
+
+  let parsed: Partial<PrayerAppSettings> & Record<string, unknown>;
+  try {
+    parsed = JSON.parse(plaintextRaw) as Partial<PrayerAppSettings> &
+      Record<string, unknown>;
+  } catch {
+    return { ...DEFAULT_SETTINGS, language: deviceLanguage(), ...secure };
+  }
+
+  // Migration: if the plaintext blob still has coordinate fields, this is a
+  // pre-task-#16 install. Copy them into the encrypted store, then strip
+  // them from the plaintext blob and re-save.
+  if (hasSecureFields(parsed)) {
+    const fromPlain = extractSecureFields(parsed);
+    // Encrypted store wins on overlap (it's the newer, authoritative source
+    // for sensitive fields if the user already migrated partially).
+    const migrated: SecureSettings = { ...fromPlain, ...secure };
+    try {
+      await saveSecureSettings(migrated);
+      const stripped = stripSecureFields(parsed);
+      await AsyncStorage.setItem(KEY, JSON.stringify(stripped));
+      secure = migrated;
+      parsed = stripped as Partial<PrayerAppSettings> & Record<string, unknown>;
+    } catch (e) {
+      // Migration failed (e.g., Keychain locked). Don't strip plaintext —
+      // we'd lose the user's coordinates. Try again next launch.
+      console.warn('Settings migration to encrypted storage failed:', e);
+    }
+  }
+
+  const merged: PrayerAppSettings = {
+    ...DEFAULT_SETTINGS,
+    ...parsed,
+    ...secure,
+  };
+  merged.languagePicked = coerceLanguagePicked(parsed);
+  merged.language = merged.languagePicked
+    ? coerceLanguage(parsed.language)
+    : deviceLanguage();
+  if (!('locationOnboardingComplete' in parsed)) {
+    merged.locationOnboardingComplete = true;
+  }
+  if (!('dataProviderAuto' in parsed)) {
+    merged.dataProviderAuto = false;
+  }
+  if (!('appearance' in parsed)) {
+    merged.appearance = 'system';
+  }
+  if (!('pureBlackDark' in parsed)) {
+    merged.pureBlackDark = false;
+  }
+  if (!('useSystemDynamicTheme' in parsed)) {
+    merged.useSystemDynamicTheme = false;
+  }
+  // A typed guard rather than a presence check: this one decides which
+  // notification channel the adhan is scheduled against, and a non-boolean
+  // that survived the spread would be truthy garbage pointing at a channel
+  // nobody created — a prayer alert that arrives silently.
+  if (typeof merged.adhanUsesAlarmStream !== 'boolean') {
+    merged.adhanUsesAlarmStream = false;
+  }
+  // One-time v2.7.27 migration: the mushaf became the default reading
+  // mode. Blobs written before the marker existed carry the OLD default
+  // ('withTranslation') that virtually no user chose explicitly — apply
+  // the new default once, then never touch the user's choice again.
+  if (!('quranModeMushafDefault' in parsed)) {
+    merged.quranReadingMode = 'mushaf';
+    merged.quranModeMushafDefault = true;
+  }
+  // App accent (#127). Older installs persisted no `appAccentId`; fall
+  // back to the brand green default and a valid 6-char hex so the
+  // palette resolver always has something concrete to work with.
+  const validAccentIds: ReadonlyArray<string> = [
+    'green',
+    'teal',
+    'blue',
+    'amber',
+    'rose',
+    'violet',
+    'custom',
+  ];
+  if (
+    typeof parsed.appAccentId !== 'string' ||
+    !validAccentIds.includes(parsed.appAccentId)
+  ) {
+    merged.appAccentId = DEFAULT_SETTINGS.appAccentId;
+  }
+  if (
+    typeof parsed.appAccentCustomHex !== 'string' ||
+    !/^#[0-9A-Fa-f]{6}$/.test(parsed.appAccentCustomHex)
+  ) {
+    merged.appAccentCustomHex = DEFAULT_SETTINGS.appAccentCustomHex;
+  }
+  // Reconcile coords with the active location preset — task #137. The
+  // user's coordinates live in two places: `manualLatitude/Longitude`
+  // (mirrored for the app's read path) and the entry inside
+  // `locationPresets[*]`. They can drift apart if the encrypted
+  // storage load partially failed, or if a previous version wrote
+  // one but not the other. When the active preset is known, treat
+  // its coords as authoritative and override the bare manual coords
+  // — this fixes the (0, 0) sentinel showing up after the user
+  // already saved a real location preset.
+  if (
+    typeof merged.activeLocationPresetId === 'string' &&
+    Array.isArray(merged.locationPresets)
+  ) {
+    const active = merged.locationPresets.find(
+      p => p.id === merged.activeLocationPresetId,
+    );
+    if (active) {
+      const noManual =
+        !Number.isFinite(merged.manualLatitude) ||
+        !Number.isFinite(merged.manualLongitude) ||
+        (merged.manualLatitude === 0 && merged.manualLongitude === 0);
+      if (noManual) {
+        merged.manualLatitude = active.latitude;
+        merged.manualLongitude = active.longitude;
+        merged.manualLocationLabel = active.label ?? merged.manualLocationLabel;
+      }
+    }
+  }
+  merged.androidWidgetBackgroundOpacity = coerceWidgetOpacity(
+    parsed.androidWidgetBackgroundOpacity,
+  );
+  merged.clockFormat = coerceClockFormat(parsed.clockFormat);
+  // Issue #19. A typed guard rather than a presence check: this decides
+  // whether the card prints a second clock time under every prayer, and a
+  // truthy non-boolean from a hand-edited blob would turn it on silently.
+  if (typeof merged.malikiSecondTimesEnabled !== 'boolean') {
+    merged.malikiSecondTimesEnabled = false;
+  }
+  // A truthy non-boolean here would unfold a diagnostics panel on the
+  // Today screen of somebody who never asked for one.
+  if (typeof merged.dataStatsExpanded !== 'boolean') {
+    merged.dataStatsExpanded = false;
+  }
+  // Alerts are opt-in per boundary and the list is the kill-switch, so a
+  // blob holding anything but a known key must come back empty rather
+  // than scheduling something nobody chose.
+  merged.malikiSecondTimeAlerts = coerceDaruriAlerts(parsed.malikiSecondTimeAlerts);
+  // #29. Every field of every reminder comes back through a coercion,
+  // and a malformed one is dropped rather than repaired: these schedule
+  // notifications, and an hour of NaN is a trigger that never fires or
+  // fires now. Same treatment as the location presets beside them.
+  merged.dhikrReminders = coerceDhikrReminders(parsed.dhikrReminders);
+  merged.malikiSecondTimeAlertMinutes = coercePrePrayerReminderMinutes(
+    parsed.malikiSecondTimeAlertMinutes ?? DEFAULT_SETTINGS.malikiSecondTimeAlertMinutes,
+  );
+  // #21. A stored blob naming a school this build does not know, or a
+  // school that no longer matches the ʿaṣr shadow beside it, comes back as
+  // Custom — the label for a combination no school claims. Never the other
+  // way round: a bad value must not silently move somebody's times.
+  merged.madhab = MADHABS.includes(parsed.madhab as Madhab)
+    ? (parsed.madhab as Madhab)
+    : null;
+  if (!madhabMatches(merged.madhab, merged.school)) merged.madhab = null;
+  merged.widgetHighlightId = coerceWidgetHighlightId(parsed.widgetHighlightId);
+  merged.widgetHighlightCustomHex = coerceWidgetHighlightHex(
+    parsed.widgetHighlightCustomHex,
+  );
+  merged.prePrayerReminderMinutes = coercePrePrayerReminderMinutes(
+    parsed.prePrayerReminderMinutes,
+  );
+  merged.notificationSound = coerceNotificationSoundId(parsed.notificationSound);
+  // Migrate locationMode: 'gps' was renamed to 'automatic' in v1.5.52+
+  if ((merged.locationMode as string) === 'gps') {
+    merged.locationMode = 'automatic';
+  }
+  // Task #18: location presets always present (default empty array). Active
+  // preset id is preserved if it points at an existing preset, dropped otherwise
+  // (defends against a deleted-preset reference surviving in plaintext storage).
+  if (!Array.isArray(merged.locationPresets)) {
+    merged.locationPresets = [];
+  }
+  if (
+    merged.activeLocationPresetId !== undefined &&
+    !merged.locationPresets.some(p => p.id === merged.activeLocationPresetId)
+  ) {
+    merged.activeLocationPresetId = undefined;
+  }
+  return merged;
+}
+
+/**
+ * Save settings — splits sensitive fields off to encrypted storage.
+ *
+ * The plaintext AsyncStorage blob is GUARANTEED to never contain
+ * coordinates after this call. The regression test
+ * `__tests__/secureStorage.migration.test.ts` confirms this invariant.
+ */
+// Write serialization — a single in-order queue for ALL settings saves.
+//
+// `updateSettings` fires `saveSettings(next)` for every change, and `next` is
+// always derived from the latest state (functional setState). But each save is
+// two async writes (encrypted + plaintext) with no ordering guarantee, so two
+// rapid changes — e.g. removing a saved location and then picking a new place —
+// could complete out of order and leave the OLDER snapshot on disk. The user
+// then sees their location change "not take" and has to redo it. Chaining every
+// save through one promise guarantees they land in call order, so the most
+// recent state always wins. (Mirrors the write-mutex used in prayerStorage.)
+let _saveQueue: Promise<void> = Promise.resolve();
+
+async function performSave(settings: PrayerAppSettings): Promise<void> {
+  const secure = extractSecureFields(settings as unknown as Record<string, unknown>);
+  const plaintext = stripSecureFields(
+    settings as unknown as Record<string, unknown>,
+  );
+  // Persist secure fields first. saveSecureSettings now writes to a plaintext
+  // AsyncStorage fallback if the encrypted store rejects (task #141), so
+  // user coordinates / presets survive a broken Keychain. We still want the
+  // plaintext settings save to proceed regardless — non-secure fields like
+  // theme, language, and method changes shouldn't be blocked by a Keychain
+  // outage. Catch and log; do not re-throw.
+  try {
+    await saveSecureSettings(secure);
+  } catch (e) {
+    console.warn(
+      'saveSettings: secure save failed, fallback engaged. Continuing with plaintext save.',
+      e,
+    );
+  }
+  await AsyncStorage.setItem(KEY, JSON.stringify(plaintext));
+}
+
+export function saveSettings(settings: PrayerAppSettings): Promise<void> {
+  // Chain onto the queue regardless of whether the previous save resolved or
+  // rejected, so one failed write can't wedge every later save.
+  const next = _saveQueue.then(
+    () => performSave(settings),
+    () => performSave(settings),
+  );
+  _saveQueue = next.catch(() => {});
+  return next;
+}
+
+/**
+ * Hard reset — task #85.
+ *
+ * Wipes EVERY persisted store the app owns:
+ *   • Plaintext settings blob (`prayerapp.settings.v1`)
+ *   • Encrypted location store (`prayerapp.location.v1`)
+ *   • Encrypted journal entries (`prayerapp.journal.v1`)
+ *   • Encrypted fasting entries (`prayerapp.fasting.v1`)
+ *   • Prayer-times cache and any miscellaneous AsyncStorage keys we wrote
+ *
+ * Used by the "Show onboarding again" entry in Settings, which is now a
+ * destructive reset gated behind a confirmation Alert. After this call
+ * returns, the next `loadSettings()` will see a virgin state and the
+ * onboarding flow will run from scratch.
+ */
+export async function resetAppData(): Promise<void> {
+  // Plaintext: clear EVERYTHING we own. AsyncStorage.clear() is too broad
+  // (it would also nuke other libraries' storage), so we enumerate keys
+  // we authored.
+  const asyncKeys = [
+    'prayerapp.settings.v1',
+    'prayerapp.prayer.v1',
+    // Mushaf one-time-download flag — task #130. Clearing forces the
+    // download prompt to re-appear on first mushaf open after reset.
+    'mushaf.assets.v1.complete',
+    'mushaf.assets.v2.complete',
+    'mushaf.assets.v3.complete',
+    // Plaintext fallback for secure storage — task #141. If the user's
+    // Keychain was rejecting writes, secure data ended up here. Reset
+    // must wipe it too.
+    'prayerapp.location.fallback.v1',
+    // Cached reverse-geocode results from the Sweden/non-Sweden gate —
+    // task #138. Not sensitive but resetting makes the next session
+    // re-fetch fresh.
+    'islamiska_forbundet.reverse.v1',
+  ];
+  try {
+    await AsyncStorage.multiRemove(asyncKeys);
+  } catch (e) {
+    console.warn('AsyncStorage reset failed:', e);
+  }
+
+  // Encrypted: wipe the three known keys. Use dynamic require so test
+  // environments without the native module don't blow up.
+  try {
+    const EncryptedStorage =
+      require('react-native-encrypted-storage').default ||
+      require('react-native-encrypted-storage');
+    const secureKeys = [
+      'prayerapp.location.v1',
+      'prayerapp.journal.v1',
+      'prayerapp.fasting.v1',
+    ];
+    for (const k of secureKeys) {
+      try {
+        await EncryptedStorage.removeItem(k);
+      } catch {
+        // missing keys throw on some platforms — non-fatal
+      }
+    }
+  } catch (e) {
+    console.warn('EncryptedStorage reset failed:', e);
+  }
+}

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The widget-picker preview for Log Today.
+
+  A separate layout, not the real one, because the real one starts with its
+  content GONE and only reveals it once a payload has arrived — which is
+  correct there (five empty chips would be a claim about a day nobody has
+  told us about) and useless here: the picker rendered a plain dark
+  rectangle, so the one widget in this app that does something new looked
+  like the one with nothing in it.
+
+  Static sample values, deliberately mid-day: two logged, one waiting to be
+  tapped, two not yet due. That is what the widget is FOR, and a preview
+  showing an empty or a finished day would not show it.
+
+  IT SHOWS THE ONE-ROW CARD, because that is what gets placed. The card is
+  the five chips, their times and the countdown to the next prayer; the date
+  line and the rule above the footer belong to the two-row version and are
+  not drawn here. A preview of a size the launcher will not give you is a
+  promise the widget breaks the moment it lands.
+
+  HEIGHT IS match_parent, NOT A NUMBER.
+
+  Both previews used to declare 110dp. The picker lays a previewLayout out in
+  a box derived from `targetCellWidth`/`targetCellHeight`, so the number was
+  answering a question the launcher had already answered — and answering it
+  wrong in both directions. Streak targets one row, which is shorter than
+  110dp, so its last line was pushed onto the padding and clipped. Log Today
+  targets two, which is taller, so its chips were laid out in 110dp and the
+  prayer names and times underneath them were sliced in half by the divider —
+  the one widget in the picker that shows what it DOES, showing it broken.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_card_preview"
+    android:padding="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:baselineAligned="false">
+
+    <!--
+      The header the card draws at this size, and the preview did not.
+      One launcher row is ~147dp on a 1080x2400 phone, past
+      STRIP_HEADER_MIN_HEIGHT_DP / COMPACT_MAX_HEIGHT_DP (145dp), so a
+      real 4x1 shows this line. The picker renders this layout in a box of
+      the same height, so leaving it out drew a card nobody gets.
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/widget_preview_header"
+            android:textColor="#9AA0A6"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.06"
+            android:maxLines="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_preview_logged"
+            android:textColor="#9AA0A6"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.06"
+            android:maxLines="1" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:gravity="center_vertical">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:layout_width="44dp" android:layout_height="26dp" android:gravity="center" android:text="✓" android:textColor="#FFFFFF" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:background="@drawable/widget_log_chip_done" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center" android:text="Fajr" android:textColor="#9AA0A6" android:textSize="10sp" android:maxLines="1" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="03:22" android:textColor="#E8EAED" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:layout_width="44dp" android:layout_height="26dp" android:gravity="center" android:text="✓" android:textColor="#FFFFFF" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:background="@drawable/widget_log_chip_done" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center" android:text="Dhuhr" android:textColor="#9AA0A6" android:textSize="10sp" android:maxLines="1" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="12:56" android:textColor="#E8EAED" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:layout_width="44dp" android:layout_height="26dp" android:gravity="center" android:text="✓" android:textColor="#6BC98A" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:background="@drawable/widget_log_chip_due" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center" android:text="Asr" android:textColor="#9AA0A6" android:textSize="10sp" android:maxLines="1" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="16:55" android:textColor="#E8EAED" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:layout_width="44dp" android:layout_height="26dp" android:gravity="center" android:text="·" android:textColor="#9AA0A6" android:textSize="13sp" android:includeFontPadding="false" android:background="@drawable/widget_log_chip_idle" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center" android:text="Maghrib" android:textColor="#9AA0A6" android:textSize="10sp" android:maxLines="1" android:ellipsize="end" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="20:33" android:textColor="#E8EAED" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:layout_width="44dp" android:layout_height="26dp" android:gravity="center" android:text="·" android:textColor="#9AA0A6" android:textSize="13sp" android:includeFontPadding="false" android:background="@drawable/widget_log_chip_idle" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center" android:text="Isha" android:textColor="#9AA0A6" android:textSize="10sp" android:maxLines="1" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="22:09" android:textColor="#E8EAED" android:textSize="13sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:maxLines="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- The footer the real card draws: what the plus does on the left,
+             the next prayer and the countdown to it on the right. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/widget_preview_tap_to_log"
+                android:textColor="#9AA0A6"
+                android:textSize="10sp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maghrib"
+                android:textColor="#9AA0A6"
+                android:textSize="10sp"
+                android:maxLines="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="4dp"
+                android:text="@string/widget_preview_in_37"
+                android:textColor="#9AA0A6"
+                android:textSize="10sp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

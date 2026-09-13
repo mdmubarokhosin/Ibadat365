@@ -1,0 +1,1779 @@
+{
+  "app": {
+    "name": "محراب",
+    "tagline": "نماز کے اوقات، قبلہ کمپاس، قرآن، دعائیں اور اذکار — مکمل آف لائن، ایک ہی ایپ میں۔"
+  },
+  "nav": {
+    "home": "محراب",
+    "settings": "ترتیبات",
+    "month": "مہینہ",
+    "shareMonth": "شیئر مہینہ",
+    "compass": "قبلہ",
+    "tasbih": "تسبیح",
+    "duas": "دعائیں",
+    "quran": "قرآن",
+    "journal": "نماز ڈائری",
+    "backup": "بیک اپ",
+    "fasting": "روزہ",
+    "today": "آج",
+    "sync": "آلات کے درمیان ہم آہنگی"
+  },
+  "a11y": {
+    "openSettings": "ترتیبات کھولیں۔",
+    "openMonth": "مہینے کا منظر کھولیں۔",
+    "openCompass": "قبلہ کمپاس کھولیں۔",
+    "openTimesSource": "نماز کے اوقات کا ذریعہ تبدیل کریں۔",
+    "countdownTo": "اس نماز تک کاؤنٹ ڈاؤن دکھائیں",
+    "countdownHere": "کاؤنٹ ڈاؤن اسی نماز پر ہے۔ اگلی پر واپس جانے کے لیے ٹیپ کریں۔"
+  },
+  "common": {
+    "change": "تبدیلی",
+    "tryAgain": "دوبارہ کوشش کریں۔",
+    "retry": "دوبارہ کوشش کریں۔",
+    "continue": "جاری رکھیں",
+    "back": "پیچھے",
+    "play": "چلائیں",
+    "pause": "روکیں",
+    "stop": "بند کریں",
+    "loading": "لوڈ ہو رہا ہے…",
+    "automatic": "خودکار",
+    "openSettings": "ترتیبات کھولیں",
+    "cancel": "منسوخ کریں",
+    "ok": "ٹھیک ہے",
+    "today": "آج",
+    "close": "بند کریں",
+    "share": "شیئر کریں",
+    "done": "ہو گیا",
+    "delete": "حذف کریں",
+    "cancelled": "منسوخ کر دیا گیا۔",
+    "listJoin": " اور ",
+    "confirmDelete": "حذف کرنے کے لیے دوبارہ دبائیں",
+    "learnMore": "مزید جانیں"
+  },
+  "home": {
+    "loadingPrayer": "نماز کے اوقات لوڈ ہو رہے ہیں…",
+    "nextPrayer": "اگلی نماز",
+    "nextIn": "{{time}} میں",
+    "hanafiSuffix": "حنفی عصر",
+    "monthTimesLink": "پورے مہینے کی نماز کے اوقات",
+    "localFallbackNotice": "مقامی حساب — اپ ڈیٹ کے لیے جڑیں",
+    "lastGpsCoordsNotice": "آخری معلوم مقام استعمال ہو رہا ہے — GPS دستیاب نہیں",
+    "exactAlarmDenied": "درست وقت کے لیے نماز الرٹ کو درست الارم کی اجازت چاہیے۔ دینے کے لیے ٹیپ کریں۔",
+    "notifPermDenied": "اطلاع کی اجازت مسترد — نماز الرٹ نہیں بجیں گے۔ ترتیبات کھولنے کے لیے ٹیپ کریں۔",
+    "updatingLocation": "مقام کو اپ ڈیٹ کیا جا رہا ہے",
+    "today": "آج",
+    "tomorrow": "کل",
+    "savedLocationLabel": "{{name}}",
+    "switchLocation": "مقام تبدیل کریں",
+    "autoBadge": "خودکار",
+    "locating": "مقام تلاش…",
+    "backToToday": "آج پر واپس",
+    "updatedAt": "اپ ڈیٹ {{when}}",
+    "daysStored": "{{count}} دن محفوظ",
+    "quranShortcut": "قرآن کھولیں",
+    "dayStrip": "دن منتخب کریں",
+    "nextPrayerIn": "{{prayer}} میں",
+    "firstPrayer": "پہلی نماز {{prayer}} · {{time}}",
+    "todaySummary": "آج",
+    "prayersLogged": "{{total}} میں سے {{count}} نمازیں درج",
+    "noFastToday": "کوئی روزہ درج نہیں",
+    "dhikrSets": "{{count}} اذکار کے دور مکمل",
+    "fastKept": {
+      "ramadan": "رمضان کا روزہ رکھا",
+      "voluntary": "سنت روزہ رکھا",
+      "qadha": "قضا روزہ رکھا"
+    },
+    "readItIn": "{{surah}} میں پڑھیں",
+    "continueAt": "جاری رکھیں · {{surah}} {{ref}}",
+    "khatmahDay": "ختم دن {{day}} از {{total}}",
+    "khatmahDaysToGo": "{{count}} دن باقی",
+    "pagesLeftToday": "آج {{count}} صفحات باقی",
+    "pageNumber": "صفحہ {{page}}",
+    "readingDone": "آج کی قراءت مکمل",
+    "readOn": "پڑھتے رہیں",
+    "qiblaChipA11y": "قبلہ {{degrees}} درجے",
+    "qiblaChipHint": "قبلہ کمپاس کھولتا ہے",
+    "alertOverrideOnce": "{{mode}} صرف اس بار · ری سیٹ",
+    "alertOverrideA11y": "{{prayer}} صرف اس بار {{mode}} پر ہے",
+    "alertOverrideResetHint": "{{mode}} بحال کرتا ہے",
+    "yesterday": "گزشتہ کل",
+    "startReading": "پڑھنا شروع کریں",
+    "startReadingHint": "الفاتحہ، صفحہ ۱"
+  },
+  "errors": {
+    "locationNeededTitle": "مقام درکار ہے۔",
+    "locationNeededBody": "نماز کے اوقات اپنی تخمینی پوزیشن کا استعمال کریں۔ سسٹم کی ترتیبات میں مقام تک رسائی فراہم کریں، پھر دوبارہ کوشش کریں۔",
+    "locationErrorTitle": "مقام کی خرابی۔",
+    "apiErrorTitle": "اوقات لوڈ نہیں ہو سکے۔",
+    "coordLat": "عرض البلد -90 اور 90 کے درمیان ہونا چاہیے۔",
+    "coordLng": "عرض البلد -180 اور 180 کے درمیان ہونا چاہیے۔",
+    "gpsPermission": "آلہ کا مقام استعمال کرنے کے لیے مقام کی اجازت درکار ہے۔",
+    "gpsRead": "GPS پوزیشن نہیں پڑھ سکا۔",
+    "gpsRequest": "مقام کی درخواست نہیں کی جا سکی۔"
+  },
+  "month": {
+    "locationNotReadyTitle": "مقام تیار نہیں ہے۔",
+    "locationNotReadyBody": "ہوم کھولیں اور آج کے اوقات کو ایک بار لوڈ کریں تاکہ یہ اسکرین آپ کی GPS پوزیشن استعمال کر سکے۔",
+    "thisMonth": "اس مہینے",
+    "standardView": "معیاری",
+    "shareView": "قابل اشتراک",
+    "shareMonth": "تصویر شیئر کریں۔",
+    "loadError": "مہینہ لوڈ نہیں ہو سکا۔",
+    "empty": "دکھانے کے لیے کوئی قطار نہیں ہے۔",
+    "refreshData": "ذخیرہ شدہ ڈیٹا کو تازہ کریں۔",
+    "refreshing": "ریفریش ہو رہا ہے...",
+    "monthsStored": "{{count}} مہینوں کا ذخیرہ",
+    "dayOfWeek": "دن",
+    "date": "تاریخ",
+    "hijri": "ہجری",
+    "gregorian": "گریگورین",
+    "prayerTimes": "نماز کے اوقات",
+    "daruriLegend": "فجر، عصر اور عشاء کے نیچے کی چھوٹی سطر بتاتی ہے کہ ہر ایک کا پہلا (اختیاری) وقت کب ختم ہوتا ہے۔ ظہر کا عصر کے شروع ہونے پر اور مغرب کا عشاء کے شروع ہونے پر ختم ہوتا ہے، سو وہ دونوں خود یہی کالم ہیں۔ فجر اور عصر کی حدیں تخمینی ہیں۔"
+  },
+  "share": {
+    "tagline": "نماز کے اوقات، قبلہ اور قرآن",
+    "timesFor": "{{place}} کے نماز اوقات",
+    "scanForApp": "ایپ حاصل کرنے کے لیے اسکین کریں",
+    "asrHanafi": "عصر: حنفی",
+    "asrStandard": "عصر: معیاری",
+    "source": "اوقات بذریعہ {{source}}",
+    "footerNote": "محسوب اوقات۔ فرق ہو تو اپنی مقامی مسجد کی پیروی کریں۔",
+    "sheetLanguage": "ورق کی زبان",
+    "exportImage": "تصویر شیئر کریں",
+    "exportPdf": "پی ڈی ایف شیئر کریں (A4)",
+    "pitch": "مفت اور بغیر اشتہار۔ نماز کے اوقات، قبلہ، تلاوت و ترجمے کے ساتھ قرآن، اور ختم ٹریکر۔"
+  },
+  "settings": {
+    "laDesignLabel": "انداز",
+    "laDesignTimeline": "ٹائم لائن",
+    "laDesignCountdown": "الٹی گنتی",
+    "appearance": "ظاہری شکل",
+    "theme": "تھیم",
+    "themeSystem": "سسٹم",
+    "themeLight": "روشنی",
+    "themeDark": "اندھیرا",
+    "themeHelp": "سسٹم آپ کے آلے کے لائٹ یا ڈارک موڈ سے میل کھاتا ہے۔ ایپ میں پلیٹ فارم پیلیٹ استعمال کرنے کے لیے سسٹم کے رنگوں کو آن کریں (بشمول آپ کا مواد اینڈرائیڈ پر)۔ بٹن اور لہجے آپ کے فون کے بنیادی رنگ کی پیروی کرتے ہیں تاکہ ڈائنامک رنگ دستیاب ہونے پر ایپ آپ کے وال پیپر سے مماثل ہو۔",
+    "clockFormat": "وقت کی شکل",
+    "clockFormatAuto": "خودکار",
+    "clockFormat12": "12 گھنٹے",
+    "clockFormat24": "24 گھنٹے",
+    "clockFormatHelp": "خودکار آپ کے آلے کی اپنی گھڑی کی ترتیب کے مطابق چلتا ہے۔ نماز کے اوقات، ماہانہ جدول اور ویجٹس سب ایک ہی شکل استعمال کرتے ہیں۔",
+    "clockFormatExample": "مثلاً: {{time}}",
+    "systemDynamicColors": "سسٹم کے رنگ",
+    "systemDynamicColorsHelp": "جب تھیم سسٹم ہو تو ایپ میں آپ کے آلے کے سیمنٹک اور متحرک رنگوں کا استعمال کرتا ہے۔ ڈارک موڈ آن ہونے پر بھی خالص سیاہ (OLED) پس منظر کو سیاہ کرتا ہے۔",
+    "pureBlack": "خالص سیاہ (OLED)",
+    "pureBlackHelp": "OLED ڈسپلے کے لیے ڈارک موڈ میں حقیقی سیاہ پس منظر۔",
+    "dataSource": "ڈیٹا سورس",
+    "provider": "نماز کے اوقات فراہم کرنے والا",
+    "providerAutoLine": "خودکار · {{label}}",
+    "providerAutoHelp": "سویڈن میں، نماز کے اوقات سویڈن کا ذریعہ استعمال کرتے ہیں (درج شہر)؛ سویڈن سے باہر، الاذان۔ ایک فراہم کنندہ کو مقفل کرنے کے لیے نیچے ایک ذریعہ منتخب کریں۔",
+    "providerOverridden": "{{picked}} کے پاس آپ کے مقام کے اوقات نہیں، اس لیے {{used}} جواب دے رہا ہے۔",
+    "location": "مقام",
+    "automatic": "خودکار",
+    "manual": "دستی",
+    "manualSearchHelp": "تلاش کے نتائج کو فوراً لاگو کرنے کے لیے اسے تھپتھپائیں، یا نقاط میں ترمیم کریں اور نیچے اپلائی کو دبائیں۔",
+    "coordsLabel": "نقاط (اعشاریہ ڈگری)",
+    "latPlaceholder": "عرض بلد",
+    "lngPlaceholder": "طول البلد",
+    "applyCoords": "نقاط کا اطلاق کریں۔",
+    "calculation": "حساب کتاب",
+    "calcHiddenSweden": "سویڈن ہر درج شہر میں نماز کے اوقات استعمال کرتا ہے۔ آپ کی پوزیشن اس شہر سے ملنے کے لیے ریورس جیو کوڈ شدہ ہے۔ صرف سویڈن کے لیے۔",
+    "calcHiddenPraytimes": "PrayTimes.dev اپنے شائع شدہ قواعد کا اطلاق کرتا ہے (دیکھیں prayertimes.dev)۔ یہاں صرف مدرسہ / عصر کا اطلاق ہوتا ہے۔ طریقہ کار کی فہرست پوشیدہ ہے۔",
+    "method": "طریقہ",
+    "methodModalTitle": "حساب کتاب کا طریقہ",
+    "hanafiAsr": "حنفی عصر",
+    "hanafiAsrHelp": "عصر کے لیے سائے کی بڑی لمبائی (اسکول = 1)",
+    "notifications": "اطلاعات",
+    "prayerAlerts": "نماز کے انتباہات",
+    "prayerAlertsHelp": "نماز پنجگانہ (فجر-عشاء) کے لیے مقرر ہے۔ قابل اعتماد وقت کے لیے Android کو عین الارم تک رسائی درکار ہو سکتی ہے۔",
+    "prePrayerReminder": "پیشگی یاد دہانی",
+    "prePrayerReminderHelp": "ہر نماز سے پہلے اختیاری دوسری اطلاع۔",
+    "prePrayerReminderModalTitle": "نماز سے چند منٹ پہلے",
+    "prePrayerReminderOff": "آف",
+    "prePrayerReminderOption": "{{count}} منٹ پہلے",
+    "liveActivity": "لائیو سرگرمی",
+    "liveActivityHelp": "اگلی نماز تک گنتی کی ایک نتھی نوٹیفکیشن، توسیع شدہ منظر میں آج کے دیگر اوقات کے ساتھ۔",
+    "liveActivityExperimental": "iOS پر تجرباتی۔",
+    "liveActivityCustomize": "حسب ضرورت بنائیں",
+    "liveActivityCompact": "کمپیکٹ موڈ",
+    "liveActivityCompactHelp": "صرف الٹی گنتی دکھائیں؛ نماز کی فہرست چھپائیں۔",
+    "liveActivityShowSunriseLabel": "طلوع آفتاب دکھائیں",
+    "liveActivityShowHijriLabel": "ہجری تاریخ دکھائیں",
+    "liveActivityShowLocationLabel": "مقام دکھائیں",
+    "language": "زبان",
+    "languageHelp": "انگریزی، سویڈش یا عربی۔ عربی میں دائیں سے بائیں ترتیب استعمال ہوتی ہے۔",
+    "langEn": "انگریزی",
+    "langSv": "سویڈش",
+    "langAr": "عربی",
+    "homeScreenWidget": "ہوم اسکرین ویجیٹ",
+    "widgetBackgroundOpacity": "ویجیٹ پس منظر کی طاقت (Android)",
+    "widgetHighlight": "اگلی دعا کا رنگ نمایاں کریں۔",
+    "widgetHighlight_green": "سبز",
+    "widgetHighlight_teal": "ٹیل",
+    "widgetHighlight_blue": "نیلا",
+    "widgetHighlight_amber": "امبر",
+    "widgetHighlight_custom": "حسب ضرورت رنگ",
+    "widgetHighlight_customAbbr": "…",
+    "widgetHighlightHexPlaceholder": "#6BC98A",
+    "widgetConfigureHint": "آپ اینڈرائیڈ پر انہی آپشنز کو ایڈجسٹ کرنے کے لیے ویجیٹ → سیٹنگز (گیئر) کو بھی ٹچ اور پکڑ سکتے ہیں۔",
+    "notificationSound": "الرٹ آواز",
+    "adhanAlarmStream": "اذان کو الارم کے طور پر چلائیں",
+    "adhanAlarmStreamHelp": "الارم کی آواز استعمال کرتا ہے، اس لیے فون سائلنٹ یا وائبریٹ پر ہو تب بھی اذان سنائی دیتی ہے۔ ڈسٹرب نہ کریں کو نظرانداز نہیں کرتا۔",
+    "notificationSoundModalTitle": "انتباہی آواز منتخب کریں۔",
+    "notificationSoundDefault": "پہلے سے طے شدہ اطلاع",
+    "notificationSoundDefaultHelp": "آپ کے آلے کی ڈیفالٹ اطلاع کی آواز استعمال کرتا ہے۔",
+    "notificationSoundAbdulBasit": "اذان۔عبدالباسط",
+    "notificationSoundAbdulGhaffar": "اذان۔عبدالغفار",
+    "notificationSoundAbdulHakam": "اذان۔عبدالحکم",
+    "notificationSoundMakkah": "اذان - مکہ",
+    "notificationSoundMadina": "اذان‘ مدینہ",
+    "notificationSoundAqsa": "اذان - الاقصیٰ",
+    "notificationSoundEgypt": "اذان - مصر",
+    "notificationSoundHalab": "اذان - حلب",
+    "notificationSoundAlHussaini": "اذان - الحسینی۔",
+    "notificationSoundBakirBash": "اذان - باقر باش",
+    "notificationSoundHafez": "اذان - حافظ",
+    "notificationSoundHafizMurad": "اذان۔حافظ مراد",
+    "notificationSoundMinshawi": "اذان‘ منشاوی",
+    "notificationSoundNaghshbandi": "اذان - نقشبندی۔",
+    "notificationSoundSaber": "اذان - صابر",
+    "notificationSoundSharifDoman": "اذان - شریف ڈومین",
+    "notificationSoundYusufIslam": "اذان - یوسف اسلام",
+    "notificationSoundVoiceHelp": "اس ایپ کی تعمیر میں بلٹ ان آواز شامل ہے۔",
+    "notificationSoundCustom": "آپ کی اپنی اذان",
+    "notificationSoundCustomHelp": "اس آلے سے ایک آڈیو فائل منتخب کریں۔",
+    "notificationSoundCustomImporting": "درآمد ہو رہی ہے…",
+    "notificationSoundCustomRemove": "اپنی اذان ہٹائیں",
+    "notificationSoundCustomTrimmed": "اطلاعات پہلے ۳۰ سیکنڈ چلاتی ہیں؛ ایپ کھلی ہو تو مکمل ریکارڈنگ چلتی ہے۔",
+    "versionInstalled": "انسٹال شدہ ورژن: {{version}}",
+    "adhanPreviewTitle": "اذان پیش نظارہ",
+    "adhanPreviewBody": "",
+    "prayerOffsets": "فی نماز ترمیم",
+    "prayerOffsetsTitle": "فی نماز ترمیم",
+    "prayerOffsetsHelp": "اپنی مقامی مسجد سے ہم آہنگ ہونے کے لیے ہر نماز کو ±{{max}} منٹ آگے پیچھے کریں۔",
+    "prayerOffsetsNone": "کوئی ترمیم نہیں",
+    "prayerOffsetsCount_one": "{{count}} نماز کا وقت درست کیا گیا",
+    "prayerOffsetsCount_other": "{{count}} نمازوں کے اوقات درست کیے گئے",
+    "prayerOffsetsIncrease": "{{prayer}} کا فرق بڑھائیں",
+    "prayerOffsetsDecrease": "{{prayer}} کا فرق گھٹائیں",
+    "prayerOffsetsReset": "سب ری سیٹ کریں",
+    "dataAndPrivacy": "ڈیٹا اور رازداری",
+    "replayOnboarding": "تعارف دوبارہ دکھائیں",
+    "replayOnboardingHelp": "خوش آمدید کا عمل دوبارہ دیکھیں۔",
+    "attributions": "حوالہ جات",
+    "attributionsBlurb": "یہ ایپ جن کے کام سے بنی ہے",
+    "attribQuran": "قرآن کا متن",
+    "attribTranslation": "ترجمہ",
+    "attribDuas": "دعائیں",
+    "accentColor": "ایکسنٹ کا رنگ",
+    "accent_green": "سبز",
+    "accent_teal": "فیروزی",
+    "accent_blue": "نیلا",
+    "accent_amber": "کہربائی",
+    "accent_custom": "اپنی پسند",
+    "accent_customAbbr": "Hex",
+    "accentColorHelp": "پورے ایپ اور ہوم اسکرین ویجٹ میں استعمال ہوتا ہے۔",
+    "widgetColorFollowsAccentHelp": "ویجٹ وہی نمایاں رنگ استعمال کرتا ہے جو ایپ کا ہے۔ اسے ظاہری شکل میں سے منتخب کریں۔",
+    "widgetColorOwnHelp": "ایپ آپ کے سسٹم رنگوں کی پیروی کر رہی ہے، ویجٹ نہیں۔ ویجٹ کا نمایاں رنگ یہاں منتخب کریں۔",
+    "additionalTimes": "اضافی اوقات",
+    "additionalTimesBlurb": "طلوعِ آفتاب، نصف شب اور رات کے تہائی حصے",
+    "additionalTimesFooter": "یہ اطلاعات کے ساتھ ساتھ نماز کے جدول، ویجٹ اور لائیو ایکٹیویٹی میں بھی نظر آتے ہیں، اور اذان کے بجائے پہلے سے طے شدہ آواز استعمال کرتے ہیں۔",
+    "dailyReminders": "روزانہ یاد دہانیاں",
+    "dailyRemindersBlurb": "ہر دن ایک آیت، آج کا ختم حصہ، الکہف اور الملک",
+    "logSection": "لاگ",
+    "sunriseTime": "طلوع آفتاب",
+    "sunriseTimeHelp": "نماز کے جدول، اطلاعات، وجٹ اور Live Activity میں طلوع آفتاب دکھائیں۔",
+    "islamicMidnight": "نصف شب",
+    "islamicMidnightHelp": "مغرب اور فجر کے درمیان رات کا وسطی نقطہ۔ بطورِ پہلے سے بند۔",
+    "lastThird": "رات کا آخری تہائی حصہ",
+    "lastThirdHelp": "رات کے آخری تہائی حصے کا آغاز — قیام اللیل کا وقت۔ بطورِ پہلے سے بند۔",
+    "firstThird": "رات کی پہلی تہائی",
+    "firstThirdHelp": "رات کی پہلی تہائی کا اختتام — مالکی حساب کے مطابق یہاں عشاء کا افضل وقت ختم ہو جاتا ہے۔ بطورِ طے شدہ بند۔",
+    "malikiSecondTimes": "مالکی ضروری اوقات",
+    "malikiSecondTimesHelp": "ہر نماز کے لیے آج کے کارڈ پر ایک سطر بتائے گی کہ اس کا اختیاری وقت کب ختم ہوتا ہے اور ضروری وقت کب شروع ہوتا ہے۔ آپ کے آلے پر آپ کے مقام سے شمار ہوتا ہے، خواہ اوقات کسی بھی ذریعے سے آئے ہوں۔ عصر کے لیے آپ کی مذہب کی ترتیب سے قطع نظر 1:1 سایہ استعمال ہوتا ہے، کیونکہ مالکی حد یہی ہے۔ بطور طے شدہ بند۔",
+    "malikiSecondTimesHanafiWarning": "توجہ: یہ مالکی حدیں ہیں، مگر آپ کی عصر حنفی پر مقرر ہے جو مختلف سایہ استعمال کرتی ہے۔ ظہر کا پہلا وقت نیچے دکھائی گئی عصر سے تقریباً آدھا گھنٹہ پہلے ختم ہوگا۔ اگر آپ چاہتے ہیں کہ کارڈ آپس میں ہم آہنگ ہو تو حنفی عصر بند کر دیں۔",
+    "malikiSecondTimesSource": "المرشد المعین (ابن عاشر) سے، The Guiding Helper کے نغمہ 11 میں۔",
+    "malikiAlerts": "مجھے اطلاع دیں",
+    "malikiAlertsHelp": "شروع میں ہر نماز کے لیے بند۔ صرف وہی منتخب کریں جن کی اطلاع چاہتے ہیں — دن میں پانچ اضافی اطلاعات وہ طریقہ ہے جس سے ایپ آپ کو خود کو نظرانداز کرنا سکھاتی ہے۔ اطلاعات کا آن ہونا ضروری ہے۔",
+    "malikiAlertsDisabled": "نماز کے اوقات میں مالکی دوسرے اوقات آن کریں، پھر ان کی اطلاع یہاں سے دی جا سکتی ہے۔",
+    "malikiAlertsNone": "کوئی اطلاع نہیں",
+    "malikiAlertsLead": "کتنی پیشگی",
+    "malikiAlertsLeadTitle": "پہلا وقت ختم ہونے سے پہلے بتائیں",
+    "malikiAlertsAtTime": "جب ختم ہو",
+    "malikiSecondTimesModelled": "فجر اور عصر کی حدیں ستاروں کا معدوم ہونا اور سورج کا زرد پڑنا ہیں — آنکھ کے فیصلے کی جگہ ایک زاویہ۔ اسی لیے انہیں تخمینی دکھایا جاتا ہے۔ جہاں سورج طلوع نہ ہو، غروب نہ ہو، یا اُس زاویے تک نہ پہنچے، وہاں اندازے کے بجائے کچھ نہیں دکھایا جاتا۔",
+    "accent_rose": "گلابی",
+    "accent_violet": "بنفشی",
+    "laDesignMarkers": "نشانات",
+    "showTour": "ایپ کا تعارفی دورہ دکھائیں",
+    "rateApp": "محراب کی درجہ بندی کریں",
+    "rateAppHelp": "ایپ پسند آئی؟ درجہ بندی دوسروں کو اسے تلاش کرنے میں مدد دیتی ہے۔",
+    "showTourHelp": "فیچر ٹور دوبارہ دیکھیں۔",
+    "ayahOfDay": "روزانہ آیت کی اطلاع",
+    "ayahOfDayHelp": "ہر روز ایک بے ترتیب منتخب آیت مع ترجمہ۔",
+    "ayahOfDayTime": "اطلاع کا وقت",
+    "hourDown": "گھنٹہ −",
+    "hourUp": "گھنٹہ +",
+    "khatmahReminder": "روزانہ ختم یاد دہانی",
+    "khatmahReminderHelp": "ختم جاری رہنے کے دوران آج کا حصہ اور کہاں سے جاری رکھیں۔",
+    "khatmahReminderNoPlan": "اسے استعمال کرنے کے لیے قرآن ٹیب میں ختم شروع کریں۔",
+    "resetApp": "ایپ ڈیٹا ری سیٹ کریں",
+    "resetAppHelp": "تمام ترتیبات اور ڈیٹا مٹا دیتا ہے۔ واپس نہیں ہو سکتا۔",
+    "batteryWarning": "اطلاعات غیر معتبر ہو سکتی ہیں",
+    "batteryWarningHelp": "بیٹری آپٹیمائزیشن ایپ بند ہونے پر اذان کی اطلاعات میں تاخیر یا خاموشی کا باعث بن سکتی ہے۔ Ibadat 365 کو مستثنیٰ کرنے کے لیے تھپتھپائیں۔",
+    "themeRestartManualTitle": "ایپ دوبارہ کھولیں",
+    "themeRestartManualBody": "iOS ایپس کو خود دوبارہ چلنے نہیں دیتا۔ نئی تھیم لاگو کرنے کے لیے ایپ مکمل بند کر کے دوبارہ کھولیں۔",
+    "liquidGlass": "لیکوئڈ گلاس",
+    "liquidGlassHelp": "iOS سسٹم رنگ اور شفاف گلاس کروم اپنائیں۔ لائٹ/ڈارک خودکار طور پر پیروی کرتا ہے۔",
+    "themeRestartTitle": "دوبارہ چلانا ضروری",
+    "themeRestartBody": "سسٹم رنگ بدلنے کے لیے ایپ کو دوبارہ چلانا ہوگا تاکہ ہر اسکرین نئی تھیم لے۔ ابھی دوبارہ چلائیں؟",
+    "themeRestartConfirm": "دوبارہ چلائیں",
+    "laLockButtonLabel": "لاک اسکرین بٹن",
+    "laLockButtonHelp": "کارڈ پر ایک بٹن دکھائیں جو اسے لاک اسکرین اور ہمیشہ آن اسکرین سے چھپا دے۔",
+    "resetTitle": "ایپ ری سیٹ کریں؟",
+    "resetBody": "یہ تمام ترتیبات، محفوظ مقامات، نمازوں کا ریکارڈ، روزوں کا ریکارڈ اور تسبیح کی حالت مٹا دے گا اور آپ کو ابتدائی مراحل پر لے جائے گا۔ واپسی ممکن نہیں۔",
+    "resetConfirm": "سب کچھ ری سیٹ کریں",
+    "prayerOffsetsCount": "{{count}} ایڈجسٹ کیے گئے",
+    "endOfDayLog": "دن کے اختتام پر ریکارڈ یاد دہانی",
+    "endOfDayLogHelp": "عشاء کے دس منٹ بعد پوچھتا ہے کہ دن کی پانچ نمازیں درج کی جائیں۔ اگلی صبح جواب دینے پر بھی درست دن درج ہوگا۔",
+    "alertModeAdhan": "اذان",
+    "alertModeNotification": "اطلاع",
+    "alertModeSilent": "خاموش",
+    "alertModeHint": "یہ نماز آپ کو کیسے مطلع کرے، بدلتا ہے",
+    "sectionPrayerTimes": "نماز کے اوقات",
+    "sectionPrayerTimesBlurb": "ذریعہ، طریقۂ حساب، مذہب، ترامیم",
+    "sectionNotifications": "اطلاعات",
+    "sectionNotificationsBlurb": "آوازیں، پیشگی یاد دہانی، اضافی اوقات، لائیو سرگرمی",
+    "sectionLocation": "مقام",
+    "sectionLocationBlurb": "آپ کہاں ہیں، اور محفوظ مقامات",
+    "sectionAppearance": "ظاہری شکل اور زبان",
+    "sectionAppearanceBlurb": "تھیم، رنگ، وقت کی شکل، زبان",
+    "sectionWidgets": "ہوم اسکرین",
+    "sectionWidgetsBlurb": "ہوم اسکرین ویجیٹ",
+    "sectionQuran": "قرآن",
+    "sectionQuranBlurb": "قراءت، ترجمہ، تفسیر، ڈاؤن لوڈ",
+    "sectionAbout": "تعارف",
+    "sectionAboutBlurb": "ورژن، ذرائع، لائسنس",
+    "malikiRows": "دن کے اوقات میں دکھائیں",
+    "malikiRowsHelp": "بند ہونے پر صرف اطلاع دی جاتی ہے — کارڈ یا مہینے میں کچھ شامل نہیں ہوتا۔",
+    "malikiEndAlerts": "اور جب وقت ختم ہو",
+    "malikiEndAlertsHelp": "جس لمحے نماز قضا ہوتی ہے، دوسری اطلاع۔ عین اسی وقت، کبھی پہلے نہیں۔",
+    "surahRemindersChannel": "سورتوں کی یاد دہانی",
+    "madhab": "مذہب",
+    "madhab_hanafi": "حنفی",
+    "madhab_maliki": "مالکی",
+    "madhab_shafii": "شافعی",
+    "madhab_hanbali": "حنبلی",
+    "madhabCustom": "حسبِ ضرورت",
+    "madhabHelp": "شافعی، مالکی اور حنبلی عصر کا ایک ہی سایہ لیتے ہیں، اس لیے ان میں انتخاب سے کوئی وقت نہیں بدلتا۔ مالکی فجر کی فرض کو صبح کہتا ہے اور دوسرے اوقات بھی دیتا ہے۔",
+    "dhikrRemindersChannel": "ذکر کی یاد دہانیاں",
+    "dhikrRemindersSilentChannel": "ذکر کی یاد دہانیاں (خاموش)",
+    "laDesignNeedsAndroid16": "اسٹائلز کے لیے Android 16 یا نیا درکار ہے۔ یہ فون معیاری کارڈ دکھاتا ہے: نماز، باقی وقت اور پروگریس بار۔"
+  },
+  "locationSetup": {
+    "headline": "اپنا مقام متعین کریں۔",
+    "sub": "نماز کے اوقات اس بات پر منحصر ہیں کہ آپ کہاں ہیں۔ نیچے دیے گئے اختیارات میں سے ایک کا انتخاب کریں — آپ اسے بعد میں سیٹنگز میں تبدیل کر سکتے ہیں۔",
+    "useAutomatic": "میرا مقام استعمال کریں",
+    "searchCoords": "کوآرڈینیٹ تلاش کریں یا درج کریں۔",
+    "manualHeadline": "دستی مقام",
+    "manualSub": "ختم کرنے کے لیے نتیجہ تلاش کریں اور تھپتھپائیں — یا نیچے عرض البلد اور طول البلد ٹائپ کریں اور جاری رکھیں کو دبائیں۔",
+    "decimalCoords": "اعشاریہ نقاط"
+  },
+  "provider": {
+    "timesSource": "ٹائمز ماخذ",
+    "automaticByLocation": "مقام کے لحاظ سے خودکار",
+    "modalTitle": "نماز کے اوقات کا ذریعہ",
+    "sectionMainstream": "مین اسٹریم APIs",
+    "sectionRegional": "قومی اور علاقائی ذرائع",
+    "autoTitle": "خودکار",
+    "autoSub": "سویڈن میں سویڈن ذریعہ؛ الاذان کہیں اور۔",
+    "autoNow": "آپ اِس وقت جہاں ہیں، وہاں یہ {{label}} ہے۔",
+    "bestHere": "آپ کے مقام کے لیے موزوں",
+    "outOfRegion": "آپ کے مقام کے لیے اوقات نہیں — اس کے بجائے {{fallback}} استعمال ہوگا۔",
+    "footer": "ملک کے مخصوص ذرائع سرکاری یا قومی دعائیہ میزیں استعمال کرتے ہیں جہاں ہم ان کو مربوط کرتے ہیں۔ وقت کے ساتھ ساتھ مزید علاقے شامل کیے جا سکتے ہیں۔"
+  },
+  "providers": {
+    "aladhan": {
+      "desc": "api.aladhan.com — وسیع طریقوں کی فہرست، دنیا بھر کے مقامات؛ عام استعمال۔",
+      "name": "AlAdhan"
+    },
+    "prayertimes_dev": {
+      "desc": "آزاد API — برطانوی طرز کے زاویے اور آفسٹس؛ حنفی/شافعی؛ عالمی نقاط۔",
+      "name": "PrayTimes.dev"
+    },
+    "local_adhan": {
+      "desc": "آپ کے فون پر Batoul Adhan کے ذریعے حساب کیا جاتا ہے — کسی نیٹ ورک API کی ضرورت نہیں۔",
+      "name": "آلے پر (Adhan JS)"
+    },
+    "islamiska_forbundet": {
+      "desc": "درج شدہ سویڈش شہروں کے اوقاتِ نماز؛ آپ کا مقام فہرست میں قریب ترین شہر سے ملایا جاتا ہے۔",
+      "name": "سویڈن"
+    },
+    "habous": {
+      "name": "مراکش",
+      "desc": "وزارتِ اوقاف و اسلامی امور کی جانب سے درج مراکشی شہروں کے لیے شائع کردہ اوقات؛ آپ کے مقام کو فہرست میں قریب ترین شہر سے ملایا جاتا ہے۔"
+    }
+  },
+  "compass": {
+    "needLocationTitle": "مقام تیار نہیں ہے۔",
+    "needLocationBody": "سیٹنگز میں ایک مقام سیٹ کریں یا GPS کے ساتھ ایک بار ہوم کھولیں تاکہ ہم قبلہ کی سمت کا حساب کر سکیں۔",
+    "bearing": "قبلہ بردار",
+    "fromNorth": "شمال سے {{deg}}°",
+    "qiblaMarker": "قبلہ",
+    "phoneFront": "فون سامنے",
+    "hint": "فون کو فلیٹ رکھیں اور دھات سے دور ہٹ جائیں۔ جب آپ قبلہ رخ ہوں تو قبلہ تیر کو \"فون کے سامنے\" کے ساتھ سیدھ کریں۔",
+    "signalStrength": "کمپاس سگنل",
+    "signalHelp": "مقناطیسی میدان کی سطح اور استحکام کی بنیاد پر۔ اگر یہ کم رہتا ہے تو دھات اور الیکٹرانکس سے دور رہیں۔",
+    "signalChecking": "…",
+    "signalOff": "آف",
+    "signalWeakTitle": "کمپاس سگنل کمزور ہے۔",
+    "signalVeryWeakTitle": "کمپاس سگنل بہت کمزور ہے۔",
+    "signalWeakBody": "دھات، میگنےٹ اور الیکٹرانکس سے دور رہیں۔ مقناطیسی فون کے لوازمات کو ہٹا دیں، پھر دوبارہ کیلیبریٹ کرنے کے لیے ایک سست فگر-8 حرکت کریں۔",
+    "motionDetectedTitle": "فون کو مستحکم رکھیں",
+    "motionDetectedBody": "بہت زیادہ حرکت سمت کود سکتی ہے۔ چلتی گاڑیوں یا سپیکروں سے دور فون کو چند سیکنڈ کے لیے فلیٹ اور ساکن رکھیں۔",
+    "motionPermissionTitle": "حرکت کی اجازت درکار ہے۔",
+    "motionPermissionDeniedBody": "iOS پر کمپاس تک رسائی سے انکار کر دیا گیا ہے۔ سسٹم کی ترتیبات میں موشن اور فٹنس تک رسائی کی اجازت دیں، پھر اس اسکرین کو دوبارہ کھولیں۔",
+    "openSettings": "ترتیبات کھولیں۔",
+    "unsupportedTitle": "لائیو کمپاس دستیاب نہیں ہے۔",
+    "unsupportedBody": "یہ آلہ قابل استعمال میگنیٹومیٹر فراہم نہیں کرتا ہے (یا رسائی ناکام ہو گئی ہے)۔ لائیو کمپاس بند ہے۔ فزیکل کمپاس یا نقشہ کے ساتھ نیچے کا بیئرنگ استعمال کریں۔",
+    "checkingCompass": "کمپاس شروع ہو رہا ہے…",
+    "checkingCompassWithPrompt": "کمپاس شروع ہو رہا ہے… اگر iOS پر اشارہ کیا جائے تو موشن اور فٹنس تک رسائی کی اجازت دیں۔",
+    "north": "ن",
+    "east": "ای",
+    "south": "ایس",
+    "west": "ڈبلیو",
+    "a11yDialLive": "قبلہ کمپاس۔ قبلے کا رخ کرنے کے لیے {{deg}} ڈگری گھمائیں۔",
+    "a11yDialChecking": "قبلہ کمپاس۔ سینسر ڈیٹا کا انتظار ہے۔",
+    "a11yDialUnavailable": "قبلہ کمپاس دستیاب نہیں۔",
+    "a11yNeedleDeg": "قبلے کا رخ کرنے کے لیے {{deg}} ڈگری گھمائیں۔",
+    "a11ySignal_good": "کمپاس سگنل: اچھا۔",
+    "a11ySignal_weak": "کمپاس سگنل: کمزور۔ کھلی جگہ پر جانے کی کوشش کریں۔",
+    "a11ySignal_very_weak": "کمپاس سگنل: بہت کمزور۔ درستگی محدود ہو سکتی ہے۔",
+    "crossCheckTitle": "اپنی کمپاس ایپ سے ملائیں",
+    "crossCheckBody": "آپ کے آلے کا اپنا کمپاس اُس کے ہارڈویئر کے مطابق ترتیب دیا گیا ہے۔ سب سے درست پیمائش کے لیے اسے کھولیں اور اُس وقت تک گھومیں جب تک وہ {{degrees}} نہ دکھائے۔",
+    "openSystemCompass": "کمپاس ایپ کھولیں",
+    "fromNorthLabel": "شمال سے"
+  },
+  "prayer": {
+    "Fajr": "فجر",
+    "Sunrise": "طلوع آفتاب",
+    "Dhuhr": "ظہر",
+    "Asr": "عصر",
+    "Maghrib": "مغرب",
+    "Isha": "عشاء",
+    "Fajr_abbr": "فجر",
+    "Sunrise_abbr": "طلوع",
+    "Dhuhr_abbr": "ظہر",
+    "Asr_abbr": "عصر",
+    "Maghrib_abbr": "مغرب",
+    "Isha_abbr": "عشاء",
+    "Midnight": "نصف شب",
+    "Midnight_abbr": "نصف",
+    "Lastthird": "آخری تہائی",
+    "Lastthird_abbr": "قیام",
+    "Firstthird": "پہلی تہائی",
+    "Firstthird_abbr": "1/3",
+    "firstTimeUntil": "پہلا وقت {{time}} تک",
+    "secondTimeUntil": "دوسرا وقت {{time}} تک",
+    "secondTimeFrom": "دوسرا وقت {{time}} سے",
+    "approx": "تقریباً",
+    "Subh": "صبح",
+    "Subh_abbr": "صبح"
+  },
+  "placeSearch": {
+    "label": "شہر یا پتہ تلاش کریں۔",
+    "placeholder": "جیسے قاہرہ، لندن، پوسٹل کوڈ…",
+    "hint": "OpenStreetMap (Nominatim) کے نتائج۔ احترام کے ساتھ استعمال کریں — بلک جیو کوڈنگ کے لیے نہیں۔",
+    "appliedTitle": "مقام لاگو کر دیا گیا۔",
+    "searchFailed": "تلاش ناکام ہوگئی",
+    "applied": "لاگو: {{label}}",
+    "noResults": "کوئی نتیجہ نہیں۔",
+    "searching": "تلاش کر رہا ہے…"
+  },
+  "alertCopy": {
+    "atPrayer": "نماز کا وقت",
+    "prePrayer": "{{count}} منٹ میں شروع ہوتا ہے۔",
+    "adhanStopAction": "اذان بند کرو",
+    "adhanDisableAction": "اذان کو غیر فعال کریں۔",
+    "snoozeAction": "موخر کریں",
+    "snoozeChoice": "{{minutes}} منٹ بعد",
+    "snoozeMinutes": "منٹ",
+    "daruriEndsIn": "پہلا وقت {{time}} پر ختم — {{count}} منٹ میں",
+    "daruriEnded": "پہلا وقت {{until}} پر ختم ہو گیا",
+    "daruriExpired": "وقت ختم ہو گیا — اسے قضا پڑھیں",
+    "atPrayerBody": "{{prayer}} کا وقت ہو گیا ہے",
+    "nextEvent": "اگلی: {{prayer}} {{time}} پر"
+  },
+  "locations": {
+    "title": "محفوظ مقامات",
+    "empty": "محفوظ مقامات شامل کریں، تاکہ آپ ان کے درمیان تیزی سے بدل سکیں۔",
+    "add": "نیا مقام شامل کریں",
+    "useAuto": "میرا مقام",
+    "addPrompt": "اس مقام کا نام رکھیں",
+    "addPlaceholder": "گھر، دفتر، سفر…",
+    "cancel": "منسوخ",
+    "save": "محفوظ کریں",
+    "use": "استعمال کریں",
+    "delete": "حذف کریں",
+    "limitReached": "زیادہ سے زیادہ {{max}} محفوظ مقامات کی حد پوری ہو گئی۔",
+    "previousLocation": "پچھلا مقام",
+    "invalidCoordsTitle": "غلط کوآرڈینیٹس",
+    "invalidCoordsBody": "عرض بلد -90 اور 90 کے درمیان اور طول بلد -180 اور 180 کے درمیان ہونا چاہیے۔",
+    "pickAPlace": "پہلے کوئی شہر تلاش کریں یا کوآرڈینیٹس درج کریں۔",
+    "duplicateTitle": "پہلے سے محفوظ",
+    "duplicateBody": "ان کوآرڈینیٹس پر ایک مقام پہلے ہی \"{{name}}\" کے نام سے محفوظ ہے۔"
+  },
+  "tasbih": {
+    "subhanallah": "سبحان اللہ",
+    "alhamdulillah": "الحمد للہ",
+    "allahuakbar": "اللہ اکبر",
+    "lailaha": "لا الٰہ الا اللہ",
+    "astaghfirullah": "استغفر اللہ",
+    "open": "شمار کھولیں",
+    "increment": "گننے کے لیے ٹیپ کریں",
+    "reset": "ری سیٹ",
+    "salahonprophet": "نبی ﷺ پر درود",
+    "prev": "پچھلا",
+    "next": "اگلا",
+    "meaning": {
+      "subhanallah": "اللہ پاک ہے",
+      "alhamdulillah": "تمام تعریفیں اللہ کے لیے ہیں",
+      "lailaha": "اللہ کے سوا کوئی معبود نہیں",
+      "allahuakbar": "اللہ سب سے بڑا ہے",
+      "astaghfirullah": "میں اللہ سے بخشش مانگتا ہوں",
+      "salahonprophet": "اے اللہ، ہمارے آقا محمد پر درود بھیج"
+    },
+    "setPosition": "سیٹ {{index}} از {{total}}",
+    "ofTarget": "از {{target}}",
+    "tapAnywhere": "کہیں بھی ٹیپ کریں",
+    "upNext": "اگلا",
+    "resetSet": "سیٹ ری سیٹ کریں",
+    "skip": "چھوڑیں"
+  },
+  "duas": {
+    "cat": {
+      "morning": "صبح",
+      "evening": "شام",
+      "afterPrayer": "نماز کے بعد",
+      "food": "کھانا",
+      "distress": "پریشانی",
+      "sleep": "نیند",
+      "lavatory": "بیت الخلاء",
+      "garment": "لباس",
+      "travel": "سفر",
+      "mosque": "مسجد",
+      "gratitude": "شکر",
+      "forgiveness": "استغفار",
+      "weather": "موسم",
+      "family": "گھر والے",
+      "sickness": "بیماری",
+      "funeral": "جنازہ",
+      "eid": "عید",
+      "beforeQuran": "قرآن سے پہلے",
+      "knowledge": "علم",
+      "protection": "حفاظت",
+      "guidance": "ہدایت"
+    },
+    "allCategories": "تمام دعائیں",
+    "repeat": "پڑھیں ×{{count}}",
+    "morning_01_ayat_kursi": {
+      "title": "آیت الکرسی"
+    },
+    "morning_02_three_quls": {
+      "title": "سورۃ الاخلاص، الفلق، الناس"
+    },
+    "morning_03_fitra_islam": {
+      "title": "اسلام کی فطرت پر"
+    },
+    "morning_04_radhitu": {
+      "title": "اللہ کو رب مان کر راضی"
+    },
+    "morning_05_ilm_nafi": {
+      "title": "مفید علم، پاکیزہ رزق اور قبول شدہ عمل"
+    },
+    "morning_06_bika_asbahna": {
+      "title": "تیرے ساتھ ہم نے صبح کی"
+    },
+    "morning_07_la_ilaha_illa_allah": {
+      "title": "اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے"
+    },
+    "morning_08_ya_hayyu_ya_qayyum": {
+      "title": "اے زندہ، اے قائم رکھنے والے"
+    },
+    "morning_09_sayyid_al_istighfar": {
+      "title": "سیّد الاستغفار"
+    },
+    "morning_10_fatir_as_samawat": {
+      "title": "آسمانوں اور زمین کا پیدا کرنے والا"
+    },
+    "morning_11_asbahna_walmulku_lillah": {
+      "title": "ہم نے صبح کی اور بادشاہی اللہ کی ہوگئی"
+    },
+    "morning_12_afw_wa_afiya": {
+      "title": "عفو اور عافیت"
+    },
+    "morning_13_bismillah_la_yadurr": {
+      "title": "اللہ کے نام سے، جس کے نام کے ساتھ کوئی چیز نقصان نہیں دیتی"
+    },
+    "morning_14_subhan_allah_adada_khalqih": {
+      "title": "اللہ پاک ہے اس کی مخلوق کی تعداد کے برابر"
+    },
+    "morning_15_afini_fi_badani": {
+      "title": "مجھے میرے بدن، کان اور آنکھ میں عافیت دے"
+    },
+    "morning_16_hasbiy_allah": {
+      "title": "اللہ مجھے کافی ہے"
+    },
+    "morning_17_ushhiduka": {
+      "title": "میں اس صبح تجھے گواہ بناتا ہوں"
+    },
+    "morning_18_la_ilaha_yuhyi_yumit": {
+      "title": "اللہ کے سوا کوئی معبود نہیں — وہ زندہ کرتا ہے اور موت دیتا ہے"
+    },
+    "morning_19_subhan_allah_wa_bihamdihi": {
+      "title": "اللہ پاک ہے اور اس کی تعریف ہے"
+    },
+    "morning_20_astaghfirullah": {
+      "title": "میں اللہ سے بخشش مانگتا ہوں"
+    },
+    "morning_21_subhan_alhamdu_takbir": {
+      "title": "تسبیح، تحمید، تکبیر، تہلیل"
+    },
+    "evening_01_ayat_kursi": {
+      "title": "آیت الکرسی"
+    },
+    "evening_02_three_quls": {
+      "title": "سورۃ الاخلاص، الفلق، الناس"
+    },
+    "evening_03_fitra_islam": {
+      "title": "اسلام کی فطرت پر (شام)"
+    },
+    "evening_04_radhitu": {
+      "title": "اللہ کو رب مان کر راضی"
+    },
+    "evening_05_bika_amsayna": {
+      "title": "تیرے ساتھ ہم نے شام کی"
+    },
+    "evening_06_la_ilaha_illa_allah": {
+      "title": "اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے"
+    },
+    "evening_07_ya_hayyu_ya_qayyum": {
+      "title": "اے زندہ، اے قائم رکھنے والے"
+    },
+    "evening_08_sayyid_al_istighfar": {
+      "title": "سیّد الاستغفار"
+    },
+    "evening_09_fatir_as_samawat": {
+      "title": "آسمانوں اور زمین کا پیدا کرنے والا"
+    },
+    "evening_10_amsayna_walmulku_lillah": {
+      "title": "ہم نے شام کی اور بادشاہی اللہ کی ہوگئی"
+    },
+    "evening_11_afw_wa_afiya": {
+      "title": "عفو اور عافیت"
+    },
+    "evening_12_bismillah_la_yadurr": {
+      "title": "اللہ کے نام سے، جس کے نام کے ساتھ کوئی چیز نقصان نہیں دیتی"
+    },
+    "evening_13_taamat_protection": {
+      "title": "اللہ کے کامل کلمات کی پناہ"
+    },
+    "evening_14_afini_fi_badani": {
+      "title": "مجھے میرے بدن، کان اور آنکھ میں عافیت دے"
+    },
+    "evening_15_hasbiy_allah": {
+      "title": "اللہ مجھے کافی ہے"
+    },
+    "evening_16_ushhiduka": {
+      "title": "میں اس شام تجھے گواہ بناتا ہوں"
+    },
+    "evening_17_la_ilaha_yuhyi_yumit": {
+      "title": "اللہ کے سوا کوئی معبود نہیں — وہ زندہ کرتا ہے اور موت دیتا ہے"
+    },
+    "evening_18_subhan_allah_wa_bihamdihi": {
+      "title": "اللہ پاک ہے اور اس کی تعریف ہے"
+    },
+    "evening_19_astaghfirullah": {
+      "title": "میں اللہ سے بخشش مانگتا ہوں"
+    },
+    "evening_20_subhan_alhamdu_takbir": {
+      "title": "تسبیح، تحمید، تکبیر، تہلیل"
+    },
+    "afterPrayer_astaghfirullah": {
+      "title": "بخشش طلب کرنا"
+    },
+    "afterPrayer_allahumma_antas_salam": {
+      "title": "اے اللہ، تو سلام ہے"
+    },
+    "afterPrayer_subhanallah_33": {
+      "title": "تسبیح (۳۳ × ۳)"
+    },
+    "afterPrayer_three_quls": {
+      "title": "ہر فرض نماز کے بعد سورۃ الاخلاص، الفلق، الناس"
+    },
+    "afterPrayer_ayat_kursi": {
+      "title": "ہر فرض نماز کے بعد آیت الکرسی"
+    },
+    "food_before": {
+      "title": "کھانے سے پہلے — بسم اللہ"
+    },
+    "food_after_min_ghayri_hawlin": {
+      "title": "کھانے کے بعد — میری طاقت و قوت کے بغیر"
+    },
+    "food_after_atamana_wa_saqana": {
+      "title": "کھانے کے بعد — جس نے کھلایا، پلایا اور ہمیں مسلمان بنایا"
+    },
+    "food_after_atama_wa_saqa_makhraj": {
+      "title": "کھانے کے بعد — جس نے کھلایا، پلایا اور باہر نکلنے کا راستہ بنایا"
+    },
+    "food_after_atamana_wa_kafana": {
+      "title": "کھانے کے بعد — کھلایا، پلایا، کافی کیا اور پناہ دی"
+    },
+    "food_after_kathiran_tayyiban": {
+      "title": "کھانے کے بعد — کثرت سے، پاکیزہ اور مبارک تعریف"
+    },
+    "distress_lahawla": {
+      "title": "اللہ کے سوا کوئی طاقت اور قوت نہیں"
+    },
+    "distress_innallaha_maana": {
+      "title": "خوف کے وقت"
+    },
+    "distress_yaa_hayyu": {
+      "title": "حیّ و قیّوم کو پکارنا"
+    },
+    "distress_ayatkursi_intro": {
+      "title": "آیت الکرسی (نیند کی حفاظت)"
+    },
+    "distress_dua_al_faraj": {
+      "title": "دعاءِ فرج"
+    },
+    "distress_dua_al_karb": {
+      "title": "کرب کے وقت کی دعا"
+    },
+    "sleep_three_quls": {
+      "title": "معوّذات — الاخلاص، الفلق، الناس"
+    },
+    "sleep_ayat_kursi": {
+      "title": "سونے سے پہلے آیت الکرسی"
+    },
+    "sleep_aslamtu_wajhi": {
+      "title": "میں نے اپنا چہرہ تجھے سپرد کیا"
+    },
+    "sleep_bismika_ahya": {
+      "title": "اے اللہ، تیرے نام پر میں جیتا اور مرتا ہوں"
+    },
+    "sleep_alhamdu_ahyana": {
+      "title": "بیدار ہونے پر"
+    },
+    "sleep_khalaqta_nafsi": {
+      "title": "تو نے میری جان بنائی — اسے حفظ کر یا بخش دے"
+    },
+    "sleep_rabba_samawat": {
+      "title": "آسمانوں، زمین اور عرشِ عظیم کا رب"
+    },
+    "sleep_dust_off_bed": {
+      "title": "بستر جھاڑنا اور دائیں کروٹ لیٹنا"
+    },
+    "sleep_takbir_tasbih_tahmid": {
+      "title": "تکبیر ۳۴، تسبیح ۳۳، تحمید ۳۳ (خادم سے بہتر)"
+    },
+    "sleep_taamat_protection": {
+      "title": "اللہ کے کامل کلمات ہر شر سے"
+    },
+    "sleep_taamat_for_children": {
+      "title": "بچوں کی پناہ — ہر شیطان اور موذی مخلوق سے"
+    },
+    "sleep_taamat_long": {
+      "title": "گھبراہٹ یا برے خواب سے بیدار ہونے پر"
+    },
+    "sleep_wajhik_alkarim": {
+      "title": "تیرے کریم چہرے اور تیرے کامل کلمات کا واسطہ"
+    },
+    "sleep_anta_rabbi": {
+      "title": "تو میرا رب ہے — کوئی مصیبت مجھ تک نہیں پہنچے گی"
+    },
+    "travel_subhanalladhi": {
+      "title": "سواری پر سوار ہوتے وقت"
+    },
+    "travel_journey": {
+      "title": "سفر کے لیے — مکمل متن"
+    },
+    "travel_returning": {
+      "title": "گھر واپسی پر"
+    },
+    "mosque_entering": {
+      "title": "مسجد میں داخل ہوتے وقت"
+    },
+    "mosque_leaving": {
+      "title": "مسجد سے نکلتے وقت"
+    },
+    "mosque_adhan_response": {
+      "title": "اذان سننے کے بعد"
+    },
+    "gratitude_blessing": {
+      "title": "نعمت پانے پر"
+    },
+    "gratitude_kindness": {
+      "title": "جب کوئی آپ سے بھلائی کرے"
+    },
+    "forgiveness_sayyidul": {
+      "title": "سیّد الاستغفار"
+    },
+    "forgiveness_rabbi_ighfir": {
+      "title": "اللہ کی طرف توبہ"
+    },
+    "distress_grief": {
+      "title": "غم اور پریشانی سے نجات کے لیے"
+    },
+    "distress_difficulty": {
+      "title": "مشکل کے وقت"
+    },
+    "distress_rain": {
+      "title": "بارش برسنے پر"
+    },
+    "weather_during_rain": {
+      "title": "بارش کے شروع ہونے پر"
+    },
+    "weather_after_rain": {
+      "title": "بارش کے بعد"
+    },
+    "weather_thunder": {
+      "title": "گرج سننے پر"
+    },
+    "weather_strong_wind": {
+      "title": "تیز ہوا چلنے پر"
+    },
+    "family_for_offspring": {
+      "title": "نیک اولاد کے لیے"
+    },
+    "family_for_parents": {
+      "title": "والدین کے لیے"
+    },
+    "family_blessing_marriage": {
+      "title": "شادی کی مبارک باد"
+    },
+    "family_for_child": {
+      "title": "بچے کے لیے پناہ مانگنا"
+    },
+    "sickness_visit": {
+      "title": "مریض کی عیادت"
+    },
+    "sickness_prayer_for_sick": {
+      "title": "مریض کے لیے دعا"
+    },
+    "sickness_when_in_pain": {
+      "title": "جسم میں درد محسوس ہونے پر"
+    },
+    "funeral_inna_lillah": {
+      "title": "وفات کی خبر سننے پر"
+    },
+    "funeral_consolation": {
+      "title": "اہلِ میت کی تعزیت"
+    },
+    "funeral_graveyard_visit": {
+      "title": "قبرستان میں داخل ہوتے وقت"
+    },
+    "eid_takbir": {
+      "title": "تکبیراتِ عید"
+    },
+    "eid_taqabbal": {
+      "title": "عید کی مبارک باد"
+    },
+    "beforeQuran_taawwudh": {
+      "title": "تلاوت سے پہلے تعوذ"
+    },
+    "beforeQuran_basmalah": {
+      "title": "ہر کام کے آغاز میں بسم اللہ"
+    },
+    "knowledge_seeking": {
+      "title": "علم میں اضافے کی دعا"
+    },
+    "knowledge_understanding": {
+      "title": "فہم کی دعا"
+    },
+    "knowledge_majlis_kaffarah": {
+      "title": "کفّارۃ المجلس"
+    },
+    "protection_morning_evening": {
+      "title": "سیّد الاستغفار مختصر (×3 صبح و شام)"
+    },
+    "protection_evil_eye": {
+      "title": "نظر بد سے بچاؤ"
+    },
+    "protection_entering_home": {
+      "title": "گھر میں داخل ہوتے وقت"
+    },
+    "protection_leaving_home": {
+      "title": "گھر سے نکلتے وقت"
+    },
+    "protection_market": {
+      "title": "بازار میں داخل ہوتے وقت"
+    },
+    "guidance_istikharah": {
+      "title": "صلاۃ الاستخارہ — مکمل متن"
+    },
+    "guidance_steadfastness": {
+      "title": "دین پر ثابت قدمی"
+    },
+    "guidance_rabbana_atina": {
+      "title": "دنیا و آخرت کی بھلائی کی دعا"
+    },
+    "guidance_against_being_misled": {
+      "title": "گمراہی سے بچاؤ کی دعا"
+    },
+    "pronunciation": "تلفظ",
+    "tapToCount": "گننے کے لیے دبائیں",
+    "shareDua": "{{title}} شیئر کریں",
+    "lavatory_01_entering": {
+      "title": "بیت الخلاء میں داخل ہوتے وقت"
+    },
+    "lavatory_02_leaving": {
+      "title": "بیت الخلاء سے نکلتے وقت"
+    },
+    "garment_01_dressing": {
+      "title": "کپڑا پہنتے وقت"
+    },
+    "garment_02_new": {
+      "title": "نیا کپڑا"
+    },
+    "garment_03_for_someone_new": {
+      "title": "نیا لباس پہننے والے کے لیے"
+    },
+    "garment_04_undressing": {
+      "title": "کپڑا اتارتے وقت"
+    },
+    "section": {
+      "day": "دن بھر",
+      "worship": "عبادت",
+      "out": "سفر و باہر",
+      "hardship": "مشکل وقت میں",
+      "asking": "دعا و طلب"
+    },
+    "countHint": "{{count}} دعائیں"
+  },
+  "quran": {
+    "meccan": "مکی",
+    "medinan": "مدنی",
+    "ayahCount": "{{count}} آیات",
+    "notFound": "سورت نہیں ملی۔",
+    "comingSoon": "اس سورت کا مکمل متن بعد میں آنے والے ڈیٹا اپ ڈیٹ میں دستیاب ہوگا۔",
+    "pageLabel": "صفحہ {{page}}",
+    "switchToTranslation": "تفسیر منظر پر جائیں",
+    "switchToMushaf": "مصحف منظر پر جائیں",
+    "viewToggleTranslation": "ترجمہ",
+    "viewToggleMushaf": "مصحف",
+    "enterFullscreen": "فل اسکرین",
+    "exitFullscreen": "فل اسکرین سے باہر",
+    "mushafDownloadTitle": "مصحف ڈاؤن لوڈ کریں",
+    "mushafDownloadBody": "مدینہ مصحف تقریباً {{size}} ایم بی کا ہے۔ ایپ میں شامل نہیں ہے — ایک بار ڈاؤن لوڈ کریں اور صفحات آپ کے آلے پر محفوظ رہیں گے۔",
+    "mushafDownloadReadCta": "ڈاؤن لوڈ کریں اور پڑھنا شروع کریں (~{{size}} MB)",
+    "mushafDownloadReadHint": "صفحات آتے ہی دکھائی دیتے ہیں؛ باقی پس منظر میں ڈاؤن لوڈ ہوتا ہے۔",
+    "mushafDownloadStrip": "مصحف ڈاؤن لوڈ ہو رہا ہے · {{pct}}٪",
+    "juzLabel": "پارہ {{juz}}",
+    "nightMode": "نائٹ موڈ",
+    "jumpToPage": "صفحے پر جائیں",
+    "pageShort": "ص {{page}}",
+    "go": "جائیں",
+    "mushafDownloadRetryBody": "{{count}} صفحات ڈاؤن لوڈ نہیں ہو سکے۔ باقی صفحات حاصل کرنے کے لیے دوبارہ کوشش کریں — جو کچھ پہلے ڈاؤن لوڈ ہو چکا ہے وہ محفوظ رہے گا۔",
+    "mushafDownloadRetryCta": "باقی صفحات دوبارہ آزمائیں",
+    "star": "اس آیت پر ستارہ لگائیں",
+    "unstar": "ستارہ ہٹائیں",
+    "bookmark": "بک مارک",
+    "bookmarkColor": "بک مارک کا رنگ {{color}}",
+    "playFromHere": "یہاں سے چلائیں",
+    "repeatAyah": "اس آیت کو دہرائیں",
+    "buffering": "بفرنگ…",
+    "previousAyah": "پچھلی آیت",
+    "nextAyah": "اگلی آیت",
+    "pause": "روکیں",
+    "play": "چلائیں",
+    "stopPlayback": "پلے بیک بند کریں",
+    "playbackSettings": "تلاوت",
+    "reciter": "قاری",
+    "downloadSurahAudio": "{{surah}} کی آڈیو ڈاؤن لوڈ کریں",
+    "surahAudioDownloaded": "آف لائن استعمال کے لیے آڈیو ڈاؤن لوڈ ہو گئی",
+    "downloadingAudio": "ڈاؤن لوڈ ہو رہا ہے… {{done}}/{{total}}",
+    "downloadSurahAudioShort": "آف لائن سننے کے لیے یہ سورت ڈاؤن لوڈ کریں",
+    "speed": "رفتار",
+    "memorization": "حفظ",
+    "repeatEachAyah": "ہر آیت دہرائیں",
+    "repeatRange": "منتخب حصہ دہرائیں",
+    "pauseBetween": "تکرار کے درمیان وقفہ",
+    "none": "کوئی نہیں",
+    "hideForReview": "دہراتے وقت چھپائیں",
+    "hideArabic": "عربی",
+    "hideTranslation": "ترجمہ",
+    "playRangeTitle": "{{surah}} کا ایک حصہ چلائیں",
+    "fromAyah": "آیت سے",
+    "toAyah": "آیت تک",
+    "playRange": "حصہ چلائیں",
+    "ayahA11y": "آیت {{ayah}} — اختیارات کے لیے ٹیپ کریں",
+    "tapToReveal": "دکھانے کے لیے ٹیپ کریں",
+    "hideModeActive": "حفظ موڈ: {{what}} پوشیدہ — دکھانے کے لیے آیت پر ٹیپ کریں",
+    "loading": "لوڈ ہو رہا ہے…",
+    "continueReading": "پڑھنا جاری رکھیں",
+    "continueKhatmah": "ختم جاری رکھیں",
+    "readingPin": "یہاں سے پڑھنا جاری رکھیں",
+    "readingPinned": "پڑھنا جاری رکھنا یہاں سے شروع ہوتا ہے",
+    "readingMarkerLabel": "پڑھائی",
+    "khatmahMarkerLabel": "ختم",
+    "khatmah": "ختم قرآن",
+    "khatmahDaysLeft": "{{count}} دن باقی",
+    "khatmahDaysLeft_one": "{{count}} دن باقی",
+    "khatmahProgress": "{{read}} / {{total}} صفحات · آج: {{today}}",
+    "khatmahBehind": "{{count}} کی تلافی باقی",
+    "startKhatmah": "ختم قرآن شروع کریں",
+    "khatmahDays": "{{count}} دن",
+    "verseOfDay": "آج کی آیت",
+    "searchPlaceholder": "سورت، آیت، ترجمہ تلاش کریں…",
+    "tabSurah": "سورتیں",
+    "tabJuz": "پارے",
+    "tabBookmarks": "بک مارکس",
+    "searchResults": "{{count}} آیات ملیں",
+    "noBookmarks": "ابھی کوئی بک مارک نہیں — پڑھتے ہوئے کسی بھی آیت پر ٹیپ کر کے بک مارک یا ستارہ لگائیں۔",
+    "starred": "ستارہ شدہ",
+    "shareAsImage": "بطور تصویر شیئر کریں",
+    "chooseReciter": "قاری منتخب کریں",
+    "searchReciters": "قاری تلاش کریں…",
+    "wordHighlightBadge": "الفاظ کی نمایاں کاری",
+    "changeReciter": "تبدیل کریں",
+    "deleteBookmark": "بک مارک حذف کریں",
+    "removeStar": "ستارہ ہٹائیں",
+    "nightShort": "رات",
+    "sepiaShort": "سیپیا",
+    "lightShort": "روشن",
+    "switchToNight": "رات کے صفحے پر جائیں",
+    "switchToSepia": "سیپیا صفحے پر جائیں",
+    "riwayahHafs": "حفص",
+    "riwayahWarsh": "ورش",
+    "switchRiwayah": "{{name}} کی روایت پر جائیں",
+    "riwayahReflowTitle": "صفحات ایک جیسے، سطریں شاید نہیں",
+    "riwayahReflowBody": "یہ مصحف ہر صفحہ بالکل وہیں شروع اور ختم کرتا ہے جہاں مطبوعہ نسخہ کرتا ہے، لیکن اس کی سطریں چھپائی سے نہیں لی جاتیں بلکہ آپ کا آلہ ترتیب دیتا ہے، اس لیے وہ ہمیشہ انہی مقامات پر نہیں ٹوٹیں گی۔",
+    "riwayahNeedsHttps": "لنک کا آغاز https:// سے ہونا چاہیے",
+    "riwayahServerSaidNo": "سرور نے {{status}} جواب دیا۔",
+    "riwayahTooLarge": "یہ فائل مصحف کے ڈیٹا سے کہیں بڑی ہے۔ لنک دیکھیں۔",
+    "riwayahUnreachable": "اس لنک تک رسائی نہ ہو سکی۔ پتہ اور اپنا کنکشن دیکھیں۔",
+    "riwayahGotAPage": "اس لنک سے ویب صفحہ آیا، ڈیٹا فائل نہیں۔ JSON ڈاؤن لوڈ کا لنک استعمال کریں۔",
+    "riwayahNotJson": "یہ ڈیٹا فائل نہیں ہے۔",
+    "riwayahNotAQuran": "یہ فائل مکمل قرآن نہیں، اس لیے نصب نہیں کی گئی۔",
+    "riwayahCouldNotSave": "اسے اس آلے پر محفوظ نہ کیا جا سکا۔",
+    "switchToLight": "روشن صفحے پر جائیں",
+    "ayahOfDayTitle": "آج کی آیت",
+    "ayahOfDayChannelName": "آج کی آیت",
+    "tafsir": "تفسیر",
+    "showTafsir": "تفسیر دکھائیں",
+    "tafsirUnavailable": "تفسیر دستیاب نہیں — ڈاؤن لوڈ کے لیے ایک بار انٹرنیٹ سے جڑیں۔",
+    "khatmahPin": "میری ختم کی پوزیشن مقرر کریں",
+    "khatmahPinned": "ختم کی پوزیشن — ہٹانے کے لیے دبائیں",
+    "khatmahUnpin": "ختم کی پوزیشن ہٹائیں",
+    "khatmahContinue": "جاری رکھیں",
+    "khatmahReset": "ری سیٹ",
+    "khatmahResetTitle": "ختم ری سیٹ کریں",
+    "khatmahResetToday": "آج کی تلاوت ری سیٹ کریں",
+    "khatmahResetTodayHelp": "صرف آج درج شدہ صفحات واپس کرتا ہے۔",
+    "khatmahResetAll": "ختم دوبارہ شروع کریں",
+    "khatmahResetAllHelp": "نئے شیڈول کے ساتھ منصوبے کے آغاز پر واپس۔",
+    "khatmahDelete": "ختم حذف کریں",
+    "khatmahDeleteHelp": "منصوبہ مکمل طور پر ہٹا دیتا ہے۔",
+    "khatmahReminderChannelName": "ختم یاد دہانی",
+    "khatmahReminderTitle": "ختم",
+    "khatmahReminderBody": "آج کا حصہ: {{pages}} صفحات — صفحہ {{page}} سے جاری رکھیں۔",
+    "audioButton": "آڈیو",
+    "khatmahCustom": "حسبِ منشا…",
+    "khatmahLengthTitle": "ختم کی مدت (دن)",
+    "khatmahSetUpTitle": "ختم شروع کریں",
+    "khatmahFromPageTitle": "پہلے سے پڑھ رہے ہیں؟ اس صفحے سے شروع کریں",
+    "khatmahFromPageHint": "شروع سے",
+    "khatmahStartCta": "شروع کریں",
+    "showMore": "مزید دکھائیں",
+    "showLess": "کم دکھائیں",
+    "tafsirEditionHelp": "ہر آیت کے نیچے دکھایا جانے والا تفسیر۔ قرآن صفحہ پر کسی بھی آیت سے بھی تبدیل کیا جا سکتا ہے۔",
+    "nextPage": "اگلا صفحہ",
+    "prevPage": "پچھلا صفحہ",
+    "companionTitle": "ہر آیت کے نیچے",
+    "companionHelp": "جہاں بھی آیت دکھائی جاتی ہے وہاں لاگو — ریڈر، آج کی آیت اور روزانہ آیت کی اطلاع۔ قرآن صفحے سے بھی تبدیل کیا جا سکتا ہے۔",
+    "companionActive": "فعال",
+    "mushafReplaceOldBody": "پچھلے ورژن کا مصحف کا ایک پرانا نسخہ ({{size}} ایم بی) اب بھی آپ کے آلے پر موجود ہے۔ اسے پہلے ہٹا دیا جائے گا — آپ کی محفوظ کردہ کوئی چیز متاثر نہیں ہوگی۔",
+    "shareAsText": "متن شیئر کریں",
+    "shareChoiceA11y": "شیئر — متن یا تصویری کارڈ منتخب کریں",
+    "recitation": "تلاوت",
+    "downloadSurahAudioSized": "یہ سورت ڈاؤن لوڈ کریں · {{size}}",
+    "tapToPick": "منتخب کریں",
+    "tabMarks": "نشانات",
+    "searchSurahOrPage": "سورت یا صفحہ تلاش کریں",
+    "reading": "زیرِ مطالعہ",
+    "pageScrubber": "صفحہ پر جائیں",
+    "goCta": "جائیں",
+    "downloadChannelName": "قرآن ڈاؤن لوڈ",
+    "downloadChannelDesc": "قرآن ڈاؤن لوڈ ہونے کی پیش رفت۔",
+    "downloadingFonts": "قرآن کا متن ڈاؤن لوڈ ہو رہا ہے",
+    "downloadingReciter": "{{name}} ڈاؤن لوڈ ہو رہا ہے",
+    "downloadProgressAyahs": "{{total}} میں سے {{done}} آیات",
+    "audioDownloadDoneTitle": "{{name}} تیار ہے",
+    "audioDownloadDoneBody": "اس آواز میں پورا قرآن اس آلے پر موجود ہے۔ اب یہ بغیر انٹرنیٹ کے چلتا ہے۔",
+    "audioDownloadIncompleteTitle": "تلاوت مکمل ڈاؤن لوڈ نہیں ہوئی",
+    "audioDownloadIncompleteBody": "{{count}} آیات اب بھی باقی ہیں۔ دوبارہ شروع کریں، یہ وہیں سے جاری رہے گا۔",
+    "listenTitle": "تلاوت",
+    "tilawahDoorSub": "قرآن سنیں",
+    "tilawahBlurb": "قرآن کی تلاوت — اسکرین بند ہونے پر بھی چلتی رہتی ہے، اور ڈاؤن لوڈ کے بعد بغیر انٹرنیٹ کے بھی چلتی ہے۔",
+    "tilawahContinue": "جہاں سے پڑھ رہے تھے وہیں سے",
+    "tilawahBegin": "شروع کریں",
+    "tilawahAyahOf": "{{total}} میں سے آیت {{done}}",
+    "tilawahShowPage": "صفحہ دکھائیں",
+    "backToTop": "اوپر واپس جائیں",
+    "tilawahKeepAwake": "اسکرین آن رکھیں",
+    "tilawahSurahSeek": "سورت کے اندر آگے پیچھے",
+    "tilawahShuffle": "سورتیں بے ترتیب چلائیں",
+    "tilawahPrevSurah": "پچھلی سورت",
+    "tilawahNextSurah": "اگلی سورت",
+    "tilawahAyahWord": "آیت",
+    "openInReader": "ریڈر میں کھولیں",
+    "listenSurahMeta": "{{count}} آیات",
+    "listenNowPlaying": "ابھی چل رہا ہے",
+    "listenContinuous": "مسلسل چل رہا ہے",
+    "listenIdle": "کچھ نہیں چل رہا",
+    "listenReciter": "قاری",
+    "listenSeek": "آیت کے اندر آگے پیچھے",
+    "listenPrevious": "پچھلی آیت",
+    "listenNext": "اگلی آیت",
+    "listenSpeed": "رفتار",
+    "listenSleep": "سلیپ ٹائمر",
+    "listenSleepOff": "بند",
+    "listenSleepSurah": "سورت کے آخر پر",
+    "listenSleepMinutes": "{{count}} منٹ",
+    "listenSleepArmed": "تقریباً {{count}} منٹ بعد رک جائے گا",
+    "listenPickSurah": "یہاں سے شروع کریں",
+    "listenDownloadTitle": "{{name}} کو اس آلے پر رکھیں",
+    "listenDownloadBody": "اس آواز میں پورا قرآن، تقریباً {{size}}۔ ریڈر بھی یہی فائلیں چلاتا ہے، اس لیے وہاں بھی کام کرے گا۔",
+    "listenDownloadComplete": "مکمل · {{size}}",
+    "listenDownloadPartial": "{{total}} میں سے {{done}} آیات یہاں موجود · {{size}}",
+    "listenDownloadStart": "ڈاؤن لوڈ",
+    "listenDownloadResume": "ڈاؤن لوڈ جاری رکھیں",
+    "listenDownloadBusy": "کچھ اور ڈاؤن لوڈ ہو رہا ہے۔ ایک وقت میں ایک، تاکہ کوئی سست نہ پڑے۔",
+    "downloadProgress": "{{total}} میں سے {{done}} صفحات",
+    "downloadDoneTitle": "قرآن تیار ہے",
+    "downloadDoneBody": "تمام صفحات اس آلے پر موجود ہیں۔ اب انٹرنیٹ کے بغیر پڑھا جا سکتا ہے۔",
+    "downloadIncompleteTitle": "ڈاؤن لوڈ مکمل نہیں ہوا",
+    "downloadIncompleteBody": "{{count}} صفحات اب بھی باقی ہیں۔ جہاں رکا تھا وہیں سے جاری رکھنے کے لیے قرآن کھولیں۔",
+    "finishDay": "دن {{day}} کی تلاوت مکمل کریں ({{when}})",
+    "finishDayShort": "دن {{day}} مکمل کریں ({{when}})",
+    "khatmahPageProgress": "{{pages}} صفحات باقی · دن {{day}} از {{days}}",
+    "khatmahDayDone": "✓ آج کی تلاوت مکمل",
+    "khatmahPagesLeftToday": "آج {{count}} صفحات باقی",
+    "khatmahPagesLeftToday_one": "آج {{count}} صفحات باقی",
+    "khatmahExtraPages": "+{{count}} صفحات اضافی",
+    "khatmahExtraPages_one": "+{{count}} صفحات اضافی",
+    "khatmahMarkDone": "دن {{day}} کی تلاوت مکمل نشان زد کریں",
+    "khatmahMarkNext": "✓ دن {{day}} ({{when}}) بھی مکمل کریں",
+    "khatmahMarkToday": "✓ آج کی تلاوت مکمل",
+    "khatmahPrevDay": "‹ پچھلا دن",
+    "riwayahQalun": "قالون",
+    "riwayahShubah": "شعبہ",
+    "riwayahPickerTitle": "روایت",
+    "riwayahPickerOpen": "روایت: {{name}}. تبدیل کرنے کے لیے ٹیپ کریں",
+    "riwayahNotOnDevice": "{{name}} — ابھی اس ڈیوائس پر موجود نہیں",
+    "riwayahAddIt": "شامل کرنے کے لیے ٹیپ کریں",
+    "riwayahDefault": "(ڈیفالٹ)",
+    "dueToday": "آج",
+    "dueTomorrow": "کل",
+    "scrubHint": "باریک کنٹرول کے لیے اوپر کھینچیں",
+    "scrubHalf": "آدھی رفتار",
+    "scrubQuarter": "چوتھائی رفتار",
+    "scrubFine": "باریک کنٹرول",
+    "translationUnavailable": "اس آیت کا کوئی ترجمہ دستیاب نہیں۔",
+    "oftenRead": "اکثر پڑھی جانے والی",
+    "listenDeleteAudio": "{{name}} کو اس ڈیوائس سے حذف کریں",
+    "listenDownloadReciter": "{{name}} ڈاؤن لوڈ کریں، تقریباً {{size}}",
+    "listenDownloadRunning": "ڈاؤن لوڈ ہو رہا ہے · {{total}} میں سے {{done}}",
+    "shareTafsir": "یہ تفسیر شیئر کریں ({{edition}})",
+    "surahAudioPartial": "{{total}} میں سے {{have}} آیات · باقی ڈاؤن لوڈ کرنے کے لیے دبائیں",
+    "deleteSurahAudio": "اس سورت کی آڈیو حذف کریں",
+    "deleteSurahAudioFor": "{{surah}} کی ڈاؤن لوڈ شدہ آڈیو حذف کریں",
+    "audioGap": "{{surah}} {{ayah}} ڈاؤن لوڈ نہیں ہے — انٹرنیٹ سے جُڑیں، یا آف لائن سننے کے لیے یہ سورت ڈاؤن لوڈ کریں۔",
+    "khatmahMore": "ختم کے مزید اختیارات",
+    "khatmahPrevDayHelp": "آج کا نشان ہٹائیں اور پچھلے دن کے حصے پر واپس جائیں۔",
+    "lastReadRow": "آخری پڑھائی · {{surah}}، صفحہ {{page}}",
+    "autoShort": "خودکار",
+    "switchToAuto": "ایپ کی تھیم کی پیروی کریں",
+    "downloadingSurah": "{{surah}} ڈاؤن لوڈ ہو رہی ہے · {{name}}",
+    "surahDownloadDoneTitle": "{{surah}} تیار ہے",
+    "surahDownloadDoneBody": "{{surah}} کی {{name}} کی تلاوت اس ڈیوائس پر موجود ہے۔ اب یہ بغیر کنکشن کے چلتی ہے۔",
+    "reciterDownloadStrip": "{{name}} ڈاؤن لوڈ ہو رہا ہے · {{pct}}%",
+    "surahDownloadStrip": "{{surah}} ڈاؤن لوڈ ہو رہی ہے · {{pct}}%"
+  },
+  "mosques": {
+    "searching": "قریبی مساجد تلاش کیے جا رہے ہیں…",
+    "noneFound": "قریب کوئی مسجد نہیں ملی۔ تلاش کا دائرہ بڑھائیں۔",
+    "unnamedMosque": "مسجد",
+    "needLocation": "پہلے مقام منتخب کریں تاکہ ہم قریب تلاش کر سکیں۔",
+    "error": "مسجد ڈیٹابیس تک رسائی نہ ہو سکی۔ دوبارہ کوشش کریں۔",
+    "title": "قریبی مسجد تلاش کریں",
+    "bodyWithLocation": "ہم آپ کے مقام پر \"mosque\" کی تلاش کے ساتھ آپ کا نقشہ ایپ کھولیں گے۔ اگر دستیاب نہ ہو تو براؤزر میں گوگل میپس کھولیں گے۔",
+    "bodyNoLocation": "پہلے ایک مقام منتخب کریں (سیٹنگز ← مقام)۔ پھر ہم اس کے ارد گرد \"mosque\" تلاش کے ساتھ نقشہ ایپ کھولیں گے۔ اگر دستیاب نہ ہو تو براؤزر میں گوگل میپس کھولیں گے۔",
+    "openInMapsApp": "نقشے کھولیں اور \"mosque\" تلاش کریں"
+  },
+  "journal": {
+    "todayLabel": "آج",
+    "streakDays": "مسلسل دن",
+    "onTimeRate": "بروقت",
+    "totalLogged": "کل درج کردہ",
+    "status": {
+      "on-time": "بروقت",
+      "late": "دیر سے",
+      "missed": "چھوٹ گئی",
+      "qadha": "قضا"
+    },
+    "statusShort": {
+      "on-time": "بروقت",
+      "late": "دیر سے",
+      "missed": "چھوٹ گئی",
+      "qadha": "قضا"
+    },
+    "encourageEmpty": "اپنی ڈائری شروع کرنے کے لیے آج کی پہلی نماز نشان زد کریں۔",
+    "encourageActive": "ہر درج شدہ نماز ایک قدم آگے ہے۔",
+    "encourageStreak": "ماشاء اللہ، مسلسل {{count}} دن بروقت۔ جاری رکھیں۔",
+    "notificationToggleTitle": "اطلاع سے درج کریں",
+    "notificationToggleOn": "نماز کے وقت کی اطلاع پر \"نماز درج کریں\" پر ٹیپ کرکے براہ راست یہاں آئیں۔",
+    "notificationToggleOff": "ہر نماز-وقت کی اطلاع میں \"نماز درج کریں\" ایکشن شامل کریں۔",
+    "notificationToggleA11y": "نماز کی اطلاعات میں ڈائری ایکشن فعال کریں",
+    "notePlaceholder": "نجی نوٹ (صرف اس آلے پر)",
+    "saveNote": "نوٹ محفوظ کریں",
+    "logActionTitle": "نماز درج کریں",
+    "logSunnahActionTitle": "سنت کے ساتھ درج کریں",
+    "loadFailedTitle": "ریکارڈ لوڈ نہیں ہو سکا",
+    "loadFailedBody": "آپ کا ڈیٹا آلے پر محفوظ ہے مگر ابھی پڑھا نہیں جا سکا۔ ریکارڈ دوبارہ کھولیں۔",
+    "saveFailedTitle": "محفوظ نہیں ہو سکا",
+    "saveFailedBody": "دوبارہ کوشش کریں۔",
+    "noteLabel": "ذاتی نوٹ (نجی، خفیہ کردہ)",
+    "notYet": "ابھی نہیں — اس کا وقت نہیں آیا",
+    "quickLogMark": "{{prayer}} کو ادا شدہ نشان زد کریں",
+    "quickLogLogged": "{{prayer}} درج: {{status}}۔ واپس لینے کے لیے دبائیں",
+    "quickLogNotYet": "{{prayer}} کا وقت ابھی نہیں آیا",
+    "passedTitle": "{{prayer}} درج کریں · {{day}}",
+    "passedBody": "اس کا وقت گزر چکا ہے۔ یہ کیسے پڑھی گئی؟",
+    "passedFirstBody": "اس کا پہلا وقت گزر چکا ہے اور دوسرا ابھی باقی ہے۔ کیا یہ پہلے وقت میں پڑھی گئی، یا اس کے بعد؟"
+  },
+  "events": {
+    "islamicNewYear": "اسلامی نیا سال",
+    "ashura": "یومِ عاشوراء",
+    "mawlid": "مولد النبی",
+    "isra": "اسراء و معراج",
+    "midShaban": "نصف شعبان",
+    "ramadanBegins": "رمضان کا آغاز",
+    "laylatAlQadr": "لیلۃ القدر (متعارف)",
+    "eidAlFitr": "عید الفطر",
+    "arafah": "یومِ عرفہ",
+    "eidAlAdha": "عید الاضحیٰ",
+    "whiteDays": "ایامِ بیض",
+    "sixOfShawwal": "شوال کے چھ روزے"
+  },
+  "ramadan": {
+    "title": "رمضان",
+    "suhoor": "سحری",
+    "iftar": "افطار",
+    "suhoorIn": "سحری {{time}} میں ختم",
+    "iftarIn": "افطار {{time}} میں"
+  },
+  "onboarding": {
+    "skip": "ابھی رہنے دیں",
+    "next": "آگے",
+    "done": "ہو گیا",
+    "stepLabel": "مرحلہ {{current}} از {{total}}",
+    "welcome": {
+      "title": "خوش آمدید",
+      "body": "اوقاتِ نماز کی ایک پُرسکون اور نجی ایپ۔ نہ کوئی تجزیہ کاری، نہ ٹریکر، بس پانچوں نمازوں کی خاموش یاد دہانی۔",
+      "salam": "آپ پر سلامتی ہو، اللہ کی رحمت اور اس کی برکتیں۔"
+    },
+    "location": {
+      "title": "آپ کا مقام",
+      "body": "درست اوقاتِ نماز نکالنے کے لیے ہم آپ کا تخمینی مقام استعمال کرتے ہیں۔ کوآرڈینیٹس اسی آلے پر خفیہ حالت میں رہتے ہیں اور اسے کبھی نہیں چھوڑتے۔",
+      "cta": "میرا مقام استعمال کریں"
+    },
+    "notifications": {
+      "title": "نماز کی اطلاعات",
+      "body": "ہم ہر نماز کے وقت خاموشی سے آپ کو اطلاع دے سکتے ہیں۔ آپ آواز چن سکتے ہیں، یاد دہانی مقرر کر سکتے ہیں، یا اسے کبھی بھی بند کر سکتے ہیں۔",
+      "cta": "اطلاعات چالو کریں"
+    },
+    "exactAlarms": {
+      "title": "عین وقت پر اطلاعات",
+      "body": "نئے Android میں نماز کی اطلاعات کو ایک اضافی اجازت درکار ہوتی ہے، تاکہ وہ عین وقت پر آئیں، چند منٹ دیر سے نہیں۔",
+      "cta": "عین وقت کی اطلاعات کی اجازت دیں"
+    },
+    "salamA11y": "السلام علیکم ورحمۃ اللہ تعالیٰ وبرکاتہ"
+  },
+  "backup": {
+    "exportSection": "برآمد",
+    "exportHelp": "اپنی ترتیبات، محفوظ مقامات، نماز کا روزنامچہ اور روزوں کا ریکارڈ ایک JSON فائل میں محفوظ کریں۔ بحالی کے لیے بعد میں اسے کھول لیں۔",
+    "exportCta": "بیک اپ برآمد کریں",
+    "shareTitle": "محراب کا بیک اپ",
+    "exportFailedTitle": "برآمد نہ ہو سکا",
+    "restoreSection": "بحالی",
+    "restoreHelp": "نیچے بیک اپ کا JSON چسپاں کریں اور جھلک دیکھنے کے لیے بحالی پر ٹیپ کریں۔ لاگو کرنے سے پہلے ایپ تصدیق کر لے گی۔",
+    "restorePastePlaceholder": "بیک اپ کا JSON یہاں چسپاں کریں…",
+    "restoreCta": "بحالی کی جھلک",
+    "restorePreviewTitle": "بیک اپ مل گیا",
+    "restorePreviewBody": "{{settings}} ترتیبات، {{presets}} محفوظ مقامات، {{journal}} روزنامچہ اندراجات، {{fasting}} روزوں کے دن۔ یہ اگلے مرحلے میں لاگو ہوگا۔",
+    "restoreFailedTitle": "بیک اپ پڑھا نہ جا سکا",
+    "notAnEnvelope": "یہ فائل محراب کا بیک اپ نہیں لگتی۔",
+    "privacyNote": "بیک اپ اُس وقت تک آپ کے آلے پر ہی رہتے ہیں جب تک آپ خود انہیں شریک نہ کریں۔ آنے والی کسی اپڈیٹ میں کوآرڈینیٹس اور روزنامچہ اندراجات کو پاس ورڈ سے خفیہ کیا جا سکے گا، تب تک اپنی بیک اپ فائل اپنے پاس ہی رکھیں۔"
+  },
+  "fasting": {
+    "todayLabel": "آج",
+    "ramadanDayLabel": "رمضان · دن {{day}}",
+    "statusKept": "روزہ مکمل — بارک اللہ فیک۔",
+    "statusRecommended": "یہ تاریخ ایک سنت نفلی روزے کے ساتھ آتی ہے۔",
+    "statusOptional": "آج کے لیے کوئی روزہ درج نہیں۔",
+    "markCta": "آج کا روزہ درج کریں",
+    "unmarkCta": "آج کا روزہ ہٹائیں",
+    "statRamadan": "رمضان",
+    "statVoluntary": "نفلی",
+    "statStreak": "مسلسل",
+    "gridLabel": "یہ رمضان",
+    "gridDayA11y": "دن {{day}} {{state}}",
+    "privacyNote": "روزوں کی تاریخ آپ کے آلے پر خفیہ رہتی ہے۔",
+    "encourageEmpty": "ٹریکنگ شروع کرنے کے لیے اپنا پہلا روزہ درج کریں۔",
+    "encourageActive": "ہر روزہ معتبر ہے — اللہ قبول فرمائے۔",
+    "encourageStreak": "ماشاء اللہ، مسلسل {{count}} دن۔ جاری رکھیں۔",
+    "reminderToggleTitle": "ایک دن پہلے یاددہانی",
+    "reminderToggleOn": "ہر سنت روزے سے ایک دن پہلے رات {{hour}}:00 پر آپ کو ہلکی یاددہانی ملے گی۔",
+    "reminderToggleOff": "ہر پیر/جمعرات اور خصوصی روزے کے دن سے پہلے رات اطلاع پائیں۔",
+    "reminderToggleA11y": "روزے سے ایک دن پہلے یاددہانی فعال کریں",
+    "upcomingLabel": "آنے والے سنت روزے",
+    "daysAway": "{{count}} دن میں",
+    "daysSpan": "{{count}} دن",
+    "daysCount": "{{count}} دن",
+    "ramadanCountdownLabel": "رمضان شروع ہونے میں",
+    "mondayEncouragement": "پیر سنت روزہ ہے — اعمال پیر اور جمعرات کو اللہ کے سامنے پیش کیے جاتے ہیں۔",
+    "thursdayEncouragement": "جمعرات سنت روزہ ہے — اعمال پیر اور جمعرات کو اللہ کے سامنے پیش کیے جاتے ہیں۔",
+    "monthViewLabel": "تمام درج کردہ روزے",
+    "noLogsYet": "جو دن آپ روزہ رکھیں گے وہ یہاں ظاہر ہوں گے۔",
+    "typeRamadan": "رمضان",
+    "typeVoluntary": "نفلی / سنت",
+    "reminderChannelName": "روزے کی یاد دہانیاں",
+    "reminderTitle": "روزے کی یاد دہانی"
+  },
+  "methods": {
+    "0": "شیعہ — اثنا عشری",
+    "1": "جامعۂ علومِ اسلامیہ، کراچی",
+    "2": "اسلامی سوسائٹی آف نارتھ امریکا (ISNA)",
+    "3": "رابطۂ عالمِ اسلامی",
+    "4": "جامعہ ام القریٰ، مکہ مکرمہ",
+    "5": "مصری جنرل اتھارٹی برائے سروے",
+    "7": "انسٹیٹیوٹ آف جیو فزکس، یونیورسٹی آف تہران",
+    "8": "خلیجی خطہ",
+    "9": "کویت",
+    "10": "قطر",
+    "11": "سنگاپور",
+    "12": "فرانس",
+    "13": "ترکی",
+    "14": "روس",
+    "15": "عالمی رویتِ ہلال کمیٹی",
+    "21": "مراکش",
+    "auto": "خودکار (مقام کے مطابق)"
+  },
+  "attributions": {
+    "groupScripture": "متن",
+    "groupRecitation": "تلاوت",
+    "groupMeaning": "ترجمہ اور تفسیر",
+    "groupTypefaces": "فونٹس",
+    "footer": "ہر سطر اپنے ماخذ سے جُڑی ہے۔",
+    "quranText": "قرآن — عثمانی متن",
+    "mushafImages": "مصحف کے صفحات کی تصاویر (604)",
+    "translationEditions": "تراجم کے ایڈیشن (14)",
+    "sahihIntl": "صحیح انٹرنیشنل (انگریزی)",
+    "pickthall": "پکتھال (انگریزی)",
+    "mushafMetadata": "مصحف کے صفحات کی ڈیٹا معلومات",
+    "riwayat": "ورش، قالون اور شعبہ متون (ڈاؤن لوڈ شدہ، شامل نہیں)",
+    "riwayahLines": "ان مصاحف کی مطبوعہ سطروں کی ساخت",
+    "amiriFonts": "فونٹس Amiri و Amiri Quran",
+    "scheherazade": "Scheherazade New",
+    "hisnulMuslim": "حصنُ المسلم کی دعائیں",
+    "quranGeometry": "آیات کی پوزیشن کا ڈیٹا (quran.com / Quran for Android پروجیکٹ)",
+    "recitation": "تلاوت کی آڈیو (42 قاری): EveryAyah.com · الفاظ کی ٹائمنگ: quran-align (CC BY 4.0)",
+    "tafsir": "تفسیری متون: ابن کثیر، معارف القرآن، المیسر",
+    "surahHeaderFont": "سورت کے عنوان کی خطاطی"
+  },
+  "liveActivity": {
+    "title": "اگلی نماز",
+    "in": "{{remaining}} میں",
+    "now": "ابھی",
+    "soon": "جلد شروع ہو رہی ہے",
+    "channelName": "نماز کی گنتی",
+    "channelDesc": "اگلی نماز کی الٹی گنتی دکھانے والی نتھی جاری نوٹیفکیشن۔",
+    "fgsText": "نماز کی گنتی فعال ہے",
+    "justThisOne": "اس بار",
+    "inWord": "میں",
+    "atWord": "بجے",
+    "hideOnLock": "لاک اسکرین پر چھپائیں",
+    "showOnLock": "لاک اسکرین پر دکھائیں"
+  },
+  "hijri": {
+    "month_1": "محرم",
+    "month_2": "صفر",
+    "month_3": "ربیع الاول",
+    "month_4": "ربیع الثانی",
+    "month_5": "جمادی الاول",
+    "month_6": "جمادی الثانی",
+    "month_7": "رجب",
+    "month_8": "شعبان",
+    "month_9": "رمضان",
+    "month_10": "شوال",
+    "month_11": "ذوالقعدہ",
+    "month_12": "ذوالحجہ"
+  },
+  "tour": {
+    "welcomeTitle": "محراب میں خوش آمدید",
+    "welcomeBody": "نماز کے اوقات، قرآن اور روزمرہ عبادت کے آلات — مکمل رازداری کے ساتھ۔ نہ کوئی اکاؤنٹ، نہ کوئی ٹریکر۔",
+    "timesTitle": "نماز کے اوقات ایک نظر میں",
+    "timesBody": "آپ کے مقام کے مطابق درست اوقات، اگلی نماز تک براہِ راست الٹی گنتی کے ساتھ۔ آنے والے دنوں پر ایک نظر ڈالنے کے لیے دن کے کارڈ کو سوائپ کریں۔",
+    "quranTitle": "قرآن، خوبصورت انداز میں",
+    "quranBody": "مدینہ مصحف پڑھیں، پانچ قاریوں کی تلاوت سنیں، آیات کو بک مارک کریں اور اپنے ختم قرآن کی پیش رفت دیکھیں۔",
+    "customizeTitle": "اسے اپنا بنائیں",
+    "customizeBody": "ہوم اسکرین ویجٹس، لائیو سرگرمی کی الٹی گنتی، تھیمز اور ایکسنٹ رنگ — سب کچھ ترتیبات میں۔",
+    "skip": "چھوڑ دیں",
+    "next": "اگلا",
+    "done": "شروع کریں"
+  },
+  "downloads": {
+    "title": "ڈاؤن لوڈز کا نظم کریں",
+    "settingsHelp": "اس آلے پر مصحف کے صفحات، تلاوت کی آڈیو اور تفسیر۔",
+    "deleteTitle": "ڈاؤن لوڈ حذف کریں؟",
+    "deleteBody": "{{what}} اس آلے سے ہٹا دیا جائے گا۔ آپ اسے کسی بھی وقت دوبارہ ڈاؤن لوڈ کر سکتے ہیں۔",
+    "total": "آلے پر کل: {{size}}",
+    "mushaf": "مصحف کے صفحات",
+    "mushafSub": "مدینہ مصحف کے 604 صفحات",
+    "audioSub": "تلاوت کی آڈیو",
+    "tafsirSub": "محفوظ شدہ تفسیر",
+    "empty": "ابھی کچھ ڈاؤن لوڈ نہیں ہوا۔ ڈاؤن لوڈ کردہ مصحف صفحات، آڈیو اور تفسیر یہاں نظر آئیں گے۔",
+    "mushafPages": "{{total}} میں سے {{pages}} صفحات",
+    "legacyMushaf": "پرانے مصحف کے صفحات",
+    "legacyMushafSub": "پچھلے ریڈر کی باقیات۔ اب انہیں کچھ بھی نہیں کھولتا۔",
+    "riwayat": "قراءت کی روایات",
+    "riwayatFootnote": "محراب یہ متون نہ شامل کرتا ہے نہ انہیں میزبانی دیتا ہے۔ فائل ناشر سے براہِ راست اسی آلے پر آتی ہے، اور اس میں سے کچھ پڑھنے سے پہلے یہیں جانچی جاتی ہے۔",
+    "riwayahInstalled": "{{pages}} صفحات · {{host}} سے",
+    "riwayahPublisher": "ناشر {{publisher}}۔ اعتراف {{credits}} کا۔",
+    "riwayahBuiltIn": "محراب میں شامل ہے۔ نہ ڈاؤن لوڈ کرنا ہے، نہ حذف۔",
+    "riwayahOpenSource": "ماخذ کھولیں",
+    "riwayahDownload": "ڈاؤن لوڈ",
+    "riwayahFetchHowTo": "مِحراب اسے ناشر سے براہِ راست اس آلے پر لے آئے گا، اور اس میں سے کچھ پڑھنے سے پہلے جانچ کرے گا۔",
+    "riwayahAddAFile": "میرے پاس موجود فائل شامل کریں",
+    "riwayahHowTo": "اُس صفحے سے JSON فائل ڈاؤن لوڈ کریں، پھر نیچے سے اُسے منتخب کریں۔ زپ شدہ رہ سکتی ہے۔",
+    "riwayahLink": "ڈیٹا فائل کا لنک",
+    "riwayahInstall": "یہ مصحف شامل کریں",
+    "riwayahChooseFile": "ڈاؤن لوڈ کی گئی فائل منتخب کریں",
+    "riwayahOrLink": "یا فائل کا براہِ راست لنک پیسٹ کریں:",
+    "riwayahUnreadable": "وہ فائل پڑھی نہ جا سکی۔",
+    "riwayahFileTooLarge": "یہ فائل مصحف ہونے کے لیے بہت بڑی ہے۔",
+    "riwayahZipUnsupported": "یہ آرکائیو ایسی صورت میں ہے جسے یہ ایپ نہیں کھول سکتی۔ اسے کھول کر اندر کی فائل منتخب کریں۔",
+    "riwayahZipUnreadable": "یہ آرکائیو نہیں کھل سکی۔",
+    "riwayahNoJsonInZip": "اس آرکائیو کے اندر کوئی .json فائل نہیں۔"
+  },
+  "dataStats": {
+    "title": "ڈیٹا شماریات",
+    "toggle": "ڈیٹا شماریات دکھائیں",
+    "toggleHelp": "ترتیبات ← نماز کے اوقات میں دکھاتا ہے کہ نماز کے اوقات کہاں سے آتے ہیں، کتنا ڈیٹا محفوظ ہے اور تازہ کاری کب ہوتی ہے۔",
+    "source": "موجودہ ذریعہ",
+    "daysStored": "آلے پر محفوظ",
+    "lastUpdated": "آخری اپ ڈیٹ",
+    "nextCheck": "اگلی اپ ڈیٹ جانچ",
+    "serverRun": "آخری سرور رن",
+    "nextServerRun": "اگلا سرور رن",
+    "never": "—",
+    "daysUnit": "دن",
+    "sourceCdn": "سرور ڈیٹا (تازہ)",
+    "sourceSeed": "آف لائن شامل ڈیٹا",
+    "sourceScrape": "لائیو Islamiska Förbundet",
+    "sourceAladhan": "AlAdhan",
+    "sourceLocal": "آلے پر حساب",
+    "sourceUnknown": "نامعلوم",
+    "serverOk": "ٹھیک ہے",
+    "serverWarning": "کم کوریج",
+    "serverUnknown": "ابھی تک جانچ نہیں ہوئی",
+    "unlockedTitle": "ڈیٹا شماریات فعال",
+    "unlockedBody": "شماریات کا کارڈ اب ترتیبات ← نماز کے اوقات میں نظر آتا ہے۔ نیچے سے کسی بھی وقت بند کریں۔",
+    "serverCoverage": "سرور کوریج",
+    "serverSweden": "سویڈن · Islamiska Förbundet",
+    "serverMorocco": "مراکش · Habous",
+    "inUse": "زیرِ استعمال",
+    "habousWindow": "وزارت صرف موجودہ ہجری مہینہ شائع کرتی ہے، اس لیے یہ مدت ہر دن ایک دن کم ہوتی ہے اور نیا مہینہ شروع ہونے پر دوبارہ بھر جاتی ہے۔ دوبارہ تعمیر سے یہ لمبی نہیں ہوتی۔"
+  },
+  "log": {
+    "legendPrayers": "0 ← 5 نمازیں",
+    "fasted": "روزہ",
+    "dayA11y": "{{date}}: {{prayers}} نمازیں درج{{fast}}",
+    "streakCaption": "{{count}} دن کا سلسلہ",
+    "streakBest": "(بہترین {{best}})",
+    "fastsCaption": "{{count}} روزے",
+    "markAllOnTime": "سب کو وقت پر نشان زد کریں",
+    "iftarAt": "افطار {{time}}",
+    "allUpcoming": "تمام آئندہ",
+    "title": "ریکارڈ",
+    "practiceTitle": "عمل",
+    "previousDay": "پچھلا دن",
+    "nextDay": "اگلا دن",
+    "backToToday": "آج پر واپس",
+    "fastingTitle": "روزہ",
+    "noFastLogged": "کوئی روزہ درج نہیں۔",
+    "markFasted": "روزہ درج کریں",
+    "unmarkFasted": "نشان ہٹائیں",
+    "showOnHome": "ہوم پر گراف دکھائیں",
+    "showOnHomeHelp": "آپ کے مربع آج کی اسکرین پر شامل کرتا ہے۔ بطور طے شدہ بند۔",
+    "backfillAction": "پچھلے دن بھریں",
+    "backfillTitle": "پچھلے دن بھر دیے جائیں؟",
+    "backfillBody": "اس سے {{days}} دنوں ({{range}}) کی {{prayers}} نمازیں وقت پر ادا شدہ کے طور پر درج ہوں گی۔ جو دن آپ پہلے درج کر چکے ہیں وہ ویسے ہی رہیں گے، اور آج کا دن نہیں بدلے گا۔",
+    "backfillConfirm": "بھر دیں",
+    "backfillNothingTitle": "بھرنے کو کچھ نہیں",
+    "backfillNothingBody": "آج سے پہلے کا ہر دن پہلے ہی درج ہے۔",
+    "openLogFromHome": "لاگ کھولیں",
+    "swipeHint": "دن بدلنے کے لیے سوائپ کریں",
+    "backfillUnreadable": "ابھی آپ کا ریکارڈ پڑھا نہیں جا سکا، اس لیے کچھ تبدیل نہیں ہوا۔ دوبارہ کوشش کریں۔",
+    "backfillRefusedTitle": "کچھ تبدیل نہیں ہوا",
+    "backfillRefusedBody": "ان دنوں کو بھرنے سے وہ چیز بدل جاتی جو آپ پہلے درج کر چکے تھے، اس لیے یہ روک دیا گیا۔ آپ کا ریکارڈ جوں کا توں ہے۔",
+    "fillMonthsAction": "پچھلے تین مہینے بھریں",
+    "fillMonthsTitle": "پچھلے تین مہینے بھر دیے جائیں؟",
+    "fillMonthsBody": "اس سے {{days}} خالی دنوں ({{range}}) کی {{prayers}} نمازیں وقت پر ادا شدہ کے طور پر درج ہوں گی۔ {{skipped}} دن ویسے ہی رہیں گے کیونکہ ان میں پہلے سے کچھ درج ہے — حالت، نوٹ یا روزہ۔ آج کا دن نہیں بدلے گا۔",
+    "fillMonthsNothingBody": "پچھلے تین مہینوں کے ہر دن میں پہلے سے کچھ درج ہے۔",
+    "fillSummaryDays": "دن",
+    "fillSummaryPrayers": "نمازیں",
+    "backfillPreserved": "جو دن آپ پہلے درج کر چکے ہیں وہ ویسے ہی رہیں گے، اور آج کا دن نہیں بدلے گا۔",
+    "fillMonthsPreserved": "جن دنوں میں پہلے سے حالت، نوٹ یا روزہ درج ہے وہ بالکل ویسے ہی رہتے ہیں۔ آج کا دن نہیں بدلے گا۔",
+    "fillSummaryLeftAlone": "غیر متاثر",
+    "unlogged": "درج نہیں",
+    "resetAction": "نماز کا ریکارڈ ری سیٹ کریں",
+    "resetTitle": "نماز کا ریکارڈ ری سیٹ کریں",
+    "resetBody": "{{day}} کے حوالے سے منتخب کریں کہ کتنا مٹانا ہے۔ روزے، سنت نمازیں اور ذکر الگ ریکارڈ ہیں اور انہیں ہاتھ نہیں لگایا جائے گا۔",
+    "resetScopeDay": "یہ دن",
+    "resetScopeMonth": "یہ مہینہ",
+    "resetScopeYear": "یہ سال",
+    "resetScopeAll": "سب کچھ",
+    "resetNothing": "کچھ نہیں",
+    "resetConfirmTitle": "یہ نمازیں مٹا دیں؟",
+    "resetConfirm": "مٹا دیں",
+    "resetPreserved": "روزے، سنت نمازیں اور ذکر کو ہاتھ نہیں لگایا جائے گا۔ اسے واپس نہیں لایا جا سکتا۔",
+    "resetRangeAll": "پورا ریکارڈ",
+    "options": "اختیارات",
+    "setUpSync": "سنک سیٹ اپ کریں",
+    "legendTitle": "گراف کیا دکھاتا ہے"
+  },
+  "endOfDay": {
+    "title": "آج کی نمازیں درج کریں؟",
+    "body": "پانچوں نمازیں وقت پر ادا کے طور پر نشان زد کریں، یا ریکارڈ کھول کر ایک ایک کر کے درج کریں۔",
+    "action": "سب کو مکمل درج کریں",
+    "channelName": "دن کے اختتام کا ریکارڈ"
+  },
+  "duaReminders": {
+    "channelName": "صبح و شام کے اذکار",
+    "morningTitle": "صبح کے اذکار",
+    "morningBody": "صبح کے اذکار — ان کا وقت طلوعِ آفتاب تک ہے۔",
+    "eveningTitle": "شام کے اذکار",
+    "eveningBody": "شام کے اذکار — ان کا وقت غروبِ آفتاب تک ہے۔",
+    "groupTitle": "صبح و شام کے اذکار",
+    "morning": "صبح کے اذکار",
+    "morningHelp": "صبح کے وقت میں ایک یاد دہانی — فجر کے بعد، طلوعِ آفتاب سے پہلے۔",
+    "evening": "شام کے اذکار",
+    "eveningHelp": "شام کے وقت میں ایک یاد دہانی — عصر کے بعد، غروبِ آفتاب سے پہلے۔"
+  },
+  "sunnah": {
+    "none": "کوئی نہیں",
+    "short": "سنت",
+    "ofTotal": "{{total}} میں سے {{done}}",
+    "ofTotalShort": "{{done}}/{{total}}",
+    "a11yNone": "{{prayer}}: کوئی سنت نہیں",
+    "a11yCount": "{{prayer}} سنت: {{total}} میں سے {{done}} درج",
+    "afterIsha": "عشاء کے بعد",
+    "witr": "وتر",
+    "prayed": "ادا کی گئی",
+    "logIt": "درج کریں",
+    "qiyam": "قیام اللیل",
+    "qiyamNote": "سلسلے میں شمار نہیں ہوتا",
+    "resetQiyam": "قیام اللیل ری سیٹ کریں",
+    "reset": "ری سیٹ",
+    "addQiyam": "ایک قیام اللیل درج کریں",
+    "qiyamCountA11y": "درج شدہ قیام اللیل",
+    "streakCaption": "{{count}} دن سنت",
+    "legend": "سنن",
+    "qiyamLegend": "رات کی نماز",
+    "a11yAll": "تمام سنن"
+  },
+  "sync": {
+    "exportSection": "برآمد",
+    "importSection": "درآمد",
+    "exportHelp": "جو کچھ آپ نے درج کیا ہے وہ سب ایک ایسی فائل میں محفوظ کر لیں جو آپ کے پاس رہے، نئے فون پر منتقل ہونے کے لیے، یا محض اس لیے کہ وہ کہیں اور بھی موجود رہے۔",
+    "exportCta": "فائل میں برآمد کریں",
+    "exportFailedTitle": "برآمد ناکام",
+    "importHelp": "بیک اپ فائل کھولیں، اس کا سارا مواد نقل کریں اور یہاں چسپاں کر دیں۔ اس آلے پر پہلے سے موجود کوئی چیز حذف نہیں ہوتی، دونوں ریکارڈ آپس میں ملا دیے جاتے ہیں۔",
+    "importPastePlaceholder": "بیک اپ فائل پیسٹ کریں",
+    "importPreviewCta": "فائل جانچیں",
+    "importApplyCta": "اس ڈیوائس میں درآمد کریں",
+    "importFound": "{{date}} کو بنائی گئی۔ منتخب کریں کہ اس میں سے کیا لینا ہے:",
+    "importDoneTitle": "درآمد ہو گیا",
+    "importNothingNew": "اس فائل میں جو کچھ تھا، وہ سب یہاں پہلے سے موجود تھا۔",
+    "importEmptyTitle": "درآمد کے لیے کچھ نہیں",
+    "importFailedTitle": "درآمد ناکام",
+    "importUnreadableTitle": "یہ پڑھا نہ جا سکا",
+    "importUnreadableBody": "یہ Ibadat 365 کا بیک اپ معلوم نہیں ہوتا۔ پوری .json فائل کا سارا مواد چسپاں کریں۔",
+    "importedLine": "{{label}}: {{before}} → {{after}}",
+    "privacyNote": "فائل سادہ متن پر مشتمل ہے اور پاس ورڈ سے محفوظ نہیں، یہ اتنی ہی نجی ہے جتنی وہ جگہ جہاں آپ اسے رکھیں۔ کچھ بھی کبھی اپلوڈ نہیں ہوتا۔",
+    "category": {
+      "prayers": "نماز کا ریکارڈ",
+      "sunnah": "سنت نمازیں",
+      "fasting": "روزہ",
+      "dhikr": "ذکر",
+      "quran": "قرآن",
+      "settings": "ترتیبات",
+      "location": "مقام"
+    },
+    "categoryHint": {
+      "prayers": "ہر وہ نماز جو آپ نے درج کی، اور آپ کے نوٹس",
+      "sunnah": "سنت، وتر اور قیام اللیل",
+      "fasting": "رکھے گئے روزے اور ان کی نیتیں",
+      "dhikr": "مکمل کی گئی تسبیحات",
+      "quran": "نشانیاں، منتخب آیات، ختمہ کے منصوبے، آخری قراءت، قاری اور تفسیر",
+      "settings": "ظاہری شکل، طریقۂ حساب، اطلاعات اور ویجٹ",
+      "location": "محفوظ مقامات اور کوآرڈینیٹس"
+    },
+    "count": {
+      "prayers": "نمازیں",
+      "fasting": "روزے",
+      "dhikr": "ذکر کے دن",
+      "sunnah": "سنت کے دن",
+      "bookmarks": "نشانیاں",
+      "khatmah": "ختمہ منصوبے"
+    },
+    "settingsRowHint": "کوئی اور آلہ جوڑیں",
+    "pairIntro": "سنک آپ کے ریکارڈ کو ہر ڈیوائس پر یکساں رکھتا ہے۔ محراب خود کچھ منتقل نہیں کرتا: اسے ایک ایسا فولڈر چاہیے جسے Nextcloud، OneDrive، Dropbox، Syncthing یا اس جیسا کوئی پہلے سے آپ کی ڈیوائسز کے درمیان ہم آہنگ رکھتا ہو۔ محراب وہاں ایک چھوٹی خفیہ فائل لکھتا ہے، جسے صرف آپ کی اپنی ڈیوائسز پڑھ سکتی ہیں۔",
+    "thisDevice": "یہ آلہ",
+    "deviceNameLabel": "آلے کا نام",
+    "thisDeviceHelp": "یہ کوڈ اپنے دوسرے آلے کو دکھائیں، یا وہاں لکھ دیں۔ یہ پاس ورڈ نہیں ہے — اسے نقل کرنا، تصویر لینا یا خود کو بھیجنا محفوظ ہے۔",
+    "codeA11y": "اس آلے کا جوڑنے والا کوڈ",
+    "copyCode": "کوڈ نقل کریں",
+    "copied": "کوڈ نقل ہو گیا",
+    "copyFailed": "کوڈ نقل نہ ہو سکا",
+    "addDevice": "آلہ شامل کریں",
+    "addDeviceHelp": "وہ کوڈ لکھیں یا چسپاں کریں جو آپ کے دوسرے آلے پر دکھایا جا رہا ہے۔",
+    "codePlaceholder": "MHRB-…",
+    "pasteCode": "چسپاں کریں",
+    "addCta": "جوڑیں",
+    "pairWarnTitle": "آلہ {{value}} سے جوڑیں؟",
+    "pairWarnBody": "اُس آلے پر درج ہر چیز یہاں آ جائے گی، اور یہاں کی ہر چیز وہاں چلی جائے گی۔ ملانے سے کبھی کچھ حذف نہیں ہوتا: جہاں دونوں مختلف ہوں، وہاں نیا اندراج رکھا جاتا ہے۔",
+    "pairConfirm": "جوڑیں",
+    "pairedTitle": "جڑ گیا",
+    "pairedBody": "اس آلے نے اپنی کنجی فولڈر میں لکھ دی ہے۔ دوسرے آلے پر محراب کھولیں — جیسے ہی وہ فولڈر پڑھے گا، دونوں جڑ جائیں گے اور ہم آہنگ ہونے لگیں گے۔",
+    "errorBadCodeTitle": "یہ کوڈ کام نہیں کر سکا",
+    "errorBadCode": "کوڈ جانچیں اور دوبارہ کوشش کریں۔ یہ چھ چھ کے گروہوں میں لکھا ہوتا ہے، اور ایک غلط حرف بھی اسے مسترد کرا دیتا ہے۔",
+    "errorThisDevice": "یہ خود اسی آلے کا کوڈ ہے۔ آپ کو وہ کوڈ چاہیے جو دوسرے آلے پر دکھایا جا رہا ہے۔",
+    "errorTooMany": "آپ زیادہ سے زیادہ {{max}} آلات جوڑ سکتے ہیں۔ پہلے ایک ہٹائیں۔",
+    "errorSaveTitle": "جوڑ محفوظ نہ ہو سکا",
+    "errorSaveBody": "آلے نے اسے محفوظ کرنے سے انکار کیا۔ دوبارہ کوشش کریں — کچھ بھی تبدیل نہیں ہوا۔",
+    "pairedSection": "جڑے ہوئے آلات",
+    "noneYet": "ابھی کوئی آلہ نہیں۔",
+    "peerNameLabel": "اس جڑے ہوئے آلے کا نام",
+    "unnamedDevice": "بے نام آلہ",
+    "fingerprint": "نشان {{value}}",
+    "viaCode": "یہاں شامل کیا گیا",
+    "viaAnnounced": "اُس آلے سے شامل ہوا",
+    "lastSeen": "آخری ہم آہنگی {{when}}",
+    "neverSeen": "ابھی ہم آہنگ نہیں ہوا",
+    "remove": "ہٹائیں",
+    "removeTitle": "{{value}} کو ہٹائیں؟",
+    "removeBody": "یہ آلہ اُسے بھیجنا اور اُس سے قبول کرنا بند کر دے گا۔ اِس آلے کو وہاں سے بھی ہٹا دیں، ورنہ وہ کوشش کرتا رہے گا۔",
+    "notReady": "یہ آلہ ہم آہنگی ترتیب نہیں دے سکتا: اس کے پاس بے ترتیبی کا محفوظ ذریعہ نہیں، اور اس کے بغیر بنی کنجی نجی نہ ہوگی۔",
+    "privacyNoteP2p": "آپ کا کوڈ ایک عوامی کنجی ہے، کوئی راز نہیں۔ اصل معلومات صرف آپ کے جڑے ہوئے آلات کے لیے خفیہ کی جاتی ہیں، اور کہیں کچھ اپ لوڈ نہیں ہوتا۔",
+    "folderSection": "فولڈر",
+    "folderHelp": "ایسا فولڈر منتخب کریں جسے آپ کی سنک سروس پہلے سے ہر ڈیوائس پر ہم آہنگ رکھتی ہو — Nextcloud، OneDrive، Dropbox یا Syncthing کا فولڈر۔ اگر کوئی چیز اُس فولڈر کو آپ کی ڈیوائسز کے درمیان سنک نہیں کر رہی تو کچھ بھی نہیں پہنچے گا۔ محراب وہاں ایک چھوٹی خفیہ فائل لکھتا ہے اور آپ کی دوسری ڈیوائسز کی چھوڑی ہوئی فائلیں پڑھتا ہے۔",
+    "chooseFolder": "فولڈر منتخب کریں",
+    "changeFolder": "فولڈر بدلیں",
+    "folderChosen": "{{value}} استعمال ہو رہا ہے",
+    "syncNow": "ابھی ہم آہنگ کریں",
+    "lastSyncedAt": "آخری جانچ {{when}}",
+    "neverSynced": "ابھی جانچ نہیں ہوئی",
+    "autoTitle": "خودکار ہم آہنگی",
+    "freqOpen": "کھلنے پر",
+    "freqHourly": "ہر گھنٹے",
+    "freqDaily": "روزانہ",
+    "freqOff": "بند",
+    "autoHelp": "خودکار ہم آہنگی صرف اُس وقت چلتی ہے جب ایپ کھلی ہو۔ یہاں جو بھی منتخب کریں، ”ابھی ہم آہنگ کریں“ ہمیشہ کام کرتا ہے۔",
+    "whatSyncs": "کیا کیا ہم آہنگ ہوتا ہے",
+    "errorFolderGone": "اُس فولڈر تک اب رسائی نہیں۔ اسے دوبارہ منتخب کریں۔",
+    "errorUnsupported": "یہ نسخہ فولڈر ہم آہنگی نہیں کر سکتا۔",
+    "syncDoneTitle": "ہم آہنگ ہو گیا",
+    "syncDoneBody": "آپ کے دوسرے آلات پر جو کچھ تھا وہ اب یہاں ہے، اور جو یہاں ہے وہ وہاں ہے۔",
+    "syncNothing": "کچھ نیا نہیں۔ آخری جانچ کے بعد آپ کے دوسرے آلات نے کچھ نہیں لکھا۔",
+    "syncFailedTitle": "ہم آہنگی مکمل نہ ہو سکی",
+    "syncFailedBody": "کچھ گڑبڑ ہو گئی: {{detail}}",
+    "hint": {
+      "quranTitle": "کیا آپ ایک سے زیادہ آلات پر پڑھتے ہیں؟",
+      "quranBody": "ہم آہنگی ترتیب دیں تو آپ کا مقام، نشانیاں اور ختمہ آلات کے درمیان آپ کے ساتھ چلیں گے۔",
+      "logTitle": "ایک آلے پر درج کریں، سب پر دیکھیں",
+      "logBody": "ہم آہنگی ترتیب دیں تاکہ آپ کا ریکارڈ ہر جگہ ایک جیسا رہے۔ کچھ اپ لوڈ نہیں ہوتا۔",
+      "dismiss": "اسے چھپائیں",
+      "openHint": "ہم آہنگی کی ترتیبات کھولتا ہے"
+    },
+    "pairedNeedsFolder": "پہلے ایک فولڈر منتخب کریں۔ دونوں آلات اسی فولڈر کے ذریعے ایک دوسرے تک پہنچتے ہیں، اور اس کے بغیر کچھ بھی تبادلہ نہیں ہو سکتا۔",
+    "folderAppHint": "محراب نے اپنے لیے {{value}} نام کا ایک فولڈر بنایا ہے۔ اسے Files ایپ میں \"میرے آئی فون پر\" کے نیچے تلاش کریں، اور اپنے دوسرے آلات تک پہنچنے کے لیے اپنی ہم آہنگی ایپ کو اسی پر لگائیں۔",
+    "syncQuietTitle": "کچھ نہیں آیا",
+    "syncNothingArrived": "آپ کی فائل فولڈر میں موجود ہے، مگر آپ کے دوسرے آلات سے وہاں کچھ نہیں آیا۔ دونوں آلات کا ایک ہی فولڈر کی طرف اشارہ کرنا ضروری ہے، اور جو چیز اُس فولڈر کو دونوں کے درمیان یکساں رکھتی ہے اُس کا چلنا بھی ضروری ہے۔",
+    "syncStale": "آپ کی فائل فولڈر میں موجود ہے، لیکن {{device}} کا تازہ ترین ریکارڈ {{when}} کو لکھا گیا تھا۔ اگر آپ نے اس کے بعد وہ ڈیوائس استعمال کی ہے، تو جو چیز فولڈر کو ہم آہنگ رکھتی ہے وہ فائلیں منتقل کرنا بند کر چکی ہے۔",
+    "scanCode": "اسکین",
+    "scanHint": "کیمرہ اپنے دوسرے آلے پر دکھائے گئے کوڈ کی طرف کریں",
+    "scanDeniedTitle": "کیمرے کی اجازت نہیں",
+    "scanDeniedBody": "محراب کو کوڈ پڑھنے کے لیے کیمرہ چاہیے۔ آپ آلے کی ترتیبات سے اجازت دے سکتے ہیں، یا کوڈ خود لکھ سکتے ہیں۔",
+    "scanNoCameraTitle": "کوئی کیمرہ نہیں",
+    "scanNoCameraBody": "اس آلے میں اسکین کرنے کے لیے کیمرہ نہیں۔ کوڈ لکھیں یا چسپاں کریں۔",
+    "freq15Min": "ہر 15 منٹ",
+    "errorFolderUnwritable": "اُس فولڈر میں لکھا نہیں جا سکتا۔ کوئی دوسرا منتخب کریں — دستاویزات یا ڈاؤن لوڈز میں آپ کا بنایا ہوا فولڈر سب سے بہتر رہتا ہے۔",
+    "errorFolderTitle": "وہ فولڈر کام نہیں آیا"
+  },
+  "stats": {
+    "daysUnit": " دن",
+    "streakLabel": "وقت پر تسلسل",
+    "best": "بہترین {{best}}",
+    "sunnahLabel": "سنت ادا",
+    "thisMonth": "اس ماہ",
+    "fastedLabel": "روزے",
+    "owedLabel": "قضا نمازیں",
+    "nothingOwed": "کوئی قضا نہیں",
+    "owedShow": "دیکھنے کے لیے دبائیں",
+    "owedHide": "دکھائی جا رہی ✕",
+    "owedHint": "قضا کرنے کے لیے دن پر دبائیں",
+    "owedMore": "+{{more}} مزید",
+    "owedA11y": "{{owed}} قضا نمازیں، دکھائیں",
+    "nothingOwedA11y": "کوئی قضا نہیں"
+  },
+  "surahReminders": {
+    "groupTitle": "سورتوں کی یاد دہانی",
+    "kahf": "جمعہ کو سورۃ الکہف",
+    "kahfHelp": "ہفتے میں ایک بار، جمعہ کو، آپ کے منتخب کردہ وقت پر۔",
+    "kahfTitle": "الکہف",
+    "kahfBody": "آج جمعہ ہے — سورۃ الکہف پڑھیں۔",
+    "mulk": "رات کو سورۃ الملک",
+    "mulkHelp": "ہر رات آپ کے منتخب کردہ وقت پر — ایپ کو معلوم نہیں آپ کب سوتے ہیں، اس لیے وہ پوچھتی ہے۔",
+    "mulkTitle": "الملک",
+    "mulkBody": "سونے سے پہلے — سورۃ الملک پڑھیں۔"
+  },
+  "dhikr": {
+    "remindersTitle": "ذکر کی یاد دہانیاں",
+    "remindersBlurb": "آپ کی اپنی یاد دہانیاں، دن کے کسی بھی وقت",
+    "remindersFooter": "نماز کے اوقات سے آزاد اور مکمل طور پر آف لائن — بغیر کنکشن اور ری اسٹارٹ کے بعد بھی چلتی ہیں۔",
+    "remindersEmpty": "ابھی کوئی یاد دہانی نہیں۔ کسی ذکر کے لیے، یا اپنے الفاظ کے لیے ایک شامل کریں۔",
+    "addReminder": "یاد دہانی شامل کریں",
+    "newReminder": "نئی یاد دہانی",
+    "editReminder": "یاد دہانی میں ترمیم",
+    "deleteReminder": "یاد دہانی حذف کریں",
+    "whichDhikr": "کون سا ذکر",
+    "ownWords": "آپ کے اپنے الفاظ",
+    "ownWordsHelp": "ایک یاد دہانی جو وہی کہے گی جو آپ لکھیں۔",
+    "customTitle": "یاد دہانی",
+    "customTitleLabel": "عنوان",
+    "customBodyLabel": "متن",
+    "days": "دن",
+    "everyDay": "ہر روز",
+    "sound": "آواز",
+    "soundDefault": "اطلاع کی آواز",
+    "soundSilent": "خاموش",
+    "soundHelp": "ذکر کی کوئی ریکارڈنگ شامل نہیں: ایپ صرف وہی مواد دیتی ہے جس کا ماخذ اور لائسنس وہ بتا سکے، اور آواز بھی اسی میں ہے۔ اپنی ریکارڈنگ منتخب کرنا اگلا قدم ہے — ایشو #29 دیکھیں۔",
+    "meaning": {
+      "hawqala": "اللہ کے سوا نہ کوئی طاقت ہے نہ قوت",
+      "subhanallahwabihamdih": "اللہ پاک ہے اور اسی کی حمد ہے"
+    }
+  }
+}

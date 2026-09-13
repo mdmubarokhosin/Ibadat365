@@ -1,0 +1,1779 @@
+{
+  "app": {
+    "name": "Михраб",
+    "tagline": "Времена молитвы, компас киблы, Коран, мольбы и зикр — полностью офлайн, в одном приложении."
+  },
+  "nav": {
+    "home": "Михраб",
+    "settings": "Настройки",
+    "month": "Месяц",
+    "shareMonth": "Поделиться месяц",
+    "compass": "Кибла",
+    "tasbih": "Тасбих",
+    "duas": "Ду‘а",
+    "quran": "Коран",
+    "journal": "Дневник намаза",
+    "backup": "Резервная копия",
+    "fasting": "Пост",
+    "today": "Сегодня",
+    "sync": "Синхронизация между устройствами"
+  },
+  "a11y": {
+    "openSettings": "Открыть настройки",
+    "openMonth": "Открыть просмотр месяца",
+    "openCompass": "Открыть компас Киблы",
+    "openTimesSource": "Изменить источник времени молитвы",
+    "countdownTo": "Отсчёт до этой молитвы",
+    "countdownHere": "Отсчёт ведётся до этой молитвы. Нажмите, чтобы вернуться к следующей."
+  },
+  "common": {
+    "change": "Изменять",
+    "tryAgain": "Попробуйте еще раз",
+    "retry": "Повторить попытку",
+    "continue": "Продолжать",
+    "back": "Назад",
+    "play": "Воспроизвести",
+    "pause": "Пауза",
+    "stop": "Стоп",
+    "loading": "Загрузка…",
+    "automatic": "Автоматический",
+    "openSettings": "Открыть настройки",
+    "cancel": "Отмена",
+    "ok": "OK",
+    "today": "Сегодня",
+    "close": "Закрыть",
+    "share": "Поделиться",
+    "done": "Готово",
+    "delete": "Удалить",
+    "cancelled": "Отменено.",
+    "listJoin": " и ",
+    "confirmDelete": "Нажмите ещё раз, чтобы удалить",
+    "learnMore": "Подробнее"
+  },
+  "home": {
+    "loadingPrayer": "Загрузка времени молитв…",
+    "nextPrayer": "Следующая молитва",
+    "nextIn": "в {{time}}",
+    "hanafiSuffix": "Ханафи Аср",
+    "monthTimesLink": "Время молитвы на весь месяц",
+    "localFallbackNotice": "Локальный расчёт — подключитесь для обновления",
+    "lastGpsCoordsNotice": "Используется последнее известное местоположение — GPS недоступен",
+    "exactAlarmDenied": "Уведомления о намазе требуют разрешения на точные будильники. Нажмите для выдачи.",
+    "notifPermDenied": "Разрешение на уведомления отклонено — оповещения о намазе не будут срабатывать. Нажмите для открытия настроек.",
+    "updatingLocation": "Обновление местоположения",
+    "today": "Сегодня",
+    "tomorrow": "Завтра",
+    "savedLocationLabel": "{{name}}",
+    "switchLocation": "Сменить место",
+    "autoBadge": "Авто",
+    "locating": "Определение…",
+    "backToToday": "К сегодня",
+    "updatedAt": "Обновлено {{when}}",
+    "daysStored": "Сохранено дней: {{count}}",
+    "quranShortcut": "Открыть Коран",
+    "dayStrip": "Выберите день",
+    "nextPrayerIn": "{{prayer}} через",
+    "firstPrayer": "Первая молитва {{prayer}} · {{time}}",
+    "todaySummary": "Сегодня",
+    "prayersLogged": "Отмечено {{count}} из {{total}} молитв",
+    "noFastToday": "Пост не отмечен",
+    "dhikrSets": "Завершено кругов зикра: {{count}}",
+    "fastKept": {
+      "ramadan": "Соблюдён пост Рамадана",
+      "voluntary": "Соблюдён добровольный пост",
+      "qadha": "Соблюдён восполняющий пост"
+    },
+    "readItIn": "Читать в {{surah}}",
+    "continueAt": "Продолжить · {{surah}} {{ref}}",
+    "khatmahDay": "Хатм: день {{day}} из {{total}}",
+    "khatmahDaysToGo": "осталось дней: {{count}}",
+    "pagesLeftToday": "сегодня осталось страниц: {{count}}",
+    "pageNumber": "страница {{page}}",
+    "readingDone": "Чтение на сегодня завершено",
+    "readOn": "Читать дальше",
+    "qiblaChipA11y": "Кибла {{degrees}} градусов",
+    "qiblaChipHint": "Открывает компас киблы",
+    "alertOverrideOnce": "{{mode}} только в этот раз · Сбросить",
+    "alertOverrideA11y": "{{prayer}} — {{mode}} только в этот раз",
+    "alertOverrideResetHint": "Возвращает {{mode}}",
+    "yesterday": "Вчера",
+    "startReading": "Начать чтение",
+    "startReadingHint": "Аль-Фатиха, страница 1"
+  },
+  "errors": {
+    "locationNeededTitle": "Требуется местоположение",
+    "locationNeededBody": "Время молитвы использует ваше приблизительное положение. Предоставьте доступ к местоположению в настройках системы и повторите попытку.",
+    "locationErrorTitle": "Ошибка местоположения",
+    "apiErrorTitle": "Не удалось загрузить время",
+    "coordLat": "Широта должна быть в пределах от -90 до 90.",
+    "coordLng": "Долгота должна быть в диапазоне от -180 до 180.",
+    "gpsPermission": "Для использования местоположения устройства требуется разрешение на определение местоположения.",
+    "gpsRead": "Не удалось прочитать координаты GPS.",
+    "gpsRequest": "Не удалось запросить местоположение."
+  },
+  "month": {
+    "locationNotReadyTitle": "Местоположение не готово",
+    "locationNotReadyBody": "Откройте «Домой» и загрузите текущее время один раз, чтобы этот экран мог использовать ваше местоположение по GPS.",
+    "thisMonth": "В этом месяце",
+    "standardView": "Стандартный",
+    "shareView": "Общий доступ",
+    "shareMonth": "Поделиться изображением",
+    "loadError": "Не удалось загрузить месяц.",
+    "empty": "Нет строк для отображения.",
+    "refreshData": "Обновить сохраненные данные",
+    "refreshing": "Освежающий...",
+    "monthsStored": "{{count}} месяцев хранится",
+    "dayOfWeek": "День",
+    "date": "Дата",
+    "hijri": "Хиджра",
+    "gregorian": "григорианский",
+    "prayerTimes": "Время молитв",
+    "daruriLegend": "Маленькая строка под Фаджром, Асром и Ишой — когда истекает предпочтительное первое время каждой из них. У Зухра оно истекает с началом Асра, у Магриба — с началом Иши, так что эти две границы и есть сами столбцы. У Фаджра и Асра — приблизительные."
+  },
+  "share": {
+    "tagline": "Время намаза, кибла и Коран",
+    "timesFor": "Время намаза для {{place}}",
+    "scanForApp": "Отсканируйте, чтобы установить приложение",
+    "asrHanafi": "Аср: ханафитский",
+    "asrStandard": "Аср: стандартный",
+    "source": "Время от {{source}}",
+    "footerNote": "Расчётное время. При расхождении следуйте своей мечети.",
+    "sheetLanguage": "Язык листа",
+    "exportImage": "Поделиться изображением",
+    "exportPdf": "Поделиться PDF (A4)",
+    "pitch": "Бесплатно и без рекламы. Время намаза, кибла, Коран с чтением и переводом и трекер хатмы."
+  },
+  "settings": {
+    "laDesignLabel": "Стиль",
+    "laDesignTimeline": "Хронология",
+    "laDesignCountdown": "Обратный отсчёт",
+    "appearance": "Появление",
+    "theme": "Тема",
+    "themeSystem": "Система",
+    "themeLight": "Свет",
+    "themeDark": "Темный",
+    "themeHelp": "Система соответствует светлому или темному режиму вашего устройства. Включите «Системные цвета», чтобы использовать палитру платформы в приложении (включая Material You на Android). Кнопки и акценты соответствуют основному цвету вашего телефона, поэтому приложение соответствует вашим обоям, если доступен динамический цвет.",
+    "clockFormat": "Формат времени",
+    "clockFormatAuto": "Автоматически",
+    "clockFormat12": "12 часов",
+    "clockFormat24": "24 часа",
+    "clockFormatHelp": "Автоматический режим следует настройке часов вашего устройства. Время намаза, таблица месяца и виджеты используют один формат.",
+    "clockFormatExample": "Например: {{time}}",
+    "systemDynamicColors": "Системные цвета",
+    "systemDynamicColorsHelp": "Использует семантические и динамические цвета вашего устройства в приложении, если выбрана тема «Система». Чистый черный (OLED) по-прежнему затемняет фон, когда включен темный режим.",
+    "pureBlack": "Чистый черный (OLED)",
+    "pureBlackHelp": "Настоящий черный фон в темном режиме для OLED-дисплеев.",
+    "dataSource": "Источник данных",
+    "provider": "Поставщик времени молитвы",
+    "providerAutoLine": "Автоматически · {{label}}",
+    "providerAutoHelp": "В Швеции время молитв основано на шведском источнике (перечисленные города); за пределами Швеции, Аль-Адхан. Выберите источник ниже, чтобы заблокировать одного провайдера.",
+    "providerOverridden": "У «{{picked}}» нет времён для вашего местоположения, поэтому отвечает {{used}}.",
+    "location": "Расположение",
+    "automatic": "Автоматически",
+    "manual": "Руководство",
+    "manualSearchHelp": "Коснитесь результата поиска, чтобы сразу применить его, или отредактируйте координаты и нажмите «Применить» ниже.",
+    "coordsLabel": "Координаты (десятичные градусы)",
+    "latPlaceholder": "Широта",
+    "lngPlaceholder": "Долгота",
+    "applyCoords": "Применить координаты",
+    "calculation": "Расчет",
+    "calcHiddenSweden": "В Швеции время молитвы указано для каждого города, включенного в список. Ваше местоположение обратно геокодировано в соответствии с этим городом; только для Швеции.",
+    "calcHiddenPraytimes": "PrayTimes.dev применяет свои собственные опубликованные правила (см. PrayTimes.dev). Здесь применима только школа мадхаба/асра; список методов скрыт.",
+    "method": "Метод",
+    "methodModalTitle": "Метод расчета",
+    "hanafiAsr": "Ханафи Аср",
+    "hanafiAsrHelp": "Увеличенная длина тени для Асра (школа = 1)",
+    "notifications": "Уведомления",
+    "prayerAlerts": "Молитвенные оповещения",
+    "prayerAlertsHelp": "Запланировано пять ежедневных молитв (Фаджр-Иша). Android может потребоваться доступ к точным сигналам тревоги для надежного расчета времени.",
+    "prePrayerReminder": "Предварительное напоминание",
+    "prePrayerReminderHelp": "Необязательное второе уведомление перед каждой молитвой.",
+    "prePrayerReminderModalTitle": "Минуты до молитвы",
+    "prePrayerReminderOff": "Выключенный",
+    "prePrayerReminderOption": "{{count}} минута назад",
+    "liveActivity": "Живая активность",
+    "liveActivityHelp": "Закреплённое уведомление с отсчётом до следующей молитвы и остальными временами на сегодня.",
+    "liveActivityExperimental": "Экспериментально на iOS.",
+    "liveActivityCustomize": "Настроить",
+    "liveActivityCompact": "Компактный режим",
+    "liveActivityCompactHelp": "Показывать только отсчёт; скрыть список молитв.",
+    "liveActivityShowSunriseLabel": "Показывать Восход",
+    "liveActivityShowHijriLabel": "Показывать дату по хиджре",
+    "liveActivityShowLocationLabel": "Показывать местоположение",
+    "language": "Язык",
+    "languageHelp": "Английский, шведский или арабский. В арабском языке используется раскладка справа налево.",
+    "langEn": "Английский",
+    "langSv": "Шведский",
+    "langAr": "арабский",
+    "homeScreenWidget": "Виджет главного экрана",
+    "widgetBackgroundOpacity": "Виджет силы фона (Android)",
+    "widgetHighlight": "Цвет выделения следующей молитвы",
+    "widgetHighlight_green": "Зеленый",
+    "widgetHighlight_teal": "Бирюзовый",
+    "widgetHighlight_blue": "Синий",
+    "widgetHighlight_amber": "Янтарь",
+    "widgetHighlight_custom": "Пользовательский цвет",
+    "widgetHighlight_customAbbr": "…",
+    "widgetHighlightHexPlaceholder": "#6BC98A",
+    "widgetConfigureHint": "Вы также можете нажать и удерживать виджет → настройки (шестеренка), чтобы настроить те же параметры на Android.",
+    "notificationSound": "Звук оповещения",
+    "adhanAlarmStream": "Воспроизводить азан как будильник",
+    "adhanAlarmStreamHelp": "Использует громкость будильника, поэтому азан слышно даже в беззвучном режиме или при вибрации. Не отменяет режим «Не беспокоить».",
+    "notificationSoundModalTitle": "Выберите звук оповещения",
+    "notificationSoundDefault": "Уведомление по умолчанию",
+    "notificationSoundDefaultHelp": "Использует звук уведомлений вашего устройства по умолчанию.",
+    "notificationSoundAbdulBasit": "Азан - Абдул Басит",
+    "notificationSoundAbdulGhaffar": "Азан - Абдул Гаффар",
+    "notificationSoundAbdulHakam": "Азан - Абдул Хакам",
+    "notificationSoundMakkah": "Азан - Мекка",
+    "notificationSoundMadina": "Азан – Мадина",
+    "notificationSoundAqsa": "Азан – Аль-Акса",
+    "notificationSoundEgypt": "Азан – Египет",
+    "notificationSoundHalab": "Азан - Халаб",
+    "notificationSoundAlHussaini": "Азан - Аль-Хусайни",
+    "notificationSoundBakirBash": "Азан - Бакир Баш",
+    "notificationSoundHafez": "Азан - Хафез",
+    "notificationSoundHafizMurad": "Азан - Хафиз Мурад",
+    "notificationSoundMinshawi": "Азан - Миншави",
+    "notificationSoundNaghshbandi": "Азан - Нагшбанди",
+    "notificationSoundSaber": "Азан - Сабля",
+    "notificationSoundSharifDoman": "Азан - Шариф Доман",
+    "notificationSoundYusufIslam": "Азан - Юсуф Ислам",
+    "notificationSoundVoiceHelp": "Встроенный голос включен в эту сборку приложения.",
+    "notificationSoundCustom": "Свой азан",
+    "notificationSoundCustomHelp": "Выберите аудиофайл на этом устройстве.",
+    "notificationSoundCustomImporting": "Импорт…",
+    "notificationSoundCustomRemove": "Удалить свой азан",
+    "notificationSoundCustomTrimmed": "В уведомлениях звучат первые 30 секунд; полная запись играет при открытом приложении.",
+    "versionInstalled": "Установленная версия: {{version}}",
+    "adhanPreviewTitle": "Предпросмотр азана",
+    "adhanPreviewBody": "",
+    "prayerOffsets": "Сдвиг по молитве",
+    "prayerOffsetsTitle": "Сдвиг по молитве",
+    "prayerOffsetsHelp": "Сдвигайте каждую молитву на ±{{max}} минут под локальную мечеть.",
+    "prayerOffsetsNone": "Нет сдвигов",
+    "prayerOffsetsCount_one": "Скорректирован {{count}} намаз",
+    "prayerOffsetsCount_other": "Скорректировано {{count}} намазов",
+    "prayerOffsetsIncrease": "Увеличить смещение для {{prayer}}",
+    "prayerOffsetsDecrease": "Уменьшить смещение для {{prayer}}",
+    "prayerOffsetsReset": "Сбросить все",
+    "dataAndPrivacy": "Данные и конфиденциальность",
+    "replayOnboarding": "Показать введение снова",
+    "replayOnboardingHelp": "Пройти приветственный поток.",
+    "attributions": "Источники",
+    "attributionsBlurb": "Чьим трудом сделано это приложение",
+    "attribQuran": "Текст Корана",
+    "attribTranslation": "Перевод",
+    "attribDuas": "Дуа",
+    "accentColor": "Акцентный цвет",
+    "accent_green": "Зелёный",
+    "accent_teal": "Бирюзовый",
+    "accent_blue": "Синий",
+    "accent_amber": "Янтарный",
+    "accent_custom": "Свой",
+    "accent_customAbbr": "Hex",
+    "accentColorHelp": "Используется по всему приложению и в виджете на главном экране.",
+    "widgetColorFollowsAccentHelp": "Виджет использует тот же акцентный цвет, что и приложение. Выберите его в разделе «Оформление».",
+    "widgetColorOwnHelp": "Приложение следует системным цветам, а виджет — нет. Выберите цвет выделения виджета здесь.",
+    "additionalTimes": "Дополнительные времена",
+    "additionalTimesBlurb": "Восход, полночь и трети ночи",
+    "additionalTimesFooter": "Они появляются в таблице молитв, виджете и Live Activity наравне с уведомлениями и используют стандартный звук, а не азан.",
+    "dailyReminders": "Ежедневные напоминания",
+    "dailyRemindersBlurb": "Аят каждый день, сегодняшняя часть хатмы, Аль-Кахф и Аль-Мульк",
+    "logSection": "Журнал",
+    "sunriseTime": "Восход",
+    "sunriseTimeHelp": "Показывать восход в таблице молитв, уведомлениях, виджете и Live Activity.",
+    "islamicMidnight": "Исламская полночь",
+    "islamicMidnightHelp": "Середина ночи между Магрибом и Фаджром. По умолчанию выключено.",
+    "lastThird": "Последняя треть ночи",
+    "lastThirdHelp": "Начало последней трети ночи — время для Кияам аль-Лайль. По умолчанию выключено.",
+    "firstThird": "Первая треть ночи",
+    "firstThirdHelp": "Конец первой трети ночи — по маликитскому счёту здесь иша выходит из предпочтительного времени. По умолчанию выключено.",
+    "malikiSecondTimes": "Маликитское второе время",
+    "malikiSecondTimesHelp": "Для каждой молитвы на карточке «Сегодня» появится строка: когда закрывается предпочтительное время (ихтияри) и начинается позднее (дарури). Считается на вашем устройстве по вашим координатам, из какого бы источника ни приходили времена. Для Асра используется тень 1:1 независимо от настройки мазхаба, потому что это маликитская граница. По умолчанию выключено.",
+    "malikiSecondTimesHanafiWarning": "Обратите внимание: это маликитские границы, но ваш Аср выставлен на ханафитский, с другой тенью. Первое время Зухра закончится примерно за полчаса до Асра, показанного ниже. Отключите ханафитский Аср, если хотите, чтобы карточка была согласована.",
+    "malikiSecondTimesSource": "По «Аль-Муршид аль-Муин» Ибн Ашира, в изложении The Guiding Helper, песнь 11.",
+    "malikiAlerts": "Уведомлять меня",
+    "malikiAlertsHelp": "Сначала выключено для всех молитв. Выберите только те, о которых хотите знать: пять лишних уведомлений в день — это то, как приложение приучает вас себя игнорировать. Нужны включённые уведомления.",
+    "malikiAlertsDisabled": "Включите маликитские вторые времена в разделе «Время намаза», и о них можно будет оповещать здесь.",
+    "malikiAlertsNone": "Без уведомлений",
+    "malikiAlertsLead": "За сколько предупреждать",
+    "malikiAlertsLeadTitle": "Предупредить до конца первого времени",
+    "malikiAlertsAtTime": "Когда закончится",
+    "malikiSecondTimesModelled": "Границы Фаджра и Асра — исчезновение звёзд и пожелтение солнца: угол вместо того, что определяет глаз. Поэтому они помечены как приблизительные. Там, где солнце не восходит, не заходит или не достигает этого угла, вместо догадки не показывается ничего.",
+    "accent_rose": "Розовый",
+    "accent_violet": "Фиолетовый",
+    "laDesignMarkers": "Метки",
+    "showTour": "Показать тур по приложению",
+    "rateApp": "Оценить Ibadat 365",
+    "rateAppHelp": "Нравится приложение? Оценка поможет другим его найти.",
+    "showTourHelp": "Посмотреть краткий обзор функций ещё раз.",
+    "ayahOfDay": "Ежедневное уведомление с аятом",
+    "ayahOfDayHelp": "Каждый день — случайно выбранный аят с переводом.",
+    "ayahOfDayTime": "Время уведомления",
+    "hourDown": "Час −",
+    "hourUp": "Час +",
+    "khatmahReminder": "Ежедневное напоминание о хатме",
+    "khatmahReminderHelp": "Сегодняшняя порция и место продолжения, пока хатма активна.",
+    "khatmahReminderNoPlan": "Начните хатму во вкладке «Коран», чтобы воспользоваться этим.",
+    "resetApp": "Сбросить данные приложения",
+    "resetAppHelp": "Стирает все настройки и данные. Необратимо.",
+    "batteryWarning": "Уведомления могут работать ненадёжно",
+    "batteryWarningHelp": "Оптимизация батареи может задерживать или отключать оповещения азана, когда приложение закрыто. Нажмите, чтобы исключить Ibadat 365.",
+    "themeRestartManualTitle": "Откройте приложение заново",
+    "themeRestartManualBody": "iOS не позволяет приложениям перезапускать себя. Полностью закройте Ibadat 365 и откройте снова, чтобы применить тему.",
+    "liquidGlass": "Liquid Glass",
+    "liquidGlassHelp": "Использовать системные цвета iOS и полупрозрачное «стекло». Автоматически следует светлой/тёмной теме.",
+    "themeRestartTitle": "Требуется перезапуск",
+    "themeRestartBody": "Смена системных цветов требует перезапуска, чтобы тема применилась на всех экранах. Перезапустить сейчас?",
+    "themeRestartConfirm": "Перезапустить",
+    "laLockButtonLabel": "Кнопка экрана блокировки",
+    "laLockButtonHelp": "Показывать на карточке кнопку для её скрытия с экрана блокировки и постоянного экрана.",
+    "resetTitle": "Сбросить приложение?",
+    "resetBody": "Это удалит все настройки, сохранённые места, записи журнала, дни поста и состояние тасбиха и вернёт вас к началу. Отменить нельзя.",
+    "resetConfirm": "Сбросить всё",
+    "prayerOffsetsCount": "изменено: {{count}}",
+    "endOfDayLog": "Напоминание в конце дня",
+    "endOfDayLogHelp": "Через десять минут после иша спрашивает, отметить ли пять молитв этого дня. Ответ на следующее утро всё равно запишется в нужный день.",
+    "alertModeAdhan": "Азан",
+    "alertModeNotification": "Сигнал",
+    "alertModeSilent": "Тихо",
+    "alertModeHint": "Меняет, как эта молитва вас уведомляет",
+    "sectionPrayerTimes": "Время намаза",
+    "sectionPrayerTimesBlurb": "Источник, метод расчёта, мазхаб, поправки",
+    "sectionNotifications": "Уведомления",
+    "sectionNotificationsBlurb": "Звуки, заблаговременные напоминания, доп. времена, живая активность",
+    "sectionLocation": "Местоположение",
+    "sectionLocationBlurb": "Где вы и ваши сохранённые места",
+    "sectionAppearance": "Вид и язык",
+    "sectionAppearanceBlurb": "Тема, акцент, формат времени, язык",
+    "sectionWidgets": "Главный экран",
+    "sectionWidgetsBlurb": "Виджет главного экрана",
+    "sectionQuran": "Коран",
+    "sectionQuranBlurb": "Чтение, перевод, тафсир, загрузки",
+    "sectionAbout": "О приложении",
+    "sectionAboutBlurb": "Версия, источники, лицензии",
+    "malikiRows": "Показывать среди времён дня",
+    "malikiRowsHelp": "Выключено — о границах только уведомляем, на карточку и в месяц ничего не добавляется.",
+    "malikiEndAlerts": "И когда время выходит",
+    "malikiEndAlertsHelp": "Второе уведомление в момент, когда молитва становится када. Ровно в это время, никогда заранее.",
+    "surahRemindersChannel": "Напоминания о сурах",
+    "madhab": "Мазхаб",
+    "madhab_hanafi": "Ханафитский",
+    "madhab_maliki": "Маликитский",
+    "madhab_shafii": "Шафиитский",
+    "madhab_hanbali": "Ханбалитский",
+    "madhabCustom": "Свой",
+    "madhabHelp": "Шафииты, маликиты и ханбалиты берут одну и ту же тень для аср, поэтому выбор между ними не меняет времени. Маликитский вдобавок называет рассветную молитву Субх и предлагает вторые времена.",
+    "dhikrRemindersChannel": "Напоминания о зикре",
+    "dhikrRemindersSilentChannel": "Напоминания о зикре (без звука)",
+    "laDesignNeedsAndroid16": "Стили требуют Android 16 или новее. На этом телефоне показывается стандартная карточка: молитва, оставшееся время и полоса прогресса."
+  },
+  "locationSetup": {
+    "headline": "Установите свое местоположение",
+    "sub": "Время молитвы зависит от того, где вы находитесь. Выберите один из вариантов ниже — вы можете изменить его позже в настройках.",
+    "useAutomatic": "Использовать моё местоположение",
+    "searchCoords": "Найдите или введите координаты",
+    "manualHeadline": "Расположение вручную",
+    "manualSub": "Найдите и коснитесь результата, чтобы закончить — или введите ниже широту и долготу и нажмите «Продолжить».",
+    "decimalCoords": "Десятичные координаты"
+  },
+  "provider": {
+    "timesSource": "Источник времени",
+    "automaticByLocation": "Автоматически по местоположению",
+    "modalTitle": "Источник времени молитвы",
+    "sectionMainstream": "Основные API",
+    "sectionRegional": "Национальные и региональные источники",
+    "autoTitle": "Автоматический",
+    "autoSub": "Швеция Источник в Швеции; Аль-Адхан в другом месте.",
+    "autoNow": "Там, где вы сейчас, это {{label}}.",
+    "bestHere": "Подходит для вашего места",
+    "outOfRegion": "Для вашего местоположения нет времён — вместо этого будет использован {{fallback}}.",
+    "footer": "Источники для конкретных стран используют официальные или национальные молитвенные таблицы, куда мы их интегрируем. Со временем могут быть добавлены и другие регионы."
+  },
+  "providers": {
+    "aladhan": {
+      "desc": "api.aladhan.com — большой список методов, мировые координаты; очень распространён.",
+      "name": "AlAdhan"
+    },
+    "prayertimes_dev": {
+      "desc": "Независимый API — углы и смещения в британском стиле; ханафи/шафии; мировые координаты.",
+      "name": "PrayTimes.dev"
+    },
+    "local_adhan": {
+      "desc": "Расчёт на вашем телефоне с Batoul Adhan — без сетевого API.",
+      "name": "На устройстве (Adhan JS)"
+    },
+    "islamiska_forbundet": {
+      "desc": "Времена молитв для перечисленных шведских городов; ваше местоположение сопоставляется с ближайшим городом из списка.",
+      "name": "Швеция"
+    },
+    "habous": {
+      "name": "Марокко",
+      "desc": "Время, публикуемое Министерством хабусов и исламских дел для указанных марокканских городов; ваше местоположение сопоставляется с ближайшим городом."
+    }
+  },
+  "compass": {
+    "needLocationTitle": "Местоположение не готово",
+    "needLocationBody": "Задайте местоположение в настройках или один раз откройте «Домой» с помощью GPS, чтобы мы могли вычислить направление Киблы.",
+    "bearing": "Кибла подшипник",
+    "fromNorth": "{{deg}}° с севера",
+    "qiblaMarker": "Кибла",
+    "phoneFront": "Телефон спереди",
+    "hint": "Держите телефон ровно и отойдите от металла. Совместите стрелку Киблы со стрелкой «Передняя часть телефона», когда вы смотрите на Киблу.",
+    "signalStrength": "Сигнал компаса",
+    "signalHelp": "На основе уровня и стабильности магнитного поля. Отойдите от металла и электроники, если он остается низким.",
+    "signalChecking": "…",
+    "signalOff": "Выключенный",
+    "signalWeakTitle": "Сигнал компаса слабый",
+    "signalVeryWeakTitle": "Сигнал компаса очень слабый",
+    "signalWeakBody": "Отойдите от металла, магнитов и электроники. Снимите магнитные аксессуары с телефона, затем сделайте медленное движение в форме восьмерки, чтобы выполнить повторную калибровку.",
+    "motionDetectedTitle": "Держите телефон устойчиво",
+    "motionDetectedBody": "Слишком большое движение может привести к скачку направления. Держите телефон ровно и неподвижно в течение нескольких секунд вдали от движущихся транспортных средств или динамиков.",
+    "motionPermissionTitle": "Требуется разрешение на движение",
+    "motionPermissionDeniedBody": "Доступ к компасу запрещен на iOS. Разрешите доступ к «Движению и фитнесу» в настройках системы, затем снова откройте этот экран.",
+    "openSettings": "Открыть настройки",
+    "unsupportedTitle": "Живой компас недоступен.",
+    "unsupportedBody": "В этом устройстве нет пригодного к использованию магнитометра (или доступ невозможен). Живой компас выключен. Используйте направление ниже с физическим компасом или картой.",
+    "checkingCompass": "Запуск компаса…",
+    "checkingCompassWithPrompt": "Запуск компаса… Если появится соответствующий запрос на iOS, разрешите доступ к Motion & Fitness.",
+    "north": "Н",
+    "east": "Э",
+    "south": "С",
+    "west": "Вт",
+    "a11yDialLive": "Компас Киблы. Поверните на {{deg}} градусов, чтобы повернуться к Кибле.",
+    "a11yDialChecking": "Компас Киблы. Ожидание данных датчика.",
+    "a11yDialUnavailable": "Компас Киблы недоступен.",
+    "a11yNeedleDeg": "Поверните на {{deg}} градусов, чтобы повернуться к Кибле.",
+    "a11ySignal_good": "Сигнал компаса: хороший.",
+    "a11ySignal_weak": "Сигнал компаса: слабый. Попробуйте выйти на открытое место.",
+    "a11ySignal_very_weak": "Сигнал компаса: очень слабый. Точность может быть ограничена.",
+    "crossCheckTitle": "Сверьтесь с приложением «Компас»",
+    "crossCheckBody": "Компас вашего устройства настроен под его аппаратуру. Для самого точного результата откройте его и поворачивайтесь, пока он не покажет {{degrees}}.",
+    "openSystemCompass": "Открыть приложение «Компас»",
+    "fromNorthLabel": "от севера"
+  },
+  "prayer": {
+    "Fajr": "Фаджр",
+    "Sunrise": "Восход",
+    "Dhuhr": "Зухр",
+    "Asr": "Аср",
+    "Maghrib": "Магриб",
+    "Isha": "Иша",
+    "Fajr_abbr": "Фаджр",
+    "Sunrise_abbr": "Восх",
+    "Dhuhr_abbr": "Зухр",
+    "Asr_abbr": "Аср",
+    "Maghrib_abbr": "Магр",
+    "Isha_abbr": "Иша",
+    "Midnight": "Исламская полночь",
+    "Midnight_abbr": "Полн",
+    "Lastthird": "Последняя треть",
+    "Lastthird_abbr": "Кияам",
+    "Firstthird": "Первая треть",
+    "Firstthird_abbr": "1/3",
+    "firstTimeUntil": "Первое время до {{time}}",
+    "secondTimeUntil": "Второе время до {{time}}",
+    "secondTimeFrom": "Второе время с {{time}}",
+    "approx": "прибл.",
+    "Subh": "Субх",
+    "Subh_abbr": "Субх"
+  },
+  "placeSearch": {
+    "label": "Поиск города или адреса",
+    "placeholder": "например Каир, Лондон, почтовый индекс…",
+    "hint": "Результаты OpenStreetMap (Nominatim). Используйте с уважением, а не для массового геокодирования.",
+    "appliedTitle": "Местоположение применено",
+    "searchFailed": "Поиск не удался",
+    "applied": "Применено: {{label}}",
+    "noResults": "Нет результатов",
+    "searching": "Идет поиск…"
+  },
+  "alertCopy": {
+    "atPrayer": "Время молитвы",
+    "prePrayer": "Начало через {{count}} мин.",
+    "adhanStopAction": "Остановить азан",
+    "adhanDisableAction": "Отключить азан",
+    "snoozeAction": "Отложить",
+    "snoozeChoice": "Отложить на {{minutes}} мин",
+    "snoozeMinutes": "Минуты",
+    "daruriEndsIn": "Первое время истекает в {{time}} — через {{count}} мин",
+    "daruriEnded": "Первое время истекло в {{until}}",
+    "daruriExpired": "Время вышло — прочитайте как када",
+    "atPrayerBody": "Время {{prayer}}",
+    "nextEvent": "Далее: {{prayer}} в {{time}}"
+  },
+  "locations": {
+    "title": "Сохранённые места",
+    "empty": "Добавьте места, чтобы быстро переключаться между ними.",
+    "add": "Добавить новое место",
+    "useAuto": "Моё местоположение",
+    "addPrompt": "Назовите это место",
+    "addPlaceholder": "Дом, работа, поездка…",
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "use": "Выбрать",
+    "delete": "Удалить",
+    "limitReached": "Достигнут предел: {{max}} сохранённых мест.",
+    "previousLocation": "Прежнее место",
+    "invalidCoordsTitle": "Неверные координаты",
+    "invalidCoordsBody": "Широта должна быть от -90 до 90, долгота — от -180 до 180.",
+    "pickAPlace": "Сначала найдите город или введите координаты.",
+    "duplicateTitle": "Уже сохранено",
+    "duplicateBody": "Место с этими координатами уже сохранено как «{{name}}»."
+  },
+  "tasbih": {
+    "subhanallah": "SubhanAllah",
+    "alhamdulillah": "Alhamdulillah",
+    "allahuakbar": "Allahu Akbar",
+    "lailaha": "La ilaha illa Allah",
+    "astaghfirullah": "Astaghfirullah",
+    "open": "Открыть счётчик",
+    "increment": "Нажмите, чтобы считать",
+    "reset": "Сброс",
+    "salahonprophet": "Салават Пророку ﷺ",
+    "prev": "Назад",
+    "next": "Далее",
+    "meaning": {
+      "subhanallah": "Пречист Аллах",
+      "alhamdulillah": "Хвала Аллаху",
+      "lailaha": "Нет божества, кроме Аллаха",
+      "allahuakbar": "Аллах велик",
+      "astaghfirullah": "Прошу прощения у Аллаха",
+      "salahonprophet": "О Аллах, благослови нашего господина Мухаммада"
+    },
+    "setPosition": "Подход {{index}} из {{total}}",
+    "ofTarget": "из {{target}}",
+    "tapAnywhere": "Нажмите в любом месте",
+    "upNext": "Далее",
+    "resetSet": "Сбросить подход",
+    "skip": "Пропустить"
+  },
+  "duas": {
+    "cat": {
+      "morning": "Утро",
+      "evening": "Вечер",
+      "afterPrayer": "После молитвы",
+      "food": "Еда",
+      "distress": "Беда",
+      "sleep": "Сон",
+      "lavatory": "Уборная",
+      "garment": "Одежда",
+      "travel": "Путешествие",
+      "mosque": "Мечеть",
+      "gratitude": "Благодарность",
+      "forgiveness": "Прощение",
+      "weather": "Погода",
+      "family": "Семья",
+      "sickness": "Болезнь",
+      "funeral": "Похороны",
+      "eid": "Ид",
+      "beforeQuran": "Перед Кораном",
+      "knowledge": "Знание",
+      "protection": "Защита",
+      "guidance": "Наставление"
+    },
+    "allCategories": "Все ду‘а",
+    "repeat": "Прочитать ×{{count}}",
+    "morning_01_ayat_kursi": {
+      "title": "Аят аль-Курси"
+    },
+    "morning_02_three_quls": {
+      "title": "Суры аль-Ихлас, аль-Фаляк, ан-Нас"
+    },
+    "morning_03_fitra_islam": {
+      "title": "На естественной природе ислама"
+    },
+    "morning_04_radhitu": {
+      "title": "Доволен Аллахом как Господом"
+    },
+    "morning_05_ilm_nafi": {
+      "title": "Полезное знание, благое пропитание, принятые дела"
+    },
+    "morning_06_bika_asbahna": {
+      "title": "Тобою мы встречаем утро"
+    },
+    "morning_07_la_ilaha_illa_allah": {
+      "title": "Нет божества, кроме одного Аллаха"
+    },
+    "morning_08_ya_hayyu_ya_qayyum": {
+      "title": "О Живой, о Поддерживающий"
+    },
+    "morning_09_sayyid_al_istighfar": {
+      "title": "Саййид аль-Истигфар (главное покаяние)"
+    },
+    "morning_10_fatir_as_samawat": {
+      "title": "Создатель небес и земли"
+    },
+    "morning_11_asbahna_walmulku_lillah": {
+      "title": "Мы и владычество встречаем утро ради Аллаха"
+    },
+    "morning_12_afw_wa_afiya": {
+      "title": "Прощение и благополучие"
+    },
+    "morning_13_bismillah_la_yadurr": {
+      "title": "Именем Аллаха — с Его именем ничто не вредит"
+    },
+    "morning_14_subhan_allah_adada_khalqih": {
+      "title": "Слава Аллаху — числом Его творений"
+    },
+    "morning_15_afini_fi_badani": {
+      "title": "Дай мне благополучие в теле, слухе и зрении"
+    },
+    "morning_16_hasbiy_allah": {
+      "title": "Достаточно мне Аллаха"
+    },
+    "morning_17_ushhiduka": {
+      "title": "Беру Тебя в свидетели в это утро"
+    },
+    "morning_18_la_ilaha_yuhyi_yumit": {
+      "title": "Нет божества, кроме Аллаха — Он оживляет и умерщвляет"
+    },
+    "morning_19_subhan_allah_wa_bihamdihi": {
+      "title": "Слава Аллаху и хвала Ему"
+    },
+    "morning_20_astaghfirullah": {
+      "title": "Прошу прощения у Аллаха"
+    },
+    "morning_21_subhan_alhamdu_takbir": {
+      "title": "Тасбих, Тахмид, Такбир, Тахлиль"
+    },
+    "evening_01_ayat_kursi": {
+      "title": "Аят аль-Курси"
+    },
+    "evening_02_three_quls": {
+      "title": "Суры аль-Ихлас, аль-Фаляк, ан-Нас"
+    },
+    "evening_03_fitra_islam": {
+      "title": "На естественной природе ислама (вечер)"
+    },
+    "evening_04_radhitu": {
+      "title": "Доволен Аллахом как Господом"
+    },
+    "evening_05_bika_amsayna": {
+      "title": "Тобою мы встречаем вечер"
+    },
+    "evening_06_la_ilaha_illa_allah": {
+      "title": "Нет божества, кроме одного Аллаха"
+    },
+    "evening_07_ya_hayyu_ya_qayyum": {
+      "title": "О Живой, о Поддерживающий"
+    },
+    "evening_08_sayyid_al_istighfar": {
+      "title": "Саййид аль-Истигфар"
+    },
+    "evening_09_fatir_as_samawat": {
+      "title": "Создатель небес и земли"
+    },
+    "evening_10_amsayna_walmulku_lillah": {
+      "title": "Мы и владычество встречаем вечер ради Аллаха"
+    },
+    "evening_11_afw_wa_afiya": {
+      "title": "Прощение и благополучие"
+    },
+    "evening_12_bismillah_la_yadurr": {
+      "title": "Именем Аллаха — с Его именем ничто не вредит"
+    },
+    "evening_13_taamat_protection": {
+      "title": "Прибежище в совершенных словах Аллаха"
+    },
+    "evening_14_afini_fi_badani": {
+      "title": "Дай мне благополучие в теле, слухе и зрении"
+    },
+    "evening_15_hasbiy_allah": {
+      "title": "Достаточно мне Аллаха"
+    },
+    "evening_16_ushhiduka": {
+      "title": "Беру Тебя в свидетели в этот вечер"
+    },
+    "evening_17_la_ilaha_yuhyi_yumit": {
+      "title": "Нет божества, кроме Аллаха — Он оживляет и умерщвляет"
+    },
+    "evening_18_subhan_allah_wa_bihamdihi": {
+      "title": "Слава Аллаху и хвала Ему"
+    },
+    "evening_19_astaghfirullah": {
+      "title": "Прошу прощения у Аллаха"
+    },
+    "evening_20_subhan_alhamdu_takbir": {
+      "title": "Тасбих, Тахмид, Такбир, Тахлиль"
+    },
+    "afterPrayer_astaghfirullah": {
+      "title": "Прошение прощения"
+    },
+    "afterPrayer_allahumma_antas_salam": {
+      "title": "О Аллах, Ты — Источник мира"
+    },
+    "afterPrayer_subhanallah_33": {
+      "title": "Тасбих (33 × 3)"
+    },
+    "afterPrayer_three_quls": {
+      "title": "Суры аль-Ихлас, аль-Фаляк, ан-Нас после каждой обязательной молитвы"
+    },
+    "afterPrayer_ayat_kursi": {
+      "title": "Аят аль-Курси после каждой обязательной молитвы"
+    },
+    "food_before": {
+      "title": "Перед едой — бисмилла"
+    },
+    "food_after_min_ghayri_hawlin": {
+      "title": "После еды — без моей силы и мощи"
+    },
+    "food_after_atamana_wa_saqana": {
+      "title": "После еды — Тот, Кто накормил, напоил и сделал нас мусульманами"
+    },
+    "food_after_atama_wa_saqa_makhraj": {
+      "title": "После еды — накормил, напоил и устроил исход"
+    },
+    "food_after_atamana_wa_kafana": {
+      "title": "После еды — накормил, напоил, дал достаток и кров"
+    },
+    "food_after_kathiran_tayyiban": {
+      "title": "После еды — обильное, благое, благословенное восхваление"
+    },
+    "distress_lahawla": {
+      "title": "Нет силы и мощи, кроме как с Аллахом"
+    },
+    "distress_innallaha_maana": {
+      "title": "При страхе"
+    },
+    "distress_yaa_hayyu": {
+      "title": "Призыв к Вечно Живому"
+    },
+    "distress_ayatkursi_intro": {
+      "title": "Аят аль-Курси (защита сна)"
+    },
+    "distress_dua_al_faraj": {
+      "title": "Дуа аль-Фарадж (избавление от тревоги и печали)"
+    },
+    "distress_dua_al_karb": {
+      "title": "Дуа во время скорби"
+    },
+    "sleep_three_quls": {
+      "title": "Аль-Муʿаввизат — аль-Ихлас, аль-Фаляк, ан-Нас"
+    },
+    "sleep_ayat_kursi": {
+      "title": "Аят аль-Курси перед сном"
+    },
+    "sleep_aslamtu_wajhi": {
+      "title": "Я обратил лицо своё к Тебе"
+    },
+    "sleep_bismika_ahya": {
+      "title": "С Твоим именем, о Аллах, живу и умираю"
+    },
+    "sleep_alhamdu_ahyana": {
+      "title": "При пробуждении"
+    },
+    "sleep_khalaqta_nafsi": {
+      "title": "Ты создал мою душу — сохрани её или прости ей"
+    },
+    "sleep_rabba_samawat": {
+      "title": "Господь небес, земли и Великого Престола"
+    },
+    "sleep_dust_off_bed": {
+      "title": "Стряхнуть постель и лечь на правый бок"
+    },
+    "sleep_takbir_tasbih_tahmid": {
+      "title": "Такбир 34, Тасбих 33, Тахмид 33 (лучше слуги)"
+    },
+    "sleep_taamat_protection": {
+      "title": "Совершенные слова Аллаха — от всякого зла"
+    },
+    "sleep_taamat_for_children": {
+      "title": "Прибежище для детей — от всякого шайтана и вредного существа"
+    },
+    "sleep_taamat_long": {
+      "title": "При пробуждении в страхе или после кошмара"
+    },
+    "sleep_wajhik_alkarim": {
+      "title": "Твоим благородным Ликом и совершенными словами"
+    },
+    "sleep_anta_rabbi": {
+      "title": "Ты — мой Господь — не постигнет меня беда"
+    },
+    "travel_subhanalladhi": {
+      "title": "При посадке в транспорт"
+    },
+    "travel_journey": {
+      "title": "На путешествие — полный текст"
+    },
+    "travel_returning": {
+      "title": "При возвращении домой"
+    },
+    "mosque_entering": {
+      "title": "При входе в мечеть"
+    },
+    "mosque_leaving": {
+      "title": "При выходе из мечети"
+    },
+    "mosque_adhan_response": {
+      "title": "После слышания азана"
+    },
+    "gratitude_blessing": {
+      "title": "При получении благ"
+    },
+    "gratitude_kindness": {
+      "title": "Когда кто-то проявил к вам добро"
+    },
+    "forgiveness_sayyidul": {
+      "title": "Главное покаяние (Саййид аль-Истигфар)"
+    },
+    "forgiveness_rabbi_ighfir": {
+      "title": "Обращение к Аллаху с покаянием"
+    },
+    "distress_grief": {
+      "title": "Для облегчения печали и тревоги"
+    },
+    "distress_difficulty": {
+      "title": "В трудную минуту"
+    },
+    "distress_rain": {
+      "title": "Когда идёт дождь"
+    },
+    "weather_during_rain": {
+      "title": "Когда начинается дождь"
+    },
+    "weather_after_rain": {
+      "title": "После того как прошёл дождь"
+    },
+    "weather_thunder": {
+      "title": "При раскатах грома"
+    },
+    "weather_strong_wind": {
+      "title": "При сильном ветре"
+    },
+    "family_for_offspring": {
+      "title": "О праведном потомстве"
+    },
+    "family_for_parents": {
+      "title": "О родителях"
+    },
+    "family_blessing_marriage": {
+      "title": "Поздравление со свадьбой"
+    },
+    "family_for_child": {
+      "title": "Прибежище для ребёнка"
+    },
+    "sickness_visit": {
+      "title": "Посещение больного"
+    },
+    "sickness_prayer_for_sick": {
+      "title": "Дуа за больного"
+    },
+    "sickness_when_in_pain": {
+      "title": "При ощущении боли в теле"
+    },
+    "funeral_inna_lillah": {
+      "title": "При известии о смерти"
+    },
+    "funeral_consolation": {
+      "title": "Утешение скорбящих"
+    },
+    "funeral_graveyard_visit": {
+      "title": "При входе на кладбище"
+    },
+    "eid_takbir": {
+      "title": "Такбир Ида"
+    },
+    "eid_taqabbal": {
+      "title": "Поздравление с Идом"
+    },
+    "beforeQuran_taawwudh": {
+      "title": "Прибежище перед чтением"
+    },
+    "beforeQuran_basmalah": {
+      "title": "В начале всякого дела"
+    },
+    "knowledge_seeking": {
+      "title": "О приумножении знания"
+    },
+    "knowledge_understanding": {
+      "title": "О понимании"
+    },
+    "knowledge_majlis_kaffarah": {
+      "title": "Завершение собрания (каффарат аль-маджлис)"
+    },
+    "protection_morning_evening": {
+      "title": "Краткий Саййид аль-Истигфар (×3 утром и вечером)"
+    },
+    "protection_evil_eye": {
+      "title": "От сглаза"
+    },
+    "protection_entering_home": {
+      "title": "При входе в дом"
+    },
+    "protection_leaving_home": {
+      "title": "При выходе из дома"
+    },
+    "protection_market": {
+      "title": "При входе на рынок"
+    },
+    "guidance_istikharah": {
+      "title": "Намаз аль-Истихара — полный текст"
+    },
+    "guidance_steadfastness": {
+      "title": "О стойкости в вере"
+    },
+    "guidance_rabbana_atina": {
+      "title": "О благе в этой и будущей жизни"
+    },
+    "guidance_against_being_misled": {
+      "title": "О защите от заблуждения"
+    },
+    "pronunciation": "Произношение",
+    "tapToCount": "Нажмите для счёта",
+    "shareDua": "Поделиться: {{title}}",
+    "lavatory_01_entering": {
+      "title": "При входе в уборную"
+    },
+    "lavatory_02_leaving": {
+      "title": "При выходе из уборной"
+    },
+    "garment_01_dressing": {
+      "title": "Когда надеваешь одежду"
+    },
+    "garment_02_new": {
+      "title": "Новая одежда"
+    },
+    "garment_03_for_someone_new": {
+      "title": "Тому, кто надел новую одежду"
+    },
+    "garment_04_undressing": {
+      "title": "Когда снимаешь одежду"
+    },
+    "section": {
+      "day": "В течение дня",
+      "worship": "Поклонение",
+      "out": "В пути",
+      "hardship": "Когда тяжело",
+      "asking": "Просьбы"
+    },
+    "countHint": "{{count}} дуа"
+  },
+  "quran": {
+    "meccan": "Мекканская",
+    "medinan": "Мединская",
+    "ayahCount": "{{count}} аятов",
+    "notFound": "Сура не найдена.",
+    "comingSoon": "Полный текст этой суры появится в будущем обновлении данных.",
+    "pageLabel": "Страница {{page}}",
+    "switchToTranslation": "Переключиться на тафсир",
+    "switchToMushaf": "Переключиться на мусхаф",
+    "viewToggleTranslation": "Перевод",
+    "viewToggleMushaf": "Мусхаф",
+    "enterFullscreen": "Полный экран",
+    "exitFullscreen": "Выйти из полного экрана",
+    "mushafDownloadTitle": "Скачать мусхаф",
+    "mushafDownloadBody": "Мединский мусхаф ~{{size}} МБ. Не входит в приложение — скачайте один раз, страницы останутся на устройстве.",
+    "mushafDownloadReadCta": "Скачать и начать читать (~{{size}} МБ)",
+    "mushafDownloadReadHint": "Страницы появляются по мере загрузки; остальное скачивается в фоне.",
+    "mushafDownloadStrip": "Загрузка мусхафа · {{pct}} %",
+    "juzLabel": "Джуз {{juz}}",
+    "nightMode": "Ночной режим",
+    "jumpToPage": "Перейти к странице",
+    "pageShort": "с. {{page}}",
+    "go": "Перейти",
+    "mushafDownloadRetryBody": "Не удалось загрузить {{count}} стр. Повторите попытку, чтобы получить недостающие страницы — всё уже загруженное сохранено.",
+    "mushafDownloadRetryCta": "Докачать недостающие страницы",
+    "star": "Отметить аят звездой",
+    "unstar": "Убрать звезду",
+    "bookmark": "Закладка",
+    "bookmarkColor": "Цвет закладки {{color}}",
+    "playFromHere": "Воспроизвести отсюда",
+    "repeatAyah": "Повторять этот аят",
+    "buffering": "Буферизация…",
+    "previousAyah": "Предыдущий аят",
+    "nextAyah": "Следующий аят",
+    "pause": "Пауза",
+    "play": "Воспроизвести",
+    "stopPlayback": "Остановить воспроизведение",
+    "playbackSettings": "Чтение",
+    "reciter": "Чтец",
+    "downloadSurahAudio": "Скачать аудио {{surah}}",
+    "surahAudioDownloaded": "Аудио скачано для офлайн-доступа",
+    "downloadingAudio": "Скачивание… {{done}}/{{total}}",
+    "downloadSurahAudioShort": "Скачать эту суру для прослушивания офлайн",
+    "speed": "Скорость",
+    "memorization": "Заучивание",
+    "repeatEachAyah": "Повторять каждый аят",
+    "repeatRange": "Повторять диапазон",
+    "pauseBetween": "Пауза между повторами",
+    "none": "Нет",
+    "hideForReview": "Скрывать при повторении",
+    "hideArabic": "Арабский",
+    "hideTranslation": "Перевод",
+    "playRangeTitle": "Воспроизвести отрывок из {{surah}}",
+    "fromAyah": "С аята",
+    "toAyah": "По аят",
+    "playRange": "Воспроизвести отрывок",
+    "ayahA11y": "Аят {{ayah}} — нажмите для действий",
+    "tapToReveal": "Нажмите, чтобы показать",
+    "hideModeActive": "Режим заучивания: {{what}} скрыто — нажмите на аят, чтобы показать",
+    "loading": "Загрузка…",
+    "continueReading": "Продолжить чтение",
+    "continueKhatmah": "Продолжить хатм",
+    "readingPin": "Продолжить чтение отсюда",
+    "readingPinned": "Продолжение чтения начинается здесь",
+    "readingMarkerLabel": "Чтение",
+    "khatmahMarkerLabel": "Хатм",
+    "khatmah": "Хатм",
+    "khatmahDaysLeft": "Осталось {{count}} дн.",
+    "khatmahDaysLeft_one": "Осталось {{count}} дн.",
+    "khatmahProgress": "{{read}} / {{total}} стр. · сегодня: {{today}}",
+    "khatmahBehind": "Догнать: {{count}}",
+    "startKhatmah": "Начать хатм",
+    "khatmahDays": "{{count}} дн.",
+    "verseOfDay": "Аят дня",
+    "searchPlaceholder": "Поиск сур, аятов, перевода…",
+    "tabSurah": "Суры",
+    "tabJuz": "Джузы",
+    "tabBookmarks": "Закладки",
+    "searchResults": "Найдено аятов: {{count}}",
+    "noBookmarks": "Закладок пока нет — нажмите на любой аят во время чтения, чтобы добавить закладку или звезду.",
+    "starred": "Отмеченные звездой",
+    "shareAsImage": "Поделиться картинкой",
+    "chooseReciter": "Выбрать чтеца",
+    "searchReciters": "Поиск чтецов…",
+    "wordHighlightBadge": "подсветка слов",
+    "changeReciter": "Изменить",
+    "deleteBookmark": "Удалить закладку",
+    "removeStar": "Убрать звезду",
+    "nightShort": "Ночь",
+    "sepiaShort": "Сепия",
+    "lightShort": "Светлая",
+    "switchToNight": "Переключить на ночную страницу",
+    "switchToSepia": "Переключить на страницу сепии",
+    "riwayahHafs": "Хафс",
+    "riwayahWarsh": "Варш",
+    "switchRiwayah": "Переключить на чтение {{name}}",
+    "riwayahReflowTitle": "Страницы совпадают, строки — не всегда",
+    "riwayahReflowBody": "Этот мусхаф начинает и заканчивает каждую страницу ровно там же, где печатный, но строки в нём верстает ваше устройство, а не типография, поэтому переносы не всегда совпадут.",
+    "riwayahNeedsHttps": "Ссылка должна начинаться с https://",
+    "riwayahServerSaidNo": "Сервер ответил {{status}}.",
+    "riwayahTooLarge": "Этот файл намного больше, чем набор данных мусхафа. Проверьте ссылку.",
+    "riwayahUnreachable": "Не удалось открыть эту ссылку. Проверьте адрес и соединение.",
+    "riwayahGotAPage": "По этой ссылке пришла веб-страница, а не файл данных. Используйте ссылку на выгрузку JSON.",
+    "riwayahNotJson": "Это не файл данных.",
+    "riwayahNotAQuran": "Этот файл — не полный Коран, поэтому он не установлен.",
+    "riwayahCouldNotSave": "Не удалось сохранить его на этом устройстве.",
+    "switchToLight": "Переключить на светлую страницу",
+    "ayahOfDayTitle": "Аят дня",
+    "ayahOfDayChannelName": "Аят дня",
+    "tafsir": "Тафсир",
+    "showTafsir": "Показать тафсир",
+    "tafsirUnavailable": "Тафсир недоступен — один раз подключитесь к интернету, чтобы загрузить его.",
+    "khatmahPin": "Отметить как мою позицию хатмы",
+    "khatmahPinned": "Позиция хатмы — нажмите, чтобы убрать",
+    "khatmahUnpin": "Убрать позицию хатмы",
+    "khatmahContinue": "Продолжить",
+    "khatmahReset": "Сброс",
+    "khatmahResetTitle": "Сбросить хатму",
+    "khatmahResetToday": "Сбросить сегодняшнее чтение",
+    "khatmahResetTodayHelp": "Отменяет только страницы, записанные сегодня.",
+    "khatmahResetAll": "Начать хатму заново",
+    "khatmahResetAllHelp": "Снова с начала плана и новым графиком.",
+    "khatmahDelete": "Удалить хатму",
+    "khatmahDeleteHelp": "Полностью удаляет план.",
+    "khatmahReminderChannelName": "Напоминание о хатме",
+    "khatmahReminderTitle": "Хатма",
+    "khatmahReminderBody": "Сегодняшняя порция: {{pages}} стр. — продолжайте со страницы {{page}}.",
+    "audioButton": "Аудио",
+    "khatmahCustom": "Свой срок…",
+    "khatmahLengthTitle": "Длительность хатмы (дней)",
+    "khatmahSetUpTitle": "Начать хатму",
+    "khatmahFromPageTitle": "Уже читаете? Начните со страницы",
+    "khatmahFromPageHint": "С начала",
+    "khatmahStartCta": "Начать",
+    "showMore": "Показать больше",
+    "showLess": "Показать меньше",
+    "tafsirEditionHelp": "Толкование, показываемое под каждым аятом. Также можно изменить у любого аята на странице Корана.",
+    "nextPage": "Следующая страница",
+    "prevPage": "Предыдущая страница",
+    "companionTitle": "Под каждым аятом",
+    "companionHelp": "Применяется везде, где показывается аят — в читалке, аяте дня и ежедневном уведомлении. Также можно изменить на странице Корана.",
+    "companionActive": "активно",
+    "mushafReplaceOldBody": "На устройстве осталась старая копия мусхафа ({{size}} МБ) от предыдущей версии. Она будет удалена в первую очередь — ничего из сохранённого вами не пострадает.",
+    "shareAsText": "Поделиться текстом",
+    "shareChoiceA11y": "Поделиться — текстом или карточкой",
+    "recitation": "Чтение",
+    "downloadSurahAudioSized": "Скачать эту суру · {{size}}",
+    "tapToPick": "выбрать",
+    "tabMarks": "Метки",
+    "searchSurahOrPage": "Найти суру или страницу",
+    "reading": "читается",
+    "pageScrubber": "Перейти к странице",
+    "goCta": "Перейти",
+    "downloadChannelName": "Загрузка Корана",
+    "downloadChannelDesc": "Ход загрузки Корана.",
+    "downloadingFonts": "Загружается текст Корана",
+    "downloadingReciter": "Загрузка: {{name}}",
+    "downloadProgressAyahs": "{{done}} из {{total}} аятов",
+    "audioDownloadDoneTitle": "{{name}} готов",
+    "audioDownloadDoneBody": "Весь Коран этим голосом есть на устройстве. Теперь он звучит без подключения.",
+    "audioDownloadIncompleteTitle": "Чтение не догрузилось",
+    "audioDownloadIncompleteBody": "Не хватает ещё {{count}} аятов. Запустите снова — продолжится с того же места.",
+    "listenTitle": "Тилават",
+    "tilawahDoorSub": "Слушать Коран",
+    "tilawahBlurb": "Чтение Корана — звучит и с выключенным экраном, а после загрузки работает без подключения.",
+    "tilawahContinue": "Продолжить с места чтения",
+    "tilawahBegin": "Начать с",
+    "tilawahAyahOf": "Аят {{done}} из {{total}}",
+    "tilawahShowPage": "Показывать страницу",
+    "backToTop": "Наверх",
+    "tilawahKeepAwake": "Не гасить экран",
+    "tilawahSurahSeek": "Перемотка внутри суры",
+    "tilawahShuffle": "Перемешать суры",
+    "tilawahPrevSurah": "Предыдущая сура",
+    "tilawahNextSurah": "Следующая сура",
+    "tilawahAyahWord": "Аят",
+    "openInReader": "Открыть в читалке",
+    "listenSurahMeta": "{{count}} аятов",
+    "listenNowPlaying": "Сейчас звучит",
+    "listenContinuous": "Играет подряд",
+    "listenIdle": "Ничего не звучит",
+    "listenReciter": "Чтец",
+    "listenSeek": "Перемотка внутри аята",
+    "listenPrevious": "Предыдущий аят",
+    "listenNext": "Следующий аят",
+    "listenSpeed": "Скорость",
+    "listenSleep": "Таймер сна",
+    "listenSleepOff": "Выключено",
+    "listenSleepSurah": "Конец суры",
+    "listenSleepMinutes": "{{count}} мин",
+    "listenSleepArmed": "Остановится примерно через {{count}} мин",
+    "listenPickSurah": "Начать с",
+    "listenDownloadTitle": "Оставить {{name}} на этом устройстве",
+    "listenDownloadBody": "Весь Коран этим голосом, около {{size}}. Читалка проигрывает те же файлы, так что там это тоже работает.",
+    "listenDownloadComplete": "Полностью · {{size}}",
+    "listenDownloadPartial": "{{done}} из {{total}} аятов здесь · {{size}}",
+    "listenDownloadStart": "Скачать",
+    "listenDownloadResume": "Продолжить загрузку",
+    "listenDownloadBusy": "Сейчас скачивается другое. По одному за раз, чтобы ни одно не замедлилось.",
+    "downloadProgress": "{{done}} из {{total}} страниц",
+    "downloadDoneTitle": "Коран готов",
+    "downloadDoneBody": "Все страницы на этом устройстве. Теперь он читается без сети.",
+    "downloadIncompleteTitle": "Загрузка не завершилась",
+    "downloadIncompleteBody": "Не хватает {{count}} страниц. Откройте Коран, чтобы продолжить с места остановки.",
+    "finishDay": "Завершить чтение дня {{day}} ({{when}})",
+    "finishDayShort": "Завершить день {{day}} ({{when}})",
+    "khatmahPageProgress": "Осталось {{pages}} стр. · день {{day}} из {{days}}",
+    "khatmahDayDone": "✓ Сегодняшнее чтение завершено",
+    "khatmahPagesLeftToday": "Осталось {{count}} стр. на сегодня",
+    "khatmahPagesLeftToday_one": "Осталось {{count}} стр. на сегодня",
+    "khatmahExtraPages": "+{{count}} стр. сверх нормы",
+    "khatmahExtraPages_one": "+{{count}} стр. сверх нормы",
+    "khatmahMarkDone": "Отметить чтение дня {{day}} как завершённое",
+    "khatmahMarkNext": "✓ Завершить и день {{day}} ({{when}})",
+    "khatmahMarkToday": "✓ Сегодняшнее чтение завершено",
+    "khatmahPrevDay": "‹ Предыдущий день",
+    "riwayahQalun": "Калун",
+    "riwayahShubah": "Шуба",
+    "riwayahPickerTitle": "Чтение",
+    "riwayahPickerOpen": "Чтение: {{name}}. Нажмите, чтобы сменить.",
+    "riwayahNotOnDevice": "{{name}} — ещё не на этом устройстве",
+    "riwayahAddIt": "Нажмите, чтобы добавить",
+    "riwayahDefault": "(по умолчанию)",
+    "dueToday": "сегодня",
+    "dueTomorrow": "завтра",
+    "scrubHint": "Проведите вверх для точной прокрутки",
+    "scrubHalf": "Половина скорости",
+    "scrubQuarter": "Четверть скорости",
+    "scrubFine": "Точная настройка",
+    "translationUnavailable": "Для этого аята нет перевода.",
+    "oftenRead": "Читают чаще всего",
+    "listenDeleteAudio": "Удалить {{name}} с этого устройства",
+    "listenDownloadReciter": "Скачать {{name}}, около {{size}}",
+    "listenDownloadRunning": "Загрузка · {{done}} из {{total}}",
+    "shareTafsir": "Поделиться этим тафсиром ({{edition}})",
+    "surahAudioPartial": "{{have}} из {{total}} аятов · нажмите, чтобы загрузить остальное",
+    "deleteSurahAudio": "Удалить аудио этой суры",
+    "deleteSurahAudioFor": "Удалить загруженное аудио суры {{surah}}",
+    "audioGap": "{{surah}} {{ayah}} не загружен — подключитесь или загрузите эту суру для прослушивания офлайн.",
+    "khatmahMore": "Другие параметры хатмы",
+    "khatmahPrevDayHelp": "Отменить сегодняшнюю отметку и вернуться к порции предыдущего дня.",
+    "lastReadRow": "Последнее чтение · {{surah}}, стр. {{page}}",
+    "autoShort": "Авто",
+    "switchToAuto": "Следовать теме приложения",
+    "downloadingSurah": "Загрузка {{surah}} · {{name}}",
+    "surahDownloadDoneTitle": "{{surah}} готова",
+    "surahDownloadDoneBody": "Чтение суры {{surah}} в исполнении {{name}} сохранено на устройстве и теперь звучит без связи.",
+    "reciterDownloadStrip": "Загрузка {{name}} · {{pct}} %",
+    "surahDownloadStrip": "Загрузка {{surah}} · {{pct}} %"
+  },
+  "mosques": {
+    "searching": "Ищем ближайшие мечети…",
+    "noneFound": "Поблизости мечетей не найдено. Расширьте радиус поиска.",
+    "unnamedMosque": "Мечеть",
+    "needLocation": "Сначала укажите местоположение, чтобы мы могли искать рядом.",
+    "error": "Не удалось обратиться к базе мечетей. Попробуйте снова.",
+    "title": "Найдите ближайшую мечеть",
+    "bodyWithLocation": "Мы откроем ваше картографическое приложение с поиском \"mosque\" вокруг вашего местоположения. Если приложение недоступно, откроем Google Карты в браузере.",
+    "bodyNoLocation": "Сначала укажите местоположение (Настройки → Местоположение). Затем мы откроем ваше картографическое приложение с поиском \"mosque\" вокруг него. Если приложения нет, откроем Google Карты в браузере.",
+    "openInMapsApp": "Открыть карты и найти \"mosque\""
+  },
+  "journal": {
+    "todayLabel": "Сегодня",
+    "streakDays": "Дней подряд",
+    "onTimeRate": "Вовремя",
+    "totalLogged": "Всего записано",
+    "status": {
+      "on-time": "Вовремя",
+      "late": "С опозданием",
+      "missed": "Пропущено",
+      "qadha": "Восполнено (қадха)"
+    },
+    "statusShort": {
+      "on-time": "Вовремя",
+      "late": "С опозданием",
+      "missed": "Пропущено",
+      "qadha": "Восполнено"
+    },
+    "encourageEmpty": "Отметьте первую молитву сегодняшнего дня, чтобы начать дневник.",
+    "encourageActive": "Каждая записанная молитва — шаг вперёд.",
+    "encourageStreak": "Машаллах, {{count}} дней подряд вовремя. Так держать.",
+    "notificationToggleTitle": "Записывать из уведомления",
+    "notificationToggleOn": "Коснитесь \"Записать молитву\" в уведомлении о времени молитвы, чтобы сразу перейти сюда.",
+    "notificationToggleOff": "Добавьте действие \"Записать молитву\" к каждому уведомлению о времени молитвы.",
+    "notificationToggleA11y": "Включить запись в дневник из уведомлений о молитве",
+    "notePlaceholder": "Личная заметка (только на этом устройстве)",
+    "saveNote": "Сохранить заметку",
+    "logActionTitle": "Записать молитву",
+    "logSunnahActionTitle": "Отметить с сунной",
+    "loadFailedTitle": "Не удалось загрузить журнал",
+    "loadFailedBody": "Ваши данные на устройстве в порядке, но сейчас их не удалось прочитать. Откройте журнал ещё раз.",
+    "saveFailedTitle": "Не удалось сохранить",
+    "saveFailedBody": "Попробуйте ещё раз.",
+    "noteLabel": "Личная заметка (приватная, зашифрованная)",
+    "notYet": "Ещё нет — время не наступило",
+    "quickLogMark": "Отметить {{prayer}} как совершённую",
+    "quickLogLogged": "{{prayer}} записана: {{status}}. Нажмите, чтобы отменить",
+    "quickLogNotYet": "Время {{prayer}} ещё не наступило",
+    "passedTitle": "Отметить {{prayer}} · {{day}}",
+    "passedBody": "Её время прошло. Как она была совершена?",
+    "passedFirstBody": "Первое время прошло, второе ещё идёт. Совершена в первое время или после него?"
+  },
+  "events": {
+    "islamicNewYear": "Исламский новый год",
+    "ashura": "День Ашура",
+    "mawlid": "Маулид ан-Наби",
+    "isra": "Исра и Мирадж",
+    "midShaban": "Середина Шаабана",
+    "ramadanBegins": "Начало Рамадана",
+    "laylatAlQadr": "Лайлят аль-Кадр (отмечаемая)",
+    "eidAlFitr": "Ид аль-Фитр",
+    "arafah": "День Арафат",
+    "eidAlAdha": "Ид аль-Адха",
+    "whiteDays": "Белые дни",
+    "sixOfShawwal": "Шесть дней Шавваля"
+  },
+  "ramadan": {
+    "title": "Рамадан",
+    "suhoor": "Сухур",
+    "iftar": "Ифтар",
+    "suhoorIn": "Сухур заканчивается через {{time}}",
+    "iftarIn": "Ифтар через {{time}}"
+  },
+  "onboarding": {
+    "skip": "Пока пропустить",
+    "next": "Далее",
+    "done": "Готово",
+    "stepLabel": "Шаг {{current}} из {{total}}",
+    "welcome": {
+      "title": "Добро пожаловать",
+      "body": "Спокойное и приватное приложение для времени намаза. Никакой аналитики и трекеров — только тихие напоминания о пяти ежедневных намазах.",
+      "salam": "Мир вам, милость Аллаха и Его благословение."
+    },
+    "location": {
+      "title": "Ваше местоположение",
+      "body": "Мы используем ваше примерное местоположение, чтобы точно рассчитать время намаза. Координаты хранятся на этом устройстве в зашифрованном виде и никогда его не покидают.",
+      "cta": "Использовать моё местоположение"
+    },
+    "notifications": {
+      "title": "Оповещения о намазе",
+      "body": "Мы можем ненавязчиво уведомлять вас о наступлении каждого намаза. Можно выбрать звук, задать напоминание или отключить это в любой момент.",
+      "cta": "Включить оповещения"
+    },
+    "exactAlarms": {
+      "title": "Оповещения точно в срок",
+      "body": "В новых версиях Android оповещениям о намазе нужно отдельное разрешение, чтобы они приходили вовремя, а не с опозданием на несколько минут.",
+      "cta": "Разрешить точные оповещения"
+    },
+    "salamA11y": "Ас-саляму алейкум ва рахматуллахи таʿаля ва баракатух"
+  },
+  "backup": {
+    "exportSection": "Экспорт",
+    "exportHelp": "Сохраните настройки, сохранённые места, дневник намазов и журнал постов в файл JSON. Откройте его позже, чтобы всё восстановить.",
+    "exportCta": "Экспортировать копию",
+    "shareTitle": "Резервная копия Ibadat 365",
+    "exportFailedTitle": "Не удалось экспортировать",
+    "restoreSection": "Восстановление",
+    "restoreHelp": "Вставьте ниже резервную копию JSON и нажмите «Восстановить», чтобы посмотреть её. Приложение спросит подтверждение перед применением.",
+    "restorePastePlaceholder": "Вставьте сюда резервную копию JSON…",
+    "restoreCta": "Посмотреть восстановление",
+    "restorePreviewTitle": "Резервная копия найдена",
+    "restorePreviewBody": "{{settings}} настроек, {{presets}} сохранённых мест, {{journal}} записей дневника, {{fasting}} дней поста. Применить это на следующем шаге.",
+    "restoreFailedTitle": "Не удалось прочитать копию",
+    "notAnEnvelope": "Этот файл не похож на резервную копию Ibadat 365.",
+    "privacyNote": "Резервные копии остаются на вашем устройстве, пока вы сами ими не поделитесь. В будущем обновлении координаты и записи дневника можно будет зашифровать паролем — до тех пор храните файл копии в тайне."
+  },
+  "fasting": {
+    "todayLabel": "Сегодня",
+    "ramadanDayLabel": "Рамадан · День {{day}}",
+    "statusKept": "Пост соблюдён — баракаллаху фик.",
+    "statusRecommended": "На эту дату приходится Сунна-пост.",
+    "statusOptional": "Сегодня пост не записан.",
+    "markCta": "Отметить сегодня как пост",
+    "unmarkCta": "Снять отметку сегодня",
+    "statRamadan": "Рамадан",
+    "statVoluntary": "Добровольно",
+    "statStreak": "Подряд",
+    "gridLabel": "Этот Рамадан",
+    "gridDayA11y": "День {{day}} {{state}}",
+    "privacyNote": "История поста остаётся зашифрованной на вашем устройстве.",
+    "encourageEmpty": "Запишите свой первый пост, чтобы начать отслеживание.",
+    "encourageActive": "Каждый пост важен. Да примет его Аллах.",
+    "encourageStreak": "Машаллах, {{count}} дней подряд. Так держать.",
+    "reminderToggleTitle": "Напоминание накануне",
+    "reminderToggleOn": "Вы получите мягкое уведомление в {{hour}}:00 накануне каждого Сунна-поста.",
+    "reminderToggleOff": "Получайте уведомление накануне каждого понедельника/четверга и особого постного дня.",
+    "reminderToggleA11y": "Включить напоминания накануне поста",
+    "upcomingLabel": "Предстоящие Сунна-посты",
+    "daysAway": "через {{count}} д",
+    "daysSpan": "{{count}} дн",
+    "daysCount": "{{count}} дн",
+    "ramadanCountdownLabel": "Рамадан начнётся через",
+    "mondayEncouragement": "Понедельник — Сунна-пост: дела представляются Аллаху по понедельникам и четвергам.",
+    "thursdayEncouragement": "Четверг — Сунна-пост: дела представляются Аллаху по понедельникам и четвергам.",
+    "monthViewLabel": "Все записанные посты",
+    "noLogsYet": "Дни, которые вы держите пост, появятся здесь.",
+    "typeRamadan": "Рамадан",
+    "typeVoluntary": "Добровольный / Сунна",
+    "reminderChannelName": "Напоминания о посте",
+    "reminderTitle": "Напоминание о посте"
+  },
+  "methods": {
+    "0": "Шииты — Иснаашария",
+    "1": "Университет исламских наук, Карачи",
+    "2": "Исламское общество Северной Америки (ISNA)",
+    "3": "Всемирная исламская лига",
+    "4": "Университет Умм-аль-Кура, Мекка",
+    "5": "Главное управление геодезии Египта",
+    "7": "Институт геофизики, Тегеранский университет",
+    "8": "Регион Залива",
+    "9": "Кувейт",
+    "10": "Катар",
+    "11": "Сингапур",
+    "12": "Франция",
+    "13": "Турция",
+    "14": "Россия",
+    "15": "Всемирный комитет наблюдения за луной",
+    "21": "Марокко",
+    "auto": "Автоматически (по местоположению)"
+  },
+  "attributions": {
+    "groupScripture": "Текст",
+    "groupRecitation": "Чтение",
+    "groupMeaning": "Перевод и тафсир",
+    "groupTypefaces": "Шрифты",
+    "footer": "Каждая строка ведёт к своему источнику.",
+    "quranText": "Коран — османский текст",
+    "mushafImages": "Изображения страниц мусхафа (604)",
+    "translationEditions": "Издания переводов (14)",
+    "sahihIntl": "Sahih International (английский)",
+    "pickthall": "Pickthall (английский)",
+    "mushafMetadata": "Метаданные страниц мусхафа",
+    "riwayat": "Тексты Варша, Калюна и Шуʿбы (загружаются, не входят в приложение)",
+    "riwayahLines": "Геометрия печатных строк этих мусхафов",
+    "amiriFonts": "Шрифты Amiri и Amiri Quran",
+    "scheherazade": "Scheherazade New",
+    "hisnulMuslim": "Дуа из Хисн аль-Муслим",
+    "quranGeometry": "Данные о положении аятов (quran.com / проект Quran for Android)",
+    "recitation": "Аудио чтения (42 чтеца): EveryAyah.com · тайминг слов: quran-align (CC BY 4.0)",
+    "tafsir": "Тафсиры: Ибн Касир, Маариф-уль-Куран, аль-Муяссар",
+    "surahHeaderFont": "Каллиграфия заголовков сур"
+  },
+  "liveActivity": {
+    "title": "Следующая молитва",
+    "in": "через {{remaining}}",
+    "now": "Сейчас",
+    "soon": "Скоро начнётся",
+    "channelName": "Отсчёт молитвы",
+    "channelDesc": "Закреплённое продолжающееся уведомление с отсчётом до следующей молитвы.",
+    "fgsText": "Обратный отсчёт намаза активен",
+    "justThisOne": "один раз",
+    "inWord": "Через",
+    "atWord": "В",
+    "hideOnLock": "Скрыть на экране блокировки",
+    "showOnLock": "Показывать на экране блокировки"
+  },
+  "hijri": {
+    "month_1": "Мухаррам",
+    "month_2": "Сафар",
+    "month_3": "Раби аль-авваль",
+    "month_4": "Раби ас-сани",
+    "month_5": "Джумада аль-уля",
+    "month_6": "Джумада ас-сани",
+    "month_7": "Раджаб",
+    "month_8": "Шаабан",
+    "month_9": "Рамадан",
+    "month_10": "Шавваль",
+    "month_11": "Зуль-каада",
+    "month_12": "Зуль-хиджа"
+  },
+  "tour": {
+    "welcomeTitle": "Добро пожаловать в Ibadat 365",
+    "welcomeBody": "Время молитв, Коран и инструменты для ежедневного поклонения — приватность по умолчанию. Без аккаунтов и трекеров.",
+    "timesTitle": "Время молитв — одним взглядом",
+    "timesBody": "Точное время для вашего местоположения с живым отсчётом до следующей молитвы. Смахните карточку дня, чтобы заглянуть в ближайшие дни.",
+    "quranTitle": "Коран в прекрасном оформлении",
+    "quranBody": "Читайте мединский мусхаф, слушайте чтение пяти чтецов, добавляйте аяты в закладки и отслеживайте свой хатм.",
+    "customizeTitle": "Настройте под себя",
+    "customizeBody": "Виджеты на главном экране, отсчёт в живой активности, темы и акцентные цвета — всё в настройках.",
+    "skip": "Пропустить",
+    "next": "Далее",
+    "done": "Начать"
+  },
+  "downloads": {
+    "title": "Управление загрузками",
+    "settingsHelp": "Страницы мусхафа, аудио чтения и тафсир на этом устройстве.",
+    "deleteTitle": "Удалить загрузку?",
+    "deleteBody": "{{what}} будет удалено с устройства. Вы можете загрузить это снова в любой момент.",
+    "total": "Всего на устройстве: {{size}}",
+    "mushaf": "Страницы мусхафа",
+    "mushafSub": "604 мединские страницы",
+    "audioSub": "Аудио чтения",
+    "tafsirSub": "Кэш тафсира",
+    "empty": "Пока ничего не загружено. Загруженные страницы мусхафа, аудио и тафсир появятся здесь.",
+    "mushafPages": "{{pages}} из {{total}} страниц",
+    "legacyMushaf": "Старые страницы мусхафа",
+    "legacyMushafSub": "Остались от прежней читалки. Их больше ничто не открывает.",
+    "riwayat": "Способы чтения",
+    "riwayatFootnote": "Ibadat 365 не содержит эти тексты и не размещает их у себя. Файл загружается от издателя прямо на это устройство и проверяется здесь, прежде чем из него что-либо будет прочитано.",
+    "riwayahInstalled": "{{pages}} страниц · с {{host}}",
+    "riwayahPublisher": "Издатель: {{publisher}}. Ссылается на {{credits}}.",
+    "riwayahBuiltIn": "Входит в Ibadat 365. Загружать нечего и удалять нечего.",
+    "riwayahOpenSource": "Открыть источник",
+    "riwayahDownload": "Скачать",
+    "riwayahFetchHowTo": "Ibadat 365 загрузит его от издателя прямо на это устройство и проверит, прежде чем из него что-либо будет прочитано.",
+    "riwayahAddAFile": "Добавить файл, который у меня уже есть",
+    "riwayahHowTo": "Скачайте JSON-файл с той страницы и выберите его ниже. Его можно не распаковывать.",
+    "riwayahLink": "Ссылка на файл данных",
+    "riwayahInstall": "Добавить этот мусхаф",
+    "riwayahChooseFile": "Выбрать загруженный файл",
+    "riwayahOrLink": "Или вставьте прямую ссылку на файл:",
+    "riwayahUnreadable": "Не удалось прочитать этот файл.",
+    "riwayahFileTooLarge": "Этот файл слишком велик, чтобы быть мусхафом.",
+    "riwayahZipUnsupported": "Этот архив в формате, который приложение не может открыть. Распакуйте его и выберите файл внутри.",
+    "riwayahZipUnreadable": "Не удалось открыть этот архив.",
+    "riwayahNoJsonInZip": "Внутри этого архива нет файла .json."
+  },
+  "dataStats": {
+    "title": "Статистика данных",
+    "toggle": "Показать статистику данных",
+    "toggleHelp": "Показывает в Настройки → Время молитв, откуда берётся время молитв, сколько данных сохранено и когда они обновляются.",
+    "source": "Текущий источник",
+    "daysStored": "Сохранено на устройстве",
+    "lastUpdated": "Последнее обновление",
+    "nextCheck": "Следующая проверка обновлений",
+    "serverRun": "Последний запуск сервера",
+    "nextServerRun": "Следующий запуск сервера",
+    "never": "—",
+    "daysUnit": "дн.",
+    "sourceCdn": "Данные сервера (свежие)",
+    "sourceSeed": "Встроенные офлайн-данные",
+    "sourceScrape": "В реальном времени Islamiska Förbundet",
+    "sourceAladhan": "AlAdhan",
+    "sourceLocal": "Расчёт на устройстве",
+    "sourceUnknown": "Неизвестно",
+    "serverOk": "ОК",
+    "serverWarning": "Мало данных",
+    "serverUnknown": "Ещё не проверено",
+    "unlockedTitle": "Статистика данных включена",
+    "unlockedBody": "Карточка статистики теперь отображается в Настройки → Время молитв. Отключить можно в любой момент ниже.",
+    "serverCoverage": "Покрытие сервера",
+    "serverSweden": "Швеция · Islamiska Förbundet",
+    "serverMorocco": "Марокко · Habous",
+    "inUse": "используется",
+    "habousWindow": "Министерство публикует только текущий месяц хиджры, поэтому это окно сокращается на день каждый день и вновь заполняется со сменой месяца. Пересборка его не удлинит."
+  },
+  "log": {
+    "legendPrayers": "0 → 5 молитв",
+    "fasted": "пост",
+    "dayA11y": "{{date}}: отмечено молитв: {{prayers}}{{fast}}",
+    "streakCaption": "серия {{count}} дней",
+    "streakBest": "(рекорд {{best}})",
+    "fastsCaption": "постов: {{count}}",
+    "markAllOnTime": "Отметить все вовремя",
+    "iftarAt": "Ифтар {{time}}",
+    "allUpcoming": "Все предстоящие",
+    "title": "Журнал",
+    "practiceTitle": "Практика",
+    "previousDay": "Предыдущий день",
+    "nextDay": "Следующий день",
+    "backToToday": "Вернуться к сегодня",
+    "fastingTitle": "Пост",
+    "noFastLogged": "Пост не отмечен.",
+    "markFasted": "Отметить пост",
+    "unmarkFasted": "Снять отметку",
+    "showOnHome": "Показывать график на главной",
+    "showOnHomeHelp": "Добавляет ваши квадраты на экран «Сегодня». По умолчанию выключено.",
+    "backfillAction": "Заполнить прошедшие дни",
+    "backfillTitle": "Заполнить прошедшие дни?",
+    "backfillBody": "Будет записано {{prayers}} молитв за {{days}} дней ({{range}}) как совершённые вовремя. Уже отмеченные дни останутся без изменений, сегодняшний день не затрагивается.",
+    "backfillConfirm": "Заполнить",
+    "backfillNothingTitle": "Нечего заполнять",
+    "backfillNothingBody": "Все дни до сегодняшнего уже записаны.",
+    "openLogFromHome": "Открыть журнал",
+    "swipeHint": "Проведите, чтобы сменить день",
+    "backfillUnreadable": "Журнал сейчас не удалось прочитать, поэтому ничего не изменилось. Попробуйте ещё раз.",
+    "backfillRefusedTitle": "Ничего не изменилось",
+    "backfillRefusedBody": "Заполнение этих дней изменило бы то, что вы уже записали, поэтому операция остановлена. Ваш журнал не тронут.",
+    "fillMonthsAction": "Заполнить последние три месяца",
+    "fillMonthsTitle": "Заполнить последние три месяца?",
+    "fillMonthsBody": "Будет записано {{prayers}} молитв за {{days}} пустых дней ({{range}}) как совершённые вовремя. {{skipped}} дней останутся нетронутыми, потому что в них уже что-то есть — статус, заметка или пост. Сегодняшний день не затрагивается.",
+    "fillMonthsNothingBody": "В каждом дне за последние три месяца уже что-то записано.",
+    "fillSummaryDays": "Дней",
+    "fillSummaryPrayers": "Молитв",
+    "backfillPreserved": "Уже отмеченные дни останутся без изменений, сегодняшний день не затрагивается.",
+    "fillMonthsPreserved": "Дни, в которых уже есть статус, заметка или пост, остаются ровно такими, как есть. Сегодняшний день не затрагивается.",
+    "fillSummaryLeftAlone": "Не тронуто",
+    "unlogged": "не заполнено",
+    "resetAction": "Сбросить журнал молитв",
+    "resetTitle": "Сбросить журнал молитв",
+    "resetBody": "Выберите, сколько очистить — относительно {{day}}. Посты, сунна-молитвы и зикр хранятся отдельно и не затрагиваются.",
+    "resetScopeDay": "Этот день",
+    "resetScopeMonth": "Этот месяц",
+    "resetScopeYear": "Этот год",
+    "resetScopeAll": "Всё",
+    "resetNothing": "ничего",
+    "resetConfirmTitle": "Очистить эти молитвы?",
+    "resetConfirm": "Очистить",
+    "resetPreserved": "Посты, сунна-молитвы и зикр не затрагиваются. Отменить это нельзя.",
+    "resetRangeAll": "весь журнал",
+    "options": "Параметры",
+    "setUpSync": "Настроить синхронизацию",
+    "legendTitle": "Что показывает график"
+  },
+  "endOfDay": {
+    "title": "Отметить сегодняшние молитвы?",
+    "body": "Отметьте все пять как совершённые вовремя или откройте журнал и заполните по одной.",
+    "action": "Отметить все выполненными",
+    "channelName": "Журнал конца дня"
+  },
+  "duaReminders": {
+    "channelName": "Утренние и вечерние дуа",
+    "morningTitle": "Утренние азкары",
+    "morningBody": "Утренние дуа — их время длится до восхода.",
+    "eveningTitle": "Вечерние азкары",
+    "eveningBody": "Вечерние дуа — их время длится до заката.",
+    "groupTitle": "Утренние и вечерние дуа",
+    "morning": "Утренние дуа",
+    "morningHelp": "Напоминание в утреннее время — после Фаджра, до восхода.",
+    "evening": "Вечерние дуа",
+    "eveningHelp": "Напоминание в вечернее время — после Асра, до заката."
+  },
+  "sunnah": {
+    "none": "Нет",
+    "short": "Сунна",
+    "ofTotal": "{{done}} из {{total}}",
+    "ofTotalShort": "{{done}}/{{total}}",
+    "a11yNone": "{{prayer}}: нет сунны",
+    "a11yCount": "Сунна {{prayer}}: отмечено {{done}} из {{total}}",
+    "afterIsha": "После Иши",
+    "witr": "Витр",
+    "prayed": "Совершена",
+    "logIt": "Отметить",
+    "qiyam": "Кыям аль-Лайль",
+    "qiyamNote": "Не учитывается в серии",
+    "resetQiyam": "Сбросить Кыям аль-Лайль",
+    "reset": "Сбросить",
+    "addQiyam": "Отметить один Кыям аль-Лайль",
+    "qiyamCountA11y": "Отмеченные Кыям аль-Лайль",
+    "streakCaption": "Сунна {{count}} дней",
+    "legend": "сунна",
+    "qiyamLegend": "ночная молитва",
+    "a11yAll": "вся сунна"
+  },
+  "sync": {
+    "exportSection": "Экспорт",
+    "importSection": "Импорт",
+    "exportHelp": "Сохраните всё записанное в файл, который останется у вас, — чтобы перенести на новый телефон или просто чтобы копия была где-то ещё.",
+    "exportCta": "Экспортировать в файл",
+    "exportFailedTitle": "Экспорт не удался",
+    "importHelp": "Откройте файл копии, скопируйте всё его содержимое и вставьте сюда. Ничего из того, что уже есть на этом устройстве, не удаляется — обе записи объединяются.",
+    "importPastePlaceholder": "Вставьте файл резервной копии",
+    "importPreviewCta": "Проверить файл",
+    "importApplyCta": "Импортировать на это устройство",
+    "importFound": "Создано {{date}}. Выберите, что взять из копии:",
+    "importDoneTitle": "Импортировано",
+    "importNothingNew": "Всё из этого файла здесь уже было.",
+    "importEmptyTitle": "Нечего импортировать",
+    "importFailedTitle": "Импорт не удался",
+    "importUnreadableTitle": "Не удалось прочитать",
+    "importUnreadableBody": "Это не похоже на резервную копию Ibadat 365. Вставьте всё содержимое файла .json.",
+    "importedLine": "{{label}}: {{before}} → {{after}}",
+    "privacyNote": "Файл — это обычный текст без защиты паролем: он настолько приватен, насколько приватно место, где вы его храните. Никуда ничего не загружается.",
+    "category": {
+      "prayers": "Журнал молитв",
+      "sunnah": "Сунна-молитвы",
+      "fasting": "Пост",
+      "dhikr": "Зикр",
+      "quran": "Коран",
+      "settings": "Настройки",
+      "location": "Местоположение"
+    },
+    "categoryHint": {
+      "prayers": "Все отмеченные вами намазы и ваши заметки",
+      "sunnah": "Сунна, витр и кыям аль-лайль",
+      "fasting": "Дни поста и намерения к ним",
+      "dhikr": "Завершённые круги тасбиха",
+      "quran": "Закладки, отмеченные аяты, планы хатма, последнее прочитанное, чтец и тафсир",
+      "settings": "Оформление, метод расчёта, уведомления и виджеты",
+      "location": "Сохранённые места и координаты"
+    },
+    "count": {
+      "prayers": "Намазы",
+      "fasting": "Посты",
+      "dhikr": "Дни зикра",
+      "sunnah": "Дни сунны",
+      "bookmarks": "Закладки",
+      "khatmah": "Планы хатма"
+    },
+    "settingsRowHint": "Связать другое устройство",
+    "pairIntro": "Синхронизация сохраняет вашу историю одинаковой на всех устройствах. Ibadat 365 сам ничего не передаёт: ему нужна папка, которую Nextcloud, OneDrive, Dropbox, Syncthing или подобное уже синхронизирует между вашими устройствами. Ibadat 365 пишет туда небольшой зашифрованный файл, прочитать который могут только ваши собственные устройства.",
+    "thisDevice": "Это устройство",
+    "deviceNameLabel": "Имя устройства",
+    "thisDeviceHelp": "Покажите этот код другому устройству или введите его там. Это не пароль — его можно спокойно скопировать, сфотографировать или отправить себе.",
+    "codeA11y": "Код связывания этого устройства",
+    "copyCode": "Скопировать код",
+    "copied": "Код скопирован",
+    "copyFailed": "Не удалось скопировать код",
+    "addDevice": "Добавить устройство",
+    "addDeviceHelp": "Введите или вставьте код, показанный на другом вашем устройстве.",
+    "codePlaceholder": "MHRB-…",
+    "pasteCode": "Вставить",
+    "addCta": "Связать",
+    "pairWarnTitle": "Связать с устройством {{value}}?",
+    "pairWarnBody": "Всё, что записано на том устройстве, появится здесь, а всё отсюда появится там. Слияние никогда ничего не удаляет: при расхождении сохраняется более поздняя запись.",
+    "pairConfirm": "Связать",
+    "pairedTitle": "Связано",
+    "pairedBody": "Это устройство записало свой ключ в папку. Откройте «Михраб» на другом устройстве — как только оно прочитает папку, оба связаны и синхронизируются.",
+    "errorBadCodeTitle": "Этот код не подошёл",
+    "errorBadCode": "Проверьте код и попробуйте снова. Он записан группами по шесть, и одного неверного знака достаточно, чтобы он был отклонён.",
+    "errorThisDevice": "Это собственный код этого устройства. Нужен код, показанный на другом.",
+    "errorTooMany": "Можно связать не больше {{max}} устройств. Сначала удалите одно.",
+    "errorSaveTitle": "Не удалось сохранить связь",
+    "errorSaveBody": "Устройство отказалось её сохранить. Попробуйте снова — ничего не изменилось.",
+    "pairedSection": "Связанные устройства",
+    "noneYet": "Устройств пока нет.",
+    "peerNameLabel": "Имя этого связанного устройства",
+    "unnamedDevice": "Устройство без имени",
+    "fingerprint": "Отпечаток {{value}}",
+    "viaCode": "добавлено здесь",
+    "viaAnnounced": "добавлено с того устройства",
+    "lastSeen": "Последняя синхронизация {{when}}",
+    "neverSeen": "Ещё не синхронизировалось",
+    "remove": "Удалить",
+    "removeTitle": "Удалить {{value}}?",
+    "removeBody": "Это устройство перестанет отправлять ему данные и принимать от него. Удалите это устройство и там, иначе оно продолжит попытки.",
+    "notReady": "Это устройство не может настроить синхронизацию: у него нет надёжного источника случайности, а ключ, созданный без него, не был бы приватным.",
+    "privacyNoteP2p": "Ваш код — это открытый ключ, а не секрет. Сами данные шифруются только для связанных вами устройств, и никуда не загружаются.",
+    "folderSection": "Папка",
+    "folderHelp": "Выберите папку, которую ваш сервис синхронизации уже поддерживает одинаковой на всех устройствах — папку Nextcloud, OneDrive, Dropbox или Syncthing. Если эту папку между вашими устройствами ничто не синхронизирует, ничего и не дойдёт. Ibadat 365 пишет туда небольшой зашифрованный файл и читает те, что оставили ваши другие устройства.",
+    "chooseFolder": "Выбрать папку",
+    "changeFolder": "Сменить папку",
+    "folderChosen": "Используется {{value}}",
+    "syncNow": "Синхронизировать",
+    "lastSyncedAt": "Последняя проверка {{when}}",
+    "neverSynced": "Ещё не проверялось",
+    "autoTitle": "Синхронизировать автоматически",
+    "freqOpen": "При открытии",
+    "freqHourly": "Раз в час",
+    "freqDaily": "Раз в день",
+    "freqOff": "Выключено",
+    "autoHelp": "Автоматическая синхронизация идёт только при открытом приложении. «Синхронизировать» работает всегда, что бы вы здесь ни выбрали.",
+    "whatSyncs": "Что синхронизируется",
+    "errorFolderGone": "Эта папка больше недоступна. Выберите её заново.",
+    "errorUnsupported": "Эта сборка не умеет синхронизировать через папку.",
+    "syncDoneTitle": "Синхронизировано",
+    "syncDoneBody": "Всё, что было на других ваших устройствах, теперь здесь, а здешнее — там.",
+    "syncNothing": "Ничего нового. Другие ваши устройства ничего не писали с прошлой проверки.",
+    "syncFailedTitle": "Синхронизация не завершилась",
+    "syncFailedBody": "Что-то пошло не так: {{detail}}",
+    "hint": {
+      "quranTitle": "Читаете больше чем на одном устройстве?",
+      "quranBody": "Настройте синхронизацию — и ваше место, закладки и хатма будут переходить вместе с вами.",
+      "logTitle": "Отметьте на одном устройстве, увидите на всех",
+      "logBody": "Настройте синхронизацию, чтобы записи были одинаковыми везде. Ничего не загружается в сеть.",
+      "dismiss": "Скрыть",
+      "openHint": "Откроет настройки синхронизации"
+    },
+    "pairedNeedsFolder": "Сначала выберите папку. Именно через неё устройства находят друг друга, и без неё обмен невозможен.",
+    "folderAppHint": "«Михраб» создал себе папку {{value}}. Найдите её в приложении «Файлы», в разделе «На моём iPhone», и направьте туда свою программу синхронизации, чтобы дотянуться до других устройств.",
+    "syncQuietTitle": "Ничего не пришло",
+    "syncNothingArrived": "Ваш файл лежит в папке, но ничего с других ваших устройств там не появилось. Оба устройства должны указывать на одну и ту же папку, а то, что синхронизирует её между ними, должно работать.",
+    "syncStale": "Ваш файл лежит в папке, но самая свежая запись с устройства {{device}} была создана {{when}}. Если вы пользовались этим устройством после, то то, что синхронизирует папку между вами, перестало переносить файлы.",
+    "scanCode": "Сканировать",
+    "scanHint": "Наведите камеру на код, показанный на другом устройстве",
+    "scanDeniedTitle": "Камера не разрешена",
+    "scanDeniedBody": "«Михрабу» нужна камера, чтобы прочитать код. Разрешите её в настройках устройства или введите код вручную.",
+    "scanNoCameraTitle": "Нет камеры",
+    "scanNoCameraBody": "На этом устройстве нет камеры для сканирования. Введите или вставьте код.",
+    "freq15Min": "Раз в 15 мин",
+    "errorFolderUnwritable": "В эту папку нельзя записывать. Выберите другую — лучше всего подойдёт папка, которую вы создали сами в «Документах» или «Загрузках».",
+    "errorFolderTitle": "Эта папка не подошла"
+  },
+  "stats": {
+    "daysUnit": " дн.",
+    "streakLabel": "Серия вовремя",
+    "best": "рекорд {{best}}",
+    "sunnahLabel": "Сунна совершена",
+    "thisMonth": "в этом месяце",
+    "fastedLabel": "Пост",
+    "owedLabel": "Пропущенные молитвы",
+    "nothingOwed": "Нет пропущенных",
+    "owedShow": "нажмите, чтобы увидеть",
+    "owedHide": "показаны ✕",
+    "owedHint": "Нажмите на день, чтобы восполнить",
+    "owedMore": "+{{more}} ещё",
+    "owedA11y": "{{owed}} пропущенных молитв, показать",
+    "nothingOwedA11y": "Нет пропущенных"
+  },
+  "surahReminders": {
+    "groupTitle": "Напоминания о сурах",
+    "kahf": "Сура Аль-Кахф по пятницам",
+    "kahfHelp": "Раз в неделю, в пятницу, в выбранное вами время.",
+    "kahfTitle": "Аль-Кахф",
+    "kahfBody": "Сегодня пятница — прочтите суру Аль-Кахф.",
+    "mulk": "Сура Аль-Мульк ночью",
+    "mulkHelp": "Каждую ночь в выбранное вами время — приложение не знает, когда вы ложитесь, поэтому спрашивает.",
+    "mulkTitle": "Аль-Мульк",
+    "mulkBody": "Перед сном — прочтите суру Аль-Мульк."
+  },
+  "dhikr": {
+    "remindersTitle": "Напоминания о зикре",
+    "remindersBlurb": "Ваши собственные напоминания, в любое время дня",
+    "remindersFooter": "Не зависят от времён молитв и работают полностью офлайн — срабатывают без связи и после перезагрузки.",
+    "remindersEmpty": "Напоминаний пока нет. Добавьте для зикра или для собственных слов.",
+    "addReminder": "Добавить напоминание",
+    "newReminder": "Новое напоминание",
+    "editReminder": "Изменить напоминание",
+    "deleteReminder": "Удалить напоминание",
+    "whichDhikr": "Какой зикр",
+    "ownWords": "Ваши собственные слова",
+    "ownWordsHelp": "Напоминание скажет то, что вы напишете.",
+    "customTitle": "Напоминание",
+    "customTitleLabel": "Заголовок",
+    "customBodyLabel": "Текст",
+    "days": "Дни",
+    "everyDay": "Каждый день",
+    "sound": "Звук",
+    "soundDefault": "Звук уведомления",
+    "soundSilent": "Без звука",
+    "soundHelp": "Запись зикра не входит в комплект: приложение распространяет только то, чей источник и лицензию оно может назвать, — голос в том числе. Выбор собственной записи — следующий шаг, см. issue #29.",
+    "meaning": {
+      "hawqala": "Нет силы и мощи ни у кого, кроме Аллаха",
+      "subhanallahwabihamdih": "Пречист Аллах, и хвала Ему"
+    }
+  }
+}

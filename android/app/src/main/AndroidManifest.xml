@@ -1,0 +1,403 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Package visibility for the Qibla screen's "open your compass app"
+        button, and nothing else.
+
+        Android 11 made other packages invisible by default, so
+        `getLaunchIntentForPackage` returns null for an app that IS
+        installed unless it is declared here. Without this the button
+        would never appear on any modern device, which is indistinguishable
+        from the vendor not shipping a compass — the failure mode that
+        looks like a correct answer.
+
+        Declared one package at a time rather than by intent filter: there
+        is no standard intent that means "show a compass", and a broad
+        query would be asking for more visibility than this needs.
+    -->
+    <queries>
+        <package android:name="com.miui.compass" />
+        <package android:name="com.huawei.compass" />
+        <package android:name="com.coloros.compass2" />
+        <package android:name="com.oneplus.compass" />
+        <package android:name="com.vivo.compass" />
+        <package android:name="com.sec.android.app.compass" />
+        <package android:name="com.motorola.compass" />
+    </queries>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Reading a pairing code off another device's screen, and nothing
+         else. Optional hardware: a tablet without a camera still pairs by
+         typing the code, and must not be filtered out of the store. -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Live Activity foreground service. Required on Android 14+ — the
+         FOREGROUND_SERVICE_SPECIAL_USE type covers our case (pinned
+         prayer-countdown notification with a live progress bar that
+         must auto-tick without the app being open). -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <!-- The Quran download. dataSync is the type Android 14+ asks for when
+         a service exists to move a file the user asked for: six hundred
+         pages, or a hundred and eighty megabytes of fonts, which nobody
+         should have to sit and watch. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <!-- Android 16 (API 36) Live Update chip (status-bar "promoted ongoing"
+         pill). Protection level is normal|appop — automatically granted at
+         install time when declared, no runtime prompt needed.
+         Required by the android.app.api_rich_ongoing_permission feature flag
+         that gates chip promotion on Pixel 10 / Android 16 builds. -->
+    <uses-permission android:name="android.permission.POST_PROMOTED_NOTIFICATIONS" />
+
+    <!-- Strip the legacy shared-storage permissions that react-native-blob-util
+         declares in its own manifest ("expansion files on shared storage").
+         Mihrab never touches shared storage: every file it writes — the mushaf
+         pages, render cache, tafsir cache and recitation audio — lives under
+         the app-private Documents directory (ReactNativeBlobUtil.fs.dirs
+         .DocumentDir), which needs no permission on any API level. Flagged by
+         the F-Droid tester review on MR 36312 (2026-07-30). -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        tools:node="remove" />
+
+    <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:allowBackup="true"
+      android:fullBackupContent="@xml/backup_rules"
+      android:dataExtractionRules="@xml/data_extraction_rules"
+      android:hasFragileUserData="true"
+      android:theme="@style/AppTheme"
+      android:usesCleartextTraffic="${usesCleartextTraffic}"
+      android:supportsRtl="true"
+      android:enableOnBackInvokedCallback="false"
+      tools:replace="android:enableOnBackInvokedCallback">
+      <receiver
+        android:name=".PrayerWidgetProvider"
+        android:exported="true"
+        android:label="@string/widget_name_medium">
+        <intent-filter>
+          <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+          <!-- USER_PRESENT is declared HERE ONLY. Every widget receiver used to
+               carry it, and each one forwarded the unlock to the same
+               PrayerWidgetProvider.requestUpdate — so one unlock ran the
+               whole fan-out nine times over: ~18 alarm registrations and
+               ~72 getAppWidgetIds binder calls, for one redraw (audit:
+               docs/design/background-power.md). requestUpdate refreshes
+               every widget class, so once is all it ever needed to be. -->
+          <action android:name="android.intent.action.USER_PRESENT" />
+          <action android:name="android.intent.action.BOOT_COMPLETED" />
+          <action android:name="com.mubarok.ibadat365.ACTION_PRAYER_TIME_ELAPSED" />
+        </intent-filter>
+        <meta-data
+          android:name="android.appwidget.provider"
+          android:resource="@xml/prayer_widget_info" />
+      </receiver>
+
+      <!-- Mihrab · Sky: the Today hero on the home screen. -->
+      <receiver
+        android:name=".PrayerWidgetSkyProvider"
+        android:exported="true"
+        android:label="@string/widget_name_sky">
+        <intent-filter>
+          <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+          <action android:name="android.intent.action.BOOT_COMPLETED" />
+          <action android:name="com.mubarok.ibadat365.ACTION_PRAYER_TIME_ELAPSED" />
+        </intent-filter>
+        <meta-data
+          android:name="android.appwidget.provider"
+          android:resource="@xml/prayer_widget_sky_info" />
+      </receiver>
+
+      <receiver
+        android:name=".PrayerWidgetSmallProvider"
+        android:exported="true"
+        android:label="@string/widget_name_small">
+        <intent-filter>
+          <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+          <action android:name="android.intent.action.BOOT_COMPLETED" />
+          <action android:name="com.mubarok.ibadat365.ACTION_PRAYER_TIME_ELAPSED" />
+        </intent-filter>
+        <meta-data
+          android:name="android.appwidget.provider"
+          android:resource="@xml/prayer_widget_small_info" />
+      </receiver>
+
+      <receiver
+        android:name=".PrayerWidgetLargeProvider"
+        android:exported="true"
+        android:label="@string/widget_name_tall">
+        <intent-filter>
+          <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+          <action android:name="android.intent.action.BOOT_COMPLETED" />
+          <action android:name="com.mubarok.ibadat365.ACTION_PRAYER_TIME_ELAPSED" />
+        </intent-filter>
+        <meta-data
+          android:name="android.appwidget.provider"
+          android:resource="@xml/prayer_widget_tall_info" />
+      </receiver>
+
+      <!-- Log Today. Also listens for its own tap action, which is what a
+           chip's PendingIntent broadcasts — see PrayerWidgetLogProvider. -->
+      <receiver
+        android:name=".PrayerWidgetLogProvider"
+        android:exported="true"
+        android:label="@string/widget_name_log">
+        <intent-filter>
+          <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+          <action android:name="android.intent.action.BOOT_COMPLETED" />
+          <action android:name="com.mubarok.ibadat365.ACTION_PRAYER_TIME_ELAPSED" />
+          <action android:name="com.mubarok.ibadat365.ACTION_WIDGET_LOG_TAP" />
+        </intent-filter>
+        <meta-data
+          android:name="android.appwidget.provider"
+          android:resource="@xml/prayer_widget_log_info" />
+      </receiver>
+      <!--
+        Log Today at three rows. A second entry for the same widget, not a
+        second widget: see prayer_widget_log_tall_info.xml.
+      -->
+<receiver
+        android:name=".PrayerWidgetLogLargeProvider"
+        android:exported="true"
+        android:label="@string/widget_name_log_tall">
+        <intent-filter>
+          <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+          <action android:name="android.intent.action.BOOT_COMPLETED" />
+          <action android:name="com.mubarok.ibadat365.ACTION_PRAYER_TIME_ELAPSED" />
+          <action android:name="com.mubarok.ibadat365.ACTION_WIDGET_LOG_TAP" />
+        </intent-filter>
+        <meta-data
+          android:name="android.appwidget.provider"
+          android:resource="@xml/prayer_widget_log_tall_info" />
+      </receiver>
+
+      <!--
+        Streak & Practice. A separate receiver, not a size of the prayer
+        widget: someone who wants only the streak should not have to put a
+        prayer table on their home screen to get it.
+      -->
+      <receiver
+        android:name=".PrayerWidgetStreakProvider"
+        android:exported="true"
+        android:label="@string/widget_name_streak">
+        <intent-filter>
+          <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+          <action android:name="android.intent.action.BOOT_COMPLETED" />
+          <action android:name="com.mubarok.ibadat365.ACTION_PRAYER_TIME_ELAPSED" />
+        </intent-filter>
+        <meta-data
+          android:name="android.appwidget.provider"
+          android:resource="@xml/prayer_widget_streak_info" />
+      </receiver>
+
+      <!-- Continue Reading. -->
+      <receiver
+        android:name=".PrayerWidgetReadingProvider"
+        android:exported="true"
+        android:label="@string/widget_name_reading">
+        <intent-filter>
+          <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+          <action android:name="android.intent.action.BOOT_COMPLETED" />
+          <action android:name="com.mubarok.ibadat365.ACTION_PRAYER_TIME_ELAPSED" />
+        </intent-filter>
+        <meta-data
+          android:name="android.appwidget.provider"
+          android:resource="@xml/prayer_widget_reading_info" />
+      </receiver>
+
+      <!--
+        Tasbih. ACTION_WIDGET_TASBIH_TAP is how the three controls reach the
+        provider; the same receiver handles it and the ordinary update
+        broadcasts, exactly as the Log Today one does.
+      -->
+      <receiver
+        android:name=".PrayerWidgetTasbihProvider"
+        android:exported="true"
+        android:label="@string/widget_name_tasbih">
+        <intent-filter>
+          <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+          <action android:name="android.intent.action.BOOT_COMPLETED" />
+          <action android:name="com.mubarok.ibadat365.ACTION_WIDGET_TASBIH_TAP" />
+          <action android:name="com.mubarok.ibadat365.ACTION_PRAYER_TIME_ELAPSED" />
+        </intent-filter>
+        <meta-data
+          android:name="android.appwidget.provider"
+          android:resource="@xml/prayer_widget_tasbih_info" />
+      </receiver>
+
+      <!--
+        Hijri Date. DATE_CHANGED and TIMEZONE_CHANGED are here and nowhere
+        else in this file for a reason: this is the only widget whose entire
+        content turns over at midnight, so it is the only one for which the
+        system's own date broadcast is the right signal.
+      -->
+      <receiver
+        android:name=".PrayerWidgetHijriProvider"
+        android:exported="true"
+        android:label="@string/widget_name_hijri">
+        <intent-filter>
+          <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+          <action android:name="android.intent.action.BOOT_COMPLETED" />
+          <action android:name="android.intent.action.DATE_CHANGED" />
+          <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+          <action android:name="com.mubarok.ibadat365.ACTION_PRAYER_TIME_ELAPSED" />
+        </intent-filter>
+        <meta-data
+          android:name="android.appwidget.provider"
+          android:resource="@xml/prayer_widget_hijri_info" />
+      </receiver>
+
+      <!-- No screenOrientation lock: Android 16 ignores orientation
+           restrictions on large screens and Play flags them (console
+           recommendation, 2026-07-16). The configure layout is a simple
+           scrollable list and works in any orientation. -->
+      <!-- The QR scanner. Not exported: it is opened by this app only, and
+           it hands a decoded string straight back to the module. -->
+      <activity
+        android:name=".ScanQrActivity"
+        android:exported="false"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+      <activity
+        android:name=".PrayerWidgetConfigureActivity"
+        android:exported="true"
+        android:theme="@style/WidgetConfigureTheme"
+        android:windowSoftInputMode="adjustResize">
+        <intent-filter>
+          <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+          <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+      </activity>
+
+      <!-- Live Activity foreground service. specialUse type because
+           we don't fit any of the predefined types (camera/location/
+           media/etc.) — we're posting a system-level pinned countdown
+           that needs to keep ticking when the app isn't in foreground.
+           The `property` element explains the use so Play Store / Play
+           Protect doesn't flag the manifest. -->
+      <!-- Notifee's own foreground service, which the Quran download runs
+           in. It is declared in notifee's manifest without a type; Android
+           14+ refuses to start an untyped one, so the type is merged in
+           here rather than forked into a service of our own. -->
+      <service
+        android:name="app.notifee.core.ForegroundService"
+        android:foregroundServiceType="dataSync"
+        tools:replace="android:foregroundServiceType" />
+
+      <service
+        android:name=".MihrabLiveActivityService"
+        android:exported="false"
+        android:foregroundServiceType="specialUse">
+        <property
+          android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+          android:value="prayerCountdown" />
+      </service>
+
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:screenOrientation="unspecified"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustResize"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        <!--
+          ibadat365:// — how a widget says WHERE it wants to be opened.
+
+          Until this existed every widget tap landed on whatever screen the
+          app happened to be on, which is fine for a prayer table and useless
+          for a widget whose promise is "carry on from page 3". The scheme is
+          app-private: nothing outside this app is expected to send it, and
+          nothing here acts on a link beyond choosing a tab or a page. See
+          src/navigation/linking.ts for the route table.
+
+          singleTask above means a link arriving while the app is already
+          running reaches the existing task through onNewIntent rather than
+          stacking a second copy of the app behind it.
+        -->
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="ibadat365" />
+        </intent-filter>
+      </activity>
+
+      <!-- Revives the Live Activity after an app update or device reboot.
+           MY_PACKAGE_REPLACED fires in the new process immediately after
+           the APK is replaced; BOOT_COMPLETED fires after a full reboot.
+           Both read the SharedPreferences payload saved by
+           MihrabLiveActivityModule.display() and restart the service. -->
+      <receiver
+        android:name=".MihrabRestartReceiver"
+        android:exported="false">
+        <intent-filter>
+          <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+          <action android:name="android.intent.action.BOOT_COMPLETED" />
+        </intent-filter>
+      </receiver>
+
+      <!-- Handles the "Mute next adhan" toggle action on the Live Activity
+           (Android 17+). Explicit-intent broadcast from the notification action;
+           no intent-filter needed. -->
+      <receiver
+        android:name=".MihrabLiveActivityActionReceiver"
+        android:exported="false" />
+
+      <!-- HeadlessJS service that re-creates the next prayer's notifee trigger
+           silently / with the adhan when the mute toggle is pressed. Runs with
+           the app closed. specialUse FGS subtype matches the Live Activity. -->
+      <service
+        android:name=".AdhanMuteHeadlessService"
+        android:exported="false"
+        android:foregroundServiceType="specialUse">
+        <property
+          android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+          android:value="prayerCountdown" />
+      </service>
+
+      <!-- HeadlessJS service behind the refresh glyph on a home-screen
+           widget: one sync round, then a rebuild of the widget payload. The
+           provider redraws the card from what is already stored before this
+           starts, so the tap is instant and this catches up behind it. -->
+      <service
+        android:name=".WidgetRefreshHeadlessService"
+        android:exported="false"
+        android:foregroundServiceType="specialUse">
+        <property
+          android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+          android:value="prayerCountdown" />
+      </service>
+
+      <!-- Serves the user's imported adhan to whoever plays notification
+           sounds. The file lives in this app's private storage, so a file://
+           URI would be unreadable outside the process; this turns it into a
+           content:// URI that CustomAdhanModule grants read access to. Not
+           exported, and scoped to the one directory in adhan_paths.xml. -->
+      <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="${applicationId}.adhan"
+        android:exported="false"
+        android:grantUriPermissions="true">
+        <meta-data
+          android:name="android.support.FILE_PROVIDER_PATHS"
+          android:resource="@xml/adhan_paths" />
+      </provider>
+
+    </application>
+</manifest>

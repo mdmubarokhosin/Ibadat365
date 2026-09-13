@@ -1,0 +1,1779 @@
+{
+  "app": {
+    "name": "Ibadat 365",
+    "tagline": "Jadwal salat, kompas kiblat, Al-Quran, doa, dan dzikir — sepenuhnya offline, dalam satu aplikasi."
+  },
+  "nav": {
+    "home": "Ibadat 365",
+    "settings": "Pengaturan",
+    "month": "Bulan",
+    "shareMonth": "Bagikan Bulan",
+    "compass": "Kiblat",
+    "tasbih": "Tasbih",
+    "duas": "Doa",
+    "quran": "Al-Qur’an",
+    "journal": "Jurnal Salat",
+    "backup": "Pencadangan",
+    "fasting": "Puasa",
+    "today": "Hari ini",
+    "sync": "Sinkronkan antar perangkat"
+  },
+  "a11y": {
+    "openSettings": "Buka pengaturan",
+    "openMonth": "Buka tampilan bulan",
+    "openCompass": "Buka kompas kiblat",
+    "openTimesSource": "Ubah sumber waktu sholat",
+    "countdownTo": "Hitung mundur ke salat ini",
+    "countdownHere": "Hitung mundur tertuju ke salat ini. Ketuk untuk kembali ke yang berikutnya."
+  },
+  "common": {
+    "change": "Mengubah",
+    "tryAgain": "Coba lagi",
+    "retry": "Mencoba kembali",
+    "continue": "Melanjutkan",
+    "back": "Kembali",
+    "play": "Putar",
+    "pause": "Jeda",
+    "stop": "Hentikan",
+    "loading": "Memuat…",
+    "automatic": "Otomatis",
+    "openSettings": "Buka Pengaturan",
+    "cancel": "Batal",
+    "ok": "OK",
+    "today": "Hari ini",
+    "close": "Tutup",
+    "share": "Bagikan",
+    "done": "Selesai",
+    "delete": "Hapus",
+    "cancelled": "Dibatalkan.",
+    "listJoin": " & ",
+    "confirmDelete": "Ketuk lagi untuk menghapus",
+    "learnMore": "Pelajari lebih lanjut"
+  },
+  "home": {
+    "loadingPrayer": "Memuat waktu sholat…",
+    "nextPrayer": "Doa selanjutnya",
+    "nextIn": "di {{time}}",
+    "hanafiSuffix": "Hanafi Ashar",
+    "monthTimesLink": "Waktu sholat sebulan penuh",
+    "localFallbackNotice": "Perhitungan lokal — sambungkan untuk memperbarui",
+    "lastGpsCoordsNotice": "Menggunakan lokasi terakhir — GPS tidak tersedia",
+    "exactAlarmDenied": "Pengingat shalat membutuhkan izin alarm tepat untuk ketepatan waktu. Ketuk untuk memberikan izin.",
+    "notifPermDenied": "Izin notifikasi ditolak — pengingat shalat tidak akan berbunyi. Ketuk untuk membuka Pengaturan.",
+    "updatingLocation": "Memperbarui lokasi",
+    "today": "Hari ini",
+    "tomorrow": "Besok",
+    "savedLocationLabel": "{{name}}",
+    "switchLocation": "Ganti lokasi",
+    "autoBadge": "Auto",
+    "locating": "Mencari lokasi…",
+    "backToToday": "Kembali ke hari ini",
+    "updatedAt": "Diperbarui {{when}}",
+    "daysStored": "{{count}} hari tersimpan",
+    "quranShortcut": "Buka Al-Qur'an",
+    "dayStrip": "Pilih hari",
+    "nextPrayerIn": "{{prayer}} dalam",
+    "firstPrayer": "Salat pertama {{prayer}} · {{time}}",
+    "todaySummary": "Hari ini",
+    "prayersLogged": "{{count}} dari {{total}} salat dicatat",
+    "noFastToday": "Tidak ada puasa dicatat",
+    "dhikrSets": "{{count}} set zikir selesai",
+    "fastKept": {
+      "ramadan": "Puasa Ramadan dijalankan",
+      "voluntary": "Puasa sunah dijalankan",
+      "qadha": "Puasa qadha dijalankan"
+    },
+    "readItIn": "Baca di {{surah}}",
+    "continueAt": "Lanjutkan · {{surah}} {{ref}}",
+    "khatmahDay": "Khatam hari {{day}} dari {{total}}",
+    "khatmahDaysToGo": "{{count}} hari lagi",
+    "pagesLeftToday": "{{count}} halaman lagi hari ini",
+    "pageNumber": "halaman {{page}}",
+    "readingDone": "Bacaan hari ini selesai",
+    "readOn": "Lanjut membaca",
+    "qiblaChipA11y": "Kiblat {{degrees}} derajat",
+    "qiblaChipHint": "Membuka kompas kiblat",
+    "alertOverrideOnce": "{{mode}} kali ini saja · Setel ulang",
+    "alertOverrideA11y": "{{prayer}} disetel ke {{mode}} kali ini saja",
+    "alertOverrideResetHint": "Mengembalikan {{mode}}",
+    "yesterday": "Kemarin",
+    "startReading": "Mulai membaca",
+    "startReadingHint": "Al-Fatihah, halaman 1"
+  },
+  "errors": {
+    "locationNeededTitle": "Lokasi diperlukan",
+    "locationNeededBody": "Waktu sholat menggunakan perkiraan posisi Anda. Berikan akses lokasi di pengaturan sistem, lalu coba lagi.",
+    "locationErrorTitle": "Kesalahan lokasi",
+    "apiErrorTitle": "Tidak dapat memuat waktu",
+    "coordLat": "Lintang harus antara -90 dan 90.",
+    "coordLng": "Garis bujur harus antara -180 dan 180.",
+    "gpsPermission": "Izin lokasi diperlukan untuk menggunakan lokasi perangkat.",
+    "gpsRead": "Tidak dapat membaca posisi GPS.",
+    "gpsRequest": "Tidak dapat meminta lokasi."
+  },
+  "month": {
+    "locationNotReadyTitle": "Lokasi belum siap",
+    "locationNotReadyBody": "Buka Beranda dan muat waktu hari ini satu kali agar layar ini dapat menggunakan posisi GPS Anda.",
+    "thisMonth": "Bulan ini",
+    "standardView": "Standar",
+    "shareView": "Dapat dibagikan",
+    "shareMonth": "Bagikan Gambar",
+    "loadError": "Tidak dapat memuat bulan.",
+    "empty": "Tidak ada baris untuk ditampilkan.",
+    "refreshData": "Segarkan data yang disimpan",
+    "refreshing": "Menyegarkan...",
+    "monthsStored": "{{count}} bulan disimpan",
+    "dayOfWeek": "Hari",
+    "date": "Tanggal",
+    "hijri": "Hijriah",
+    "gregorian": "Gregorian",
+    "prayerTimes": "Waktu Sholat",
+    "daruriLegend": "Baris kecil di bawah Subuh, Asar, dan Isya adalah kapan waktu pertama (pilihan) masing-masing berakhir. Zuhur berakhir saat Asar masuk dan Magrib saat Isya masuk, jadi keduanya adalah kolom itu sendiri. Milik Subuh dan Asar bersifat perkiraan."
+  },
+  "share": {
+    "tagline": "Waktu salat, kiblat, dan Al-Qur’an",
+    "timesFor": "Waktu salat untuk {{place}}",
+    "scanForApp": "Pindai untuk mengunduh aplikasi",
+    "asrHanafi": "Asar: Hanafi",
+    "asrStandard": "Asar: standar",
+    "source": "Waktu dari {{source}}",
+    "footerNote": "Waktu hasil perhitungan. Ikuti masjid setempat bila berbeda.",
+    "sheetLanguage": "Bahasa lembar",
+    "exportImage": "Bagikan gambar",
+    "exportPdf": "Bagikan PDF (A4)",
+    "pitch": "Gratis dan tanpa iklan. Waktu salat, kiblat, Al-Qur’an dengan tilawah dan terjemahan, serta pelacak khatam."
+  },
+  "settings": {
+    "laDesignLabel": "Gaya",
+    "laDesignTimeline": "Lini masa",
+    "laDesignCountdown": "Hitung mundur",
+    "appearance": "Penampilan",
+    "theme": "Tema",
+    "themeSystem": "Sistem",
+    "themeLight": "Lampu",
+    "themeDark": "Gelap",
+    "themeHelp": "Sistem mencocokkan mode terang atau gelap perangkat Anda. Aktifkan warna Sistem untuk menggunakan palet platform di aplikasi (termasuk Material You di Android). Tombol dan aksen mengikuti warna utama ponsel Anda sehingga aplikasi cocok dengan wallpaper Anda saat warna dinamis tersedia.",
+    "clockFormat": "Format waktu",
+    "clockFormatAuto": "Otomatis",
+    "clockFormat12": "12 jam",
+    "clockFormat24": "24 jam",
+    "clockFormatHelp": "Otomatis mengikuti pengaturan jam perangkat Anda. Waktu salat, tabel bulanan, dan widget menggunakan format yang sama.",
+    "clockFormatExample": "Misalnya: {{time}}",
+    "systemDynamicColors": "Warna sistem",
+    "systemDynamicColorsHelp": "Menggunakan warna semantik dan dinamis perangkat Anda di aplikasi jika temanya adalah Sistem. Hitam murni (OLED) tetap menggelapkan latar belakang saat mode gelap aktif.",
+    "pureBlack": "Hitam murni (OLED)",
+    "pureBlackHelp": "Latar belakang hitam sesungguhnya dalam mode gelap untuk tampilan OLED.",
+    "dataSource": "Sumber data",
+    "provider": "Penyedia waktu sholat",
+    "providerAutoLine": "Otomatis · {{label}}",
+    "providerAutoHelp": "Di Swedia, waktu sholat menggunakan sumber Swedia (kota-kota yang terdaftar); di luar Swedia, AlAdhan. Pilih sumber di bawah untuk mengunci satu penyedia.",
+    "providerOverridden": "{{picked}} tidak punya jadwal untuk lokasi Anda, jadi {{used}} yang dipakai.",
+    "location": "Lokasi",
+    "automatic": "Otomatis",
+    "manual": "petunjuk",
+    "manualSearchHelp": "Ketuk hasil pencarian untuk langsung menerapkannya, atau edit koordinat dan tekan Terapkan di bawah.",
+    "coordsLabel": "Koordinat (derajat desimal)",
+    "latPlaceholder": "Lintang",
+    "lngPlaceholder": "Garis bujur",
+    "applyCoords": "Terapkan koordinat",
+    "calculation": "Perhitungan",
+    "calcHiddenSweden": "Swedia menggunakan waktu sholat per kota yang terdaftar. Posisi Anda diberi kode geografis terbalik agar sesuai dengan kota tersebut; hanya untuk Swedia.",
+    "calcHiddenPraytimes": "PrayTimes.dev menerapkan aturannya sendiri yang diterbitkan (lihat Prayertimes.dev). Hanya sekolah madzhab/ashar yang berlaku di sini; daftar metode disembunyikan.",
+    "method": "Metode",
+    "methodModalTitle": "Metode perhitungan",
+    "hanafiAsr": "Hanafi Ashar",
+    "hanafiAsrHelp": "Panjang bayangan Ashar lebih besar (sekolah = 1)",
+    "notifications": "Pemberitahuan",
+    "prayerAlerts": "Peringatan doa",
+    "prayerAlertsHelp": "Dijadwalkan untuk shalat lima waktu (Fajr – Isya). Android mungkin memerlukan akses alarm yang tepat agar pengaturan waktu dapat diandalkan.",
+    "prePrayerReminder": "Pengingat terlebih dahulu",
+    "prePrayerReminderHelp": "Pemberitahuan kedua opsional sebelum setiap doa.",
+    "prePrayerReminderModalTitle": "Beberapa menit sebelum sholat",
+    "prePrayerReminderOff": "Mati",
+    "prePrayerReminderOption": "{{count}} menit sebelumnya",
+    "liveActivity": "Aktivitas langsung",
+    "liveActivityHelp": "Notifikasi tersemat dengan hitungan mundur ke salat berikutnya dan jadwal lainnya hari ini.",
+    "liveActivityExperimental": "Eksperimental di iOS.",
+    "liveActivityCustomize": "Sesuaikan",
+    "liveActivityCompact": "Mode ringkas",
+    "liveActivityCompactHelp": "Tampilkan hanya hitungan mundur; sembunyikan daftar salat.",
+    "liveActivityShowSunriseLabel": "Tampilkan Syuruq",
+    "liveActivityShowHijriLabel": "Tampilkan tanggal Hijriah",
+    "liveActivityShowLocationLabel": "Tampilkan lokasi",
+    "language": "Bahasa",
+    "languageHelp": "Inggris, Swedia, atau Arab. Bahasa Arab menggunakan tata letak kanan ke kiri.",
+    "langEn": "Bahasa inggris",
+    "langSv": "Swedia",
+    "langAr": "Arab",
+    "homeScreenWidget": "Widget layar beranda",
+    "widgetBackgroundOpacity": "Kekuatan latar belakang widget (Android)",
+    "widgetHighlight": "Selanjutnya doa menyorot warna",
+    "widgetHighlight_green": "Hijau",
+    "widgetHighlight_teal": "teal",
+    "widgetHighlight_blue": "Biru",
+    "widgetHighlight_amber": "Amber",
+    "widgetHighlight_custom": "Warna khusus",
+    "widgetHighlight_customAbbr": "…",
+    "widgetHighlightHexPlaceholder": "#6BC98A",
+    "widgetConfigureHint": "Anda juga dapat menyentuh dan menahan widget → pengaturan (roda gigi) untuk menyesuaikan opsi yang sama di Android.",
+    "notificationSound": "Suara peringatan",
+    "adhanAlarmStream": "Putar azan sebagai alarm",
+    "adhanAlarmStreamHelp": "Menggunakan volume alarm, sehingga azan tetap terdengar saat ponsel senyap atau getar. Tidak menimpa mode Jangan Ganggu.",
+    "notificationSoundModalTitle": "Pilih suara peringatan",
+    "notificationSoundDefault": "Pemberitahuan bawaan",
+    "notificationSoundDefaultHelp": "Menggunakan suara notifikasi default perangkat Anda.",
+    "notificationSoundAbdulBasit": "Adzan - Abdul Basit",
+    "notificationSoundAbdulGhaffar": "Adzan - Abdul Ghaffar",
+    "notificationSoundAbdulHakam": "Adzan - Abdul Hakam",
+    "notificationSoundMakkah": "Adzan - Makkah",
+    "notificationSoundMadina": "Adzan - Madinah",
+    "notificationSoundAqsa": "Adzan - Al-Aqsa",
+    "notificationSoundEgypt": "Adzan - Mesir",
+    "notificationSoundHalab": "Adzan - Halab",
+    "notificationSoundAlHussaini": "Adzan - Al-Hussaini",
+    "notificationSoundBakirBash": "Adzan - Bakir Bash",
+    "notificationSoundHafez": "Adzan - Hafez",
+    "notificationSoundHafizMurad": "Adzan - Hafiz Murad",
+    "notificationSoundMinshawi": "Adzan - Minshawi",
+    "notificationSoundNaghshbandi": "Adzan - Naghsybandi",
+    "notificationSoundSaber": "Adzan - Pedang",
+    "notificationSoundSharifDoman": "Adzan - Syarif Doman",
+    "notificationSoundYusufIslam": "Adzan - Yusuf Islam",
+    "notificationSoundVoiceHelp": "Suara bawaan disertakan dalam pembuatan aplikasi ini.",
+    "notificationSoundCustom": "Azan Anda sendiri",
+    "notificationSoundCustomHelp": "Pilih berkas audio dari perangkat ini.",
+    "notificationSoundCustomImporting": "Mengimpor…",
+    "notificationSoundCustomRemove": "Hapus azan Anda",
+    "notificationSoundCustomTrimmed": "Notifikasi memutar 30 detik pertama; rekaman penuh diputar saat aplikasi terbuka.",
+    "versionInstalled": "Versi terinstal: {{version}}",
+    "adhanPreviewTitle": "Pratinjau adzan",
+    "adhanPreviewBody": "",
+    "prayerOffsets": "Penyesuaian per shalat",
+    "prayerOffsetsTitle": "Penyesuaian per shalat",
+    "prayerOffsetsHelp": "Geser setiap shalat ±{{max}} menit agar sesuai masjid setempat.",
+    "prayerOffsetsNone": "Tidak ada penyesuaian",
+    "prayerOffsetsCount_one": "{{count}} waktu salat disesuaikan",
+    "prayerOffsetsCount_other": "{{count}} waktu salat disesuaikan",
+    "prayerOffsetsIncrease": "Tambah penyesuaian {{prayer}}",
+    "prayerOffsetsDecrease": "Kurangi penyesuaian {{prayer}}",
+    "prayerOffsetsReset": "Setel ulang semua",
+    "dataAndPrivacy": "Data & privasi",
+    "replayOnboarding": "Tampilkan onboarding lagi",
+    "replayOnboardingHelp": "Lihat alur sambutan.",
+    "attributions": "Atribusi",
+    "attributionsBlurb": "Karya siapa saja yang membentuk aplikasi ini",
+    "attribQuran": "Teks Al-Quran",
+    "attribTranslation": "Terjemahan",
+    "attribDuas": "Doa",
+    "accentColor": "Warna aksen",
+    "accent_green": "Hijau",
+    "accent_teal": "Tosca",
+    "accent_blue": "Biru",
+    "accent_amber": "Amber",
+    "accent_custom": "Kustom",
+    "accent_customAbbr": "Hex",
+    "accentColorHelp": "Digunakan di seluruh aplikasi dan widget layar utama.",
+    "widgetColorFollowsAccentHelp": "Widget memakai warna aksen yang sama dengan aplikasi. Pilih warnanya di Tampilan.",
+    "widgetColorOwnHelp": "Aplikasi mengikuti warna sistem Anda, widget tidak. Pilih warna sorotan widget di sini.",
+    "additionalTimes": "Waktu tambahan",
+    "additionalTimesBlurb": "Matahari terbit, tengah malam, dan sepertiga malam",
+    "additionalTimesFooter": "Semua ini muncul di tabel salat, widget, dan Live Activity selain di notifikasi, dan memakai suara bawaan, bukan azan.",
+    "dailyReminders": "Pengingat harian",
+    "dailyRemindersBlurb": "Satu ayat setiap hari, jatah khatam hari ini, Al-Kahf dan Al-Mulk",
+    "logSection": "Catatan",
+    "sunriseTime": "Matahari terbit",
+    "sunriseTimeHelp": "Tampilkan matahari terbit di tabel salat, notifikasi, widget, dan Live Activity.",
+    "islamicMidnight": "Tengah malam",
+    "islamicMidnightHelp": "Titik tengah malam antara Magrib dan Subuh. Nonaktif secara default.",
+    "lastThird": "Sepertiga malam terakhir",
+    "lastThirdHelp": "Awal sepertiga malam terakhir — waktu untuk Qiyamul Lail. Nonaktif secara default.",
+    "firstThird": "Sepertiga malam pertama",
+    "firstThirdHelp": "Akhir sepertiga malam pertama — dalam perhitungan Maliki, saat Isya keluar dari waktu utamanya. Nonaktif secara bawaan.",
+    "malikiSecondTimes": "Waktu kedua Maliki",
+    "malikiSecondTimesHelp": "Setiap salat mendapat satu baris di kartu Hari Ini yang menyebutkan kapan waktu pilihannya (ikhtiyari) berakhir dan waktu daruratnya (daruri) dimulai. Dihitung di perangkat Anda dari koordinat Anda, dari sumber mana pun waktu Anda berasal. Memakai bayangan 1:1 untuk Asar tanpa memandang pengaturan mazhab Anda, karena itulah batas Maliki. Nonaktif secara bawaan.",
+    "malikiSecondTimesHanafiWarning": "Perhatian: ini batas Maliki, tetapi Asar Anda diatur ke Hanafi yang memakai bayangan berbeda. Waktu pertama Zuhur akan berakhir sekitar setengah jam sebelum Asar yang tampil di bawahnya. Matikan Asar Hanafi jika Anda ingin kartu ini konsisten.",
+    "malikiSecondTimesSource": "Dari Al-Murshid al-Muin (Ibnu Asyir), sebagaimana dituangkan dalam The Guiding Helper, nyanyian 11.",
+    "malikiAlerts": "Beri tahu saya",
+    "malikiAlertsHelp": "Mati untuk semua salat pada awalnya. Pilih hanya yang ingin Anda ketahui — lima notifikasi tambahan sehari adalah cara sebuah aplikasi mengajari Anda mengabaikannya. Perlu notifikasi diaktifkan.",
+    "malikiAlertsDisabled": "Aktifkan waktu kedua Maliki di Waktu salat, lalu waktu itu bisa diumumkan di sini.",
+    "malikiAlertsNone": "Tanpa notifikasi",
+    "malikiAlertsLead": "Berapa lama sebelumnya",
+    "malikiAlertsLeadTitle": "Ingatkan sebelum waktu pertama berakhir",
+    "malikiAlertsAtTime": "Saat berakhir",
+    "malikiSecondTimesModelled": "Batas Subuh dan Asar adalah pudarnya bintang dan menguningnya matahari — sebuah sudut yang menggantikan sesuatu yang dinilai mata. Keduanya ditandai sebagai perkiraan. Di tempat matahari tidak terbit, tidak terbenam, atau tidak pernah mencapai sudut itu, tidak ada yang ditampilkan alih-alih tebakan.",
+    "accent_rose": "Mawar",
+    "accent_violet": "Ungu",
+    "laDesignMarkers": "Penanda",
+    "showTour": "Tampilkan tur aplikasi",
+    "rateApp": "Beri nilai Ibadat 365",
+    "rateAppHelp": "Suka aplikasinya? Penilaian membantu orang lain menemukannya.",
+    "showTourHelp": "Putar ulang tur fitur singkat.",
+    "ayahOfDay": "Notifikasi ayat harian",
+    "ayahOfDayHelp": "Satu ayat yang dipilih acak beserta terjemahannya, setiap hari.",
+    "ayahOfDayTime": "Waktu notifikasi",
+    "hourDown": "Jam −",
+    "hourUp": "Jam +",
+    "khatmahReminder": "Pengingat khataman harian",
+    "khatmahReminderHelp": "Bagian hari ini dan tempat melanjutkan, selama khataman aktif.",
+    "khatmahReminderNoPlan": "Mulai khatam di tab Al-Qur’an untuk menggunakan ini.",
+    "resetApp": "Atur ulang data aplikasi",
+    "resetAppHelp": "Menghapus semua pengaturan dan data. Tidak dapat dibatalkan.",
+    "batteryWarning": "Notifikasi mungkin tidak andal",
+    "batteryWarningHelp": "Pengoptimalan baterai dapat menunda atau membisukan notifikasi azan saat aplikasi ditutup. Ketuk untuk mengecualikan Ibadat 365.",
+    "themeRestartManualTitle": "Buka ulang aplikasi",
+    "themeRestartManualBody": "iOS tidak mengizinkan aplikasi memulai ulang sendiri. Tutup paksa Ibadat 365 lalu buka lagi agar tema baru berlaku.",
+    "liquidGlass": "Liquid Glass",
+    "liquidGlassHelp": "Gunakan warna sistem iOS dan krom kaca tembus pandang. Mengikuti Terang/Gelap otomatis.",
+    "themeRestartTitle": "Perlu mulai ulang",
+    "themeRestartBody": "Mengganti warna sistem perlu memulai ulang agar semua layar memakai tema baru. Mulai ulang sekarang?",
+    "themeRestartConfirm": "Mulai ulang",
+    "laLockButtonLabel": "Tombol layar kunci",
+    "laLockButtonHelp": "Tampilkan tombol pada kartu untuk menyembunyikannya dari layar kunci dan layar selalu aktif.",
+    "resetTitle": "Setel ulang aplikasi?",
+    "resetBody": "Ini menghapus semua pengaturan, lokasi tersimpan, catatan, log puasa, dan status tasbih, lalu kembali ke pengenalan. Tidak dapat dibatalkan.",
+    "resetConfirm": "Setel ulang semua",
+    "prayerOffsetsCount": "{{count}} disesuaikan",
+    "endOfDayLog": "Pengingat catatan akhir hari",
+    "endOfDayLogHelp": "Sepuluh menit setelah Isya, menanyakan apakah lima salat hari itu dicatat. Menjawabnya keesokan pagi tetap mencatat hari yang benar.",
+    "alertModeAdhan": "Azan",
+    "alertModeNotification": "Notifikasi",
+    "alertModeSilent": "Senyap",
+    "alertModeHint": "Mengubah cara salat ini memberi tahu Anda",
+    "sectionPrayerTimes": "Waktu salat",
+    "sectionPrayerTimesBlurb": "Sumber, metode hitung, mazhab, penyesuaian",
+    "sectionNotifications": "Notifikasi",
+    "sectionNotificationsBlurb": "Suara, pengingat awal, waktu tambahan, aktivitas langsung",
+    "sectionLocation": "Lokasi",
+    "sectionLocationBlurb": "Di mana Anda, dan tempat tersimpan",
+    "sectionAppearance": "Tampilan & bahasa",
+    "sectionAppearanceBlurb": "Tema, warna, format waktu, bahasa",
+    "sectionWidgets": "Layar utama",
+    "sectionWidgetsBlurb": "Widget layar beranda",
+    "sectionQuran": "Al-Qur'an",
+    "sectionQuranBlurb": "Bacaan, terjemahan, tafsir, unduhan",
+    "sectionAbout": "Tentang",
+    "sectionAboutBlurb": "Versi, sumber, lisensi",
+    "malikiRows": "Tampilkan di antara waktu hari ini",
+    "malikiRowsHelp": "Jika nonaktif, batas waktu hanya diberitahukan — tidak ada tambahan pada kartu atau bulan.",
+    "malikiEndAlerts": "Dan saat waktunya habis",
+    "malikiEndAlertsHelp": "Notifikasi kedua tepat saat salat menjadi qadha. Pada waktunya sendiri, tidak pernah lebih awal.",
+    "surahRemindersChannel": "Pengingat surah",
+    "madhab": "Mazhab",
+    "madhab_hanafi": "Hanafi",
+    "madhab_maliki": "Maliki",
+    "madhab_shafii": "Syafii",
+    "madhab_hanbali": "Hanbali",
+    "madhabCustom": "Khusus",
+    "madhabHelp": "Syafii, Maliki dan Hanbali memakai bayangan asar yang sama, jadi memilih di antaranya tidak mengubah waktu mana pun. Maliki juga menamai salat fajar dengan Subuh dan menyediakan waktu kedua.",
+    "dhikrRemindersChannel": "Pengingat zikir",
+    "dhikrRemindersSilentChannel": "Pengingat zikir (senyap)",
+    "laDesignNeedsAndroid16": "Gaya memerlukan Android 16 atau lebih baru. Ponsel ini menampilkan kartu standar: salat, sisa waktu, dan bilah kemajuan."
+  },
+  "locationSetup": {
+    "headline": "Tetapkan lokasi Anda",
+    "sub": "Waktu sholat tergantung di mana Anda berada. Pilih salah satu opsi di bawah — Anda dapat mengubahnya nanti di Pengaturan.",
+    "useAutomatic": "Gunakan lokasi saya",
+    "searchCoords": "Cari atau masukkan koordinat",
+    "manualHeadline": "Lokasi manual",
+    "manualSub": "Cari dan ketuk hasil untuk menyelesaikannya — atau ketik lintang dan bujur di bawah dan tekan Lanjutkan.",
+    "decimalCoords": "Koordinat desimal"
+  },
+  "provider": {
+    "timesSource": "Sumber waktu",
+    "automaticByLocation": "Otomatis berdasarkan lokasi",
+    "modalTitle": "Sumber waktu sholat",
+    "sectionMainstream": "API arus utama",
+    "sectionRegional": "Sumber nasional & regional",
+    "autoTitle": "Otomatis",
+    "autoSub": "Sumber Swedia di Swedia; Al-Adhan di tempat lain.",
+    "autoNow": "Di lokasi Anda sekarang, itu berarti {{label}}.",
+    "bestHere": "Cocok dengan lokasi Anda",
+    "outOfRegion": "Tidak ada jadwal untuk lokasi Anda — {{fallback}} akan dipakai sebagai gantinya.",
+    "footer": "Sumber khusus negara menggunakan tabel doa resmi atau nasional tempat kami mengintegrasikannya. Lebih banyak wilayah dapat ditambahkan seiring waktu."
+  },
+  "providers": {
+    "aladhan": {
+      "desc": "api.aladhan.com — daftar metode lengkap, koordinat global; sangat banyak digunakan.",
+      "name": "AlAdhan"
+    },
+    "prayertimes_dev": {
+      "desc": "API independen — sudut & offset gaya UK; Hanafi/Syafi’i; koordinat global.",
+      "name": "PrayTimes.dev"
+    },
+    "local_adhan": {
+      "desc": "Dihitung di ponselmu dengan Batoul Adhan — tanpa API jaringan.",
+      "name": "Di perangkat (Adhan JS)"
+    },
+    "islamiska_forbundet": {
+      "desc": "Waktu salat untuk kota-kota Swedia yang terdaftar; lokasimu dicocokkan dengan kota terdekat dalam daftar.",
+      "name": "Swedia"
+    },
+    "habous": {
+      "name": "Maroko",
+      "desc": "Jadwal yang diterbitkan Kementerian Habous dan Urusan Islam untuk kota-kota Maroko yang terdaftar; lokasi Anda dicocokkan dengan kota terdekat."
+    }
+  },
+  "compass": {
+    "needLocationTitle": "Lokasi belum siap",
+    "needLocationBody": "Tetapkan lokasi di Pengaturan atau buka Beranda sekali dengan GPS sehingga kita dapat menghitung arah kiblat.",
+    "bearing": "Arah kiblat",
+    "fromNorth": "{{deg}}° dari utara",
+    "qiblaMarker": "Kiblat",
+    "phoneFront": "Telepon depan",
+    "hint": "Pegang ponsel secara mendatar dan jauhkan dari logam. Sejajarkan panah kiblat dengan “Ponsel depan” saat Anda menghadap kiblat.",
+    "signalStrength": "Sinyal kompas",
+    "signalHelp": "Berdasarkan tingkat dan stabilitas medan magnet. Menjauhlah dari logam dan elektronik jika suhunya tetap rendah.",
+    "signalChecking": "…",
+    "signalOff": "Mati",
+    "signalWeakTitle": "Sinyal kompas lemah",
+    "signalVeryWeakTitle": "Sinyal kompas sangat lemah",
+    "signalWeakBody": "Menjauhlah dari logam, magnet, dan barang elektronik. Lepaskan aksesori ponsel magnetis, lalu lakukan gerakan lambat angka 8 untuk mengkalibrasi ulang.",
+    "motionDetectedTitle": "Pegang ponsel dengan stabil",
+    "motionDetectedBody": "Terlalu banyak gerakan bisa membuat arah melompat. Pegang ponsel secara mendatar dan diam selama beberapa detik, jauh dari kendaraan atau speaker yang bergerak.",
+    "motionPermissionTitle": "Izin gerak diperlukan",
+    "motionPermissionDeniedBody": "Akses kompas ditolak di iOS. Izinkan akses Gerakan & Kebugaran di pengaturan sistem, lalu buka kembali layar ini.",
+    "openSettings": "Buka Pengaturan",
+    "unsupportedTitle": "Kompas langsung tidak tersedia",
+    "unsupportedBody": "Perangkat ini tidak menyediakan magnetometer yang dapat digunakan (atau akses gagal). Kompas hidup dimatikan. Gunakan arah di bawah ini dengan kompas atau peta fisik.",
+    "checkingCompass": "Memulai kompas…",
+    "checkingCompassWithPrompt": "Memulai kompas… Jika diminta di iOS, izinkan akses Motion & Fitness.",
+    "north": "N",
+    "east": "E",
+    "south": "S",
+    "west": "W",
+    "a11yDialLive": "Kompas Kiblat. Putar {{deg}} derajat untuk menghadap Kiblat.",
+    "a11yDialChecking": "Kompas Kiblat. Menunggu data sensor.",
+    "a11yDialUnavailable": "Kompas Kiblat tidak tersedia.",
+    "a11yNeedleDeg": "Putar {{deg}} derajat untuk menghadap Kiblat.",
+    "a11ySignal_good": "Sinyal kompas: baik.",
+    "a11ySignal_weak": "Sinyal kompas: lemah. Cobalah pindah ke area terbuka.",
+    "a11ySignal_very_weak": "Sinyal kompas: sangat lemah. Akurasi mungkin terbatas.",
+    "crossCheckTitle": "Periksa silang dengan aplikasi kompas Anda",
+    "crossCheckBody": "Kompas bawaan perangkat Anda disetel untuk perangkat kerasnya. Untuk pembacaan paling akurat, buka dan putar hingga menunjukkan {{degrees}}.",
+    "openSystemCompass": "Buka aplikasi kompas",
+    "fromNorthLabel": "dari utara"
+  },
+  "prayer": {
+    "Fajr": "Subuh",
+    "Sunrise": "Matahari terbit",
+    "Dhuhr": "Dhuhur",
+    "Asr": "Asar",
+    "Maghrib": "Maghrib",
+    "Isha": "Isya",
+    "Fajr_abbr": "Subuh",
+    "Sunrise_abbr": "Terbt",
+    "Dhuhr_abbr": "Dhuhr",
+    "Asr_abbr": "Asar",
+    "Maghrib_abbr": "Magh",
+    "Isha_abbr": "Isya",
+    "Midnight": "Tengah malam",
+    "Midnight_abbr": "Tgh",
+    "Lastthird": "Sepertiga akhir",
+    "Lastthird_abbr": "Qiyam",
+    "Firstthird": "Sepertiga awal",
+    "Firstthird_abbr": "1/3",
+    "firstTimeUntil": "Waktu pertama sampai {{time}}",
+    "secondTimeUntil": "Waktu kedua sampai {{time}}",
+    "secondTimeFrom": "Waktu kedua dari {{time}}",
+    "approx": "kira-kira",
+    "Subh": "Subuh",
+    "Subh_abbr": "Subuh"
+  },
+  "placeSearch": {
+    "label": "Cari kota atau alamat",
+    "placeholder": "misalnya Kairo, London, kode pos…",
+    "hint": "Hasil dari OpenStreetMap (Nominatim). Gunakan dengan hormat — bukan untuk geocoding massal.",
+    "appliedTitle": "Lokasi diterapkan",
+    "searchFailed": "Pencarian gagal",
+    "applied": "Diterapkan: {{label}}",
+    "noResults": "Tidak ada hasil",
+    "searching": "Mencari…"
+  },
+  "alertCopy": {
+    "atPrayer": "Waktunya sholat",
+    "prePrayer": "Dimulai dalam {{count}} menit",
+    "adhanStopAction": "Hentikan adzan",
+    "adhanDisableAction": "Nonaktifkan adzan",
+    "snoozeAction": "Tunda",
+    "snoozeChoice": "Tunda {{minutes}} mnt",
+    "snoozeMinutes": "Menit",
+    "daruriEndsIn": "Waktu pertama berakhir {{time}} — dalam {{count}} mnt",
+    "daruriEnded": "Waktu pertama berakhir {{until}}",
+    "daruriExpired": "Waktunya telah habis — kerjakan sebagai qadha",
+    "atPrayerBody": "Waktu {{prayer}} telah tiba",
+    "nextEvent": "Berikutnya: {{prayer}} pukul {{time}}"
+  },
+  "locations": {
+    "title": "Lokasi tersimpan",
+    "empty": "Tambahkan lokasi tersimpan agar Anda bisa berpindah di antaranya dengan cepat.",
+    "add": "Tambah lokasi baru",
+    "useAuto": "Lokasi saya",
+    "addPrompt": "Beri nama lokasi ini",
+    "addPlaceholder": "Rumah, Kantor, Perjalanan…",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "use": "Pakai",
+    "delete": "Hapus",
+    "limitReached": "Batas maksimal {{max}} lokasi tersimpan sudah tercapai.",
+    "previousLocation": "Lokasi sebelumnya",
+    "invalidCoordsTitle": "Koordinat tidak valid",
+    "invalidCoordsBody": "Lintang harus antara -90 dan 90, bujur antara -180 dan 180.",
+    "pickAPlace": "Cari kota atau masukkan koordinat terlebih dahulu.",
+    "duplicateTitle": "Sudah tersimpan",
+    "duplicateBody": "Lokasi pada koordinat ini sudah tersimpan sebagai \"{{name}}\"."
+  },
+  "tasbih": {
+    "subhanallah": "SubhanAllah",
+    "alhamdulillah": "Alhamdulillah",
+    "allahuakbar": "Allahu Akbar",
+    "lailaha": "La ilaha illa Allah",
+    "astaghfirullah": "Astaghfirullah",
+    "open": "Buka hitungan",
+    "increment": "Ketuk untuk menghitung",
+    "reset": "Atur ulang",
+    "salahonprophet": "Salawat atas Nabi ﷺ",
+    "prev": "Sebelumnya",
+    "next": "Berikutnya",
+    "meaning": {
+      "subhanallah": "Maha Suci Allah",
+      "alhamdulillah": "Segala puji bagi Allah",
+      "lailaha": "Tiada tuhan selain Allah",
+      "allahuakbar": "Allah Maha Besar",
+      "astaghfirullah": "Aku memohon ampun kepada Allah",
+      "salahonprophet": "Ya Allah, limpahkanlah selawat kepada junjungan kami Muhammad"
+    },
+    "setPosition": "Set {{index}} dari {{total}}",
+    "ofTarget": "dari {{target}}",
+    "tapAnywhere": "Ketuk di mana saja",
+    "upNext": "Berikutnya",
+    "resetSet": "Atur ulang set",
+    "skip": "Lewati"
+  },
+  "duas": {
+    "cat": {
+      "morning": "Pagi",
+      "evening": "Petang",
+      "afterPrayer": "Setelah salat",
+      "food": "Makan",
+      "distress": "Kesusahan",
+      "sleep": "Tidur",
+      "lavatory": "Kamar kecil",
+      "garment": "Berpakaian",
+      "travel": "Perjalanan",
+      "mosque": "Masjid",
+      "gratitude": "Syukur",
+      "forgiveness": "Ampunan",
+      "weather": "Cuaca",
+      "family": "Keluarga",
+      "sickness": "Sakit",
+      "funeral": "Jenazah",
+      "eid": "Idul",
+      "beforeQuran": "Sebelum Al-Qur’an",
+      "knowledge": "Ilmu",
+      "protection": "Perlindungan",
+      "guidance": "Petunjuk"
+    },
+    "allCategories": "Semua doa",
+    "repeat": "Baca ×{{count}}",
+    "morning_01_ayat_kursi": {
+      "title": "Ayat al-Kursi"
+    },
+    "morning_02_three_quls": {
+      "title": "Surah al-Ikhlas, al-Falaq, an-Nas"
+    },
+    "morning_03_fitra_islam": {
+      "title": "Atas fitrah Islam"
+    },
+    "morning_04_radhitu": {
+      "title": "Ridha kepada Allah sebagai Tuhan"
+    },
+    "morning_05_ilm_nafi": {
+      "title": "Ilmu yang bermanfaat, rezeki yang baik, amal yang diterima"
+    },
+    "morning_06_bika_asbahna": {
+      "title": "Dengan-Mu kami memasuki pagi"
+    },
+    "morning_07_la_ilaha_illa_allah": {
+      "title": "Tiada tuhan selain Allah semata"
+    },
+    "morning_08_ya_hayyu_ya_qayyum": {
+      "title": "Wahai Yang Maha Hidup, Yang Maha Mengurus"
+    },
+    "morning_09_sayyid_al_istighfar": {
+      "title": "Sayyidul Istighfar (tuan dari permohonan ampun)"
+    },
+    "morning_10_fatir_as_samawat": {
+      "title": "Pencipta langit dan bumi"
+    },
+    "morning_11_asbahna_walmulku_lillah": {
+      "title": "Kami dan kerajaan memasuki pagi untuk Allah"
+    },
+    "morning_12_afw_wa_afiya": {
+      "title": "Maaf dan keafiatan"
+    },
+    "morning_13_bismillah_la_yadurr": {
+      "title": "Dengan nama Allah yang dengan nama-Nya tiada apa pun yang membahayakan"
+    },
+    "morning_14_subhan_allah_adada_khalqih": {
+      "title": "Mahasuci Allah sebanyak ciptaan-Nya"
+    },
+    "morning_15_afini_fi_badani": {
+      "title": "Berilah aku afiat pada badan, pendengaran, dan penglihatan"
+    },
+    "morning_16_hasbiy_allah": {
+      "title": "Cukuplah Allah bagiku"
+    },
+    "morning_17_ushhiduka": {
+      "title": "Aku jadikan Engkau sebagai saksi pagi ini"
+    },
+    "morning_18_la_ilaha_yuhyi_yumit": {
+      "title": "Tiada tuhan selain Allah — Dia menghidupkan dan mematikan"
+    },
+    "morning_19_subhan_allah_wa_bihamdihi": {
+      "title": "Mahasuci Allah dan dengan memuji-Nya"
+    },
+    "morning_20_astaghfirullah": {
+      "title": "Aku memohon ampunan Allah"
+    },
+    "morning_21_subhan_alhamdu_takbir": {
+      "title": "Tasbih, Tahmid, Takbir, Tahlil"
+    },
+    "evening_01_ayat_kursi": {
+      "title": "Ayat al-Kursi"
+    },
+    "evening_02_three_quls": {
+      "title": "Surah al-Ikhlas, al-Falaq, an-Nas"
+    },
+    "evening_03_fitra_islam": {
+      "title": "Atas fitrah Islam (petang)"
+    },
+    "evening_04_radhitu": {
+      "title": "Ridha kepada Allah sebagai Tuhan"
+    },
+    "evening_05_bika_amsayna": {
+      "title": "Dengan-Mu kami memasuki petang"
+    },
+    "evening_06_la_ilaha_illa_allah": {
+      "title": "Tiada tuhan selain Allah semata"
+    },
+    "evening_07_ya_hayyu_ya_qayyum": {
+      "title": "Wahai Yang Maha Hidup, Yang Maha Mengurus"
+    },
+    "evening_08_sayyid_al_istighfar": {
+      "title": "Sayyidul Istighfar (tuan dari permohonan ampun)"
+    },
+    "evening_09_fatir_as_samawat": {
+      "title": "Pencipta langit dan bumi"
+    },
+    "evening_10_amsayna_walmulku_lillah": {
+      "title": "Kami dan kerajaan memasuki petang untuk Allah"
+    },
+    "evening_11_afw_wa_afiya": {
+      "title": "Maaf dan keafiatan"
+    },
+    "evening_12_bismillah_la_yadurr": {
+      "title": "Dengan nama Allah yang dengan nama-Nya tiada apa pun yang membahayakan"
+    },
+    "evening_13_taamat_protection": {
+      "title": "Berlindung dengan kalimat-kalimat Allah yang sempurna"
+    },
+    "evening_14_afini_fi_badani": {
+      "title": "Berilah aku afiat pada badan, pendengaran, dan penglihatan"
+    },
+    "evening_15_hasbiy_allah": {
+      "title": "Cukuplah Allah bagiku"
+    },
+    "evening_16_ushhiduka": {
+      "title": "Aku jadikan Engkau sebagai saksi petang ini"
+    },
+    "evening_17_la_ilaha_yuhyi_yumit": {
+      "title": "Tiada tuhan selain Allah — Dia menghidupkan dan mematikan"
+    },
+    "evening_18_subhan_allah_wa_bihamdihi": {
+      "title": "Mahasuci Allah dan dengan memuji-Nya"
+    },
+    "evening_19_astaghfirullah": {
+      "title": "Aku memohon ampunan Allah"
+    },
+    "evening_20_subhan_alhamdu_takbir": {
+      "title": "Tasbih, Tahmid, Takbir, Tahlil"
+    },
+    "afterPrayer_astaghfirullah": {
+      "title": "Memohon ampunan"
+    },
+    "afterPrayer_allahumma_antas_salam": {
+      "title": "Ya Allah, Engkau-lah As-Salam (sumber damai)"
+    },
+    "afterPrayer_subhanallah_33": {
+      "title": "Tasbih (33 × 3)"
+    },
+    "afterPrayer_three_quls": {
+      "title": "Surah al-Ikhlas, al-Falaq, an-Nas setelah setiap salat fardhu"
+    },
+    "afterPrayer_ayat_kursi": {
+      "title": "Ayat al-Kursi setelah setiap salat fardhu"
+    },
+    "food_before": {
+      "title": "Sebelum makan — bismillāh"
+    },
+    "food_after_min_ghayri_hawlin": {
+      "title": "Setelah makan — tanpa daya dan kekuatan dariku"
+    },
+    "food_after_atamana_wa_saqana": {
+      "title": "Setelah makan — yang memberi makan, minum, dan menjadikan kami muslim"
+    },
+    "food_after_atama_wa_saqa_makhraj": {
+      "title": "Setelah makan — memberi makan, minum, dan menjadikan jalan keluarnya"
+    },
+    "food_after_atamana_wa_kafana": {
+      "title": "Setelah makan — memberi makan, minum, mencukupi, dan melindungi"
+    },
+    "food_after_kathiran_tayyiban": {
+      "title": "Setelah makan — pujian yang banyak, baik, dan diberkahi"
+    },
+    "distress_lahawla": {
+      "title": "Tiada daya dan kekuatan kecuali dengan Allah"
+    },
+    "distress_innallaha_maana": {
+      "title": "Ketika takut"
+    },
+    "distress_yaa_hayyu": {
+      "title": "Memohon kepada Yang Maha Hidup"
+    },
+    "distress_ayatkursi_intro": {
+      "title": "Ayat al-Kursi (perlindungan tidur)"
+    },
+    "distress_dua_al_faraj": {
+      "title": "Doa al-Faraj (pelega kegelisahan dan kesedihan)"
+    },
+    "distress_dua_al_karb": {
+      "title": "Doa saat dukacita"
+    },
+    "sleep_three_quls": {
+      "title": "Al-Muʿawwidhāt — al-Ikhlas, al-Falaq, an-Nas"
+    },
+    "sleep_ayat_kursi": {
+      "title": "Ayat al-Kursi sebelum tidur"
+    },
+    "sleep_aslamtu_wajhi": {
+      "title": "Aku serahkan wajahku kepada-Mu"
+    },
+    "sleep_bismika_ahya": {
+      "title": "Dengan nama-Mu, ya Allah, aku hidup dan mati"
+    },
+    "sleep_alhamdu_ahyana": {
+      "title": "Saat bangun tidur"
+    },
+    "sleep_khalaqta_nafsi": {
+      "title": "Engkau ciptakan jiwaku — peliharalah atau ampuni ia"
+    },
+    "sleep_rabba_samawat": {
+      "title": "Tuhan langit, bumi, dan Arsy yang Agung"
+    },
+    "sleep_dust_off_bed": {
+      "title": "Mengipas tempat tidur dan berbaring di sisi kanan"
+    },
+    "sleep_takbir_tasbih_tahmid": {
+      "title": "Takbir 34, Tasbih 33, Tahmid 33 (lebih baik dari pelayan)"
+    },
+    "sleep_taamat_protection": {
+      "title": "Kalimat-kalimat Allah yang sempurna dari segala kejahatan"
+    },
+    "sleep_taamat_for_children": {
+      "title": "Perlindungan untuk anak — dari setiap setan dan makhluk berbahaya"
+    },
+    "sleep_taamat_long": {
+      "title": "Saat bangun terkejut atau dari mimpi buruk"
+    },
+    "sleep_wajhik_alkarim": {
+      "title": "Demi wajah-Mu yang mulia dan kalimat-kalimat-Mu yang sempurna"
+    },
+    "sleep_anta_rabbi": {
+      "title": "Engkau Tuhanku — tiada bencana yang menimpaku"
+    },
+    "travel_subhanalladhi": {
+      "title": "Ketika menaiki kendaraan"
+    },
+    "travel_journey": {
+      "title": "Untuk perjalanan — teks lengkap"
+    },
+    "travel_returning": {
+      "title": "Saat pulang ke rumah"
+    },
+    "mosque_entering": {
+      "title": "Saat masuk masjid"
+    },
+    "mosque_leaving": {
+      "title": "Saat keluar dari masjid"
+    },
+    "mosque_adhan_response": {
+      "title": "Setelah mendengar azan"
+    },
+    "gratitude_blessing": {
+      "title": "Saat menerima nikmat"
+    },
+    "gratitude_kindness": {
+      "title": "Saat seseorang berbuat kebaikan kepadamu"
+    },
+    "forgiveness_sayyidul": {
+      "title": "Sayyidul Istighfar"
+    },
+    "forgiveness_rabbi_ighfir": {
+      "title": "Bertaubat kepada Allah"
+    },
+    "distress_grief": {
+      "title": "Untuk meringankan kesedihan dan kegelisahan"
+    },
+    "distress_difficulty": {
+      "title": "Ketika dalam kesulitan"
+    },
+    "distress_rain": {
+      "title": "Ketika hujan turun"
+    },
+    "weather_during_rain": {
+      "title": "Saat hujan mulai turun"
+    },
+    "weather_after_rain": {
+      "title": "Setelah hujan turun"
+    },
+    "weather_thunder": {
+      "title": "Saat mendengar guruh"
+    },
+    "weather_strong_wind": {
+      "title": "Saat angin bertiup kencang"
+    },
+    "family_for_offspring": {
+      "title": "Untuk keturunan yang saleh"
+    },
+    "family_for_parents": {
+      "title": "Untuk orang tua"
+    },
+    "family_blessing_marriage": {
+      "title": "Ucapan selamat pernikahan"
+    },
+    "family_for_child": {
+      "title": "Memohon perlindungan untuk anak"
+    },
+    "sickness_visit": {
+      "title": "Menjenguk orang sakit"
+    },
+    "sickness_prayer_for_sick": {
+      "title": "Doa untuk orang sakit"
+    },
+    "sickness_when_in_pain": {
+      "title": "Saat merasakan sakit di tubuh"
+    },
+    "funeral_inna_lillah": {
+      "title": "Saat mendengar berita kematian"
+    },
+    "funeral_consolation": {
+      "title": "Menghibur keluarga yang berduka"
+    },
+    "funeral_graveyard_visit": {
+      "title": "Saat memasuki pemakaman"
+    },
+    "eid_takbir": {
+      "title": "Takbir Idul"
+    },
+    "eid_taqabbal": {
+      "title": "Ucapan selamat Idul"
+    },
+    "beforeQuran_taawwudh": {
+      "title": "Berlindung sebelum membaca"
+    },
+    "beforeQuran_basmalah": {
+      "title": "Memulai setiap perbuatan"
+    },
+    "knowledge_seeking": {
+      "title": "Memohon tambahan ilmu"
+    },
+    "knowledge_understanding": {
+      "title": "Memohon pemahaman"
+    },
+    "knowledge_majlis_kaffarah": {
+      "title": "Penutup majelis (kaffaratul majlis)"
+    },
+    "protection_morning_evening": {
+      "title": "Sayyidul Istighfar singkat (×3 pagi & petang)"
+    },
+    "protection_evil_eye": {
+      "title": "Dari ‘ain (mata jahat)"
+    },
+    "protection_entering_home": {
+      "title": "Saat masuk rumah"
+    },
+    "protection_leaving_home": {
+      "title": "Saat keluar rumah"
+    },
+    "protection_market": {
+      "title": "Saat masuk pasar"
+    },
+    "guidance_istikharah": {
+      "title": "Salat Istikharah (memohon petunjuk) — teks lengkap"
+    },
+    "guidance_steadfastness": {
+      "title": "Untuk teguh di atas iman"
+    },
+    "guidance_rabbana_atina": {
+      "title": "Untuk kebaikan dunia dan akhirat"
+    },
+    "guidance_against_being_misled": {
+      "title": "Memohon perlindungan dari kesesatan"
+    },
+    "pronunciation": "Pelafalan",
+    "tapToCount": "Ketuk untuk menghitung",
+    "shareDua": "Bagikan {{title}}",
+    "lavatory_01_entering": {
+      "title": "Ketika masuk kamar kecil"
+    },
+    "lavatory_02_leaving": {
+      "title": "Ketika keluar dari kamar kecil"
+    },
+    "garment_01_dressing": {
+      "title": "Ketika memakai pakaian"
+    },
+    "garment_02_new": {
+      "title": "Pakaian baru"
+    },
+    "garment_03_for_someone_new": {
+      "title": "Untuk orang yang memakai pakaian baru"
+    },
+    "garment_04_undressing": {
+      "title": "Ketika melepas pakaian"
+    },
+    "section": {
+      "day": "Sepanjang hari",
+      "worship": "Ibadah",
+      "out": "Dalam perjalanan",
+      "hardship": "Saat berat",
+      "asking": "Memohon"
+    },
+    "countHint": "{{count}} doa"
+  },
+  "quran": {
+    "meccan": "Makkiyah",
+    "medinan": "Madaniyah",
+    "ayahCount": "{{count}} ayat",
+    "notFound": "Surat tidak ditemukan.",
+    "comingSoon": "Teks lengkap surah ini akan tersedia pada pembaruan data berikutnya.",
+    "pageLabel": "Halaman {{page}}",
+    "switchToTranslation": "Beralih ke tampilan tafsir",
+    "switchToMushaf": "Beralih ke tampilan mushaf",
+    "viewToggleTranslation": "Terjemahan",
+    "viewToggleMushaf": "Mushaf",
+    "enterFullscreen": "Layar penuh",
+    "exitFullscreen": "Keluar layar penuh",
+    "mushafDownloadTitle": "Unduh mushaf",
+    "mushafDownloadBody": "Mushaf Madinah berukuran sekitar {{size}} MB. Tidak disertakan di aplikasi — unduh sekali dan halamannya tetap tersimpan di perangkat.",
+    "mushafDownloadReadCta": "Unduh dan mulai membaca (~{{size}} MB)",
+    "mushafDownloadReadHint": "Halaman tampil begitu tiba; sisanya diunduh di latar belakang.",
+    "mushafDownloadStrip": "Mengunduh mushaf · {{pct}}%",
+    "juzLabel": "Juz {{juz}}",
+    "nightMode": "Mode malam",
+    "jumpToPage": "Ke halaman",
+    "pageShort": "hlm. {{page}}",
+    "go": "Buka",
+    "mushafDownloadRetryBody": "{{count}} halaman gagal diunduh. Coba lagi untuk mengambil halaman yang hilang — semua yang sudah diunduh tetap tersimpan.",
+    "mushafDownloadRetryCta": "Coba lagi halaman yang hilang",
+    "star": "Bintangi ayat ini",
+    "unstar": "Hapus bintang",
+    "bookmark": "Penanda",
+    "bookmarkColor": "Warna penanda {{color}}",
+    "playFromHere": "Putar dari sini",
+    "repeatAyah": "Ulangi ayat ini",
+    "buffering": "Buffering…",
+    "previousAyah": "Ayat sebelumnya",
+    "nextAyah": "Ayat berikutnya",
+    "pause": "Jeda",
+    "play": "Putar",
+    "stopPlayback": "Hentikan pemutaran",
+    "playbackSettings": "Tilawah",
+    "reciter": "Qari",
+    "downloadSurahAudio": "Unduh audio {{surah}}",
+    "surahAudioDownloaded": "Audio diunduh untuk penggunaan offline",
+    "downloadingAudio": "Mengunduh… {{done}}/{{total}}",
+    "downloadSurahAudioShort": "Unduh surah ini untuk didengarkan offline",
+    "speed": "Kecepatan",
+    "memorization": "Hafalan",
+    "repeatEachAyah": "Ulangi setiap ayat",
+    "repeatRange": "Ulangi rentang",
+    "pauseBetween": "Jeda antar pengulangan",
+    "none": "Tidak ada",
+    "hideForReview": "Sembunyikan saat murajaah",
+    "hideArabic": "Arab",
+    "hideTranslation": "Terjemahan",
+    "playRangeTitle": "Putar rentang dari {{surah}}",
+    "fromAyah": "Dari ayat",
+    "toAyah": "Sampai ayat",
+    "playRange": "Putar rentang",
+    "ayahA11y": "Ayat {{ayah}} — ketuk untuk tindakan",
+    "tapToReveal": "Ketuk untuk menampilkan",
+    "hideModeActive": "Mode hafalan: {{what}} disembunyikan — ketuk ayat untuk menampilkan",
+    "loading": "Memuat…",
+    "continueReading": "Lanjutkan membaca",
+    "continueKhatmah": "Lanjutkan khataman",
+    "readingPin": "Lanjutkan membaca dari sini",
+    "readingPinned": "Lanjutkan membaca mulai di sini",
+    "readingMarkerLabel": "Bacaan",
+    "khatmahMarkerLabel": "Khataman",
+    "khatmah": "Khataman",
+    "khatmahDaysLeft": "{{count}} hari lagi",
+    "khatmahDaysLeft_one": "{{count}} hari lagi",
+    "khatmahProgress": "{{read}} / {{total}} halaman · hari ini: {{today}}",
+    "khatmahBehind": "{{count}} perlu dikejar",
+    "startKhatmah": "Mulai khataman",
+    "khatmahDays": "{{count}} hari",
+    "verseOfDay": "Ayat hari ini",
+    "searchPlaceholder": "Cari surah, ayat, terjemahan…",
+    "tabSurah": "Surah",
+    "tabJuz": "Juz",
+    "tabBookmarks": "Penanda",
+    "searchResults": "{{count}} ayat ditemukan",
+    "noBookmarks": "Belum ada penanda — ketuk ayat mana pun saat membaca untuk menandai atau membintanginya.",
+    "starred": "Berbintang",
+    "shareAsImage": "Bagikan sebagai gambar",
+    "chooseReciter": "Pilih qari",
+    "searchReciters": "Cari qari…",
+    "wordHighlightBadge": "sorotan kata",
+    "changeReciter": "Ubah",
+    "deleteBookmark": "Hapus markah",
+    "removeStar": "Hapus bintang",
+    "nightShort": "Malam",
+    "sepiaShort": "Sepia",
+    "lightShort": "Terang",
+    "switchToNight": "Beralih ke halaman malam",
+    "switchToSepia": "Beralih ke halaman sepia",
+    "riwayahHafs": "Hafs",
+    "riwayahWarsh": "Warsy",
+    "switchRiwayah": "Beralih ke riwayat {{name}}",
+    "riwayahReflowTitle": "Halaman sama, baris mungkin berbeda",
+    "riwayahReflowBody": "Mushaf ini memulai dan mengakhiri setiap halaman persis seperti cetakannya, tetapi barisnya disusun oleh perangkat Anda, bukan diambil dari cetakan, sehingga tidak selalu terputus di tempat yang sama.",
+    "riwayahNeedsHttps": "Tautan harus diawali https://",
+    "riwayahServerSaidNo": "Server menjawab {{status}}.",
+    "riwayahTooLarge": "Berkas itu jauh lebih besar daripada data mushaf. Periksa tautannya.",
+    "riwayahUnreachable": "Tautan itu tidak dapat dijangkau. Periksa alamat dan koneksi Anda.",
+    "riwayahGotAPage": "Tautan itu mengembalikan halaman web, bukan berkas data. Gunakan tautan unduhan JSON.",
+    "riwayahNotJson": "Berkas itu bukan berkas data.",
+    "riwayahNotAQuran": "Berkas itu bukan Al-Qur’an yang utuh, jadi tidak dipasang.",
+    "riwayahCouldNotSave": "Tidak dapat disimpan ke perangkat ini.",
+    "switchToLight": "Beralih ke halaman terang",
+    "ayahOfDayTitle": "Ayat hari ini",
+    "ayahOfDayChannelName": "Ayat hari ini",
+    "tafsir": "Tafsir",
+    "showTafsir": "Tampilkan tafsir",
+    "tafsirUnavailable": "Tafsir tidak tersedia — sambungkan ke internet sekali untuk mengunduhnya.",
+    "khatmahPin": "Jadikan posisi khataman saya",
+    "khatmahPinned": "Posisi khataman — ketuk untuk menghapus",
+    "khatmahUnpin": "Hapus posisi khataman",
+    "khatmahContinue": "Lanjutkan",
+    "khatmahReset": "Atur ulang",
+    "khatmahResetTitle": "Atur ulang khataman",
+    "khatmahResetToday": "Atur ulang bacaan hari ini",
+    "khatmahResetTodayHelp": "Hanya mengembalikan halaman yang tercatat hari ini.",
+    "khatmahResetAll": "Mulai ulang khataman",
+    "khatmahResetAllHelp": "Kembali ke awal rencana dengan jadwal baru.",
+    "khatmahDelete": "Hapus khataman",
+    "khatmahDeleteHelp": "Menghapus rencana sepenuhnya.",
+    "khatmahReminderChannelName": "Pengingat khataman",
+    "khatmahReminderTitle": "Khataman",
+    "khatmahReminderBody": "Bagian hari ini: {{pages}} halaman — lanjutkan dari halaman {{page}}.",
+    "audioButton": "Audio",
+    "khatmahCustom": "Kustom…",
+    "khatmahLengthTitle": "Durasi khatmah (hari)",
+    "khatmahSetUpTitle": "Mulai khatmah",
+    "khatmahFromPageTitle": "Sudah membaca? Mulai dari halaman",
+    "khatmahFromPageHint": "Dari awal",
+    "khatmahStartCta": "Mulai",
+    "showMore": "Tampilkan selengkapnya",
+    "showLess": "Tampilkan lebih sedikit",
+    "tafsirEditionHelp": "Tafsir yang ditampilkan di bawah setiap ayat. Juga dapat diubah dari ayat mana pun di halaman Al-Qur’an.",
+    "nextPage": "Halaman berikutnya",
+    "prevPage": "Halaman sebelumnya",
+    "companionTitle": "Di bawah setiap ayat",
+    "companionHelp": "Berlaku di mana pun ayat ditampilkan — pembaca, ayat hari ini, dan notifikasi ayat harian. Juga dapat diubah dari halaman Al-Qur'an.",
+    "companionActive": "aktif",
+    "mushafReplaceOldBody": "Salinan mushaf yang lama ({{size}} MB) masih ada di perangkat Anda dari versi sebelumnya. Salinan itu akan dihapus lebih dulu — tidak ada yang Anda simpan yang terpengaruh.",
+    "shareAsText": "Bagikan teks",
+    "shareChoiceA11y": "Bagikan — teks atau kartu gambar",
+    "recitation": "Tilawah",
+    "downloadSurahAudioSized": "Unduh surah ini · {{size}}",
+    "tapToPick": "pilih",
+    "tabMarks": "Tanda",
+    "searchSurahOrPage": "Cari surah atau halaman",
+    "reading": "sedang dibaca",
+    "pageScrubber": "Ke halaman",
+    "goCta": "Buka",
+    "downloadChannelName": "Unduhan Al-Qur'an",
+    "downloadChannelDesc": "Kemajuan saat Al-Qur'an diunduh.",
+    "downloadingFonts": "Mengunduh teks Al-Qur'an",
+    "downloadingReciter": "Mengunduh {{name}}",
+    "downloadProgressAyahs": "{{done}} dari {{total}} ayat",
+    "audioDownloadDoneTitle": "{{name}} siap",
+    "audioDownloadDoneBody": "Seluruh Al-Qur'an dengan suara ini ada di perangkat ini. Kini dapat diputar tanpa koneksi.",
+    "audioDownloadIncompleteTitle": "Murottal belum selesai diunduh",
+    "audioDownloadIncompleteBody": "{{count}} ayat masih kurang. Mulai lagi untuk melanjutkan dari tempat berhenti.",
+    "listenTitle": "Tilawah",
+    "tilawahDoorSub": "Dengarkan Al-Qur'an",
+    "tilawahBlurb": "Tilawah Al-Qur'an — tetap diputar meski layar mati, dan bisa didengar tanpa koneksi setelah diunduh.",
+    "tilawahContinue": "Lanjutkan dari bacaan Anda",
+    "tilawahBegin": "Mulai dengan",
+    "tilawahAyahOf": "Ayat {{done}} dari {{total}}",
+    "tilawahShowPage": "Tampilkan halaman",
+    "backToTop": "Kembali ke atas",
+    "tilawahKeepAwake": "Biarkan layar menyala",
+    "tilawahSurahSeek": "Geser di dalam surah",
+    "tilawahShuffle": "Acak surah",
+    "tilawahPrevSurah": "Surah sebelumnya",
+    "tilawahNextSurah": "Surah berikutnya",
+    "tilawahAyahWord": "Ayat",
+    "openInReader": "Buka di pembaca",
+    "listenSurahMeta": "{{count}} ayat",
+    "listenNowPlaying": "Sedang diputar",
+    "listenContinuous": "Berlanjut terus",
+    "listenIdle": "Tidak ada yang diputar",
+    "listenReciter": "Qari",
+    "listenSeek": "Geser di dalam ayat",
+    "listenPrevious": "Ayat sebelumnya",
+    "listenNext": "Ayat berikutnya",
+    "listenSpeed": "Kecepatan",
+    "listenSleep": "Timer tidur",
+    "listenSleepOff": "Mati",
+    "listenSleepSurah": "Akhir surah",
+    "listenSleepMinutes": "{{count}} menit",
+    "listenSleepArmed": "Berhenti sekitar {{count}} menit lagi",
+    "listenPickSurah": "Mulai dari",
+    "listenDownloadTitle": "Simpan {{name}} di perangkat ini",
+    "listenDownloadBody": "Seluruh Al-Qur'an dengan suara ini, sekitar {{size}}. Pembaca memutar berkas yang sama, jadi di sana pun bisa.",
+    "listenDownloadComplete": "Lengkap · {{size}}",
+    "listenDownloadPartial": "{{done}} dari {{total}} ayat ada di sini · {{size}}",
+    "listenDownloadStart": "Unduh",
+    "listenDownloadResume": "Lanjutkan unduhan",
+    "listenDownloadBusy": "Ada unduhan lain yang sedang berjalan. Satu per satu, supaya tidak ada yang melambat.",
+    "downloadProgress": "{{done}} dari {{total}} halaman",
+    "downloadDoneTitle": "Al-Qur'an siap",
+    "downloadDoneBody": "Semua halaman ada di perangkat ini. Kini bisa dibaca tanpa sambungan.",
+    "downloadIncompleteTitle": "Unduhan belum selesai",
+    "downloadIncompleteBody": "{{count}} halaman masih kurang. Buka Al-Qur'an untuk melanjutkan dari tempat berhenti.",
+    "finishDay": "Selesaikan bacaan hari {{day}} ({{when}})",
+    "finishDayShort": "Selesaikan hari {{day}} ({{when}})",
+    "khatmahPageProgress": "{{pages}} halaman lagi · hari ke-{{day}} dari {{days}}",
+    "khatmahDayDone": "✓ Bacaan hari ini selesai",
+    "khatmahPagesLeftToday": "{{count}} halaman lagi hari ini",
+    "khatmahPagesLeftToday_one": "{{count}} halaman lagi hari ini",
+    "khatmahExtraPages": "+{{count}} halaman tambahan",
+    "khatmahExtraPages_one": "+{{count}} halaman tambahan",
+    "khatmahMarkDone": "Tandai bacaan hari ke-{{day}} selesai",
+    "khatmahMarkNext": "✓ Selesaikan hari {{day}} ({{when}}) juga",
+    "khatmahMarkToday": "✓ Bacaan hari ini selesai",
+    "khatmahPrevDay": "‹ Hari sebelumnya",
+    "riwayahQalun": "Qalun",
+    "riwayahShubah": "Syu'bah",
+    "riwayahPickerTitle": "Riwayat bacaan",
+    "riwayahPickerOpen": "Riwayat bacaan: {{name}}. Ketuk untuk mengganti.",
+    "riwayahNotOnDevice": "{{name}} — belum ada di perangkat ini",
+    "riwayahAddIt": "Ketuk untuk menambahkan",
+    "riwayahDefault": "(bawaan)",
+    "dueToday": "hari ini",
+    "dueTomorrow": "besok",
+    "scrubHint": "Geser ke atas untuk kontrol lebih halus",
+    "scrubHalf": "Setengah kecepatan",
+    "scrubQuarter": "Seperempat kecepatan",
+    "scrubFine": "Kontrol halus",
+    "translationUnavailable": "Tidak ada terjemahan untuk ayat ini.",
+    "oftenRead": "Sering dibaca",
+    "listenDeleteAudio": "Hapus {{name}} dari perangkat ini",
+    "listenDownloadReciter": "Unduh {{name}}, sekitar {{size}}",
+    "listenDownloadRunning": "Mengunduh · {{done}} dari {{total}}",
+    "shareTafsir": "Bagikan tafsir ini ({{edition}})",
+    "surahAudioPartial": "{{have}} dari {{total}} ayat · ketuk untuk mengunduh sisanya",
+    "deleteSurahAudio": "Hapus audio surah ini",
+    "deleteSurahAudioFor": "Hapus audio {{surah}} yang telah diunduh",
+    "audioGap": "{{surah}} {{ayah}} belum diunduh — sambungkan, atau unduh surah ini untuk didengarkan luring.",
+    "khatmahMore": "Opsi khatam lainnya",
+    "khatmahPrevDayHelp": "Batalkan tanda hari ini dan kembali ke bagian hari sebelumnya.",
+    "lastReadRow": "Terakhir dibaca · {{surah}}, halaman {{page}}",
+    "autoShort": "Otomatis",
+    "switchToAuto": "Ikuti tema aplikasi",
+    "downloadingSurah": "Mengunduh {{surah}} · {{name}}",
+    "surahDownloadDoneTitle": "{{surah}} siap",
+    "surahDownloadDoneBody": "Tilawah {{surah}} oleh {{name}} ada di perangkat ini. Kini diputar tanpa koneksi.",
+    "reciterDownloadStrip": "Mengunduh {{name}} · {{pct}}%",
+    "surahDownloadStrip": "Mengunduh {{surah}} · {{pct}}%"
+  },
+  "mosques": {
+    "searching": "Mencari masjid terdekat…",
+    "noneFound": "Tidak ada masjid terdekat. Coba perluas radius pencarian.",
+    "unnamedMosque": "Masjid",
+    "needLocation": "Atur lokasi terlebih dahulu agar kami bisa mencari di sekitarnya.",
+    "error": "Tidak dapat mengakses basis data masjid. Coba lagi.",
+    "title": "Temukan masjid di dekatmu",
+    "bodyWithLocation": "Kami akan membuka aplikasi peta dengan pencarian \"mosque\" di sekitar lokasimu. Jika tidak tersedia, kami akan membuka Google Maps di browser.",
+    "bodyNoLocation": "Atur lokasi terlebih dahulu (Pengaturan → Lokasi). Kemudian kami akan membuka aplikasi peta dengan pencarian \"mosque\" di sekitarnya. Jika tidak tersedia, kami akan membuka Google Maps di browser.",
+    "openInMapsApp": "Buka Maps dan cari \"mosque\""
+  },
+  "journal": {
+    "todayLabel": "Hari ini",
+    "streakDays": "Hari beruntun",
+    "onTimeRate": "Tepat waktu",
+    "totalLogged": "Total tercatat",
+    "status": {
+      "on-time": "Tepat waktu",
+      "late": "Terlambat",
+      "missed": "Terlewat",
+      "qadha": "Qadha"
+    },
+    "statusShort": {
+      "on-time": "Tepat waktu",
+      "late": "Terlambat",
+      "missed": "Terlewat",
+      "qadha": "Qadha"
+    },
+    "encourageEmpty": "Tandai salat pertama hari ini untuk memulai jurnalmu.",
+    "encourageActive": "Setiap salat yang tercatat adalah langkah maju.",
+    "encourageStreak": "Mashallah, {{count}} hari beruntun tepat waktu. Lanjutkan.",
+    "notificationToggleTitle": "Catat dari notifikasi",
+    "notificationToggleOn": "Ketuk \"Catat salat\" di notifikasi waktu salat untuk langsung ke sini.",
+    "notificationToggleOff": "Tambahkan tindakan \"Catat salat\" ke setiap notifikasi waktu salat.",
+    "notificationToggleA11y": "Aktifkan tindakan jurnal di notifikasi salat",
+    "notePlaceholder": "Catatan pribadi (hanya di perangkat ini)",
+    "saveNote": "Simpan catatan",
+    "logActionTitle": "Catat salat",
+    "logSunnahActionTitle": "Catat dengan sunah",
+    "loadFailedTitle": "Tidak dapat memuat catatan",
+    "loadFailedBody": "Data Anda aman di perangkat tetapi tidak dapat dibaca sekarang. Coba buka catatan lagi.",
+    "saveFailedTitle": "Tidak dapat menyimpan",
+    "saveFailedBody": "Silakan coba lagi.",
+    "noteLabel": "Catatan pribadi (privat, terenkripsi)",
+    "notYet": "Belum — waktunya belum tiba",
+    "quickLogMark": "Tandai {{prayer}} sudah ditunaikan",
+    "quickLogLogged": "{{prayer}} dicatat: {{status}}. Ketuk untuk membatalkan",
+    "quickLogNotYet": "Waktu {{prayer}} belum masuk",
+    "passedTitle": "Catat {{prayer}} · {{day}}",
+    "passedBody": "Waktunya telah lewat. Bagaimana dikerjakannya?",
+    "passedFirstBody": "Waktu pertamanya telah lewat dan waktu kedua masih berjalan. Dikerjakan pada waktu pertama, atau setelahnya?"
+  },
+  "events": {
+    "islamicNewYear": "Tahun Baru Hijriyah",
+    "ashura": "Hari Asyura",
+    "mawlid": "Maulid Nabi",
+    "isra": "Isra' Mikraj",
+    "midShaban": "Pertengahan Sya'ban",
+    "ramadanBegins": "Ramadan dimulai",
+    "laylatAlQadr": "Lailatul Qadar (yang diperingati)",
+    "eidAlFitr": "Idul Fitri",
+    "arafah": "Hari Arafah",
+    "eidAlAdha": "Idul Adha",
+    "whiteDays": "Ayyamul Bidh (Hari Putih)",
+    "sixOfShawwal": "Enam Hari Syawal"
+  },
+  "ramadan": {
+    "title": "Ramadan",
+    "suhoor": "Sahur",
+    "iftar": "Berbuka",
+    "suhoorIn": "Sahur berakhir dalam {{time}}",
+    "iftarIn": "Berbuka dalam {{time}}"
+  },
+  "onboarding": {
+    "skip": "Lewati dulu",
+    "next": "Lanjut",
+    "done": "Selesai",
+    "stepLabel": "Langkah {{current}} dari {{total}}",
+    "welcome": {
+      "title": "Selamat datang",
+      "body": "Aplikasi jadwal salat yang nyaman dan pribadi. Tanpa analitik, tanpa pelacak — hanya pengingat yang tenang untuk salat lima waktu.",
+      "salam": "Semoga keselamatan, rahmat Allah, dan berkah-Nya menyertaimu."
+    },
+    "location": {
+      "title": "Lokasi Anda",
+      "body": "Kami memakai perkiraan posisi Anda untuk menghitung jadwal salat yang akurat. Koordinat tersimpan terenkripsi di perangkat ini — tidak pernah keluar dari sini.",
+      "cta": "Gunakan lokasi saya"
+    },
+    "notifications": {
+      "title": "Pengingat salat",
+      "body": "Kami bisa memberi tahu Anda dengan tenang pada setiap waktu salat. Anda bisa memilih suara, mengatur pengingat, atau mematikannya kapan saja.",
+      "cta": "Aktifkan pengingat"
+    },
+    "exactAlarms": {
+      "title": "Pengingat tepat waktu",
+      "body": "Di Android versi baru, pengingat salat perlu izin tambahan agar berbunyi tepat waktu, bukan terlambat beberapa menit.",
+      "cta": "Izinkan pengingat tepat waktu"
+    },
+    "salamA11y": "Assalāmu ʿalaikum warahmatullāhi taʿālā wabarakātuh"
+  },
+  "backup": {
+    "exportSection": "Ekspor",
+    "exportHelp": "Simpan pengaturan, lokasi tersimpan, jurnal salat, dan catatan puasa Anda ke berkas JSON. Buka lagi nanti untuk memulihkannya.",
+    "exportCta": "Ekspor cadangan",
+    "shareTitle": "Cadangan Ibadat 365",
+    "exportFailedTitle": "Tidak bisa mengekspor",
+    "restoreSection": "Pulihkan",
+    "restoreHelp": "Tempel JSON cadangan di bawah lalu ketuk Pulihkan untuk melihat pratinjaunya. Aplikasi akan meminta konfirmasi sebelum menerapkannya.",
+    "restorePastePlaceholder": "Tempel JSON cadangan di sini…",
+    "restoreCta": "Pratinjau pemulihan",
+    "restorePreviewTitle": "Cadangan ditemukan",
+    "restorePreviewBody": "{{settings}} pengaturan, {{presets}} lokasi tersimpan, {{journal}} catatan jurnal, {{fasting}} hari puasa. Diterapkan pada langkah berikutnya.",
+    "restoreFailedTitle": "Tidak bisa membaca cadangan",
+    "notAnEnvelope": "File itu tidak terlihat seperti cadangan Ibadat 365.",
+    "privacyNote": "Cadangan tetap ada di perangkat Anda sampai Anda membagikannya. Koordinat dan catatan jurnal bisa dienkripsi dengan kata sandi pada pembaruan mendatang — sampai saat itu, simpan berkas cadangan Anda untuk diri sendiri."
+  },
+  "fasting": {
+    "todayLabel": "Hari ini",
+    "ramadanDayLabel": "Ramadan · Hari ke-{{day}}",
+    "statusKept": "Puasa terjaga — barakallāhu fīk.",
+    "statusRecommended": "Hari ini bertepatan dengan puasa Sunnah yang dianjurkan.",
+    "statusOptional": "Belum ada puasa tercatat hari ini.",
+    "markCta": "Tandai hari ini sebagai puasa",
+    "unmarkCta": "Batalkan tanda hari ini",
+    "statRamadan": "Ramadan",
+    "statVoluntary": "Sukarela",
+    "statStreak": "Beruntun",
+    "gridLabel": "Ramadan ini",
+    "gridDayA11y": "Hari {{day}} {{state}}",
+    "privacyNote": "Riwayat puasa tetap terenkripsi di perangkatmu.",
+    "encourageEmpty": "Catat puasamu yang pertama untuk mulai melacak.",
+    "encourageActive": "Setiap puasa dihitung. Semoga Allah menerimanya.",
+    "encourageStreak": "Mashallah, beruntun {{count}} hari. Lanjutkan.",
+    "reminderToggleTitle": "Pengingat sehari sebelumnya",
+    "reminderToggleOn": "Kamu akan mendapat notifikasi lembut pukul {{hour}}:00 malam sebelum setiap puasa Sunnah.",
+    "reminderToggleOff": "Dapatkan notifikasi pada malam sebelum setiap hari Senin/Kamis dan hari puasa istimewa.",
+    "reminderToggleA11y": "Aktifkan pengingat sehari sebelum puasa",
+    "upcomingLabel": "Puasa Sunnah mendatang",
+    "daysAway": "{{count}} hari lagi",
+    "daysSpan": "{{count}} hari",
+    "daysCount": "{{count}} hari",
+    "ramadanCountdownLabel": "Ramadan dimulai dalam",
+    "mondayEncouragement": "Senin adalah puasa Sunnah — amal diperlihatkan kepada Allah pada Senin dan Kamis.",
+    "thursdayEncouragement": "Kamis adalah puasa Sunnah — amal diperlihatkan kepada Allah pada Senin dan Kamis.",
+    "monthViewLabel": "Semua puasa tercatat",
+    "noLogsYet": "Hari-hari yang kamu jalani akan muncul di sini.",
+    "typeRamadan": "Ramadan",
+    "typeVoluntary": "Sukarela / Sunnah",
+    "reminderChannelName": "Pengingat puasa",
+    "reminderTitle": "Pengingat puasa"
+  },
+  "methods": {
+    "0": "Syiah — Itsna Asyariyah",
+    "1": "Universitas Ilmu Islam, Karachi",
+    "2": "Islamic Society of North America (ISNA)",
+    "3": "Liga Muslim Dunia",
+    "4": "Universitas Umm Al-Qura, Mekkah",
+    "5": "Otoritas Survei Umum Mesir",
+    "7": "Institut Geofisika, Universitas Teheran",
+    "8": "Wilayah Teluk",
+    "9": "Kuwait",
+    "10": "Qatar",
+    "11": "Singapura",
+    "12": "Prancis",
+    "13": "Turki",
+    "14": "Rusia",
+    "15": "Komite Pengamatan Hilal Sedunia",
+    "21": "Maroko",
+    "auto": "Otomatis (berdasarkan lokasi)"
+  },
+  "attributions": {
+    "groupScripture": "Teksnya",
+    "groupRecitation": "Tilawah",
+    "groupMeaning": "Terjemahan dan tafsir",
+    "groupTypefaces": "Huruf",
+    "footer": "Setiap baris tertaut ke sumbernya.",
+    "quranText": "Teks Al-Qur’an Utsmani",
+    "mushafImages": "Gambar halaman mushaf (604)",
+    "translationEditions": "Edisi terjemahan (14)",
+    "sahihIntl": "Sahih International (Inggris)",
+    "pickthall": "Pickthall (Inggris)",
+    "mushafMetadata": "Metadata halaman mushaf",
+    "riwayat": "Teks Warsy, Qalun, dan Syuʿbah (diunduh, tidak disertakan)",
+    "riwayahLines": "Geometri baris cetak mushaf-mushaf tersebut",
+    "amiriFonts": "Font Amiri & Amiri Quran",
+    "scheherazade": "Scheherazade New",
+    "hisnulMuslim": "Doa-doa Hisnul Muslim",
+    "quranGeometry": "Data posisi ayat (quran.com / proyek Quran for Android)",
+    "recitation": "Audio tilawah (42 qari): EveryAyah.com · pewaktuan kata: quran-align (CC BY 4.0)",
+    "tafsir": "Teks tafsir: Ibnu Katsir, Maarif-ul-Quran, al-Muyassar",
+    "surahHeaderFont": "Kaligrafi kepala surah"
+  },
+  "liveActivity": {
+    "title": "Salat berikutnya",
+    "in": "dalam {{remaining}}",
+    "now": "Sekarang",
+    "soon": "Segera dimulai",
+    "channelName": "Hitungan mundur salat",
+    "channelDesc": "Notifikasi berkelanjutan tersemat yang menampilkan hitungan mundur ke salat berikutnya.",
+    "fgsText": "Hitung mundur shalat aktif",
+    "justThisOne": "kali ini",
+    "inWord": "Dalam",
+    "atWord": "Pukul",
+    "hideOnLock": "Sembunyikan di layar kunci",
+    "showOnLock": "Tampilkan di layar kunci"
+  },
+  "hijri": {
+    "month_1": "Muharram",
+    "month_2": "Safar",
+    "month_3": "Rabiulawal",
+    "month_4": "Rabiulakhir",
+    "month_5": "Jumadilawal",
+    "month_6": "Jumadilakhir",
+    "month_7": "Rajab",
+    "month_8": "Syakban",
+    "month_9": "Ramadan",
+    "month_10": "Syawal",
+    "month_11": "Zulkaidah",
+    "month_12": "Zulhijah"
+  },
+  "tour": {
+    "welcomeTitle": "Selamat datang di Ibadat 365",
+    "welcomeBody": "Jadwal salat, Al-Qur'an, dan sarana ibadah harian — privat sejak awal. Tanpa akun, tanpa pelacak.",
+    "timesTitle": "Jadwal salat dalam sekejap",
+    "timesBody": "Waktu yang akurat untuk lokasi Anda, dengan hitungan mundur langsung ke salat berikutnya. Usap kartu hari untuk melihat hari-hari mendatang.",
+    "quranTitle": "Al-Qur'an, dalam tampilan indah",
+    "quranBody": "Baca mushaf Madinah, dengarkan tilawah dari lima qari, tandai ayat, dan pantau khataman Anda.",
+    "customizeTitle": "Jadikan milik Anda",
+    "customizeBody": "Widget layar utama, hitungan mundur Aktivitas langsung, tema dan warna aksen — semuanya di Pengaturan.",
+    "skip": "Lewati",
+    "next": "Berikutnya",
+    "done": "Mulai"
+  },
+  "downloads": {
+    "title": "Kelola unduhan",
+    "settingsHelp": "Halaman mushaf, audio tilawah, dan tafsir di perangkat ini.",
+    "deleteTitle": "Hapus unduhan?",
+    "deleteBody": "{{what}} akan dihapus dari perangkat ini. Anda dapat mengunduhnya lagi kapan saja.",
+    "total": "Total di perangkat: {{size}}",
+    "mushaf": "Halaman mushaf",
+    "mushafSub": "604 halaman Madinah",
+    "audioSub": "Audio tilawah",
+    "tafsirSub": "Teks tafsir tersimpan",
+    "empty": "Belum ada unduhan. Halaman mushaf, audio, dan tafsir yang diunduh akan muncul di sini.",
+    "mushafPages": "{{pages}} dari {{total}} halaman",
+    "legacyMushaf": "Halaman mushaf lama",
+    "legacyMushafSub": "Sisa dari pembaca sebelumnya. Tidak ada lagi yang membukanya.",
+    "riwayat": "Riwayat bacaan",
+    "riwayatFootnote": "Ibadat 365 tidak menyertakan atau menyimpan teks ini. Berkasnya diambil dari penerbit langsung ke perangkat ini, dan diperiksa di sini sebelum apa pun dibaca darinya.",
+    "riwayahInstalled": "{{pages}} halaman · dari {{host}}",
+    "riwayahPublisher": "Diterbitkan oleh {{publisher}}. Mengkredit {{credits}}.",
+    "riwayahBuiltIn": "Sudah ada di Ibadat 365. Tidak ada yang perlu diunduh atau dihapus.",
+    "riwayahOpenSource": "Buka sumber",
+    "riwayahDownload": "Unduh",
+    "riwayahFetchHowTo": "Ibadat 365 akan mengambilnya dari penerbit langsung ke perangkat ini, dan memeriksanya sebelum ada yang dibaca darinya.",
+    "riwayahAddAFile": "Tambahkan berkas yang sudah saya punya",
+    "riwayahHowTo": "Unduh berkas JSON dari halaman itu, lalu pilih di bawah ini. Boleh tetap dalam bentuk zip.",
+    "riwayahLink": "Tautan ke berkas data",
+    "riwayahInstall": "Tambahkan mushaf ini",
+    "riwayahChooseFile": "Pilih berkas yang diunduh",
+    "riwayahOrLink": "Atau tempel tautan langsung ke berkas:",
+    "riwayahUnreadable": "Berkas itu tidak dapat dibaca.",
+    "riwayahFileTooLarge": "Berkas itu jauh terlalu besar untuk sebuah mushaf.",
+    "riwayahZipUnsupported": "Arsip itu dalam bentuk yang tidak bisa dibuka aplikasi ini. Ekstrak dan pilih berkas di dalamnya.",
+    "riwayahZipUnreadable": "Arsip itu tidak dapat dibuka.",
+    "riwayahNoJsonInZip": "Tidak ada berkas .json di dalam arsip itu."
+  },
+  "dataStats": {
+    "title": "Statistik data",
+    "toggle": "Tampilkan statistik data",
+    "toggleHelp": "Menampilkan di Pengaturan → Waktu salat dari mana waktu salat berasal, berapa banyak yang tersimpan, dan jadwal pembaruan.",
+    "source": "Sumber saat ini",
+    "daysStored": "Tersimpan di perangkat",
+    "lastUpdated": "Terakhir diperbarui",
+    "nextCheck": "Pemeriksaan pembaruan berikutnya",
+    "serverRun": "Proses server terakhir",
+    "nextServerRun": "Proses server berikutnya",
+    "never": "—",
+    "daysUnit": "hari",
+    "sourceCdn": "Data server (baru)",
+    "sourceSeed": "Data bawaan offline",
+    "sourceScrape": "Langsung Islamiska Förbundet",
+    "sourceAladhan": "AlAdhan",
+    "sourceLocal": "Perhitungan di perangkat",
+    "sourceUnknown": "Tidak diketahui",
+    "serverOk": "OK",
+    "serverWarning": "Cakupan rendah",
+    "serverUnknown": "Belum diperiksa",
+    "unlockedTitle": "Statistik data diaktifkan",
+    "unlockedBody": "Kartu statistik kini muncul di Pengaturan → Waktu salat. Matikan kapan saja di bawah.",
+    "serverCoverage": "Cakupan server",
+    "serverSweden": "Swedia · Islamiska Förbundet",
+    "serverMorocco": "Maroko · Habous",
+    "inUse": "dipakai",
+    "habousWindow": "Kementerian hanya menerbitkan bulan Hijriah yang sedang berjalan, sehingga jendela ini berkurang satu hari setiap hari dan terisi lagi saat bulan berganti. Membangun ulang tidak memperpanjangnya."
+  },
+  "log": {
+    "legendPrayers": "0 → 5 salat",
+    "fasted": "puasa",
+    "dayA11y": "{{date}}: {{prayers}} salat dicatat{{fast}}",
+    "streakCaption": "{{count}} hari berturut",
+    "streakBest": "(terbaik {{best}})",
+    "fastsCaption": "{{count}} puasa",
+    "markAllOnTime": "Tandai semua tepat waktu",
+    "iftarAt": "Buka puasa {{time}}",
+    "allUpcoming": "Semua mendatang",
+    "title": "Catatan",
+    "practiceTitle": "Praktik",
+    "previousDay": "Hari sebelumnya",
+    "nextDay": "Hari berikutnya",
+    "backToToday": "Kembali ke hari ini",
+    "fastingTitle": "Puasa",
+    "noFastLogged": "Tidak ada puasa tercatat.",
+    "markFasted": "Tandai sudah berpuasa",
+    "unmarkFasted": "Batalkan tanda",
+    "showOnHome": "Tampilkan grafik di Beranda",
+    "showOnHomeHelp": "Menambahkan kotak praktik Anda ke layar Hari Ini. Mati secara bawaan.",
+    "backfillAction": "Isi hari-hari sebelumnya",
+    "backfillTitle": "Isi hari-hari sebelumnya?",
+    "backfillBody": "Ini mencatat {{prayers}} salat selama {{days}} hari ({{range}}) sebagai dikerjakan tepat waktu. Hari yang sudah kamu catat dibiarkan apa adanya, dan hari ini tidak diubah.",
+    "backfillConfirm": "Isi semuanya",
+    "backfillNothingTitle": "Tidak ada yang perlu diisi",
+    "backfillNothingBody": "Semua hari sebelum hari ini sudah tercatat.",
+    "openLogFromHome": "Buka catatan",
+    "swipeHint": "Geser untuk mengganti hari",
+    "backfillUnreadable": "Catatanmu tidak bisa dibaca saat ini, jadi tidak ada yang diubah. Silakan coba lagi.",
+    "backfillRefusedTitle": "Tidak ada yang diubah",
+    "backfillRefusedBody": "Mengisi hari-hari itu akan mengubah sesuatu yang sudah kamu catat, jadi dihentikan. Catatanmu tetap utuh.",
+    "fillMonthsAction": "Isi tiga bulan terakhir",
+    "fillMonthsTitle": "Isi tiga bulan terakhir?",
+    "fillMonthsBody": "Ini mencatat {{prayers}} salat pada {{days}} hari kosong ({{range}}) sebagai dikerjakan tepat waktu. {{skipped}} hari dibiarkan karena sudah berisi sesuatu — status, catatan, atau puasa. Hari ini tidak diubah.",
+    "fillMonthsNothingBody": "Setiap hari dalam tiga bulan terakhir sudah berisi sesuatu.",
+    "fillSummaryDays": "Hari",
+    "fillSummaryPrayers": "Salat",
+    "backfillPreserved": "Hari yang sudah kamu catat dibiarkan apa adanya, dan hari ini tidak diubah.",
+    "fillMonthsPreserved": "Hari yang sudah berisi status, catatan, atau puasa dibiarkan persis seperti adanya. Hari ini tidak diubah.",
+    "fillSummaryLeftAlone": "Dibiarkan",
+    "unlogged": "belum diisi",
+    "resetAction": "Setel ulang catatan salat",
+    "resetTitle": "Setel ulang catatan salat",
+    "resetBody": "Pilih seberapa banyak yang dihapus, relatif terhadap {{day}}. Puasa, salat sunah dan zikir adalah catatan terpisah dan tidak disentuh.",
+    "resetScopeDay": "Hari ini",
+    "resetScopeMonth": "Bulan ini",
+    "resetScopeYear": "Tahun ini",
+    "resetScopeAll": "Semuanya",
+    "resetNothing": "tidak ada",
+    "resetConfirmTitle": "Hapus salat ini?",
+    "resetConfirm": "Hapus",
+    "resetPreserved": "Puasa, salat sunah dan zikir tidak disentuh. Ini tidak bisa dibatalkan.",
+    "resetRangeAll": "seluruh catatan",
+    "options": "Opsi",
+    "setUpSync": "Siapkan sinkronisasi",
+    "legendTitle": "Arti grafik"
+  },
+  "endOfDay": {
+    "title": "Catat salat hari ini?",
+    "body": "Tandai kelimanya sebagai tepat waktu, atau buka Catatan untuk mengisinya satu per satu.",
+    "action": "Catat semua sebagai selesai",
+    "channelName": "Catatan akhir hari"
+  },
+  "duaReminders": {
+    "channelName": "Doa pagi dan petang",
+    "morningTitle": "Dzikir pagi",
+    "morningBody": "Doa-doa pagi — waktunya sampai matahari terbit.",
+    "eveningTitle": "Dzikir petang",
+    "eveningBody": "Doa-doa petang — waktunya sampai matahari terbenam.",
+    "groupTitle": "Doa pagi dan petang",
+    "morning": "Doa pagi",
+    "morningHelp": "Pengingat pada waktu pagi — setelah Subuh, sebelum matahari terbit.",
+    "evening": "Doa petang",
+    "eveningHelp": "Pengingat pada waktu petang — setelah Asar, sebelum matahari terbenam."
+  },
+  "sunnah": {
+    "none": "Tidak ada",
+    "short": "Sunnah",
+    "ofTotal": "{{done}} dari {{total}}",
+    "ofTotalShort": "{{done}}/{{total}}",
+    "a11yNone": "{{prayer}}: tidak ada salat sunnah",
+    "a11yCount": "Sunnah {{prayer}}: {{done}} dari {{total}} dicatat",
+    "afterIsha": "Setelah Isya",
+    "witr": "Witir",
+    "prayed": "Dikerjakan",
+    "logIt": "Catat",
+    "qiyam": "Qiyam al-Lail",
+    "qiyamNote": "Tidak dihitung dalam rentetan",
+    "resetQiyam": "Setel ulang Qiyam al-Lail",
+    "reset": "Setel ulang",
+    "addQiyam": "Catat satu Qiyam al-Lail",
+    "qiyamCountA11y": "Qiyam al-Lail tercatat",
+    "streakCaption": "Sunnah {{count}} hari",
+    "legend": "sunnah",
+    "qiyamLegend": "salat malam",
+    "a11yAll": "semua sunnah"
+  },
+  "sync": {
+    "exportSection": "Ekspor",
+    "importSection": "Impor",
+    "exportHelp": "Simpan semua yang sudah Anda catat ke sebuah berkas milik Anda — untuk pindah ke ponsel baru, atau sekadar agar salinannya ada di tempat lain.",
+    "exportCta": "Ekspor ke berkas",
+    "exportFailedTitle": "Ekspor gagal",
+    "importHelp": "Buka berkas cadangan, salin seluruh isinya, lalu tempel di sini. Tidak ada yang dihapus dari perangkat ini — kedua catatan digabungkan.",
+    "importPastePlaceholder": "Tempel berkas cadangan",
+    "importPreviewCta": "Periksa berkas",
+    "importApplyCta": "Impor ke perangkat ini",
+    "importFound": "Dibuat pada {{date}}. Pilih apa yang ingin diambil darinya:",
+    "importDoneTitle": "Diimpor",
+    "importNothingNew": "Semua yang ada di berkas itu sudah ada di sini.",
+    "importEmptyTitle": "Tidak ada yang bisa diimpor",
+    "importFailedTitle": "Impor gagal",
+    "importUnreadableTitle": "Tidak bisa dibaca",
+    "importUnreadableBody": "Itu sepertinya bukan cadangan Ibadat 365. Tempel seluruh isi berkas .json.",
+    "importedLine": "{{label}}: {{before}} → {{after}}",
+    "privacyNote": "Berkas ini berupa teks biasa dan tidak dilindungi kata sandi — seaman tempat Anda menyimpannya. Tidak ada yang pernah diunggah.",
+    "category": {
+      "prayers": "Catatan salat",
+      "sunnah": "Salat sunah",
+      "fasting": "Puasa",
+      "dhikr": "Zikir",
+      "quran": "Al-Qur’an",
+      "settings": "Pengaturan",
+      "location": "Lokasi"
+    },
+    "categoryHint": {
+      "prayers": "Setiap salat yang Anda catat, beserta catatannya",
+      "sunnah": "Salat sunah, witir, dan qiyamul lail",
+      "fasting": "Hari puasa dan niatnya",
+      "dhikr": "Putaran tasbih yang selesai",
+      "quran": "Penanda, ayat berbintang, rencana khatam, terakhir dibaca, qari, dan tafsir",
+      "settings": "Tampilan, metode perhitungan, notifikasi, dan widget",
+      "location": "Tempat tersimpan dan koordinat"
+    },
+    "count": {
+      "prayers": "Salat",
+      "fasting": "Puasa",
+      "dhikr": "Hari zikir",
+      "sunnah": "Hari sunah",
+      "bookmarks": "Penanda",
+      "khatmah": "Rencana khatam"
+    },
+    "settingsRowHint": "Sandingkan perangkat lain",
+    "pairIntro": "Sinkronisasi menjaga catatan Anda sama di setiap perangkat. Ibadat 365 tidak pernah memindahkan apa pun sendiri: ia memerlukan folder yang sudah disinkronkan Nextcloud, OneDrive, Dropbox, Syncthing atau sejenisnya di antara perangkat Anda. Ibadat 365 menulis satu berkas kecil terenkripsi di sana, dan hanya perangkat Anda sendiri yang dapat membacanya.",
+    "thisDevice": "Perangkat ini",
+    "deviceNameLabel": "Nama perangkat",
+    "thisDeviceHelp": "Tunjukkan kode ini ke perangkat Anda yang lain, atau ketikkan di sana. Ini bukan kata sandi — aman untuk disalin, difoto, atau dikirim ke diri sendiri.",
+    "codeA11y": "Kode penyandingan perangkat ini",
+    "copyCode": "Salin kode",
+    "copied": "Kode disalin",
+    "copyFailed": "Kode tidak bisa disalin",
+    "addDevice": "Tambah perangkat",
+    "addDeviceHelp": "Ketik atau tempel kode yang tampil di perangkat Anda yang lain.",
+    "codePlaceholder": "MHRB-…",
+    "pasteCode": "Tempel",
+    "addCta": "Sandingkan",
+    "pairWarnTitle": "Sandingkan dengan perangkat {{value}}?",
+    "pairWarnBody": "Semua yang tercatat di perangkat itu akan muncul di sini, dan semua yang di sini akan muncul di sana. Penggabungan tidak pernah menghapus: bila keduanya berbeda, entri yang lebih baru yang disimpan.",
+    "pairConfirm": "Sandingkan",
+    "pairedTitle": "Tersanding",
+    "pairedBody": "Perangkat ini sudah menulis kuncinya ke folder. Buka Ibadat 365 di perangkat satunya — begitu ia membaca folder itu, keduanya tersanding dan tersinkron.",
+    "errorBadCodeTitle": "Kode itu tidak berhasil",
+    "errorBadCode": "Periksa kodenya dan coba lagi. Kode ditulis dalam kelompok enam, dan satu karakter salah saja sudah cukup untuk ditolak.",
+    "errorThisDevice": "Itu kode milik perangkat ini sendiri. Anda perlu kode yang tampil di perangkat satunya.",
+    "errorTooMany": "Anda bisa menyandingkan hingga {{max}} perangkat. Hapus satu dulu.",
+    "errorSaveTitle": "Penyandingan tidak tersimpan",
+    "errorSaveBody": "Perangkat menolak menyimpannya. Coba lagi — tidak ada yang berubah.",
+    "pairedSection": "Perangkat tersanding",
+    "noneYet": "Belum ada perangkat.",
+    "peerNameLabel": "Nama perangkat tersanding ini",
+    "unnamedDevice": "Perangkat tanpa nama",
+    "fingerprint": "Sidik {{value}}",
+    "viaCode": "ditambahkan di sini",
+    "viaAnnounced": "ditambahkan dari perangkat itu",
+    "lastSeen": "Terakhir tersinkron {{when}}",
+    "neverSeen": "Belum pernah tersinkron",
+    "remove": "Hapus",
+    "removeTitle": "Hapus {{value}}?",
+    "removeBody": "Perangkat ini akan berhenti mengirim ke sana dan berhenti menerima dari sana. Hapus juga perangkat ini di sana, kalau tidak ia akan terus mencoba.",
+    "notReady": "Perangkat ini tidak bisa menyiapkan sinkronisasi: tidak ada sumber acak yang aman, dan kunci yang dibuat tanpa itu tidak akan bersifat pribadi.",
+    "privacyNoteP2p": "Kode Anda adalah kunci publik, bukan rahasia. Datanya sendiri dienkripsi hanya untuk perangkat yang Anda sandingkan, dan tidak ada yang diunggah ke mana pun.",
+    "folderSection": "Folder",
+    "folderHelp": "Pilih folder yang sudah dijaga tetap selaras oleh layanan sinkronisasi Anda di setiap perangkat — folder Nextcloud, OneDrive, Dropbox, atau Syncthing. Jika tidak ada yang menyinkronkan folder itu di antara perangkat Anda, tidak ada yang akan sampai. Ibadat 365 menulis satu berkas kecil terenkripsi di sana dan membaca berkas yang ditinggalkan perangkat Anda yang lain.",
+    "chooseFolder": "Pilih folder",
+    "changeFolder": "Ganti folder",
+    "folderChosen": "Memakai {{value}}",
+    "syncNow": "Sinkronkan sekarang",
+    "lastSyncedAt": "Terakhir diperiksa {{when}}",
+    "neverSynced": "Belum diperiksa",
+    "autoTitle": "Sinkronkan otomatis",
+    "freqOpen": "Saat dibuka",
+    "freqHourly": "Tiap jam",
+    "freqDaily": "Tiap hari",
+    "freqOff": "Mati",
+    "autoHelp": "Sinkronisasi otomatis hanya berjalan selama aplikasi terbuka. “Sinkronkan sekarang” selalu bisa, apa pun pilihan di sini.",
+    "whatSyncs": "Yang disinkronkan",
+    "errorFolderGone": "Folder itu tidak bisa dijangkau lagi. Pilih ulang.",
+    "errorUnsupported": "Versi ini tidak bisa memakai sinkronisasi folder.",
+    "syncDoneTitle": "Tersinkron",
+    "syncDoneBody": "Semua yang ada di perangkat Anda yang lain kini ada di sini, dan yang di sini ada di sana.",
+    "syncNothing": "Tidak ada yang baru. Perangkat Anda yang lain belum menulis apa pun sejak pemeriksaan terakhir.",
+    "syncFailedTitle": "Sinkronisasi tidak selesai",
+    "syncFailedBody": "Ada yang salah: {{detail}}",
+    "hint": {
+      "quranTitle": "Membaca di lebih dari satu perangkat?",
+      "quranBody": "Siapkan sinkronisasi agar posisi bacaan, markah, dan khatam Anda ikut berpindah.",
+      "logTitle": "Catat di satu perangkat, lihat di semuanya",
+      "logBody": "Siapkan sinkronisasi agar catatan Anda sama di mana pun. Tidak ada yang diunggah.",
+      "dismiss": "Sembunyikan ini",
+      "openHint": "Membuka pengaturan sinkronisasi"
+    },
+    "pairedNeedsFolder": "Pilih folder dulu. Lewat folder itulah kedua perangkat saling menjangkau, dan tanpa folder tidak ada yang bisa dipertukarkan.",
+    "folderAppHint": "Ibadat 365 membuat folder bernama {{value}} untuk dirinya sendiri. Cari di app Files, di bawah Di iPhone Saya, lalu arahkan aplikasi sinkronisasi Anda ke sana untuk menjangkau perangkat lain.",
+    "syncQuietTitle": "Tidak ada yang datang",
+    "syncNothingArrived": "Berkas Anda ada di folder, tetapi tidak ada apa pun dari perangkat lain yang muncul di sana. Kedua perangkat harus menunjuk ke folder yang sama, dan yang menjaga folder itu tetap sama di antara keduanya harus sedang berjalan.",
+    "syncStale": "File Anda ada di folder, tetapi catatan terbaru dari {{device}} ditulis {{when}}. Jika Anda telah menggunakan perangkat itu sejak saat itu, apa pun yang menjaga folder tetap selaras di antara keduanya sudah berhenti memindahkan file.",
+    "scanCode": "Pindai",
+    "scanHint": "Arahkan kamera ke kode di perangkat Anda yang lain",
+    "scanDeniedTitle": "Kamera tidak diizinkan",
+    "scanDeniedBody": "Ibadat 365 perlu kamera untuk membaca kode. Anda bisa mengizinkannya di pengaturan perangkat, atau ketik kodenya saja.",
+    "scanNoCameraTitle": "Tidak ada kamera",
+    "scanNoCameraBody": "Perangkat ini tidak punya kamera untuk memindai. Ketik atau tempel kodenya.",
+    "freq15Min": "Tiap 15 mnt",
+    "errorFolderUnwritable": "Folder itu tidak bisa ditulisi. Pilih yang lain — folder yang Anda buat sendiri di Dokumen atau Unduhan paling cocok.",
+    "errorFolderTitle": "Folder itu tidak berhasil"
+  },
+  "stats": {
+    "daysUnit": " hari",
+    "streakLabel": "Rentetan tepat waktu",
+    "best": "terbaik {{best}}",
+    "sunnahLabel": "Sunah ditunaikan",
+    "thisMonth": "bulan ini",
+    "fastedLabel": "Berpuasa",
+    "owedLabel": "Salat qadha",
+    "nothingOwed": "Tidak ada qadha",
+    "owedShow": "ketuk untuk lihat",
+    "owedHide": "ditampilkan ✕",
+    "owedHint": "Ketuk hari untuk mengqadhanya",
+    "owedMore": "+{{more}} lagi",
+    "owedA11y": "{{owed}} salat qadha, tampilkan",
+    "nothingOwedA11y": "Tidak ada qadha"
+  },
+  "surahReminders": {
+    "groupTitle": "Pengingat surah",
+    "kahf": "Surah Al-Kahf pada hari Jumat",
+    "kahfHelp": "Sekali sepekan, pada hari Jumat, pada waktu yang kamu pilih.",
+    "kahfTitle": "Al-Kahf",
+    "kahfBody": "Hari ini Jumat — bacalah Surah Al-Kahf.",
+    "mulk": "Surah Al-Mulk pada malam hari",
+    "mulkHelp": "Setiap malam pada waktu yang kamu pilih — aplikasi tidak tahu kapan kamu tidur, jadi ia bertanya.",
+    "mulkTitle": "Al-Mulk",
+    "mulkBody": "Sebelum tidur — bacalah Surah Al-Mulk."
+  },
+  "dhikr": {
+    "remindersTitle": "Pengingat zikir",
+    "remindersBlurb": "Pengingat Anda sendiri, kapan saja",
+    "remindersFooter": "Terpisah dari waktu salat dan sepenuhnya luring — berbunyi tanpa koneksi dan setelah dimulai ulang.",
+    "remindersEmpty": "Belum ada pengingat. Tambahkan satu untuk zikir, atau untuk kata-kata Anda sendiri.",
+    "addReminder": "Tambah pengingat",
+    "newReminder": "Pengingat baru",
+    "editReminder": "Ubah pengingat",
+    "deleteReminder": "Hapus pengingat",
+    "whichDhikr": "Zikir yang mana",
+    "ownWords": "Kata-kata Anda sendiri",
+    "ownWordsHelp": "Pengingat yang mengatakan apa pun yang Anda tulis.",
+    "customTitle": "Pengingat",
+    "customTitleLabel": "Judul",
+    "customBodyLabel": "Teks",
+    "days": "Hari",
+    "everyDay": "Setiap hari",
+    "sound": "Suara",
+    "soundDefault": "Suara notifikasi",
+    "soundSilent": "Senyap",
+    "soundHelp": "Rekaman zikir tidak disertakan: aplikasi hanya memuat konten yang sumber dan lisensinya dapat disebutkan, termasuk suara. Memilih rekaman milik Anda sendiri adalah langkah berikutnya — lihat isu #29.",
+    "meaning": {
+      "hawqala": "Tiada daya dan kekuatan kecuali dengan Allah",
+      "subhanallahwabihamdih": "Mahasuci Allah, dan segala puji bagi-Nya"
+    }
+  }
+}

@@ -1,0 +1,583 @@
+// hover-ok: list-row / settings-row / sheet pressables. Hover-state
+// treatment would visually noise these dense surfaces; the touch
+// feedback (pressed opacity / ripple) is the right affordance here.
+import { memo, useEffect, useRef, useState } from 'react';
+import {
+  Alert,
+  Animated,
+  Pressable,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
+import { useTranslation } from 'react-i18next';
+import { useLocationSettings } from '../../context/PrayerSettingsContext';
+import { useAppPalette } from '../../hooks/useAppPalette';
+import { inputChromeStyle } from '../../theme/chrome';
+import {
+  addPreset,
+  deletePreset,
+  MAX_LOCATION_PRESETS,
+} from '../../settings/locationPresets';
+import { PlaceSearchSection } from '../../components/PlaceSearchSection';
+import type { GeocodedPlace } from '../../geocoding/nominatim';
+import { SettingsBlock, SettingsGroup } from './SettingsGroup';
+import { sharedSettingsStyles as s } from './sharedStyles';
+import { RADIUS, SPACING } from '../../theme/tokens';
+import { TYPE } from '../../theme/typography';
+
+/** Coords are "the same place" if they round to the same 4-decimal value
+ *  (~11 m precision). Used to reject duplicate saves of the same spot
+ *  under different names — that's the bug behind #79. */
+function sameCoord(a: number, b: number): boolean {
+  return Math.round(a * 1e4) === Math.round(b * 1e4);
+}
+
+/**
+ * Saved-locations card — task #18.
+ *
+ * Lets the user keep multiple named locations (Home / Work / Travel) and
+ * switch between them with one tap. Coordinates are PII; the underlying
+ * `locationPresets` array lives in encrypted storage (task #16 + #18).
+ *
+ * UI states:
+ *   • Empty — shows help text + "Save current as…" button.
+ *   • Populated — list of presets with use/delete actions; "Save current"
+ *     button at the bottom (hidden when limit reached).
+ *   • Adding — inline name input replaces the bottom button.
+ *
+ * ── IT USED TO VANISH ON AUTOMATIC ─────────────────────────────────────
+ *
+ * "Only renders when locationMode === 'manual'", on the reasoning that
+ * saving a GPS location as a preset does not make sense and the feature is
+ * about switching between MANUAL locations. Both halves were wrong in
+ * practice. Reported as "multiple city gets disabled if the user selects
+ * auto location": someone on automatic could not see their saved list, add
+ * to it, or delete from it, and to save the city they were standing in
+ * they had to leave automatic first — after which the only way back was
+ * Settings, because the home chip's sheet had no row for it either.
+ *
+ * The two are not alternatives. Automatic is where you live; the saved
+ * list is the other places you look in on — family in another city, where
+ * you are travelling next week. So the card is always here, "Save current"
+ * means the GPS fix when the GPS is what is current, and using a saved
+ * location switches to it the way the home chip always has. Going back is
+ * one tap on the chip's "My location".
+ */
+function SavedLocationsCardImpl({
+  highlightSignal = 0,
+}: {
+  /** Bumped by the parent to trigger a brief attention flash (deep-link
+   *  from the home location selector's "Add new location"). */
+  highlightSignal?: number;
+}) {
+  const { t } = useTranslation();
+  const { slice: settings, update: updateSettings } = useLocationSettings();
+  const { palette } = useAppPalette();
+
+  // Brief accent flash when the user is deep-linked here to add a location.
+  const flash = useRef(new Animated.Value(0)).current;
+  useEffect(() => {
+    if (!highlightSignal) return;
+    flash.setValue(0);
+    Animated.sequence([
+      Animated.timing(flash, { toValue: 1, duration: 280, useNativeDriver: false }),
+      Animated.timing(flash, { toValue: 0, duration: 280, useNativeDriver: false }),
+      Animated.timing(flash, { toValue: 1, duration: 280, useNativeDriver: false }),
+      Animated.timing(flash, { toValue: 0, duration: 420, useNativeDriver: false }),
+    ]).start();
+  }, [highlightSignal, flash]);
+  const [draftName, setDraftName] = useState('');
+  const [draftPlace, setDraftPlace] = useState<GeocodedPlace | null>(null);
+  const [draftLatStr, setDraftLatStr] = useState('');
+  const [draftLngStr, setDraftLngStr] = useState('');
+  const [adding, setAdding] = useState(false);
+
+  /** GPS. Anything that is not explicit manual entry. */
+  const isAuto = settings.locationMode !== 'manual';
+
+  const presets = settings.locationPresets ?? [];
+  const limitReached = presets.length >= MAX_LOCATION_PRESETS;
+
+  const onUse = (id: string) => {
+    const preset = presets.find(p => p.id === id);
+    if (!preset) return;
+    updateSettings({
+      // Using a saved location means using it — from automatic too. This
+      // set the coordinates and left the mode alone, so on automatic the
+      // button did nothing at all: the app went on showing GPS times while
+      // the row it had just been given ticked itself as active. The chip on
+      // the home screen has always switched the mode; this is the same act
+      // from the other end of the app.
+      locationMode: 'manual',
+      manualLatitude: preset.latitude,
+      manualLongitude: preset.longitude,
+      manualLocationLabel: preset.label,
+      activeLocationPresetId: preset.id,
+    });
+  };
+
+  const onDelete = (id: string) => {
+    updateSettings({
+      locationPresets: deletePreset(presets, id),
+      // If the deleted preset was active, clear the active id. The current
+      // manualLatitude/Longitude stay — user keeps using those coords until
+      // they pick a different preset or edit manually.
+      activeLocationPresetId:
+        settings.activeLocationPresetId === id
+          ? undefined
+          : settings.activeLocationPresetId,
+    });
+  };
+
+  const onSaveCurrent = () => {
+    const name = draftName.trim();
+    if (!name) return;
+
+    // Resolve the coords to save:
+    //   1) Place picked from search → its lat/lng + display label
+    //   2) Manual lat/lng typed in the inputs → parsed numbers
+    //   3) Fall back to the current `manual*` (legacy behavior)
+    let lat: number | null = null;
+    let lng: number | null = null;
+    let label: string | undefined;
+
+    if (draftPlace) {
+      lat = draftPlace.latitude;
+      lng = draftPlace.longitude;
+      label = draftPlace.displayName;
+    } else if (draftLatStr.trim() || draftLngStr.trim()) {
+      const parsedLat = parseFloat(draftLatStr.replace(',', '.'));
+      const parsedLng = parseFloat(draftLngStr.replace(',', '.'));
+      if (
+        !Number.isFinite(parsedLat) ||
+        parsedLat < -90 ||
+        parsedLat > 90 ||
+        !Number.isFinite(parsedLng) ||
+        parsedLng < -180 ||
+        parsedLng > 180
+      ) {
+        Alert.alert(
+          t('locations.invalidCoordsTitle', 'Invalid coordinates'),
+          t('locations.invalidCoordsBody', 'Latitude must be between -90 and 90, longitude between -180 and 180.'),
+        );
+        return;
+      }
+      lat = parsedLat;
+      lng = parsedLng;
+    } else if (isAuto) {
+      // "Current" on automatic is the GPS fix, not the manual coordinates
+      // — which are whatever was last typed in, possibly nothing. This is
+      // the case that used to be unreachable, because the card was not
+      // rendered at all in this mode; someone wanting to save the city
+      // they were standing in had to leave automatic to do it.
+      lat = settings.lastFetchedLatitude ?? null;
+      lng = settings.lastFetchedLongitude ?? null;
+      label = settings.autoLocationLabel;
+    } else {
+      lat = settings.manualLatitude;
+      lng = settings.manualLongitude;
+      label = settings.manualLocationLabel;
+    }
+
+    // Reject the explicit "no location set" sentinel (0, 0) — most likely
+    // user landed here without picking a real place.
+    if (lat == null || lng == null || (lat === 0 && lng === 0)) {
+      Alert.alert(
+        t('locations.invalidCoordsTitle', 'Invalid coordinates'),
+        t('locations.pickAPlace', 'Search for a city or enter coordinates first.'),
+      );
+      return;
+    }
+
+    // Reject duplicates of an existing preset — addresses the user's bug
+    // report that saving "different names" kept producing the same coords.
+    const dupe = presets.find(
+      p => sameCoord(p.latitude, lat as number) && sameCoord(p.longitude, lng as number),
+    );
+    if (dupe) {
+      Alert.alert(
+        t('locations.duplicateTitle', 'Already saved'),
+        t(
+          'locations.duplicateBody',
+          'A location at these coordinates is already saved as "{{name}}".',
+          { name: dupe.name },
+        ),
+      );
+      return;
+    }
+
+    // Preserve the user's existing manual location — task #136. If the
+    // user typed/picked a location via LocationCard and never saved it
+    // as a preset, then comes here to add a *different* location, the
+    // old behaviour overwrote `manualLat/Lng` and the previous location
+    // was lost forever. Auto-save it as a preset first so both end up
+    // in the list and the user can switch back with a tap.
+    // …in manual mode. On automatic there is nothing live to lose: the
+    // manual coordinates are not what the app is using, so rescuing them
+    // into the list would hand someone who has been on GPS for months a
+    // "Previous location" they never asked for.
+    let workingPresets = presets;
+    const currentLat = isAuto ? 0 : settings.manualLatitude;
+    const currentLng = isAuto ? 0 : settings.manualLongitude;
+    const hasCurrent =
+      Number.isFinite(currentLat) &&
+      Number.isFinite(currentLng) &&
+      !(currentLat === 0 && currentLng === 0);
+    const newCoordsAreCurrent =
+      hasCurrent &&
+      sameCoord(currentLat, lat) &&
+      sameCoord(currentLng, lng);
+    const currentAlreadyPreset =
+      hasCurrent &&
+      presets.some(
+        p => sameCoord(p.latitude, currentLat) && sameCoord(p.longitude, currentLng),
+      );
+    if (hasCurrent && !newCoordsAreCurrent && !currentAlreadyPreset) {
+      // Best-effort name for the auto-saved preset: the user's stored
+      // place label, otherwise a generic localized fallback.
+      const autoName =
+        (settings.manualLocationLabel?.split(',')[0] ?? '').trim() ||
+        t('locations.previousLocation', 'Previous location');
+      workingPresets = addPreset(workingPresets, {
+        name: autoName,
+        latitude: currentLat,
+        longitude: currentLng,
+        label: settings.manualLocationLabel,
+      });
+    }
+
+    const next = addPreset(workingPresets, {
+      name,
+      latitude: lat,
+      longitude: lng,
+      label,
+    });
+    const newPreset = next[next.length - 1];
+    updateSettings(
+      isAuto
+        ? // Saving is not switching. Someone on automatic who adds the city
+          // they are visiting next week has not asked to leave the city
+          // they are in; the list gains a row and the app carries on where
+          // it is. Use it when you want it — the row's button, or the chip.
+          { locationPresets: next }
+        : {
+            locationPresets: next,
+            activeLocationPresetId: newPreset?.id,
+            // Switch the manual location to the just-saved preset so the
+            // rest of the app immediately reflects the user's choice.
+            manualLatitude: lat,
+            manualLongitude: lng,
+            manualLocationLabel: label,
+          },
+    );
+    setDraftName('');
+    setDraftPlace(null);
+    setDraftLatStr('');
+    setDraftLngStr('');
+    setAdding(false);
+  };
+
+  return (
+    <SettingsGroup title={t('locations.title')}>
+      <SettingsBlock>
+        {/* Attention flash overlay — a soft accent wash that pulses when the
+            user is routed here to add a location. Non-interactive. */}
+        <Animated.View
+          pointerEvents="none"
+          style={[
+            StyleSheet.absoluteFill,
+            {
+              backgroundColor: palette.accent,
+              opacity: flash.interpolate({
+                inputRange: [0, 1],
+                outputRange: [0, 0.24],
+              }),
+            },
+          ]}
+        />
+        {presets.length === 0 ? (
+          <Text style={[s.help, { color: palette.muted }]}>
+            {t('locations.empty')}
+          </Text>
+        ) : (
+          <View style={styles.list}>
+            {presets.map(p => {
+              // On automatic nothing in this list is in use, whatever the
+              // stored id still says — the app is following the GPS, and a
+              // ticked row would be claiming otherwise.
+              const isActive =
+                !isAuto && settings.activeLocationPresetId === p.id;
+              return (
+                <View
+                  key={p.id}
+                  style={[
+                    styles.row,
+                    isActive && { backgroundColor: palette.accentBg },
+                  ]}>
+                  <View style={styles.rowText}>
+                    <Text
+                      style={[styles.rowName, { color: palette.text }]}
+                      numberOfLines={1}>
+                      {p.name}
+                    </Text>
+                    <Text
+                      style={[styles.rowSub, { color: palette.muted }]}
+                      numberOfLines={1}>
+                      {p.label ??
+                        `${p.latitude.toFixed(4)}°, ${p.longitude.toFixed(4)}°`}
+                    </Text>
+                  </View>
+                  <View style={styles.rowActions}>
+                    <Pressable
+                      accessibilityRole="button"
+                      accessibilityLabel={`${t('locations.use')}: ${p.name}`}
+                      accessibilityState={{ selected: isActive }}
+                      onPress={() => onUse(p.id)}
+                      hitSlop={8}
+                      style={styles.actionBtn}>
+                      <Text
+                        style={[
+                          styles.actionLabel,
+                          { color: isActive ? palette.muted : palette.accent },
+                        ]}>
+                        {t('locations.use')}
+                      </Text>
+                    </Pressable>
+                    <Pressable
+                      accessibilityRole="button"
+                      accessibilityLabel={`${t('locations.delete')}: ${p.name}`}
+                      onPress={() => onDelete(p.id)}
+                      hitSlop={8}
+                      style={styles.actionBtn}>
+                      <Text style={[styles.actionLabel, { color: palette.danger }]}>
+                        {t('locations.delete')}
+                      </Text>
+                    </Pressable>
+                  </View>
+                </View>
+              );
+            })}
+          </View>
+        )}
+
+        {adding ? (
+          <View style={styles.addColumn}>
+            <TextInput
+              accessibilityLabel={t('locations.addPrompt')}
+              value={draftName}
+              onChangeText={setDraftName}
+              placeholder={t('locations.addPlaceholder')}
+              placeholderTextColor={palette.muted}
+              autoFocus
+              returnKeyType="next"
+              maxLength={60}
+              style={[
+                s.input,
+                inputChromeStyle(palette),
+                { color: palette.text, backgroundColor: palette.bg },
+              ]}
+            />
+            {/* Place search: pick a real city by name (geocoded). Selecting
+                a result populates draftPlace and we use those coords. */}
+            <PlaceSearchSection
+              palette={{
+                bg: palette.bg,
+                text: palette.text,
+                muted: palette.muted,
+                border: palette.border,
+                accent: palette.accent,
+                accentBg: palette.accentBg,
+                card: palette.card,
+                danger: palette.danger,
+                flatChrome: palette.flatChrome,
+              }}
+              onSelectPlace={place => {
+                setDraftPlace(place);
+                setDraftLatStr(String(place.latitude));
+                setDraftLngStr(String(place.longitude));
+              }}
+            />
+            {/* OR manual coordinates: lat/lng pair. Editing either clears
+                the picked place so we know to use the typed values. */}
+            <View style={styles.coordsRow}>
+              <TextInput
+                accessibilityLabel={t('settings.latPlaceholder', 'Latitude')}
+                value={draftLatStr}
+                onChangeText={txt => {
+                  setDraftLatStr(txt);
+                  setDraftPlace(null);
+                }}
+                keyboardType="numbers-and-punctuation"
+                placeholder={t('settings.latPlaceholder', 'Latitude')}
+                placeholderTextColor={palette.muted}
+                style={[
+                  s.input,
+                  inputChromeStyle(palette),
+                  styles.coordInput,
+                  { color: palette.text, backgroundColor: palette.bg },
+                ]}
+              />
+              <TextInput
+                accessibilityLabel={t('settings.lngPlaceholder', 'Longitude')}
+                value={draftLngStr}
+                onChangeText={txt => {
+                  setDraftLngStr(txt);
+                  setDraftPlace(null);
+                }}
+                keyboardType="numbers-and-punctuation"
+                placeholder={t('settings.lngPlaceholder', 'Longitude')}
+                placeholderTextColor={palette.muted}
+                style={[
+                  s.input,
+                  inputChromeStyle(palette),
+                  styles.coordInput,
+                  { color: palette.text, backgroundColor: palette.bg },
+                ]}
+              />
+            </View>
+            <View style={styles.addRow}>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={t('locations.cancel')}
+                onPress={() => {
+                  setAdding(false);
+                  setDraftName('');
+                  setDraftPlace(null);
+                  setDraftLatStr('');
+                  setDraftLngStr('');
+                }}
+                hitSlop={8}
+                style={styles.addCancelBtn}>
+                <Text style={[styles.actionLabel, { color: palette.muted }]}>
+                  {t('locations.cancel')}
+                </Text>
+              </Pressable>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={t('locations.save')}
+                accessibilityState={{ disabled: draftName.trim().length === 0 }}
+                disabled={draftName.trim().length === 0}
+                onPress={onSaveCurrent}
+                style={[
+                  styles.addSaveBtn,
+                  {
+                    backgroundColor:
+                      draftName.trim().length === 0
+                        ? palette.muted
+                        : palette.accent,
+                  },
+                ]}>
+                <Text style={styles.addSaveLabel}>{t('locations.save')}</Text>
+              </Pressable>
+            </View>
+          </View>
+        ) : limitReached ? (
+          <Text
+            style={[s.help, { color: palette.muted, marginTop: SPACING.sm }]}>
+            {t('locations.limitReached', { max: MAX_LOCATION_PRESETS })}
+          </Text>
+        ) : (
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t('locations.add')}
+            onPress={() => setAdding(true)}
+            style={[
+              styles.addBtn,
+              { borderColor: palette.border, backgroundColor: palette.bg },
+            ]}>
+            <Text style={[styles.addBtnLabel, { color: palette.accent }]}>
+              + {t('locations.add')}
+            </Text>
+          </Pressable>
+        )}
+      </SettingsBlock>
+    </SettingsGroup>
+  );
+}
+
+export const SavedLocationsCard = memo(SavedLocationsCardImpl);
+
+const styles = StyleSheet.create({
+  list: {
+    gap: SPACING.xs,
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: SPACING.md,
+    paddingHorizontal: SPACING.md,
+    borderRadius: RADIUS.md,
+    gap: SPACING.sm,
+  },
+  rowText: {
+    flex: 1,
+  },
+  rowName: {
+    fontSize: TYPE.body.fontSize,
+    fontWeight: '600',
+  },
+  rowSub: {
+    fontSize: TYPE.label.fontSize,
+    marginTop: 2,
+  },
+  rowActions: {
+    flexDirection: 'row',
+    gap: SPACING.md,
+  },
+  actionBtn: {
+    paddingVertical: SPACING.sm,
+    paddingHorizontal: SPACING.xs,
+  },
+  actionLabel: {
+    fontSize: TYPE.callout.fontSize,
+    fontWeight: '600',
+  },
+  addBtn: {
+    marginTop: SPACING.md,
+    paddingVertical: SPACING.md,
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
+    alignItems: 'center',
+  },
+  addBtnLabel: {
+    fontSize: TYPE.callout.fontSize,
+    fontWeight: '600',
+  },
+  addColumn: {
+    marginTop: SPACING.md,
+    gap: SPACING.md,
+  },
+  addRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SPACING.sm,
+    justifyContent: 'flex-end',
+  },
+  coordsRow: {
+    flexDirection: 'row',
+    gap: SPACING.sm,
+  },
+  coordInput: {
+    flex: 1,
+  },
+  addInput: {
+    flex: 1,
+  },
+  addCancelBtn: {
+    paddingVertical: SPACING.md,
+    paddingHorizontal: SPACING.sm,
+  },
+  addSaveBtn: {
+    paddingVertical: SPACING.md,
+    paddingHorizontal: SPACING.lg,
+    borderRadius: RADIUS.md,
+    alignItems: 'center',
+  },
+  addSaveLabel: {
+    color: '#fff',
+    fontSize: TYPE.callout.fontSize,
+    fontWeight: '700',
+  },
+});

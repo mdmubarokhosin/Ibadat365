@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Full-backup content rules (Android 11 and below path of Auto Backup).
+
+  WHAT PERSISTS: the AsyncStorage database (RKStorage) carries every user
+  preference and feature state — settings blob, journal, fasting log,
+  tasbih, Quran bookmarks/khatmah/last-read (mihrab.quran.v1) — plus all
+  shared preferences (widget/live-activity native prefs).
+
+  WHAT'S EXCLUDED: everything else — most importantly the managed Quran
+  content store (files/quran/ — mushaf pages + recitation audio, 100+ MB;
+  it would blow the 25 MB Auto Backup quota and is fully re-downloadable).
+  Because at least one <include> is present, ONLY the included paths are
+  backed up; no explicit <exclude> is needed (and lint rejects an exclude
+  whose path is not inside an included domain path).
+
+  NOTE: react-native-encrypted-storage values (saved location presets) are
+  keyed to the Android Keystore, which the OS wipes on uninstall — after a
+  keep-data reinstall they decrypt-fail and the app falls back gracefully
+  (see __tests__/secureStorage.fallback.test.ts). Everything else resumes
+  exactly where the user left off.
+-->
+<full-backup-content>
+  <include domain="database" path="RKStorage" />
+  <include domain="sharedpref" path="." />
+</full-backup-content>

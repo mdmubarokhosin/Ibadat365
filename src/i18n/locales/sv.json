@@ -1,0 +1,1779 @@
+{
+  "app": {
+    "name": "Ibadat 365",
+    "tagline": "Bönetider, qibla-kompass, Koran, böner och dhikr — helt offline, i en app."
+  },
+  "nav": {
+    "home": "Ibadat 365",
+    "settings": "Inställningar",
+    "month": "Månad",
+    "shareMonth": "Dela månad",
+    "compass": "Kibla",
+    "tasbih": "Tasbih",
+    "duas": "Duor",
+    "quran": "Koranen",
+    "journal": "Bönedagbok",
+    "backup": "Säkerhetskopiering",
+    "fasting": "Fasta",
+    "today": "Idag",
+    "sync": "Synka mellan enheter"
+  },
+  "a11y": {
+    "openSettings": "Öppna inställningar",
+    "openMonth": "Öppna månadsvy",
+    "openCompass": "Öppna kiblakompass",
+    "openTimesSource": "Byt källa för bönetider",
+    "countdownTo": "Räkna ner till denna bön",
+    "countdownHere": "Nedräkningen är satt till denna bön. Tryck för att gå tillbaka till nästa."
+  },
+  "common": {
+    "change": "Ändra",
+    "tryAgain": "Försök igen",
+    "retry": "Försök igen",
+    "continue": "Fortsätt",
+    "back": "Tillbaka",
+    "play": "Spela upp",
+    "pause": "Pausa",
+    "stop": "Stoppa",
+    "loading": "Laddar…",
+    "automatic": "Automatiskt",
+    "openSettings": "Öppna inställningar",
+    "cancel": "Avbryt",
+    "ok": "OK",
+    "today": "Idag",
+    "close": "Stäng",
+    "share": "Dela",
+    "done": "Klar",
+    "delete": "Ta bort",
+    "cancelled": "Avbruten.",
+    "listJoin": " & ",
+    "confirmDelete": "Tryck igen för att ta bort",
+    "learnMore": "Läs mer"
+  },
+  "home": {
+    "loadingPrayer": "Laddar bönetider…",
+    "nextPrayer": "Nästa bön",
+    "nextIn": "om {{time}}",
+    "hanafiSuffix": "Hanafi asr",
+    "monthTimesLink": "Bönetider för hela månaden",
+    "localFallbackNotice": "Lokal beräkning — anslut för att uppdatera",
+    "lastGpsCoordsNotice": "Använder senast kända position — GPS inte tillgänglig",
+    "exactAlarmDenied": "Bönetidsaviseringar behöver exakt larmtillstånd för korrekt timing. Tryck för att bevilja.",
+    "notifPermDenied": "Aviseringsbehörighet nekad — bönetidsaviseringar fungerar inte. Tryck för att öppna inställningar.",
+    "updatingLocation": "Uppdaterar plats",
+    "today": "Idag",
+    "tomorrow": "Imorgon",
+    "savedLocationLabel": "{{name}}",
+    "switchLocation": "Byt plats",
+    "autoBadge": "Auto",
+    "locating": "Söker plats…",
+    "backToToday": "Till idag",
+    "updatedAt": "Uppdaterad {{when}}",
+    "daysStored": "{{count}} dagar sparade",
+    "quranShortcut": "Öppna Koranen",
+    "dayStrip": "Välj en dag",
+    "nextPrayerIn": "{{prayer}} om",
+    "firstPrayer": "Första bönen {{prayer}} · {{time}}",
+    "todaySummary": "Idag",
+    "prayersLogged": "{{count}} av {{total}} böner loggade",
+    "noFastToday": "Ingen fasta registrerad",
+    "dhikrSets": "{{count}} dhikr-omgångar klara",
+    "fastKept": {
+      "ramadan": "Ramadanfasta hållen",
+      "voluntary": "Sunnafasta hållen",
+      "qadha": "Igenfasta hållen"
+    },
+    "readItIn": "Läs den i {{surah}}",
+    "continueAt": "Fortsätt · {{surah}} {{ref}}",
+    "khatmahDay": "Khatmah dag {{day}} av {{total}}",
+    "khatmahDaysToGo": "{{count}} dagar kvar",
+    "pagesLeftToday": "{{count}} sidor kvar idag",
+    "pageNumber": "sida {{page}}",
+    "readingDone": "Dagens läsning klar",
+    "readOn": "Läs vidare",
+    "qiblaChipA11y": "Qibla {{degrees}} grader",
+    "qiblaChipHint": "Öppnar Qibla-kompassen",
+    "alertOverrideOnce": "{{mode}} bara denna gång · Återställ",
+    "alertOverrideA11y": "{{prayer}} är inställd på {{mode}} bara denna gång",
+    "alertOverrideResetHint": "Återställer {{mode}}",
+    "yesterday": "Igår",
+    "startReading": "Börja läsa",
+    "startReadingHint": "Al-Fātiḥah, sida 1"
+  },
+  "errors": {
+    "locationNeededTitle": "Plats krävs",
+    "locationNeededBody": "Bönetider behöver din ungefärliga position. Tillåt platsåtkomst i systeminställningarna och försök igen.",
+    "locationErrorTitle": "Platsfel",
+    "apiErrorTitle": "Kunde inte ladda tider",
+    "coordLat": "Latitud måste vara mellan -90 och 90.",
+    "coordLng": "Longitud måste vara mellan -180 och 180.",
+    "gpsPermission": "Platsbehörighet krävs för att använda enhetens plats.",
+    "gpsRead": "Kunde inte läsa GPS-position.",
+    "gpsRequest": "Kunde inte begära plats."
+  },
+  "month": {
+    "locationNotReadyTitle": "Platsen är inte klar",
+    "locationNotReadyBody": "Öppna Hem och ladda dagens tider en gång så att den här skärmen kan använda din GPS-position.",
+    "thisMonth": "Den här månaden",
+    "standardView": "Standard",
+    "shareView": "Delbar",
+    "shareMonth": "Dela bild",
+    "loadError": "Kunde inte ladda månaden.",
+    "empty": "Inget att visa.",
+    "refreshData": "Uppdatera sparad data",
+    "refreshing": "Uppdaterar...",
+    "monthsStored": "{{count}} månader sparade",
+    "dayOfWeek": "Dag",
+    "date": "Datum",
+    "hijri": "Hijri",
+    "gregorian": "Gregoriansk",
+    "prayerTimes": "Bönetider",
+    "daruriLegend": "Den lilla raden under Fajr, Asr och Isha är när respektive böns första (föredragna) tid går ut. Dhuhrs går ut när Asr börjar och Maghribs när Isha börjar, så de två är kolumnerna själva. Fajrs och Asrs är ungefärliga."
+  },
+  "share": {
+    "tagline": "Bönetider, qibla och Koranen",
+    "timesFor": "Bönetider för {{place}}",
+    "scanForApp": "Skanna för att hämta appen",
+    "asrHanafi": "Asr: hanafitisk",
+    "asrStandard": "Asr: standard",
+    "source": "Tider från {{source}}",
+    "footerNote": "Beräknade tider. Följ din lokala moské där de skiljer sig.",
+    "sheetLanguage": "Bladets språk",
+    "exportImage": "Dela bild",
+    "exportPdf": "Dela PDF (A4)",
+    "pitch": "Gratis och utan reklam. Bönetider, qibla, Koranen med recitation och översättning, och en khatma-räknare."
+  },
+  "settings": {
+    "laDesignLabel": "Stil",
+    "laDesignTimeline": "Tidslinje",
+    "laDesignCountdown": "Nedräkning",
+    "appearance": "Utseende",
+    "theme": "Tema",
+    "themeSystem": "System",
+    "themeLight": "Ljust",
+    "themeDark": "Mörkt",
+    "themeHelp": "System följer enhetens ljust eller mörkt läge. Slå på Systemfärger för plattformspalett i appen (inkl. Material You på Android). Knappar och accenter följer enhetens primärfärg så appen matchar bakgrunden när dynamisk färg finns.",
+    "clockFormat": "Tidsformat",
+    "clockFormatAuto": "Automatiskt",
+    "clockFormat12": "12-timmars",
+    "clockFormat24": "24-timmars",
+    "clockFormatHelp": "Automatiskt följer enhetens egen klockinställning. Bönetider, månadstabellen och widgetarna använder samma format.",
+    "clockFormatExample": "Till exempel: {{time}}",
+    "systemDynamicColors": "Systemfärger",
+    "systemDynamicColorsHelp": "Använder enhetens semantiska och dynamiska färger i appen när temat är System. Ren svart (OLED) mörkar fortfarande bakgrunder i mörkt läge.",
+    "pureBlack": "Helt svart (OLED)",
+    "pureBlackHelp": "Helt svart bakgrund i mörkt läge för OLED-skärmar.",
+    "dataSource": "Datakälla",
+    "provider": "Leverantör av bönetider",
+    "providerAutoLine": "Automatiskt · {{label}}",
+    "providerAutoHelp": "I Sverige används Sverige-källan ( listade städer); utanför Sverige används AlAdhan. Välj en källa nedan för att låsa en leverantör.",
+    "providerOverridden": "{{picked}} har inga tider för där du är, så {{used}} svarar i stället.",
+    "location": "Plats",
+    "automatic": "Automatisk",
+    "manual": "Manuell",
+    "manualSearchHelp": "Tryck på ett sökresultat för att använda det direkt, eller redigera koordinater och tryck Använd nedan.",
+    "coordsLabel": "Koordinater (decimalgrader)",
+    "latPlaceholder": "Latitud",
+    "lngPlaceholder": "Longitud",
+    "applyCoords": "Använd koordinater",
+    "calculation": "Beräkning",
+    "calcHiddenSweden": "Sverige använder bönetider per listad stad. Din position omvänds geografiskt till närmaste stad i listan; endast för Sverige.",
+    "calcHiddenPraytimes": "PrayTimes.dev använder sina publicerade regler (se prayertimes.dev). Endast madhab / asr-skola gäller här; metodlistan döljs.",
+    "method": "Metod",
+    "methodModalTitle": "Beräkningsmetod",
+    "hanafiAsr": "Hanafi asr",
+    "hanafiAsrHelp": "Längre skugga för asr (skola = 1)",
+    "notifications": "Aviseringar",
+    "prayerAlerts": "Bönepåminnelser",
+    "prayerAlertsHelp": "Planeras för de fem dagliga bönerna (Fajr–Isha). Android kan kräva exakt larm för pålitlig tid.",
+    "prePrayerReminder": "Förhands-påminnelse",
+    "prePrayerReminderHelp": "Valfri andra avisering innan varje bön.",
+    "prePrayerReminderModalTitle": "Minuter före bön",
+    "prePrayerReminderOff": "Av",
+    "prePrayerReminderOption": "{{count}} min före",
+    "liveActivity": "Live-aktivitet",
+    "liveActivityHelp": "Fastnålad nedräkning till nästa bön, med dagens övriga tider i den utökade vyn.",
+    "liveActivityExperimental": "Experimentellt på iOS.",
+    "liveActivityCustomize": "Anpassa",
+    "liveActivityCompact": "Kompakt läge",
+    "liveActivityCompactHelp": "Visa endast nedräkningen; dölj bönlistan.",
+    "liveActivityShowSunriseLabel": "Visa Soluppgång",
+    "liveActivityShowHijriLabel": "Visa Hijri-datum",
+    "liveActivityShowLocationLabel": "Visa plats",
+    "language": "Språk",
+    "languageHelp": "Engelska, svenska eller arabiska. Arabiska använder höger-till-vänster-layout.",
+    "langEn": "Engelska",
+    "langSv": "Svenska",
+    "langAr": "Arabiska",
+    "homeScreenWidget": "Hemskärmswidget",
+    "widgetBackgroundOpacity": "Widgetbakgrund (Android)",
+    "widgetHighlight": "Färg för nästa bön",
+    "widgetHighlight_green": "Grön",
+    "widgetHighlight_teal": "Turkos",
+    "widgetHighlight_blue": "Blå",
+    "widgetHighlight_amber": "Bärnsten",
+    "widgetHighlight_custom": "Egen färg",
+    "widgetHighlight_customAbbr": "…",
+    "widgetHighlightHexPlaceholder": "#6BC98A",
+    "widgetConfigureHint": "På Android kan du också trycka länge på widgeten → inställningar (kugghjul) för samma val.",
+    "notificationSound": "Aviseringsljud",
+    "adhanAlarmStream": "Spela adhan som ett alarm",
+    "adhanAlarmStreamHelp": "Använder alarmvolymen, så att adhan hörs även när telefonen är ljudlös eller på vibration. Åsidosätter inte Stör ej.",
+    "notificationSoundModalTitle": "Välj aviseringsljud",
+    "notificationSoundDefault": "Standardavisering",
+    "notificationSoundDefaultHelp": "Använder enhetens standardljud för aviseringar.",
+    "notificationSoundAbdulBasit": "Adhan - Abdul Basit",
+    "notificationSoundAbdulGhaffar": "Adhan - Abdul Ghaffar",
+    "notificationSoundAbdulHakam": "Adhan - Abdul Hakam",
+    "notificationSoundMakkah": "Adhan - Makkah",
+    "notificationSoundMadina": "Adhan - Madina",
+    "notificationSoundAqsa": "Adhan - Al-Aqsa",
+    "notificationSoundEgypt": "Adhan - Egypten",
+    "notificationSoundHalab": "Adhan - Halab",
+    "notificationSoundAlHussaini": "Adhan - Al-Hussaini",
+    "notificationSoundBakirBash": "Adhan - Bakir Bash",
+    "notificationSoundHafez": "Adhan - Hafez",
+    "notificationSoundHafizMurad": "Adhan - Hafiz Murad",
+    "notificationSoundMinshawi": "Adhan - Minshawi",
+    "notificationSoundNaghshbandi": "Adhan - Naghshbandi",
+    "notificationSoundSaber": "Adhan - Saber",
+    "notificationSoundSharifDoman": "Adhan - Sharif Doman",
+    "notificationSoundYusufIslam": "Adhan - Yusuf Islam",
+    "notificationSoundVoiceHelp": "Inbyggd röst ingår i den här appversionen.",
+    "notificationSoundCustom": "Din egen adhan",
+    "notificationSoundCustomHelp": "Välj en ljudfil från den här enheten.",
+    "notificationSoundCustomImporting": "Importerar…",
+    "notificationSoundCustomRemove": "Ta bort din adhan",
+    "notificationSoundCustomTrimmed": "Aviseringar spelar de första 30 sekunderna; hela inspelningen spelas när appen är öppen.",
+    "versionInstalled": "Installerad version: {{version}}",
+    "adhanPreviewTitle": "Förhandsvisning av adhan",
+    "adhanPreviewBody": "",
+    "prayerOffsets": "Justeringar per bön",
+    "prayerOffsetsTitle": "Justeringar per bön",
+    "prayerOffsetsHelp": "Justera varje bön ±{{max}} minuter för att matcha din lokala moské.",
+    "prayerOffsetsNone": "Inga justeringar",
+    "prayerOffsetsCount_one": "{{count}} bön justerad",
+    "prayerOffsetsCount_other": "{{count}} böner justerade",
+    "prayerOffsetsIncrease": "Öka förskjutningen för {{prayer}}",
+    "prayerOffsetsDecrease": "Minska förskjutningen för {{prayer}}",
+    "prayerOffsetsReset": "Återställ alla",
+    "dataAndPrivacy": "Data & integritet",
+    "replayOnboarding": "Visa introduktion igen",
+    "replayOnboardingHelp": "Gå igenom välkomstflödet.",
+    "attributions": "Erkännanden",
+    "attributionsBlurb": "Vems arbete den här appen är gjord av",
+    "attribQuran": "Koranens text",
+    "attribTranslation": "Översättning",
+    "attribDuas": "Duas",
+    "accentColor": "Accentfärg",
+    "accent_green": "Grön",
+    "accent_teal": "Turkos",
+    "accent_blue": "Blå",
+    "accent_amber": "Bärnsten",
+    "accent_custom": "Egen",
+    "accent_customAbbr": "Hex",
+    "accentColorHelp": "Används i hela appen och i hemskärmens widget.",
+    "widgetColorFollowsAccentHelp": "Widgeten använder samma accentfärg som appen. Välj den under Utseende.",
+    "widgetColorOwnHelp": "Appen följer dina systemfärger, vilket widgeten inte gör. Välj widgetens markeringsfärg här.",
+    "additionalTimes": "Ytterligare tider",
+    "additionalTimesBlurb": "Soluppgång, midnatt och nattens tredjedelar",
+    "additionalTimesFooter": "De syns i bönetabellen, widgeten och Live-aktiviteten lika mycket som i aviseringarna, och använder standardljudet i stället för adhan.",
+    "dailyReminders": "Dagliga påminnelser",
+    "dailyRemindersBlurb": "En vers om dagen, dagens khatma-del, Al-Kahf och Al-Mulk",
+    "logSection": "Logg",
+    "sunriseTime": "Soluppgång",
+    "sunriseTimeHelp": "Visa soluppgång i bönetabellen, aviseringar, widgeten och Live Activity.",
+    "islamicMidnight": "Islamisk midnatt",
+    "islamicMidnightHelp": "Mittpunkten av natten mellan Maghrib och Fajr. Av som standard.",
+    "lastThird": "Nattens sista tredjedel",
+    "lastThirdHelp": "Början på nattens sista tredjedel — tiden för Qiyam al-Layl. Av som standard.",
+    "firstThird": "Nattens första tredjedel",
+    "firstThirdHelp": "Slutet på nattens första tredjedel — i malikitisk räkning där Isha lämnar sitt bästa tidsfönster. Av som standard.",
+    "malikiSecondTimes": "Malikitiska andratider",
+    "malikiSecondTimesHelp": "Varje bön får en rad på Idag-kortet som säger när dess föredragna tid (ikhtiyari) stängs och dess sena tid (daruri) börjar. Beräknas på din enhet utifrån dina koordinater, oavsett vilken källa tiderna kommer från. Använder 1:1-skuggan för Asr oavsett din madhhab-inställning, eftersom det är den malikitiska gränsen. Av som standard.",
+    "malikiSecondTimesHanafiWarning": "Obs: det här är malikitiska gränser, men din Asr är inställd på hanafitisk, som använder en annan skugga. Zuhrs första tid slutar ungefär en halvtimme före den Asr som visas under. Stäng av hanafitisk Asr om du vill att kortet ska stämma med sig självt.",
+    "malikiSecondTimesSource": "Från Al-Murshid al-Muin (Ibn Ashir), återgiven i The Guiding Helper, sång 11.",
+    "malikiAlerts": "Avisera mig",
+    "malikiAlertsHelp": "Av för alla böner från början. Välj bara dem du vill bli påmind om — fem extra aviseringar om dagen är hur en app lär dig att strunta i den. Kräver att aviseringar är på.",
+    "malikiAlertsDisabled": "Slå på de malikitiska andratiderna under Bönetider, så kan de aviseras härifrån.",
+    "malikiAlertsNone": "Inga aviseringar",
+    "malikiAlertsLead": "Hur lång förvarning",
+    "malikiAlertsLeadTitle": "Varna mig innan första tiden går ut",
+    "malikiAlertsAtTime": "När den går ut",
+    "malikiSecondTimesModelled": "Fajrs och Asrs gränser är stjärnorna som bleknar och solen som gulnar — en vinkel som står för något ögat bedömer. De märks som ungefärliga. Där solen inte går upp, inte går ner, eller aldrig når vinkeln visas ingenting i stället för en gissning.",
+    "accent_rose": "Rosa",
+    "accent_violet": "Violett",
+    "laDesignMarkers": "Markörer",
+    "showTour": "Visa rundturen i appen",
+    "rateApp": "Betygsätt Ibadat 365",
+    "rateAppHelp": "Gillar du appen? Ett betyg hjälper andra att hitta den.",
+    "showTourHelp": "Spela upp funktionsgenomgången igen.",
+    "ayahOfDay": "Daglig aya-avisering",
+    "ayahOfDayHelp": "En slumpmässigt vald aya med översättning, varje dag.",
+    "ayahOfDayTime": "Aviseringstid",
+    "hourDown": "Timme −",
+    "hourUp": "Timme +",
+    "khatmahReminder": "Daglig khatmah-påminnelse",
+    "khatmahReminderHelp": "Dagens portion och var du ska fortsätta, medan en khatmah är aktiv.",
+    "khatmahReminderNoPlan": "Starta en khatmah i Koran-fliken för att använda detta.",
+    "resetApp": "Återställ appdata",
+    "resetAppHelp": "Raderar alla inställningar och data. Kan inte ångras.",
+    "batteryWarning": "Aviseringar kan vara opålitliga",
+    "batteryWarningHelp": "Batterioptimering kan fördröja eller tysta adhan-aviseringar när appen är stängd. Tryck för att undanta Ibadat 365.",
+    "themeRestartManualTitle": "Öppna appen igen",
+    "themeRestartManualBody": "iOS tillåter inte att appar startar om sig själva. Tvångsavsluta Ibadat 365 och öppna appen igen för att det nya temat ska gälla.",
+    "liquidGlass": "Liquid Glass",
+    "liquidGlassHelp": "Använd iOS systemfärger och genomskinlig glaskrom. Följer ljust/mörkt automatiskt.",
+    "themeRestartTitle": "Omstart krävs",
+    "themeRestartBody": "Byte av systemfärger kräver omstart så att alla skärmar får det nya temat. Starta om nu?",
+    "themeRestartConfirm": "Starta om",
+    "laLockButtonLabel": "Knäppknapp för låsskärmen",
+    "laLockButtonHelp": "Visa en knapp på kortet för att dölja det från låsskärmen och alltid-på-skärmen.",
+    "resetTitle": "Återställ appen?",
+    "resetBody": "Detta raderar alla inställningar, sparade platser, loggposter, fasteloggen och tasbih-läget och tar dig tillbaka till introduktionen. Kan inte ångras.",
+    "resetConfirm": "Återställ allt",
+    "prayerOffsetsCount": "{{count}} justerade",
+    "endOfDayLog": "Påminnelse i slutet av dagen",
+    "endOfDayLogHelp": "Tio minuter efter isha frågar den om dagens fem böner ska loggas. Svarar du nästa morgon loggas ändå rätt dag.",
+    "alertModeAdhan": "Adhan",
+    "alertModeNotification": "Avisering",
+    "alertModeSilent": "Tyst",
+    "alertModeHint": "Ändrar hur den här bönen aviserar dig",
+    "sectionPrayerTimes": "Bönetider",
+    "sectionPrayerTimesBlurb": "Källa, beräkningsmetod, madhhab, justeringar",
+    "sectionNotifications": "Aviseringar",
+    "sectionNotificationsBlurb": "Ljud, förvarningar, extra tider, live-aktivitet",
+    "sectionLocation": "Plats",
+    "sectionLocationBlurb": "Var du är och dina sparade platser",
+    "sectionAppearance": "Utseende och språk",
+    "sectionAppearanceBlurb": "Tema, accentfärg, tidsformat, språk",
+    "sectionWidgets": "Hemskärm",
+    "sectionWidgetsBlurb": "Hemskärmswidget",
+    "sectionQuran": "Koranen",
+    "sectionQuranBlurb": "Läsning, översättning, tafsir, nedladdningar",
+    "sectionAbout": "Om",
+    "sectionAboutBlurb": "Version, källor, licenser",
+    "malikiRows": "Visa dem bland dagens tider",
+    "malikiRowsHelp": "Av: gränserna aviseras bara — inget läggs till på kortet eller i månaden.",
+    "malikiEndAlerts": "Och när tiden går ut",
+    "malikiEndAlertsHelp": "En andra avisering i det ögonblick bönen blir qada. Skickas exakt då, aldrig i förväg.",
+    "surahRemindersChannel": "Surapåminnelser",
+    "madhab": "Rättsskola",
+    "madhab_hanafi": "Hanafitisk",
+    "madhab_maliki": "Malikitisk",
+    "madhab_shafii": "Shafiitisk",
+    "madhab_hanbali": "Hanbalitisk",
+    "madhabCustom": "Anpassad",
+    "madhabHelp": "Shafiiter, malikiter och hanbaliter tar samma asr-skugga, så valet mellan dem ändrar ingen tid. Malikitisk kallar dessutom gryningsbönen Subh och erbjuder andratiderna.",
+    "dhikrRemindersChannel": "Dhikr-påminnelser",
+    "dhikrRemindersSilentChannel": "Dhikr-påminnelser (tysta)",
+    "laDesignNeedsAndroid16": "Stilar kräver Android 16 eller senare. Den här telefonen visar standardkortet: bönen, tiden kvar och en förloppsindikator."
+  },
+  "locationSetup": {
+    "headline": "Ange din plats",
+    "sub": "Bönetider beror på var du är. Välj ett av alternativen nedan — du kan ändra det senare i Inställningar.",
+    "useAutomatic": "Använd min plats",
+    "searchCoords": "Sök eller ange koordinater",
+    "manualHeadline": "Manuell plats",
+    "manualSub": "Sök och tryck på ett resultat för att slutföra — eller skriv latitud och longitud nedan och tryck Fortsätt.",
+    "decimalCoords": "Decimala koordinater"
+  },
+  "provider": {
+    "timesSource": "Tidskälla",
+    "automaticByLocation": "Automatiskt efter plats",
+    "modalTitle": "Källa för bönetider",
+    "sectionMainstream": "Stora API:er",
+    "sectionRegional": "Nationella och regionala källor",
+    "autoTitle": "Automatiskt",
+    "autoSub": "Sverige-källa i Sverige; AlAdhan annars.",
+    "autoNow": "Där du är nu blir det {{label}}.",
+    "bestHere": "Passar där du är",
+    "outOfRegion": "Inga tider för där du är — {{fallback}} skulle användas i stället.",
+    "footer": "Landspecifika källor använder officiella eller nationella bönetabeller där vi integrerar dem. Fler regioner kan läggas till över tid."
+  },
+  "providers": {
+    "aladhan": {
+      "desc": "api.aladhan.com — stor metodlista, koordinater världen över; mycket använd.",
+      "name": "AlAdhan"
+    },
+    "prayertimes_dev": {
+      "desc": "Oberoende API — vinklar och offset i UK-stil; Hanafi/Shafi; globala koordinater.",
+      "name": "PrayTimes.dev"
+    },
+    "local_adhan": {
+      "desc": "Beräknas på din telefon med Batoul Adhan — ingen nätverks-API.",
+      "name": "På enheten (Adhan JS)"
+    },
+    "islamiska_forbundet": {
+      "desc": "Bönetider för listade svenska städer; din plats matchas med närmaste stad i listan.",
+      "name": "Sverige"
+    },
+    "habous": {
+      "name": "Marocko",
+      "desc": "Tiderna som Ministeriet för Habous och islamiska frågor publicerar för listade marockanska städer; din plats matchas mot närmaste stad i listan."
+    }
+  },
+  "compass": {
+    "needLocationTitle": "Platsen är inte klar",
+    "needLocationBody": "Ange en plats i Inställningar eller öppna Hem en gång med GPS så att vi kan beräkna kiblariktningen.",
+    "bearing": "Kibla-riktning",
+    "fromNorth": "{{deg}}° från norr",
+    "qiblaMarker": "Kibla",
+    "phoneFront": "Telefonframdel",
+    "hint": "Håll telefonen platt och undvik metall. Rikta kiblapilen mot “Telefonframdel” när du vänder dig mot kibla.",
+    "signalStrength": "Kompassignal",
+    "signalHelp": "Bygger på magnetfält och stabilitet. Flytta dig från metall och elektronik om den förblir låg.",
+    "signalChecking": "…",
+    "signalOff": "Av",
+    "signalWeakTitle": "Kompassignalen är svag",
+    "signalVeryWeakTitle": "Kompassignalen är mycket svag",
+    "signalWeakBody": "Flytta dig från metall, magneter och elektronik. Ta bort magnetiska tillbehör och gör sedan en långsam åtta-rörelse för kalibrering.",
+    "motionDetectedTitle": "Håll telefonen stilla",
+    "motionDetectedBody": "För mycket rörelse kan få riktningen att hoppa. Håll telefonen platt och stilla i några sekunder, bort från fordon och högtalare.",
+    "motionPermissionTitle": "Rörelsebehörighet krävs",
+    "motionPermissionDeniedBody": "Kompassåtkomst nekas på iOS. Tillåt Rörelse och fitness i systeminställningar och öppna sedan den här skärmen igen.",
+    "openSettings": "Öppna inställningar",
+    "unsupportedTitle": "Livekompass otillgänglig",
+    "unsupportedBody": "Enheten har ingen användbar magnetometer (eller åtkomst misslyckades). Livekompassen är avstängd. Använd riktningen nedan med fysisk kompass eller karta.",
+    "checkingCompass": "Startar kompass…",
+    "checkingCompassWithPrompt": "Startar kompass… Om iOS frågar, tillåt Rörelse och fitness.",
+    "north": "N",
+    "east": "Ö",
+    "south": "S",
+    "west": "V",
+    "a11yDialLive": "Qiblakompass. Vrid {{deg}} grader för att vända mot Qibla.",
+    "a11yDialChecking": "Qiblakompass. Väntar på sensordata.",
+    "a11yDialUnavailable": "Qiblakompass ej tillgänglig.",
+    "a11yNeedleDeg": "Vrid {{deg}} grader för att vända mot Qibla.",
+    "a11ySignal_good": "Kompasssignal: bra.",
+    "a11ySignal_weak": "Kompasssignal: svag.",
+    "a11ySignal_very_weak": "Kompasssignal: mycket svag.",
+    "crossCheckTitle": "Dubbelkolla med din kompassapp",
+    "crossCheckBody": "Enhetens egen kompass är anpassad till dess hårdvara. För bästa noggrannhet, öppna den och vrid tills den visar {{degrees}}.",
+    "openSystemCompass": "Öppna kompassappen",
+    "fromNorthLabel": "från norr"
+  },
+  "prayer": {
+    "Fajr": "Fajr",
+    "Sunrise": "Soluppgång",
+    "Dhuhr": "Dhuhr",
+    "Asr": "Asr",
+    "Maghrib": "Maghrib",
+    "Isha": "Isha",
+    "Fajr_abbr": "Fajr",
+    "Sunrise_abbr": "Sol",
+    "Dhuhr_abbr": "Dhuhr",
+    "Asr_abbr": "Asr",
+    "Maghrib_abbr": "Magh",
+    "Isha_abbr": "Isha",
+    "Midnight": "Islamisk midnatt",
+    "Midnight_abbr": "Mitt",
+    "Lastthird": "Sista tredjedelen",
+    "Lastthird_abbr": "Qiyam",
+    "Firstthird": "Första tredjedelen",
+    "Firstthird_abbr": "1/3",
+    "firstTimeUntil": "Första tiden till {{time}}",
+    "secondTimeUntil": "Andra tiden till {{time}}",
+    "secondTimeFrom": "Andra tiden från {{time}}",
+    "approx": "ca",
+    "Subh": "Subh",
+    "Subh_abbr": "Subh"
+  },
+  "placeSearch": {
+    "label": "Sök stad eller adress",
+    "placeholder": "t.ex. Stockholm, postnummer…",
+    "hint": "Resultat från OpenStreetMap (Nominatim). Använd ansvarsfullt — inte för massgeokodning.",
+    "appliedTitle": "Plats tillämpad",
+    "searchFailed": "Sökningen misslyckades",
+    "applied": "Tillämpat: {{label}}",
+    "noResults": "Inga resultat",
+    "searching": "Söker…"
+  },
+  "alertCopy": {
+    "atPrayer": "Bönetid",
+    "prePrayer": "Börjar om {{count}} min",
+    "adhanStopAction": "Stoppa adhan",
+    "adhanDisableAction": "Inaktivera adhan",
+    "snoozeAction": "Snooza",
+    "snoozeChoice": "Snooza {{minutes}} min",
+    "snoozeMinutes": "Minuter",
+    "daruriEndsIn": "Första tiden går ut {{time}} — om {{count}} min",
+    "daruriEnded": "Första tiden gick ut {{until}}",
+    "daruriExpired": "Tiden har gått ut — be den som qada",
+    "atPrayerBody": "Det är dags för {{prayer}}",
+    "nextEvent": "Nästa: {{prayer}} kl. {{time}}"
+  },
+  "locations": {
+    "title": "Sparade platser",
+    "empty": "Lägg till sparade platser så kan du växla snabbt mellan dem.",
+    "add": "Lägg till ny plats",
+    "useAuto": "Min plats",
+    "addPrompt": "Namnge platsen",
+    "addPlaceholder": "Hem, Jobb, Resa…",
+    "cancel": "Avbryt",
+    "save": "Spara",
+    "use": "Använd",
+    "delete": "Ta bort",
+    "limitReached": "Max {{max}} sparade platser har nåtts.",
+    "previousLocation": "Tidigare plats",
+    "invalidCoordsTitle": "Ogiltiga koordinater",
+    "invalidCoordsBody": "Latitud måste vara mellan -90 och 90, longitud mellan -180 och 180.",
+    "pickAPlace": "Sök efter en stad eller ange koordinater först.",
+    "duplicateTitle": "Redan sparad",
+    "duplicateBody": "En plats med dessa koordinater är redan sparad som ”{{name}}”."
+  },
+  "tasbih": {
+    "subhanallah": "SubhanAllah",
+    "alhamdulillah": "Alhamdulillah",
+    "allahuakbar": "Allahu Akbar",
+    "lailaha": "La ilaha illa Allah",
+    "astaghfirullah": "Astaghfirullah",
+    "open": "Öppna räknaren",
+    "increment": "Tryck för att räkna",
+    "reset": "Återställ",
+    "salahonprophet": "Salawat över Profeten ﷺ",
+    "prev": "Föregående",
+    "next": "Nästa",
+    "meaning": {
+      "subhanallah": "Ära vare Allah",
+      "alhamdulillah": "All lov tillkommer Allah",
+      "lailaha": "Det finns ingen gud utom Allah",
+      "allahuakbar": "Allah är störst",
+      "astaghfirullah": "Jag söker Allahs förlåtelse",
+      "salahonprophet": "O Allah, sänd välsignelser över vår mästare Muhammad"
+    },
+    "setPosition": "Omgång {{index}} av {{total}}",
+    "ofTarget": "av {{target}}",
+    "tapAnywhere": "Tryck var som helst",
+    "upNext": "Härnäst",
+    "resetSet": "Nollställ omgång",
+    "skip": "Hoppa över"
+  },
+  "duas": {
+    "cat": {
+      "morning": "Morgon",
+      "evening": "Kväll",
+      "afterPrayer": "Efter bön",
+      "food": "Måltid",
+      "distress": "Nöd",
+      "sleep": "Sömn",
+      "lavatory": "Toaletten",
+      "garment": "Kläder",
+      "travel": "Resa",
+      "mosque": "Moské",
+      "gratitude": "Tacksamhet",
+      "forgiveness": "Förlåtelse",
+      "weather": "Väder",
+      "family": "Familj",
+      "sickness": "Sjukdom",
+      "funeral": "Begravning",
+      "eid": "Eid",
+      "beforeQuran": "Före Koranen",
+      "knowledge": "Kunskap",
+      "protection": "Skydd",
+      "guidance": "Vägledning"
+    },
+    "allCategories": "Alla duor",
+    "repeat": "Recitera ×{{count}}",
+    "morning_01_ayat_kursi": {
+      "title": "Ayat al-Kursi"
+    },
+    "morning_02_three_quls": {
+      "title": "Surorna al-Ikhlas, al-Falaq, an-Nas"
+    },
+    "morning_03_fitra_islam": {
+      "title": "På islams naturliga anlag"
+    },
+    "morning_04_radhitu": {
+      "title": "Nöjd med Allah som Herre"
+    },
+    "morning_05_ilm_nafi": {
+      "title": "Nyttig kunskap, god försörjning, accepterade gärningar"
+    },
+    "morning_06_bika_asbahna": {
+      "title": "Med Dig går vi in i morgonen"
+    },
+    "morning_07_la_ilaha_illa_allah": {
+      "title": "Det finns ingen gud utom Allah, ensam"
+    },
+    "morning_08_ya_hayyu_ya_qayyum": {
+      "title": "O Evigt Levande, O Upprätthållare"
+    },
+    "morning_09_sayyid_al_istighfar": {
+      "title": "Sayyid al-Istighfar (förlåtelsens mästardua)"
+    },
+    "morning_10_fatir_as_samawat": {
+      "title": "Himlens och jordens skapare"
+    },
+    "morning_11_asbahna_walmulku_lillah": {
+      "title": "Vi och herraväldet har gått in i morgonen för Allah"
+    },
+    "morning_12_afw_wa_afiya": {
+      "title": "Förlåtelse och välbefinnande"
+    },
+    "morning_13_bismillah_la_yadurr": {
+      "title": "I Allahs namn — med Hans namn skadar intet"
+    },
+    "morning_14_subhan_allah_adada_khalqih": {
+      "title": "Pris vare Allah, så många som Hans skapelse"
+    },
+    "morning_15_afini_fi_badani": {
+      "title": "Bevara mig i kropp, hörsel och syn"
+    },
+    "morning_16_hasbiy_allah": {
+      "title": "Allah är mig nog"
+    },
+    "morning_17_ushhiduka": {
+      "title": "Jag tar Dig till vittne i morgon"
+    },
+    "morning_18_la_ilaha_yuhyi_yumit": {
+      "title": "Ingen gud utom Allah — Han ger liv och tar liv"
+    },
+    "morning_19_subhan_allah_wa_bihamdihi": {
+      "title": "Pris och lov vare Allah"
+    },
+    "morning_20_astaghfirullah": {
+      "title": "Jag söker Allahs förlåtelse"
+    },
+    "morning_21_subhan_alhamdu_takbir": {
+      "title": "Tasbîh, Tahmîd, Takbîr, Tahlîl"
+    },
+    "evening_01_ayat_kursi": {
+      "title": "Ayat al-Kursi"
+    },
+    "evening_02_three_quls": {
+      "title": "Surorna al-Ikhlas, al-Falaq, an-Nas"
+    },
+    "evening_03_fitra_islam": {
+      "title": "På islams naturliga anlag (kväll)"
+    },
+    "evening_04_radhitu": {
+      "title": "Nöjd med Allah som Herre"
+    },
+    "evening_05_bika_amsayna": {
+      "title": "Med Dig går vi in i kvällen"
+    },
+    "evening_06_la_ilaha_illa_allah": {
+      "title": "Det finns ingen gud utom Allah, ensam"
+    },
+    "evening_07_ya_hayyu_ya_qayyum": {
+      "title": "O Evigt Levande, O Upprätthållare"
+    },
+    "evening_08_sayyid_al_istighfar": {
+      "title": "Sayyid al-Istighfar (förlåtelsens mästardua)"
+    },
+    "evening_09_fatir_as_samawat": {
+      "title": "Himlens och jordens skapare"
+    },
+    "evening_10_amsayna_walmulku_lillah": {
+      "title": "Vi och herraväldet har gått in i kvällen för Allah"
+    },
+    "evening_11_afw_wa_afiya": {
+      "title": "Förlåtelse och välbefinnande"
+    },
+    "evening_12_bismillah_la_yadurr": {
+      "title": "I Allahs namn — med Hans namn skadar intet"
+    },
+    "evening_13_taamat_protection": {
+      "title": "Tillflykt till Allahs fullkomliga ord"
+    },
+    "evening_14_afini_fi_badani": {
+      "title": "Bevara mig i kropp, hörsel och syn"
+    },
+    "evening_15_hasbiy_allah": {
+      "title": "Allah är mig nog"
+    },
+    "evening_16_ushhiduka": {
+      "title": "Jag tar Dig till vittne i kväll"
+    },
+    "evening_17_la_ilaha_yuhyi_yumit": {
+      "title": "Ingen gud utom Allah — Han ger liv och tar liv"
+    },
+    "evening_18_subhan_allah_wa_bihamdihi": {
+      "title": "Pris och lov vare Allah"
+    },
+    "evening_19_astaghfirullah": {
+      "title": "Jag söker Allahs förlåtelse"
+    },
+    "evening_20_subhan_alhamdu_takbir": {
+      "title": "Tasbîh, Tahmîd, Takbîr, Tahlîl"
+    },
+    "afterPrayer_astaghfirullah": {
+      "title": "Söka förlåtelse"
+    },
+    "afterPrayer_allahumma_antas_salam": {
+      "title": "Allah är fridens källa"
+    },
+    "afterPrayer_subhanallah_33": {
+      "title": "Tasbîh (33 × 3)"
+    },
+    "afterPrayer_three_quls": {
+      "title": "Surorna al-Ikhlas, al-Falaq, an-Nas efter varje fard-bön"
+    },
+    "afterPrayer_ayat_kursi": {
+      "title": "Ayat al-Kursi efter varje fard-bön"
+    },
+    "food_before": {
+      "title": "Före måltid — bismillāh"
+    },
+    "food_after_min_ghayri_hawlin": {
+      "title": "Efter måltid — utan min makt eller kraft"
+    },
+    "food_after_atamana_wa_saqana": {
+      "title": "Efter måltid — Han matade och släckte vår törst och gjorde oss till muslimer"
+    },
+    "food_after_atama_wa_saqa_makhraj": {
+      "title": "Efter måltid — gav oss mat, dryck och en ren utgång"
+    },
+    "food_after_atamana_wa_kafana": {
+      "title": "Efter måltid — matade, släckte törsten, räckte till och gav skydd"
+    },
+    "food_after_kathiran_tayyiban": {
+      "title": "Efter måltid — mycken, god och välsignad lovprisning"
+    },
+    "distress_lahawla": {
+      "title": "Det finns ingen kraft utom hos Allah"
+    },
+    "distress_innallaha_maana": {
+      "title": "Vid rädsla"
+    },
+    "distress_yaa_hayyu": {
+      "title": "Att åkalla den Evigt Levande"
+    },
+    "distress_ayatkursi_intro": {
+      "title": "Ayat al-Kursi (skydd vid sömn)"
+    },
+    "distress_dua_al_faraj": {
+      "title": "Dua al-Faraj (lindring vid oro och sorg)"
+    },
+    "distress_dua_al_karb": {
+      "title": "Dua vid sorgens stund"
+    },
+    "sleep_three_quls": {
+      "title": "Muʿawwidhāt — al-Ikhlas, al-Falaq, an-Nas"
+    },
+    "sleep_ayat_kursi": {
+      "title": "Ayat al-Kursi innan sömn"
+    },
+    "sleep_aslamtu_wajhi": {
+      "title": "Jag har överlämnat mitt ansikte till Dig"
+    },
+    "sleep_bismika_ahya": {
+      "title": "I Ditt namn, Allah, lever och dör jag"
+    },
+    "sleep_alhamdu_ahyana": {
+      "title": "Vid uppvaknande"
+    },
+    "sleep_khalaqta_nafsi": {
+      "title": "Du skapade min själ — bevara den eller förlåt den"
+    },
+    "sleep_rabba_samawat": {
+      "title": "Herre över himlarna, jorden och den mäktiga tronen"
+    },
+    "sleep_dust_off_bed": {
+      "title": "Borsta av sängen och lägg dig på höger sida"
+    },
+    "sleep_takbir_tasbih_tahmid": {
+      "title": "Takbîr 34, Tasbîh 33, Tahmîd 33 (bättre än en tjänare)"
+    },
+    "sleep_taamat_protection": {
+      "title": "Allahs fullkomliga ord, mot allt ont"
+    },
+    "sleep_taamat_for_children": {
+      "title": "Skydd för barn — varje djävul och skadlig varelse"
+    },
+    "sleep_taamat_long": {
+      "title": "När man vaknar uppskärrad eller från en mardröm"
+    },
+    "sleep_wajhik_alkarim": {
+      "title": "Vid Ditt ädla ansikte och Dina fullkomliga ord"
+    },
+    "sleep_anta_rabbi": {
+      "title": "Du är min Herre — ingen olycka når mig"
+    },
+    "travel_subhanalladhi": {
+      "title": "Vid påstigning av ett fordon"
+    },
+    "travel_journey": {
+      "title": "För en resa — full text"
+    },
+    "travel_returning": {
+      "title": "När man kommer hem"
+    },
+    "mosque_entering": {
+      "title": "Vid moskéns inträde"
+    },
+    "mosque_leaving": {
+      "title": "Vid moskéns utgång"
+    },
+    "mosque_adhan_response": {
+      "title": "Efter att ha hört adhân"
+    },
+    "gratitude_blessing": {
+      "title": "När man får en välsignelse"
+    },
+    "gratitude_kindness": {
+      "title": "När någon gör dig en vänlighet"
+    },
+    "forgiveness_sayyidul": {
+      "title": "Förlåtelsens mästardua (Sayyid al-Istighfar)"
+    },
+    "forgiveness_rabbi_ighfir": {
+      "title": "Vända sig till Allah i ånger"
+    },
+    "distress_grief": {
+      "title": "För lindring av sorg och ångest"
+    },
+    "distress_difficulty": {
+      "title": "Vid svårigheter"
+    },
+    "distress_rain": {
+      "title": "När regnet faller"
+    },
+    "weather_during_rain": {
+      "title": "När regnet börjar falla"
+    },
+    "weather_after_rain": {
+      "title": "Efter att regnet fallit"
+    },
+    "weather_thunder": {
+      "title": "Vid åskskall"
+    },
+    "weather_strong_wind": {
+      "title": "Vid kraftig vind"
+    },
+    "family_for_offspring": {
+      "title": "För fromma efterkommande"
+    },
+    "family_for_parents": {
+      "title": "För föräldrarna"
+    },
+    "family_blessing_marriage": {
+      "title": "Vid lyckönskan till bröllop"
+    },
+    "family_for_child": {
+      "title": "Sökande skydd för ett barn"
+    },
+    "sickness_visit": {
+      "title": "Besöka den sjuke"
+    },
+    "sickness_prayer_for_sick": {
+      "title": "Bön för en sjuk"
+    },
+    "sickness_when_in_pain": {
+      "title": "När man känner smärta i kroppen"
+    },
+    "funeral_inna_lillah": {
+      "title": "Vid besked om dödsfall"
+    },
+    "funeral_consolation": {
+      "title": "Att trösta de sörjande"
+    },
+    "funeral_graveyard_visit": {
+      "title": "Vid besök på en begravningsplats"
+    },
+    "eid_takbir": {
+      "title": "Eid-takbir"
+    },
+    "eid_taqabbal": {
+      "title": "Eid-hälsning"
+    },
+    "beforeQuran_taawwudh": {
+      "title": "Söka skydd innan recitation"
+    },
+    "beforeQuran_basmalah": {
+      "title": "Att inleda varje handling"
+    },
+    "knowledge_seeking": {
+      "title": "Att be om mer kunskap"
+    },
+    "knowledge_understanding": {
+      "title": "För förståelse"
+    },
+    "knowledge_majlis_kaffarah": {
+      "title": "Att avsluta en samling (kaffârat al-majlis)"
+    },
+    "protection_morning_evening": {
+      "title": "Förkortad Sayyid al-Istighfar (×3 morgon & kväll)"
+    },
+    "protection_evil_eye": {
+      "title": "Mot det onda ögat"
+    },
+    "protection_entering_home": {
+      "title": "Att gå in i hemmet"
+    },
+    "protection_leaving_home": {
+      "title": "Att lämna hemmet"
+    },
+    "protection_market": {
+      "title": "Att gå in på marknaden"
+    },
+    "guidance_istikharah": {
+      "title": "Salât al-Istikhâra (beslutssökande) — full text"
+    },
+    "guidance_steadfastness": {
+      "title": "För ståndaktighet i tron"
+    },
+    "guidance_rabbana_atina": {
+      "title": "För det goda i detta liv och det kommande"
+    },
+    "guidance_against_being_misled": {
+      "title": "För skydd mot vilseledande"
+    },
+    "pronunciation": "Uttal",
+    "tapToCount": "Tryck för att räkna",
+    "shareDua": "Dela {{title}}",
+    "lavatory_01_entering": {
+      "title": "När man går in på toaletten"
+    },
+    "lavatory_02_leaving": {
+      "title": "När man lämnar toaletten"
+    },
+    "garment_01_dressing": {
+      "title": "När man tar på sig ett plagg"
+    },
+    "garment_02_new": {
+      "title": "Ett nytt plagg"
+    },
+    "garment_03_for_someone_new": {
+      "title": "Till den som bär nya kläder"
+    },
+    "garment_04_undressing": {
+      "title": "När man tar av sig ett plagg"
+    },
+    "section": {
+      "day": "Genom dagen",
+      "worship": "Tillbedjan",
+      "out": "På väg",
+      "hardship": "När det är svårt",
+      "asking": "Att be om"
+    },
+    "countHint": "{{count}} duor"
+  },
+  "quran": {
+    "meccan": "Meckansk",
+    "medinan": "Medinensisk",
+    "ayahCount": "{{count}} verser",
+    "notFound": "Sura hittades inte.",
+    "comingSoon": "Hela texten för denna sura kommer i en kommande datauppdatering.",
+    "pageLabel": "Sida {{page}}",
+    "switchToTranslation": "Byt till tafsir-vy",
+    "switchToMushaf": "Byt till mushaf-vy",
+    "viewToggleTranslation": "Översättning",
+    "viewToggleMushaf": "Mushaf",
+    "enterFullscreen": "Helskärmsläge",
+    "exitFullscreen": "Stäng helskärm",
+    "mushafDownloadTitle": "Ladda ner mushafen",
+    "mushafDownloadBody": "Madinah-mushafen är cirka {{size}} MB. Den ingår inte i appen — ladda ner den en gång så stannar sidorna på din enhet.",
+    "mushafDownloadReadCta": "Ladda ner och börja läsa (~{{size}} MB)",
+    "mushafDownloadReadHint": "Sidorna visas när de kommer; resten laddas ner i bakgrunden.",
+    "mushafDownloadStrip": "Laddar ner mushafen · {{pct}} %",
+    "juzLabel": "Juz {{juz}}",
+    "nightMode": "Nattläge",
+    "jumpToPage": "Gå till sida",
+    "pageShort": "s. {{page}}",
+    "go": "Gå",
+    "mushafDownloadRetryBody": "{{count}} sidor kunde inte laddas ned. Försök igen för att hämta de saknade sidorna — allt som redan laddats ned behålls.",
+    "mushafDownloadRetryCta": "Försök igen med saknade sidor",
+    "star": "Stjärnmärk denna ayah",
+    "unstar": "Ta bort stjärna",
+    "bookmark": "Bokmärke",
+    "bookmarkColor": "Bokmärkesfärg {{color}}",
+    "playFromHere": "Spela upp härifrån",
+    "repeatAyah": "Upprepa denna ayah",
+    "buffering": "Buffrar…",
+    "previousAyah": "Föregående ayah",
+    "nextAyah": "Nästa ayah",
+    "pause": "Pausa",
+    "play": "Spela upp",
+    "stopPlayback": "Stoppa uppspelning",
+    "playbackSettings": "Recitation",
+    "reciter": "Recitatör",
+    "downloadSurahAudio": "Ladda ned ljud för {{surah}}",
+    "surahAudioDownloaded": "Ljud nedladdat för offlineanvändning",
+    "downloadingAudio": "Laddar ned… {{done}}/{{total}}",
+    "downloadSurahAudioShort": "Ladda ned denna surah för offlinelyssning",
+    "speed": "Hastighet",
+    "memorization": "Memorering",
+    "repeatEachAyah": "Upprepa varje ayah",
+    "repeatRange": "Upprepa intervallet",
+    "pauseBetween": "Paus mellan upprepningar",
+    "none": "Ingen",
+    "hideForReview": "Dölj vid repetition",
+    "hideArabic": "Arabiska",
+    "hideTranslation": "Översättning",
+    "playRangeTitle": "Spela upp ett intervall ur {{surah}}",
+    "fromAyah": "Från ayah",
+    "toAyah": "Till ayah",
+    "playRange": "Spela upp intervall",
+    "ayahA11y": "Ayah {{ayah}} — tryck för åtgärder",
+    "tapToReveal": "Tryck för att visa",
+    "hideModeActive": "Memoreringsläge: {{what}} dolt — tryck på en ayah för att visa",
+    "loading": "Läser in…",
+    "continueReading": "Fortsätt läsa",
+    "continueKhatmah": "Fortsätt khatmah",
+    "readingPin": "Fortsätt läsa härifrån",
+    "readingPinned": "Fortsätt läsa börjar här",
+    "readingMarkerLabel": "Läsning",
+    "khatmahMarkerLabel": "Khatmah",
+    "khatmah": "Khatmah",
+    "khatmahDaysLeft": "{{count}} dagar kvar",
+    "khatmahDaysLeft_one": "{{count}} dag kvar",
+    "khatmahProgress": "{{read}} / {{total}} sidor · idag: {{today}}",
+    "khatmahBehind": "{{count}} att komma ikapp",
+    "startKhatmah": "Starta en khatmah",
+    "khatmahDays": "{{count}} dagar",
+    "verseOfDay": "Dagens vers",
+    "searchPlaceholder": "Sök suror, ayat, översättning…",
+    "tabSurah": "Sura",
+    "tabJuz": "Juz",
+    "tabBookmarks": "Bokmärken",
+    "searchResults": "{{count}} ayah-träffar",
+    "noBookmarks": "Inga bokmärken än — tryck på en ayah medan du läser för att bokmärka eller stjärnmärka den.",
+    "starred": "Stjärnmärkta",
+    "shareAsImage": "Dela som bild",
+    "chooseReciter": "Välj recitatör",
+    "searchReciters": "Sök recitatörer…",
+    "wordHighlightBadge": "ordmarkering",
+    "changeReciter": "Byt",
+    "deleteBookmark": "Ta bort bokmärke",
+    "removeStar": "Ta bort stjärna",
+    "nightShort": "Natt",
+    "sepiaShort": "Sepia",
+    "lightShort": "Ljus",
+    "switchToNight": "Byt till nattläge",
+    "switchToSepia": "Byt till sepiasida",
+    "riwayahHafs": "Hafs",
+    "riwayahWarsh": "Warsh",
+    "switchRiwayah": "Byt till läsarten {{name}}",
+    "riwayahReflowTitle": "Sidorna stämmer, raderna kanske inte",
+    "riwayahReflowBody": "Denna mushaf börjar och slutar varje sida exakt som den tryckta, men raderna sätts av din enhet i stället för att hämtas från trycket, så de bryts inte alltid på samma ställen.",
+    "riwayahNeedsHttps": "Länken måste börja med https://",
+    "riwayahServerSaidNo": "Servern svarade {{status}}.",
+    "riwayahTooLarge": "Filen är mycket större än en mushaf-datamängd. Kontrollera länken.",
+    "riwayahUnreachable": "Kunde inte nå länken. Kontrollera adressen och din anslutning.",
+    "riwayahGotAPage": "Länken gav en webbsida, inte en datafil. Använd länken till JSON-nedladdningen.",
+    "riwayahNotJson": "Filen är inte en datafil.",
+    "riwayahNotAQuran": "Filen är inte en fullständig Koran och installerades inte.",
+    "riwayahCouldNotSave": "Kunde inte spara på den här enheten.",
+    "switchToLight": "Byt till ljust läge",
+    "ayahOfDayTitle": "Dagens aya",
+    "ayahOfDayChannelName": "Dagens aya",
+    "tafsir": "Tafsir",
+    "showTafsir": "Visa tafsir",
+    "tafsirUnavailable": "Tafsir är inte tillgänglig — anslut till internet en gång för att hämta den.",
+    "khatmahPin": "Ange som min khatmah-position",
+    "khatmahPinned": "Khatmah-position — tryck för att ta bort",
+    "khatmahUnpin": "Ta bort khatmah-position",
+    "khatmahContinue": "Fortsätt",
+    "khatmahReset": "Återställ",
+    "khatmahResetTitle": "Återställ khatmah",
+    "khatmahResetToday": "Återställ dagens läsning",
+    "khatmahResetTodayHelp": "Spolar bara tillbaka dagens registrerade sidor.",
+    "khatmahResetAll": "Starta om khatman",
+    "khatmahResetAllHelp": "Tillbaka till planens början, med nytt schema.",
+    "khatmahDelete": "Ta bort khatman",
+    "khatmahDeleteHelp": "Tar bort planen helt.",
+    "khatmahReminderChannelName": "Khatmah-påminnelse",
+    "khatmahReminderTitle": "Khatmah",
+    "khatmahReminderBody": "Dagens portion: {{pages}} sidor — fortsätt från sida {{page}}.",
+    "audioButton": "Ljud",
+    "khatmahCustom": "Anpassad…",
+    "khatmahLengthTitle": "Khatmahns längd (dagar)",
+    "khatmahSetUpTitle": "Starta en khatmah",
+    "khatmahFromPageTitle": "Läser du redan? Börja på sida",
+    "khatmahFromPageHint": "Från början",
+    "khatmahStartCta": "Starta",
+    "showMore": "Visa mer",
+    "showLess": "Visa mindre",
+    "tafsirEditionHelp": "Kommentaren som visas under varje vers. Kan även ändras från valfri vers på Koran-sidan.",
+    "nextPage": "Nästa sida",
+    "prevPage": "Föregående sida",
+    "companionTitle": "Under varje vers",
+    "companionHelp": "Gäller överallt där en vers visas — läsaren, dagens vers och den dagliga ayah-aviseringen. Kan även ändras från Koran-sidan.",
+    "companionActive": "aktiv",
+    "mushafReplaceOldBody": "En äldre kopia av mushafen ({{size}} MB) finns kvar på enheten sedan en tidigare version. Den tas bort först — inget du har sparat påverkas.",
+    "shareAsText": "Dela texten",
+    "shareChoiceA11y": "Dela — välj text eller bildkort",
+    "recitation": "Recitation",
+    "downloadSurahAudioSized": "Ladda ner denna sura · {{size}}",
+    "tapToPick": "välj",
+    "tabMarks": "Märken",
+    "searchSurahOrPage": "Sök sura eller sida",
+    "reading": "läser",
+    "pageScrubber": "Gå till sida",
+    "goCta": "Gå",
+    "downloadChannelName": "Nedladdning av Koranen",
+    "downloadChannelDesc": "Förlopp medan Koranen laddas ned.",
+    "downloadingFonts": "Laddar ned Koranens text",
+    "downloadingReciter": "Laddar ned {{name}}",
+    "downloadProgressAyahs": "{{done}} av {{total}} verser",
+    "audioDownloadDoneTitle": "{{name}} är klar",
+    "audioDownloadDoneBody": "Hela Koranen med den här rösten finns på enheten. Den spelas nu utan uppkoppling.",
+    "audioDownloadIncompleteTitle": "Recitationen blev inte klar",
+    "audioDownloadIncompleteBody": "{{count}} verser saknas fortfarande. Starta om, så fortsätter den där den slutade.",
+    "listenTitle": "Tilawah",
+    "tilawahDoorSub": "Lyssna på Koranen",
+    "tilawahBlurb": "Recitation av Koranen — den fortsätter spela med skärmen av och fungerar utan uppkoppling när den är nedladdad.",
+    "tilawahContinue": "Fortsätt där du läste",
+    "tilawahBegin": "Börja med",
+    "tilawahAyahOf": "Vers {{done}} av {{total}}",
+    "tilawahShowPage": "Visa sidan",
+    "backToTop": "Tillbaka till toppen",
+    "tilawahKeepAwake": "Håll skärmen tänd",
+    "tilawahSurahSeek": "Spola inom suran",
+    "tilawahShuffle": "Blanda suror",
+    "tilawahPrevSurah": "Föregående sura",
+    "tilawahNextSurah": "Nästa sura",
+    "tilawahAyahWord": "Vers",
+    "openInReader": "Öppna i läsaren",
+    "listenSurahMeta": "{{count}} verser",
+    "listenNowPlaying": "Spelas nu",
+    "listenContinuous": "Spelar vidare",
+    "listenIdle": "Inget spelas",
+    "listenReciter": "Recitatör",
+    "listenSeek": "Spola inom ayahn",
+    "listenPrevious": "Föregående ayah",
+    "listenNext": "Nästa ayah",
+    "listenSpeed": "Hastighet",
+    "listenSleep": "Insomningstimer",
+    "listenSleepOff": "Av",
+    "listenSleepSurah": "Slutet av suran",
+    "listenSleepMinutes": "{{count}} min",
+    "listenSleepArmed": "Pausar om cirka {{count}} min",
+    "listenPickSurah": "Börja från",
+    "listenDownloadTitle": "Behåll {{name}} på den här enheten",
+    "listenDownloadBody": "Hela Koranen med den här rösten, ungefär {{size}}. Läsaren spelar samma filer, så det fungerar där också.",
+    "listenDownloadComplete": "Komplett · {{size}}",
+    "listenDownloadPartial": "{{done}} av {{total}} verser finns här · {{size}}",
+    "listenDownloadStart": "Ladda ner",
+    "listenDownloadResume": "Fortsätt ladda ner",
+    "listenDownloadBusy": "Något annat laddas ner just nu. En i taget, så att ingen blir långsammare.",
+    "downloadProgress": "{{done}} av {{total}} sidor",
+    "downloadDoneTitle": "Koranen är klar",
+    "downloadDoneBody": "Alla sidor finns på den här enheten. Den går att läsa utan uppkoppling nu.",
+    "downloadIncompleteTitle": "Nedladdningen blev inte klar",
+    "downloadIncompleteBody": "{{count}} sidor saknas fortfarande. Öppna Koranen för att fortsätta där den stannade.",
+    "finishDay": "Slutför dag {{day}}s läsning ({{when}})",
+    "finishDayShort": "Slutför dag {{day}} ({{when}})",
+    "khatmahPageProgress": "{{pages}} sidor kvar · dag {{day}} av {{days}}",
+    "khatmahDayDone": "✓ Dagens läsning klar",
+    "khatmahPagesLeftToday": "{{count}} sidor kvar i dag",
+    "khatmahPagesLeftToday_one": "{{count}} sida kvar i dag",
+    "khatmahExtraPages": "+{{count}} sidor extra",
+    "khatmahExtraPages_one": "+{{count}} sida extra",
+    "khatmahMarkDone": "Markera dag {{day}}s läsning som klar",
+    "khatmahMarkNext": "✓ Slutför dag {{day}} ({{when}}) också",
+    "khatmahMarkToday": "✓ Dagens läsning klar",
+    "khatmahPrevDay": "‹ Föregående dag",
+    "riwayahQalun": "Qalun",
+    "riwayahShubah": "Shu'bah",
+    "riwayahPickerTitle": "Läsart",
+    "riwayahPickerOpen": "Läsart: {{name}}. Tryck för att byta.",
+    "riwayahNotOnDevice": "{{name}} — finns inte på den här enheten än",
+    "riwayahAddIt": "Tryck för att lägga till",
+    "riwayahDefault": "(standard)",
+    "dueToday": "idag",
+    "dueTomorrow": "imorgon",
+    "scrubHint": "Dra uppåt för finare kontroll",
+    "scrubHalf": "Halv hastighet",
+    "scrubQuarter": "Kvarts hastighet",
+    "scrubFine": "Finjustering",
+    "translationUnavailable": "Ingen översättning för denna vers.",
+    "oftenRead": "Läses ofta",
+    "listenDeleteAudio": "Ta bort {{name}} från den här enheten",
+    "listenDownloadReciter": "Ladda ner {{name}}, cirka {{size}}",
+    "listenDownloadRunning": "Laddar ner · {{done}} av {{total}}",
+    "shareTafsir": "Dela denna tafsir ({{edition}})",
+    "surahAudioPartial": "{{have}} av {{total}} verser · tryck för att hämta resten",
+    "deleteSurahAudio": "Ta bort ljudet för denna sura",
+    "deleteSurahAudioFor": "Ta bort hämtat ljud för {{surah}}",
+    "audioGap": "{{surah}} {{ayah}} är inte hämtad — anslut, eller hämta suran för offline-bruk.",
+    "khatmahMore": "Fler alternativ för khatmah",
+    "khatmahPrevDayHelp": "Ångra dagens markering och gå tillbaka till föregående dags del.",
+    "lastReadRow": "Senast läst · {{surah}}, sida {{page}}",
+    "autoShort": "Auto",
+    "switchToAuto": "Följ appens tema",
+    "downloadingSurah": "Laddar ner {{surah}} · {{name}}",
+    "surahDownloadDoneTitle": "{{surah}} är klar",
+    "surahDownloadDoneBody": "{{name}}s recitation av {{surah}} finns på den här enheten. Den spelas nu utan anslutning.",
+    "reciterDownloadStrip": "Laddar ner {{name}} · {{pct}} %",
+    "surahDownloadStrip": "Laddar ner {{surah}} · {{pct}} %"
+  },
+  "mosques": {
+    "searching": "Söker närliggande moskéer…",
+    "noneFound": "Inga moskéer hittades i närheten. Försök utöka sökradien.",
+    "unnamedMosque": "Moské",
+    "needLocation": "Ange en plats först så vi kan söka i närheten.",
+    "error": "Kunde inte nå moské-databasen. Försök igen.",
+    "title": "Hitta en moské nära dig",
+    "bodyWithLocation": "Vi öppnar din kart-app med sökningen \"mosque\" centrerad på din plats. Om appen inte finns öppnar vi Google Maps i webbläsaren.",
+    "bodyNoLocation": "Ange först en plats (Inställningar → Plats). Sedan öppnar vi din kart-app med sökningen \"mosque\" centrerad där. Om appen inte finns öppnar vi Google Maps i webbläsaren.",
+    "openInMapsApp": "Öppna Maps och sök \"mosque\""
+  },
+  "journal": {
+    "todayLabel": "Idag",
+    "streakDays": "Dagar i rad",
+    "onTimeRate": "I tid",
+    "totalLogged": "Totalt loggat",
+    "status": {
+      "on-time": "I tid",
+      "late": "Sent",
+      "missed": "Missad",
+      "qadha": "Make-up (qadhā)"
+    },
+    "statusShort": {
+      "on-time": "I tid",
+      "late": "Sent",
+      "missed": "Missad",
+      "qadha": "Tagen igen"
+    },
+    "encourageEmpty": "Markera dagens första bön för att börja journalen.",
+    "encourageActive": "Varje bön du loggar är ett steg framåt.",
+    "encourageStreak": "Mashallah, {{count}} dagar i tid på rad. Fortsätt.",
+    "notificationToggleTitle": "Logga från notisen",
+    "notificationToggleOn": "Tryck \"Logga bön\" i bönetidsnotisen för att hoppa hit direkt.",
+    "notificationToggleOff": "Lägg till en \"Logga bön\"-åtgärd i varje bönetidsnotis.",
+    "notificationToggleA11y": "Aktivera loggåtgärd i bönenotiser",
+    "notePlaceholder": "Privat anteckning (endast på denna enhet)",
+    "saveNote": "Spara anteckning",
+    "logActionTitle": "Logga bön",
+    "logSunnahActionTitle": "Logga med sunnah",
+    "loadFailedTitle": "Kunde inte läsa loggen",
+    "loadFailedBody": "Dina data finns kvar på enheten men kunde inte läsas just nu. Försök öppna loggen igen.",
+    "saveFailedTitle": "Kunde inte spara",
+    "saveFailedBody": "Försök igen.",
+    "noteLabel": "Personlig anteckning (privat, krypterad)",
+    "notYet": "Inte än – tiden har inte kommit",
+    "quickLogMark": "Markera {{prayer}} som bedd",
+    "quickLogLogged": "{{prayer}} loggad: {{status}}. Tryck för att ångra",
+    "quickLogNotYet": "{{prayer}} har inte infallit ännu",
+    "passedTitle": "Logga {{prayer}} · {{day}}",
+    "passedBody": "Dess tid har passerat. Hur bads den?",
+    "passedFirstBody": "Första tiden har passerat och den andra är öppen. Bads den i första tiden, eller efter den?"
+  },
+  "events": {
+    "islamicNewYear": "Islamiskt nyår",
+    "ashura": "Ashura-dagen",
+    "mawlid": "Mawlid an-Nabi",
+    "isra": "Isra och Mi'raj",
+    "midShaban": "Mitten av Sha'bân",
+    "ramadanBegins": "Ramadan börjar",
+    "laylatAlQadr": "Laylat al-Qadr (uppmärksammad)",
+    "eidAlFitr": "Eid al-Fitr",
+    "arafah": "Arafa-dagen",
+    "eidAlAdha": "Eid al-Adha",
+    "whiteDays": "De vita dagarna",
+    "sixOfShawwal": "Sex i Shawwal"
+  },
+  "ramadan": {
+    "title": "Ramadan",
+    "suhoor": "Suhoor",
+    "iftar": "Iftar",
+    "suhoorIn": "Suhoor slutar om {{time}}",
+    "iftarIn": "Iftar om {{time}}"
+  },
+  "onboarding": {
+    "skip": "Hoppa över just nu",
+    "next": "Nästa",
+    "done": "Klar",
+    "stepLabel": "Steg {{current}} av {{total}}",
+    "welcome": {
+      "title": "Välkommen",
+      "body": "En trevlig och privat app för bönetider. Ingen analys, inga spårare — bara lugna påminnelser om de fem dagliga bönerna.",
+      "salam": "Frid vare med dig, och Allahs nåd och Hans välsignelser."
+    },
+    "location": {
+      "title": "Din plats",
+      "body": "Vi använder din ungefärliga position för att räkna ut exakta bönetider. Koordinaterna förblir krypterade på den här enheten — de lämnar den aldrig.",
+      "cta": "Använd min plats"
+    },
+    "notifications": {
+      "title": "Böneaviseringar",
+      "body": "Vi kan diskret avisera dig vid varje bönetid. Du kan välja ett ljud, ställa in en påminnelse eller stänga av det här när som helst.",
+      "cta": "Aktivera aviseringar"
+    },
+    "exactAlarms": {
+      "title": "Aviseringar på exakt tid",
+      "body": "På nyare Android behöver böneaviseringar en extra behörighet för att komma i tid och inte några minuter för sent.",
+      "cta": "Tillåt exakta aviseringar"
+    },
+    "salamA11y": "As-salāmu ʿalaykum wa raḥmatu llāhi taʿālā wa barakātuh"
+  },
+  "backup": {
+    "exportSection": "Exportera",
+    "exportHelp": "Spara dina inställningar, sparade platser, bönedagbok och fastelogg till en JSON-fil. Öppna den senare för att återställa.",
+    "exportCta": "Exportera säkerhetskopia",
+    "shareTitle": "Ibadat 365-säkerhetskopia",
+    "exportFailedTitle": "Kunde inte exportera",
+    "restoreSection": "Återställ",
+    "restoreHelp": "Klistra in en JSON-säkerhetskopia nedan och tryck på Återställ för att förhandsgranska den. Appen bekräftar innan något tillämpas.",
+    "restorePastePlaceholder": "Klistra in JSON-säkerhetskopian här…",
+    "restoreCta": "Förhandsgranska återställning",
+    "restorePreviewTitle": "Säkerhetskopia hittad",
+    "restorePreviewBody": "{{settings}} inställningar, {{presets}} sparade platser, {{journal}} dagboksanteckningar, {{fasting}} fastedagar. Tillämpas i nästa steg.",
+    "restoreFailedTitle": "Kunde inte tolka säkerhetskopian",
+    "notAnEnvelope": "Filen ser inte ut att vara en Ibadat 365-säkerhetskopia.",
+    "privacyNote": "Säkerhetskopior stannar på din enhet tills du delar dem. Koordinater och dagboksanteckningar kommer att kunna krypteras med ett lösenord i en framtida uppdatering — håll din säkerhetskopia privat tills dess."
+  },
+  "fasting": {
+    "todayLabel": "Idag",
+    "ramadanDayLabel": "Ramadan · Dag {{day}}",
+    "statusKept": "Fastan hölls — barakAllāhu fīk.",
+    "statusRecommended": "En frivillig Sunnah-fasta infaller denna dag.",
+    "statusOptional": "Ingen fasta loggad idag.",
+    "markCta": "Markera dagens fasta",
+    "unmarkCta": "Avmarkera dagens fasta",
+    "statRamadan": "Ramadan",
+    "statVoluntary": "Frivilligt",
+    "statStreak": "Svit",
+    "gridLabel": "Denna Ramadan",
+    "gridDayA11y": "Dag {{day}} {{state}}",
+    "privacyNote": "Fastehistoriken förblir krypterad på din enhet.",
+    "encourageEmpty": "Logga din första fasta för att börja följa.",
+    "encourageActive": "Varje fasta räknas. Må Allah ta emot den.",
+    "encourageStreak": "Mashallah, {{count}} dagar i rad. Fortsätt.",
+    "reminderToggleTitle": "Påminnelse dagen innan",
+    "reminderToggleOn": "Du får en mjuk notis kl. {{hour}}:00 kvällen före varje Sunnah-fasta.",
+    "reminderToggleOff": "Få en notis kvällen före varje måndag/torsdag och särskild fastedag.",
+    "reminderToggleA11y": "Aktivera påminnelser dagen innan fasta",
+    "upcomingLabel": "Kommande Sunnah-fastor",
+    "daysAway": "om {{count}} d",
+    "daysSpan": "{{count}} dagar",
+    "daysCount": "{{count}} dagar",
+    "ramadanCountdownLabel": "Ramadan börjar om",
+    "mondayEncouragement": "Måndag är en Sunnah-fasta — gärningar visas för Allah på måndagar och torsdagar.",
+    "thursdayEncouragement": "Torsdag är en Sunnah-fasta — gärningar visas för Allah på måndagar och torsdagar.",
+    "monthViewLabel": "Alla loggade fastor",
+    "noLogsYet": "Dagar du fastar visas här.",
+    "typeRamadan": "Ramadan",
+    "typeVoluntary": "Frivillig / Sunnah",
+    "reminderChannelName": "Fastepåminnelser",
+    "reminderTitle": "Fastepåminnelse"
+  },
+  "methods": {
+    "0": "Shia — Ithna Ashari",
+    "1": "University of Islamic Sciences, Karachi",
+    "2": "Islamic Society of North America (ISNA)",
+    "3": "Muslim World League",
+    "4": "Umm Al-Qura-universitetet, Mecka",
+    "5": "Egyptian General Authority of Survey",
+    "7": "Institutet för geofysik, Teherans universitet",
+    "8": "Gulfregionen",
+    "9": "Kuwait",
+    "10": "Qatar",
+    "11": "Singapore",
+    "12": "Frankrike",
+    "13": "Turkiet",
+    "14": "Ryssland",
+    "15": "Moonsighting Committee Worldwide",
+    "21": "Marocko",
+    "auto": "Automatiskt (efter plats)"
+  },
+  "attributions": {
+    "groupScripture": "Texten",
+    "groupRecitation": "Recitation",
+    "groupMeaning": "Översättning och tafsir",
+    "groupTypefaces": "Typsnitt",
+    "footer": "Varje rad länkar till sin källa.",
+    "quranText": "Koranen — Uthmani-text",
+    "mushafImages": "Mushaf-sidbilder (604)",
+    "translationEditions": "Översättningar (14)",
+    "sahihIntl": "Sahih International (engelska)",
+    "pickthall": "Pickthall (engelska)",
+    "mushafMetadata": "Metadata för mushaf-sidor",
+    "riwayat": "Warsh-, Qālūn- och Shuʿbah-texter (nedladdade, inte medföljande)",
+    "riwayahLines": "Tryckt radgeometri för dessa mushaf",
+    "amiriFonts": "Amiri och Amiri Quran-typsnitt",
+    "scheherazade": "Scheherazade New",
+    "hisnulMuslim": "Hisn al-Muslim-duor",
+    "quranGeometry": "Data för ayah-positioner (quran.com / projektet Quran for Android)",
+    "recitation": "Recitationsljud (42 recitatörer): EveryAyah.com · ordtiming: quran-align (CC BY 4.0)",
+    "tafsir": "Tafsir-texter: Ibn Kathir, Maarif-ul-Quran, al-Muyassar",
+    "surahHeaderFont": "Kalligrafi för surarubriker"
+  },
+  "liveActivity": {
+    "title": "Nästa bön",
+    "in": "om {{remaining}}",
+    "now": "Nu",
+    "soon": "Börjar snart",
+    "channelName": "Bönnedräkning",
+    "channelDesc": "Fastnålad pågående notis som visar nedräkning till nästa bön.",
+    "fgsText": "Bönernedräkning aktiv",
+    "justThisOne": "en gång",
+    "inWord": "Om",
+    "atWord": "Kl.",
+    "hideOnLock": "Dölj på låsskärmen",
+    "showOnLock": "Visa på låsskärmen"
+  },
+  "hijri": {
+    "month_1": "Muharram",
+    "month_2": "Safar",
+    "month_3": "Rabi I",
+    "month_4": "Rabi II",
+    "month_5": "Jumada I",
+    "month_6": "Jumada II",
+    "month_7": "Rajab",
+    "month_8": "Sha'ban",
+    "month_9": "Ramadan",
+    "month_10": "Shawwal",
+    "month_11": "Dhul-Qa'dah",
+    "month_12": "Dhul-Hijjah"
+  },
+  "tour": {
+    "welcomeTitle": "Välkommen till Ibadat 365",
+    "welcomeBody": "Bönetider, Koranen och verktyg för daglig dyrkan — privat i grunden. Inga konton, inga spårare.",
+    "timesTitle": "Bönetider i ett ögonkast",
+    "timesBody": "Exakta tider för din plats, med en nedräkning till nästa bön. Svep på dagskortet för att se de kommande dagarna.",
+    "quranTitle": "Koranen, vackert återgiven",
+    "quranBody": "Läs Madinah-mushafen, lyssna på recitation från fem recitatörer, bokmärk verser och följ din khatmah.",
+    "customizeTitle": "Gör den till din",
+    "customizeBody": "Hemskärmswidgetar, en nedräkning i Live-aktivitet, teman och accentfärger — allt i Inställningar.",
+    "skip": "Hoppa över",
+    "next": "Nästa",
+    "done": "Kom igång"
+  },
+  "downloads": {
+    "title": "Hantera nedladdningar",
+    "settingsHelp": "Mushaf-sidor, recitationsljud och tafsir på den här enheten.",
+    "deleteTitle": "Ta bort nedladdning?",
+    "deleteBody": "{{what}} tas bort från enheten. Du kan hämta den igen när som helst.",
+    "total": "Totalt på enheten: {{size}}",
+    "mushaf": "Mushaf-sidor",
+    "mushafSub": "604 Madinah-sidor",
+    "audioSub": "Recitationsljud",
+    "tafsirSub": "Cachade tafsir-texter",
+    "empty": "Inget nedladdat ännu. Mushaf-sidor, recitationsljud och tafsir du hämtar visas här.",
+    "mushafPages": "{{pages}} av {{total}} sidor",
+    "legacyMushaf": "Äldre mushaf-sidor",
+    "legacyMushafSub": "Kvar från den tidigare läsaren. Inget öppnar dem längre.",
+    "riwayat": "Läsarter",
+    "riwayatFootnote": "Ibadat 365 innehåller inte och lagrar inte dessa texter. Filen hämtas från utgivaren direkt till den här enheten och kontrolleras här innan något läses ur den.",
+    "riwayahInstalled": "{{pages}} sidor · från {{host}}",
+    "riwayahPublisher": "Utgiven av {{publisher}}. Krediterar {{credits}}.",
+    "riwayahBuiltIn": "Ingår i Ibadat 365. Inget att ladda ner och inget att ta bort.",
+    "riwayahOpenSource": "Öppna källan",
+    "riwayahDownload": "Ladda ner",
+    "riwayahFetchHowTo": "Ibadat 365 hämtar den från utgivaren direkt till den här enheten och kontrollerar den innan något läses ur den.",
+    "riwayahAddAFile": "Lägg till en fil jag redan har",
+    "riwayahHowTo": "Ladda ner JSON-filen från den sidan och välj den nedan. Den får förbli zippad.",
+    "riwayahLink": "Länk till datafilen",
+    "riwayahInstall": "Lägg till denna mushaf",
+    "riwayahChooseFile": "Välj den nedladdade filen",
+    "riwayahOrLink": "Eller klistra in en direktlänk till filen:",
+    "riwayahUnreadable": "Filen kunde inte läsas.",
+    "riwayahFileTooLarge": "Filen är alldeles för stor för att vara en mushaf.",
+    "riwayahZipUnsupported": "Arkivet har ett format som appen inte kan öppna. Packa upp det och välj filen inuti.",
+    "riwayahZipUnreadable": "Arkivet kunde inte öppnas.",
+    "riwayahNoJsonInZip": "Det finns ingen .json-fil i arkivet."
+  },
+  "dataStats": {
+    "title": "Datastatistik",
+    "toggle": "Visa datastatistik",
+    "toggleHelp": "Visar under Inställningar → Bönetider var bönetiderna kommer ifrån, hur mycket som är lagrat och när de uppdateras.",
+    "source": "Aktuell källa",
+    "daysStored": "Sparat på enheten",
+    "lastUpdated": "Senast uppdaterad",
+    "nextCheck": "Nästa uppdateringskoll",
+    "serverRun": "Senaste serverkörning",
+    "nextServerRun": "Nästa serverkörning",
+    "never": "—",
+    "daysUnit": "dagar",
+    "sourceCdn": "Serverdata (färsk)",
+    "sourceSeed": "Inbyggd offlinedata",
+    "sourceScrape": "Live Islamiska Förbundet",
+    "sourceAladhan": "AlAdhan",
+    "sourceLocal": "Beräkning på enheten",
+    "sourceUnknown": "Okänd",
+    "serverOk": "OK",
+    "serverWarning": "Låg täckning",
+    "serverUnknown": "Inte kontrollerad än",
+    "unlockedTitle": "Datastatistik aktiverad",
+    "unlockedBody": "Ett statistikkort visas nu under Inställningar → Bönetider. Stäng av det när du vill nedan.",
+    "serverCoverage": "Servertäckning",
+    "serverSweden": "Sverige · Islamiska Förbundet",
+    "serverMorocco": "Marocko · Habous",
+    "inUse": "används",
+    "habousWindow": "Ministeriet publicerar bara den pågående hijrimånaden, så fönstret krymper med en dag varje dag och fylls på när månaden vänder. En ombyggnad gör det inte längre."
+  },
+  "log": {
+    "legendPrayers": "0 → 5 böner",
+    "fasted": "fastade",
+    "dayA11y": "{{date}}: {{prayers}} böner loggade{{fast}}",
+    "streakCaption": "{{count}} dagar i rad",
+    "streakBest": "(bäst {{best}})",
+    "fastsCaption": "{{count}} fastor",
+    "markAllOnTime": "Markera alla i tid",
+    "iftarAt": "Iftar {{time}}",
+    "allUpcoming": "Alla kommande",
+    "title": "Logg",
+    "practiceTitle": "Utövande",
+    "previousDay": "Föregående dag",
+    "nextDay": "Nästa dag",
+    "backToToday": "Tillbaka till idag",
+    "fastingTitle": "Fasta",
+    "noFastLogged": "Ingen fasta registrerad.",
+    "markFasted": "Markera som fastad",
+    "unmarkFasted": "Avmarkera",
+    "showOnHome": "Visa grafen på startsidan",
+    "showOnHomeHelp": "Lägger till dina rutor på Idag-skärmen. Av som standard.",
+    "backfillAction": "Fyll i tidigare dagar",
+    "backfillTitle": "Fyll i tidigare dagar?",
+    "backfillBody": "Detta registrerar {{prayers}} böner under {{days}} dagar ({{range}}) som bedda i tid. Dagar du redan loggat lämnas orörda, och dagens datum påverkas inte.",
+    "backfillConfirm": "Fyll i dem",
+    "backfillNothingTitle": "Inget att fylla i",
+    "backfillNothingBody": "Alla dagar före i dag är redan registrerade.",
+    "openLogFromHome": "Öppna loggen",
+    "swipeHint": "Svep för att byta dag",
+    "backfillUnreadable": "Din logg kunde inte läsas just nu, så ingenting ändrades. Försök igen.",
+    "backfillRefusedTitle": "Ingenting ändrades",
+    "backfillRefusedBody": "Att fylla i de dagarna skulle ha ändrat något du redan loggat, så det stoppades. Din logg är orörd.",
+    "fillMonthsAction": "Fyll de senaste tre månaderna",
+    "fillMonthsTitle": "Fyll de senaste tre månaderna?",
+    "fillMonthsBody": "Detta registrerar {{prayers}} böner under {{days}} tomma dagar ({{range}}) som bedda i tid. {{skipped}} dagar lämnas orörda eftersom de redan innehåller något – en status, en anteckning eller en fasta. Dagens datum påverkas inte.",
+    "fillMonthsNothingBody": "Varje dag de senaste tre månaderna har redan något loggat.",
+    "fillSummaryDays": "Dagar",
+    "fillSummaryPrayers": "Böner",
+    "backfillPreserved": "Dagar du redan loggat lämnas orörda, och dagens datum påverkas inte.",
+    "fillMonthsPreserved": "Dagar som redan har en status, en anteckning eller en fasta lämnas precis som de är. Dagens datum påverkas inte.",
+    "fillSummaryLeftAlone": "Orörda",
+    "unlogged": "ej ifyllt",
+    "resetAction": "Nollställ bönloggen",
+    "resetTitle": "Nollställ bönloggen",
+    "resetBody": "Välj hur mycket som ska rensas, räknat från {{day}}. Fastor, sunnaböner och dhikr är egna register och rörs inte.",
+    "resetScopeDay": "Denna dag",
+    "resetScopeMonth": "Denna månad",
+    "resetScopeYear": "Detta år",
+    "resetScopeAll": "Allt",
+    "resetNothing": "ingenting",
+    "resetConfirmTitle": "Rensa dessa böner?",
+    "resetConfirm": "Rensa dem",
+    "resetPreserved": "Fastor, sunnaböner och dhikr rörs inte. Detta går inte att ångra.",
+    "resetRangeAll": "hela loggen",
+    "options": "Alternativ",
+    "setUpSync": "Ställ in synk",
+    "legendTitle": "Vad grafen visar"
+  },
+  "endOfDay": {
+    "title": "Logga dagens böner?",
+    "body": "Markera alla fem som bedda i tid, eller öppna loggen och fyll i dem en och en.",
+    "action": "Logga alla som utförda",
+    "channelName": "Slut på dagen-logg"
+  },
+  "duaReminders": {
+    "channelName": "Morgonens och kvällens duaer",
+    "morningTitle": "Morgonens adhkār",
+    "morningBody": "Morgonens duaer — deras tid varar till soluppgången.",
+    "eveningTitle": "Kvällens adhkār",
+    "eveningBody": "Kvällens duaer — deras tid varar till solnedgången.",
+    "groupTitle": "Morgonens och kvällens duaer",
+    "morning": "Morgonens duaer",
+    "morningHelp": "En påminnelse i morgonfönstret — efter Fajr, före soluppgången.",
+    "evening": "Kvällens duaer",
+    "eveningHelp": "En påminnelse i kvällsfönstret — efter Asr, före solnedgången."
+  },
+  "sunnah": {
+    "none": "Ingen",
+    "short": "Sunnah",
+    "ofTotal": "{{done}} av {{total}}",
+    "ofTotalShort": "{{done}}/{{total}}",
+    "a11yNone": "{{prayer}}: ingen sunnahbön",
+    "a11yCount": "{{prayer}} sunnah: {{done}} av {{total}} loggade",
+    "afterIsha": "Efter Isha",
+    "witr": "Witr",
+    "prayed": "Bedd",
+    "logIt": "Logga",
+    "qiyam": "Qiyam al-Layl",
+    "qiyamNote": "Räknas inte in i sviten",
+    "resetQiyam": "Nollställ Qiyam al-Layl",
+    "reset": "Nollställ",
+    "addQiyam": "Logga en Qiyam al-Layl",
+    "qiyamCountA11y": "Loggade Qiyam al-Layl",
+    "streakCaption": "{{count}} dagar sunnah",
+    "legend": "sunnah",
+    "qiyamLegend": "nattbön",
+    "a11yAll": "alla sunnah"
+  },
+  "sync": {
+    "exportSection": "Exportera",
+    "importSection": "Importera",
+    "exportHelp": "Spara allt du har registrerat till en fil som du behåller — för att flytta till en ny telefon, eller bara för att det ska finnas någon annanstans.",
+    "exportCta": "Exportera till en fil",
+    "exportFailedTitle": "Exporten misslyckades",
+    "importHelp": "Öppna säkerhetskopian, kopiera allt och klistra in det här. Ingenting som redan finns på den här enheten tas bort — de två uppsättningarna slås samman.",
+    "importPastePlaceholder": "Klistra in säkerhetskopian",
+    "importPreviewCta": "Kontrollera filen",
+    "importApplyCta": "Importera till den här enheten",
+    "importFound": "Skapad {{date}}. Välj vad du vill hämta från den:",
+    "importDoneTitle": "Importerat",
+    "importNothingNew": "Allt i den filen fanns redan här.",
+    "importEmptyTitle": "Inget att importera",
+    "importFailedTitle": "Importen misslyckades",
+    "importUnreadableTitle": "Kunde inte läsa det där",
+    "importUnreadableBody": "Det där ser inte ut som en säkerhetskopia från Ibadat 365. Klistra in hela innehållet i .json-filen.",
+    "importedLine": "{{label}}: {{before}} → {{after}}",
+    "privacyNote": "Filen är vanlig text och är inte lösenordsskyddad — den är lika privat som platsen du sparar den på. Ingenting laddas någonsin upp.",
+    "category": {
+      "prayers": "Bönelogg",
+      "sunnah": "Sunnaböner",
+      "fasting": "Fasta",
+      "dhikr": "Dhikr",
+      "quran": "Koranen",
+      "settings": "Inställningar",
+      "location": "Plats"
+    },
+    "categoryHint": {
+      "prayers": "Varje bön du har loggat, och dina anteckningar",
+      "sunnah": "Sunnah, witr och qiyam al-layl",
+      "fasting": "Dagar du fastat och deras avsikter",
+      "dhikr": "Avklarade tasbih-omgångar",
+      "quran": "Bokmärken, stjärnmärkta ayat, khatmah-planer, senast lästa, reciterare och tafsir",
+      "settings": "Utseende, beräkningsmetod, aviseringar och widgetar",
+      "location": "Sparade platser och koordinater"
+    },
+    "count": {
+      "prayers": "Böner",
+      "fasting": "Fastedagar",
+      "dhikr": "Dhikr-dagar",
+      "sunnah": "Sunnah-dagar",
+      "bookmarks": "Bokmärken",
+      "khatmah": "Khatmah-planer"
+    },
+    "settingsRowHint": "Parkoppla en annan enhet",
+    "pairIntro": "Synk håller din historik likadan på alla enheter du använder. Ibadat 365 flyttar aldrig något själv: appen behöver en mapp som Nextcloud, OneDrive, Dropbox, Syncthing eller liknande redan håller synkroniserad mellan dina enheter. Ibadat 365 skriver en liten krypterad fil där, och bara dina egna enheter kan läsa den.",
+    "thisDevice": "Den här enheten",
+    "deviceNameLabel": "Enhetens namn",
+    "thisDeviceHelp": "Visa den här koden för din andra enhet, eller skriv in den där. Det är inte ett lösenord — den går bra att kopiera, fotografera eller skicka till dig själv.",
+    "codeA11y": "Den här enhetens parkopplingskod",
+    "copyCode": "Kopiera koden",
+    "copied": "Koden kopierad",
+    "copyFailed": "Det gick inte att kopiera koden",
+    "addDevice": "Lägg till en enhet",
+    "addDeviceHelp": "Skriv eller klistra in koden som visas på din andra enhet.",
+    "codePlaceholder": "MHRB-…",
+    "pasteCode": "Klistra in",
+    "addCta": "Parkoppla",
+    "pairWarnTitle": "Parkoppla med enhet {{value}}?",
+    "pairWarnBody": "Allt som finns registrerat på den enheten dyker upp här, och allt som finns här dyker upp där. Sammanfogningen tar aldrig bort något: där de två skiljer sig behålls den senaste posten.",
+    "pairConfirm": "Parkoppla",
+    "pairedTitle": "Parkopplad",
+    "pairedBody": "Den här enheten har skrivit sin nyckel till mappen. Öppna Ibadat 365 på den andra enheten — så fort den läser mappen är båda parkopplade och synkar.",
+    "errorBadCodeTitle": "Koden fungerade inte",
+    "errorBadCode": "Kontrollera koden och försök igen. Den är grupperad i sexor, och ett enda fel tecken räcker för att den ska avvisas.",
+    "errorThisDevice": "Det är den här enhetens egen kod. Du behöver den som visas på den andra enheten.",
+    "errorTooMany": "Du kan parkoppla upp till {{max}} enheter. Ta bort en först.",
+    "errorSaveTitle": "Kunde inte spara parkopplingen",
+    "errorSaveBody": "Enheten ville inte lagra den. Försök igen — ingenting ändrades.",
+    "pairedSection": "Parkopplade enheter",
+    "noneYet": "Inga enheter ännu.",
+    "peerNameLabel": "Namn på den här parkopplade enheten",
+    "unnamedDevice": "Namnlös enhet",
+    "fingerprint": "Fingeravtryck {{value}}",
+    "viaCode": "tillagd här",
+    "viaAnnounced": "tillagd från den enheten",
+    "lastSeen": "Senast synkad {{when}}",
+    "neverSeen": "Inte synkad ännu",
+    "remove": "Ta bort",
+    "removeTitle": "Ta bort {{value}}?",
+    "removeBody": "Den här enheten slutar skicka till den och slutar ta emot från den. Ta bort den här enheten på den andra också, annars fortsätter den försöka.",
+    "notReady": "Den här enheten kan inte ställa in synk: den saknar en säker källa till slumptal, och en nyckel som skapas utan en sådan vore inte privat.",
+    "privacyNoteP2p": "Din kod är en publik nyckel, inte en hemlighet. Själva uppgifterna krypteras bara för dina parkopplade enheter, och ingenting laddas upp någonstans.",
+    "folderSection": "Mapp",
+    "folderHelp": "Välj en mapp som din synktjänst redan håller synkroniserad på alla enheter — en mapp i Nextcloud, OneDrive, Dropbox eller Syncthing. Om ingenting synkar den mappen mellan dina enheter når ingenting fram. Ibadat 365 skriver en liten krypterad fil där och läser dem dina andra enheter lämnat.",
+    "chooseFolder": "Välj en mapp",
+    "changeFolder": "Byt mapp",
+    "folderChosen": "Använder {{value}}",
+    "syncNow": "Synka nu",
+    "lastSyncedAt": "Senast kontrollerad {{when}}",
+    "neverSynced": "Inte kontrollerad ännu",
+    "autoTitle": "Synka automatiskt",
+    "freqOpen": "Vid öppning",
+    "freqHourly": "Varje timme",
+    "freqDaily": "En gång om dagen",
+    "freqOff": "Av",
+    "autoHelp": "Automatisk synk körs bara när appen är öppen. ”Synka nu” fungerar alltid, oavsett vad du väljer här.",
+    "whatSyncs": "Vad som synkas",
+    "errorFolderGone": "Den mappen går inte att nå längre. Välj den igen.",
+    "errorUnsupported": "Det här bygget kan inte använda mappsynk.",
+    "syncDoneTitle": "Synkad",
+    "syncDoneBody": "Allt som fanns på dina andra enheter finns nu här, och det som finns här finns där.",
+    "syncNothing": "Inget nytt. Dina andra enheter har inte skrivit något sedan förra kontrollen.",
+    "syncFailedTitle": "Synken blev inte klar",
+    "syncFailedBody": "Något gick fel: {{detail}}",
+    "hint": {
+      "quranTitle": "Läser du på mer än en enhet?",
+      "quranBody": "Ställ in synk så följer din plats, dina bokmärken och din khatmah med mellan dem.",
+      "logTitle": "Logga på en enhet, se det på alla",
+      "logBody": "Ställ in synk så att dina uppgifter är likadana överallt. Ingenting laddas upp.",
+      "dismiss": "Dölj det här",
+      "openHint": "Öppnar synkinställningarna"
+    },
+    "pairedNeedsFolder": "Välj en mapp först. Det är via mappen de två enheterna når varandra, och utan en kan ingenting utbytas.",
+    "folderAppHint": "Ibadat 365 har skapat en egen mapp som heter {{value}}. Du hittar den i Filer, under På min iPhone — peka din synkapp mot den för att nå dina andra enheter.",
+    "syncQuietTitle": "Ingenting kom fram",
+    "syncNothingArrived": "Din fil ligger i mappen, men ingenting från dina andra enheter har dykt upp där. Båda enheterna måste peka mot samma mapp, och det som håller mappen i takt mellan dem måste vara igång.",
+    "syncStale": "Din fil ligger i mappen, men det senaste från {{device}} skrevs {{when}}. Om du har använt den enheten sedan dess har det som håller mappen synkroniserad slutat flytta filer.",
+    "scanCode": "Skanna",
+    "scanHint": "Rikta kameran mot koden på din andra enhet",
+    "scanDeniedTitle": "Kameran är inte tillåten",
+    "scanDeniedBody": "Ibadat 365 behöver kameran för att läsa koden. Du kan tillåta det i enhetens inställningar, eller skriva in koden i stället.",
+    "scanNoCameraTitle": "Ingen kamera",
+    "scanNoCameraBody": "Den här enheten har ingen kamera att skanna med. Skriv eller klistra in koden i stället.",
+    "freq15Min": "Var 15:e min",
+    "errorFolderUnwritable": "Det går inte att skriva i den mappen. Välj en annan — en mapp du själv skapat i Dokument eller Nedladdningar fungerar bäst.",
+    "errorFolderTitle": "Den mappen fungerade inte"
+  },
+  "stats": {
+    "daysUnit": " dagar",
+    "streakLabel": "Svit i tid",
+    "best": "bäst {{best}}",
+    "sunnahLabel": "Sunnah utförd",
+    "thisMonth": "denna månad",
+    "fastedLabel": "Fastat",
+    "owedLabel": "Böner att ta igen",
+    "nothingOwed": "Inget att ta igen",
+    "owedShow": "tryck för att se",
+    "owedHide": "visas ✕",
+    "owedHint": "Tryck på en dag för att ta igen den",
+    "owedMore": "+{{more}} till",
+    "owedA11y": "{{owed}} böner att ta igen, visa dem",
+    "nothingOwedA11y": "Inget att ta igen"
+  },
+  "surahReminders": {
+    "groupTitle": "Surapåminnelser",
+    "kahf": "Sura Al-Kahf på fredagar",
+    "kahfHelp": "En gång i veckan, på fredagen, vid tiden du väljer.",
+    "kahfTitle": "Al-Kahf",
+    "kahfBody": "Det är fredag — läs sura Al-Kahf.",
+    "mulk": "Sura Al-Mulk på kvällen",
+    "mulkHelp": "Varje kväll vid tiden du väljer — appen vet inte när du sover, så den frågar.",
+    "mulkTitle": "Al-Mulk",
+    "mulkBody": "Före sömnen — läs sura Al-Mulk."
+  },
+  "dhikr": {
+    "remindersTitle": "Dhikr-påminnelser",
+    "remindersBlurb": "Dina egna påminnelser, när som helst på dygnet",
+    "remindersFooter": "Oberoende av bönetiderna och helt offline — de går av utan uppkoppling och efter en omstart.",
+    "remindersEmpty": "Inga påminnelser än. Lägg till en för ett dhikr, eller för egna ord.",
+    "addReminder": "Lägg till en påminnelse",
+    "newReminder": "Ny påminnelse",
+    "editReminder": "Redigera påminnelse",
+    "deleteReminder": "Ta bort påminnelse",
+    "whichDhikr": "Vilket dhikr",
+    "ownWords": "Dina egna ord",
+    "ownWordsHelp": "En påminnelse som säger det du skriver.",
+    "customTitle": "Påminnelse",
+    "customTitleLabel": "Rubrik",
+    "customBodyLabel": "Text",
+    "days": "Dagar",
+    "everyDay": "Varje dag",
+    "sound": "Ljud",
+    "soundDefault": "Aviseringsljud",
+    "soundSilent": "Tyst",
+    "soundHelp": "Ingen inspelad dhikr följer med: appen levererar bara innehåll vars källa och licens den kan namnge, och det gäller även en röst. Att välja en egen inspelning kommer härnäst — se ärende #29.",
+    "meaning": {
+      "hawqala": "Det finns ingen makt och ingen kraft utom hos Allah",
+      "subhanallahwabihamdih": "Ära vare Allah, och lov och pris tillkommer Honom"
+    }
+  }
+}

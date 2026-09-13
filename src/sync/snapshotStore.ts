@@ -1,0 +1,204 @@
+/**
+ * The half of the snapshot that touches disk.
+ *
+ * `snapshot.ts` and `merge.ts` are pure so they can be tested exhaustively
+ * without a device; this is the thin, boring layer that reads the six stores
+ * and writes the result back. Keeping it thin is the point — every decision
+ * worth arguing about lives next door, and this file should never need one.
+ *
+ * WHAT IS DELIBERATELY NOT HERE: the prayer-times cache, the city registry,
+ * provider health, the reverse-geocode cache, the dataset caches, the
+ * install date, the muted-adhan flag, the feature-tour flag, and every
+ * downloaded mushaf page, font, recitation and tafsir file. Those are either
+ * derived (they rebuild themselves), device-local (they describe THIS phone,
+ * not the user), or enormous. Carrying `mihrab.first_seen_day` across would
+ * be actively wrong: the Log's "fill in earlier days" button uses it as the
+ * earliest day it may offer, so importing it would let a phone claim days it
+ * never saw.
+ */
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {
+  durableEncryptedGet,
+  durableEncryptedSet,
+} from '../storage/durableWrite';
+import { coerceJournalEntries } from '../journal/journal';
+import { coerceFastEntries } from '../fasting/fasting';
+import { coerceSunnahLog } from '../journal/sunnah';
+import {
+  coerceDhikrLog,
+  DHIKR_KEY,
+  FASTING_KEY,
+  JOURNAL_KEY,
+  SUNNAH_KEY,
+  notifyPracticeChanged,
+} from '../practice/practiceStore';
+import {
+  coerceQuranState,
+  primeQuranState,
+  QURAN_STORAGE_KEY,
+} from '../quran/quranState';
+import { republishWidgetPayload } from '../widget/republishWidgetPayload';
+import { whileApplyingSnapshot } from './recordChanged';
+import { emptyData, type SnapshotData, type SyncSelection } from './snapshot';
+import { mergeData, summarise, type MergeSummary } from './merge';
+import type { Snapshot } from './snapshot';
+
+/** Plaintext settings blob. Must match `KEY` in settings/storage.ts. */
+export const SETTINGS_KEY = 'prayerapp.settings.v1';
+/** Encrypted location blob. Must match `SECURE_KEY` in secureStorage.ts. */
+export const LOCATION_KEY = 'prayerapp.location.v1';
+
+function parse<T>(raw: string | null, coerce: (v: unknown) => T, fallback: T): T {
+  if (!raw) return fallback;
+  try {
+    return coerce(JSON.parse(raw));
+  } catch {
+    return fallback;
+  }
+}
+
+function asObject(v: unknown): Record<string, unknown> {
+  return v && typeof v === 'object' && !Array.isArray(v)
+    ? (v as Record<string, unknown>)
+    : {};
+}
+
+/**
+ * Read every syncable store, whatever state it is in.
+ *
+ * Every read is independently guarded: one unreadable store must not stop
+ * the other five being exported. Someone whose Keychain entry was lost in a
+ * device migration should still get their Quran bookmarks out.
+ *
+ * EXCEPT when the result is about to be written back. A merge takes what
+ * this returns as the local side, unions the peer's copy onto it, and
+ * writes the result over the stores — so a journal that exists and could
+ * not be read must not come back as an empty journal here, or the union
+ * is "the peer's entries" and the local ones are gone. `strict` lets that
+ * read fail out loud (see `durableEncryptedGet`); the export path keeps
+ * the lenient reads, because a backup of what CAN be read beats none.
+ */
+export async function collectData(
+  options: { strict?: boolean } = {},
+): Promise<SnapshotData> {
+  const enc = (key: string) =>
+    options.strict
+      ? durableEncryptedGet(key, { strict: true })
+      : durableEncryptedGet(key).catch(() => null);
+  const [journal, fasting, dhikr, sunnah, quran, settings, location] =
+    await Promise.all([
+      enc(JOURNAL_KEY),
+      enc(FASTING_KEY),
+      enc(DHIKR_KEY),
+      enc(SUNNAH_KEY),
+      AsyncStorage.getItem(QURAN_STORAGE_KEY).catch(() => null),
+      AsyncStorage.getItem(SETTINGS_KEY).catch(() => null),
+      enc(LOCATION_KEY),
+    ]);
+  const base = emptyData();
+  return {
+    prayers: parse(journal, coerceJournalEntries, base.prayers),
+    fasting: parse(fasting, coerceFastEntries, base.fasting),
+    dhikr: parse(dhikr, coerceDhikrLog, base.dhikr),
+    sunnah: parse(sunnah, coerceSunnahLog, base.sunnah),
+    quran: parse(quran, coerceQuranState, base.quran),
+    settings: parse(settings, asObject, base.settings),
+    location: parse(location, asObject, base.location),
+  };
+}
+
+/**
+ * Write back only what changed.
+ *
+ * A store whose category the user declined is not rewritten at all, rather
+ * than rewritten with the same bytes: on the encrypted stores each write is
+ * a Keystore round-trip that can fail, and a failure that risks data has no
+ * business happening for a category nobody asked to touch.
+ */
+export async function writeData(
+  next: SnapshotData,
+  touched: SyncSelection,
+): Promise<void> {
+  const jobs: Array<Promise<unknown>> = [];
+  if (touched.prayers) {
+    jobs.push(durableEncryptedSet(JOURNAL_KEY, JSON.stringify(next.prayers)));
+  }
+  if (touched.fasting) {
+    jobs.push(durableEncryptedSet(FASTING_KEY, JSON.stringify(next.fasting)));
+  }
+  if (touched.dhikr) {
+    jobs.push(durableEncryptedSet(DHIKR_KEY, JSON.stringify(next.dhikr)));
+  }
+  if (touched.sunnah) {
+    jobs.push(durableEncryptedSet(SUNNAH_KEY, JSON.stringify(next.sunnah)));
+  }
+  if (touched.quran) {
+    jobs.push(
+      AsyncStorage.setItem(QURAN_STORAGE_KEY, JSON.stringify(next.quran)),
+    );
+  }
+  // ...and see below: the Quran store has to be told, not just the disk.
+  if (touched.settings) {
+    jobs.push(
+      AsyncStorage.setItem(SETTINGS_KEY, JSON.stringify(next.settings)),
+    );
+  }
+  if (touched.location) {
+    jobs.push(durableEncryptedSet(LOCATION_KEY, JSON.stringify(next.location)));
+  }
+  await Promise.all(jobs);
+
+  // Tell the stores, not only the disk.
+  //
+  // Every write above goes straight to a key. The practice stores are fine
+  // with that — `notifyPracticeChanged` drops their cache and everyone
+  // re-reads. The Quran store is not: it holds its state in memory and its
+  // hydrate is idempotent, so once the app has started, nothing short of a
+  // restart would have picked this up. A restore that visibly did nothing to
+  // the reading position until the app was killed is indistinguishable from
+  // a restore that failed.
+  if (touched.quran) {
+    try {
+      primeQuranState(next.quran);
+    } catch (e) {
+      console.warn('snapshotStore: could not adopt the restored Quran state', e);
+    }
+  }
+  notifyPracticeChanged();
+
+  // The widget is a reader of every one of these and has no way to notice a
+  // restore on its own.
+  void republishWidgetPayload('queue-drain');
+}
+
+export type ApplyResult = {
+  summary: MergeSummary;
+  /** The categories that were actually written. */
+  applied: SyncSelection;
+};
+
+/**
+ * Merge a snapshot into this device and persist the result.
+ *
+ * A category is only touched when the snapshot carries it AND the user
+ * accepted it — two gates, so neither the sending device nor the receiving
+ * one can decide alone.
+ */
+export async function applySnapshot(
+  snapshot: Snapshot,
+  accept: SyncSelection,
+): Promise<ApplyResult> {
+  // Strict: what this reads is what the merge writes back over.
+  const before = await collectData({ strict: true });
+  const after = mergeData(before, snapshot, accept);
+  const applied = {} as SyncSelection;
+  for (const key of Object.keys(accept) as Array<keyof SyncSelection>) {
+    applied[key] = accept[key] && snapshot.data[key] !== undefined;
+  }
+  // WITH THE CHANGE SIGNAL OFF. `writeData` writes every store a change
+  // would schedule a sync for, so without this a round would end by asking
+  // for another one — on every paired device, each one's merge waking the
+  // next, indefinitely. A merge is the one write that is not news.
+  await whileApplyingSnapshot(() => writeData(after, applied));
+  return { summary: summarise(before, after), applied };
+}

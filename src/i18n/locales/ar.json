@@ -1,0 +1,1779 @@
+{
+  "app": {
+    "name": "محراب",
+    "tagline": "أوقات الصلاة وبوصلة القبلة والقرآن والأدعية والأذكار — دون الاتصال بالإنترنت، في تطبيق واحد."
+  },
+  "nav": {
+    "home": "محراب",
+    "settings": "الإعدادات",
+    "month": "الشهر",
+    "shareMonth": "مشاركة الشهر",
+    "compass": "القبلة",
+    "tasbih": "التسبيح",
+    "duas": "الأدعية",
+    "quran": "القرآن",
+    "journal": "يوميات الصلاة",
+    "backup": "نسخ احتياطي",
+    "fasting": "الصيام",
+    "today": "اليوم",
+    "sync": "المزامنة بين الأجهزة"
+  },
+  "a11y": {
+    "openSettings": "فتح الإعدادات",
+    "openMonth": "فتح عرض الشهر",
+    "openCompass": "فتح بوصلة القبلة",
+    "openTimesSource": "تغيير مصدر أوقات الصلاة",
+    "countdownTo": "اجعل العد التنازلي إلى هذه الصلاة",
+    "countdownHere": "العد التنازلي مضبوط على هذه الصلاة. اضغط للعودة إلى الصلاة التالية."
+  },
+  "common": {
+    "change": "تغيير",
+    "tryAgain": "حاول مرة أخرى",
+    "retry": "إعادة المحاولة",
+    "continue": "متابعة",
+    "back": "رجوع",
+    "play": "تشغيل",
+    "pause": "إيقاف مؤقت",
+    "stop": "إيقاف",
+    "loading": "جارٍ التحميل…",
+    "automatic": "تلقائي",
+    "openSettings": "فتح الإعدادات",
+    "cancel": "إلغاء",
+    "ok": "حسناً",
+    "today": "اليوم",
+    "close": "إغلاق",
+    "share": "مشاركة",
+    "done": "تم",
+    "delete": "حذف",
+    "cancelled": "أُلغي.",
+    "listJoin": " و",
+    "confirmDelete": "اضغط مرة أخرى للحذف",
+    "learnMore": "اعرف المزيد"
+  },
+  "home": {
+    "loadingPrayer": "جارٍ تحميل أوقات الصلاة…",
+    "nextPrayer": "الصلاة التالية",
+    "nextIn": "خلال {{time}}",
+    "hanafiSuffix": "عصر حنفي",
+    "monthTimesLink": "أوقات الصلاة للشهر كاملًا",
+    "localFallbackNotice": "حساب محلي — اتصل بالإنترنت للتحديث",
+    "lastGpsCoordsNotice": "استخدام الموقع الأخير — GPS غير متاح",
+    "exactAlarmDenied": "تنبيهات الصلاة تحتاج إذن التنبيه الدقيق للتوقيت الصحيح. اضغط للمنح.",
+    "notifPermDenied": "إذن الإشعارات مرفوض — لن تعمل تنبيهات الصلاة. اضغط لفتح الإعدادات.",
+    "updatingLocation": "جارٍ تحديث الموقع",
+    "today": "اليوم",
+    "tomorrow": "غداً",
+    "savedLocationLabel": "{{name}}",
+    "switchLocation": "تغيير الموقع",
+    "autoBadge": "تلقائي",
+    "locating": "جارٍ تحديد الموقع…",
+    "backToToday": "العودة إلى اليوم",
+    "updatedAt": "آخر تحديث {{when}}",
+    "daysStored": "{{count}} يومًا مخزّنة",
+    "quranShortcut": "افتح المصحف",
+    "dayStrip": "اختر يومًا",
+    "nextPrayerIn": "{{prayer}} خلال",
+    "firstPrayer": "أول صلاة {{prayer}} · {{time}}",
+    "todaySummary": "اليوم",
+    "prayersLogged": "{{count}} من {{total}} صلوات مسجلة",
+    "noFastToday": "لم يُسجَّل صيام",
+    "dhikrSets": "{{count}} جولة ذكر مكتملة",
+    "fastKept": {
+      "ramadan": "صيام رمضان",
+      "voluntary": "صيام سنة",
+      "qadha": "صيام قضاء"
+    },
+    "readItIn": "اقرأها في {{surah}}",
+    "continueAt": "متابعة · {{surah}} {{ref}}",
+    "khatmahDay": "الختمة اليوم {{day}} من {{total}}",
+    "khatmahDaysToGo": "بقي {{count}} يومًا",
+    "pagesLeftToday": "بقي {{count}} صفحة اليوم",
+    "pageNumber": "صفحة {{page}}",
+    "readingDone": "انتهت قراءة اليوم",
+    "readOn": "تابع القراءة",
+    "qiblaChipA11y": "القبلة {{degrees}} درجة",
+    "qiblaChipHint": "يفتح بوصلة القبلة",
+    "alertOverrideOnce": "{{mode}} هذه المرة فقط · إعادة",
+    "alertOverrideA11y": "{{prayer}} مضبوطة على {{mode}} هذه المرة فقط",
+    "alertOverrideResetHint": "يعيد {{mode}}",
+    "yesterday": "أمس",
+    "startReading": "ابدأ القراءة",
+    "startReadingHint": "الفاتحة، الصفحة ١"
+  },
+  "errors": {
+    "locationNeededTitle": "الموقع مطلوب",
+    "locationNeededBody": "أوقات الصلاة تحتاج إلى موقعك التقريبي. اسمح بالوصول إلى الموقع في إعدادات النظام ثم حاول مرة أخرى.",
+    "locationErrorTitle": "خطأ في الموقع",
+    "apiErrorTitle": "تعذّر تحميل الأوقات",
+    "coordLat": "يجب أن تكون خط العرض بين ‎-90‎ و‎ 90‎.",
+    "coordLng": "يجب أن يكون خط الطول بين ‎-180‎ و‎ 180‎.",
+    "gpsPermission": "إذن الموقع مطلوب لاستخدام موقع الجهاز.",
+    "gpsRead": "تعذّر قراءة موقع GPS.",
+    "gpsRequest": "تعذّر طلب الموقع."
+  },
+  "month": {
+    "locationNotReadyTitle": "الموقع غير جاهز",
+    "locationNotReadyBody": "افتح الرئيسية وحمّل أوقات اليوم مرة واحدة حتى تتمكن هذه الشاشة من استخدام موقع GPS.",
+    "thisMonth": "هذا الشهر",
+    "standardView": "قياسي",
+    "shareView": "للمشاركة",
+    "shareMonth": "مشاركة الصورة",
+    "loadError": "تعذّر تحميل الشهر.",
+    "empty": "لا يوجد ما يُعرض.",
+    "refreshData": "تحديث البيانات المخزنة",
+    "refreshing": "جارٍ التحديث...",
+    "monthsStored": "{{count}} أشهر مخزنة",
+    "dayOfWeek": "اليوم",
+    "date": "التاريخ",
+    "hijri": "هجري",
+    "gregorian": "ميلادي",
+    "prayerTimes": "مواقيت الصلاة",
+    "daruriLegend": "السطر الصغير تحت الفجر والعصر والعشاء هو وقت انتهاء الوقت الاختياري لكل منها. وينتهي وقت الظهر الاختياري بدخول العصر، والمغرب بدخول العشاء، فهذان العمودان نفسهما. وحدّا الفجر والعصر تقريبيان."
+  },
+  "share": {
+    "tagline": "مواقيت الصلاة والقبلة والقرآن",
+    "timesFor": "مواقيت الصلاة في {{place}}",
+    "scanForApp": "امسح الرمز لتحميل التطبيق",
+    "asrHanafi": "العصر: حنفي",
+    "asrStandard": "العصر: الجمهور",
+    "source": "المواقيت من {{source}}",
+    "footerNote": "مواقيت محسوبة. اتبع مسجد حيّك عند الاختلاف.",
+    "sheetLanguage": "لغة الورقة",
+    "exportImage": "مشاركة صورة",
+    "exportPdf": "مشاركة PDF (A4)",
+    "pitch": "مجاني وبلا إعلانات. مواقيت الصلاة والقبلة والقرآن بالتلاوة والترجمة ومتابعة الختمة."
+  },
+  "settings": {
+    "laDesignLabel": "النمط",
+    "laDesignTimeline": "الجدول الزمني",
+    "laDesignCountdown": "العد التنازلي",
+    "appearance": "المظهر",
+    "theme": "السمة",
+    "themeSystem": "النظام",
+    "themeLight": "فاتح",
+    "themeDark": "داكن",
+    "themeHelp": "يتبع النظام وضع الإضاءة أو الداكن على الجهاز. فعّل ألوان النظام لاستخدام لوحة الألوان في التطبيق (بما فيها Material You على أندرويد). الأزرار والتمييزات تتبع لون الجهاز الأساسي لتتماشى مع الخلفية عند توفر الألوان الديناميكية.",
+    "clockFormat": "صيغة الوقت",
+    "clockFormatAuto": "تلقائي",
+    "clockFormat12": "12 ساعة",
+    "clockFormat24": "24 ساعة",
+    "clockFormatHelp": "يتبع الوضع التلقائي إعداد الساعة في جهازك. أوقات الصلاة وجدول الشهر والأدوات تستخدم الصيغة نفسها.",
+    "clockFormatExample": "مثال: {{time}}",
+    "systemDynamicColors": "ألوان النظام",
+    "systemDynamicColorsHelp": "يستخدم ألوان النظام الدلالية والديناميكية في التطبيق عندما يكون المظهر «النظام». الوضع الأسود البحت (OLED) يظل يغمّق الخلفيات في الوضع الداكن.",
+    "pureBlack": "أسود كامل (OLED)",
+    "pureBlackHelp": "خلفية سوداء بالكامل في الوضع الداكن لشاشات OLED.",
+    "dataSource": "مصدر البيانات",
+    "provider": "مزوّد أوقات الصلاة",
+    "providerAutoLine": "تلقائي · {{label}}",
+    "providerAutoHelp": "في السويد تُستخدم مصادر السويد (مدن مدرجة)؛ خارج السويد يُستخدم AlAdhan. اختر مصدرًا أدناه لتثبيت المزوّد.",
+    "providerOverridden": "{{picked}} لا يوفّر أوقاتًا لموقعك، لذا يتولى {{used}} الأمر.",
+    "location": "الموقع",
+    "automatic": "تلقائي",
+    "manual": "يدوي",
+    "manualSearchHelp": "اضغط نتيجة بحث لتطبيقها فورًا، أو عدّل الإحداثيات ثم اضغط تطبيق أدناه.",
+    "coordsLabel": "الإحداثيات (درجات عشرية)",
+    "latPlaceholder": "خط العرض",
+    "lngPlaceholder": "خط الطول",
+    "applyCoords": "تطبيق الإحداثيات",
+    "calculation": "الحساب",
+    "calcHiddenSweden": "السويد تستخدم أوقاتًا لكل مدينة مدرجة. يُطابق موقعك أقرب مدينة في القائمة؛ للسويد فقط.",
+    "calcHiddenPraytimes": "PrayTimes.dev يطبّق قواعده المنشورة (راجع prayertimes.dev). يُطبَّق المذهب/مدرسة العصر فقط؛ قائمة الطرق مخفية.",
+    "method": "الطريقة",
+    "methodModalTitle": "طريقة الحساب",
+    "hanafiAsr": "عصر حنفي",
+    "hanafiAsrHelp": "ظل أطول للعصر (مدرسة = 1)",
+    "notifications": "الإشعارات",
+    "prayerAlerts": "تنبيهات الصلاة",
+    "prayerAlertsHelp": "تُجدول لصلوات اليوم الخمس (الفجر–العشاء). قد يتطلب أندرويد إذن المنبه الدقيق للتوقيت الموثوق.",
+    "prePrayerReminder": "تذكير مسبق",
+    "prePrayerReminderHelp": "إشعار إضافي اختياري قبل كل صلاة.",
+    "prePrayerReminderModalTitle": "الدقائق قبل الصلاة",
+    "prePrayerReminderOff": "إيقاف",
+    "prePrayerReminderOption": "{{count}} د قبل الصلاة",
+    "liveActivity": "النشاط المباشر",
+    "liveActivityHelp": "إشعار مثبت يعرض العد التنازلي للصلاة القادمة، مع بقية أوقات اليوم في العرض الموسّع.",
+    "liveActivityExperimental": "تجريبي على iOS.",
+    "liveActivityCustomize": "تخصيص",
+    "liveActivityCompact": "وضع مضغوط",
+    "liveActivityCompactHelp": "عرض العد التنازلي فقط؛ إخفاء قائمة الصلوات.",
+    "liveActivityShowSunriseLabel": "إظهار الشروق",
+    "liveActivityShowHijriLabel": "إظهار التاريخ الهجري",
+    "liveActivityShowLocationLabel": "إظهار الموقع",
+    "language": "اللغة",
+    "languageHelp": "الإنجليزية أو السويدية أو العربية. العربية تستخدم تخطيطًا من اليمين لليسار.",
+    "langEn": "الإنجليزية",
+    "langSv": "السويدية",
+    "langAr": "العربية",
+    "homeScreenWidget": "ودجة الشاشة الرئيسية",
+    "widgetBackgroundOpacity": "قوة خلفية الودجة (أندرويد)",
+    "widgetHighlight": "لون تمييز الصلاة التالية",
+    "widgetHighlight_green": "أخضر",
+    "widgetHighlight_teal": "تركواز",
+    "widgetHighlight_blue": "أزرق",
+    "widgetHighlight_amber": "كهرماني",
+    "widgetHighlight_custom": "لون مخصص",
+    "widgetHighlight_customAbbr": "…",
+    "widgetHighlightHexPlaceholder": "#6BC98A",
+    "widgetConfigureHint": "يمكنك أيضًا على أندرويد المس مع الاستمرار على الودجة ← الإعدادات (ترس) لنفس الخيارات.",
+    "notificationSound": "صوت التنبيه",
+    "adhanAlarmStream": "تشغيل الأذان كمنبّه",
+    "adhanAlarmStreamHelp": "يستخدم مستوى صوت المنبّه، فيُسمع الأذان حتى والهاتف صامت أو على الاهتزاز. لا يتجاوز وضع عدم الإزعاج.",
+    "notificationSoundModalTitle": "اختر صوت التنبيه",
+    "notificationSoundDefault": "تنبيه النظام الافتراضي",
+    "notificationSoundDefaultHelp": "يستخدم صوت الإشعار الافتراضي في جهازك.",
+    "notificationSoundAbdulBasit": "أذان - عبد الباسط",
+    "notificationSoundAbdulGhaffar": "أذان - عبد الغفار",
+    "notificationSoundAbdulHakam": "أذان - عبد الحكم",
+    "notificationSoundMakkah": "أذان - مكة",
+    "notificationSoundMadina": "أذان - المدينة",
+    "notificationSoundAqsa": "أذان - الأقصى",
+    "notificationSoundEgypt": "أذان - مصر",
+    "notificationSoundHalab": "أذان - حلب",
+    "notificationSoundAlHussaini": "أذان - الحسيني",
+    "notificationSoundBakirBash": "أذان - باقر باش",
+    "notificationSoundHafez": "أذان - حافظ",
+    "notificationSoundHafizMurad": "أذان - حافظ مراد",
+    "notificationSoundMinshawi": "أذان - المنشاوي",
+    "notificationSoundNaghshbandi": "أذان - نقشبندي",
+    "notificationSoundSaber": "أذان - صابر",
+    "notificationSoundSharifDoman": "أذان - شريف دومان",
+    "notificationSoundYusufIslam": "أذان - يوسف إسلام",
+    "notificationSoundVoiceHelp": "الصوت مضمّن داخل هذا الإصدار من التطبيق.",
+    "notificationSoundCustom": "أذانك الخاص",
+    "notificationSoundCustomHelp": "اختر ملفًا صوتيًا من هذا الجهاز.",
+    "notificationSoundCustomImporting": "جارٍ الاستيراد…",
+    "notificationSoundCustomRemove": "إزالة أذانك",
+    "notificationSoundCustomTrimmed": "تشغّل الإشعارات أول ٣٠ ثانية، ويُشغَّل التسجيل كاملًا عندما يكون التطبيق مفتوحًا.",
+    "versionInstalled": "الإصدار المثبت: {{version}}",
+    "adhanPreviewTitle": "معاينة الأذان",
+    "adhanPreviewBody": "",
+    "prayerOffsets": "تعديلات لكل صلاة",
+    "prayerOffsetsTitle": "تعديلات لكل صلاة",
+    "prayerOffsetsHelp": "حرّك كل صلاة ±{{max}} دقيقة لمطابقة مسجدك المحلي.",
+    "prayerOffsetsNone": "لا توجد تعديلات",
+    "prayerOffsetsCount_one": "تم تعديل {{count}} صلاة",
+    "prayerOffsetsCount_other": "تم تعديل {{count}} صلوات",
+    "prayerOffsetsIncrease": "زيادة الفارق لصلاة {{prayer}}",
+    "prayerOffsetsDecrease": "إنقاص الفارق لصلاة {{prayer}}",
+    "prayerOffsetsReset": "إعادة تعيين الكل",
+    "dataAndPrivacy": "البيانات والخصوصية",
+    "replayOnboarding": "إعادة عرض البداية",
+    "replayOnboardingHelp": "تصفّح خطوات الترحيب.",
+    "attributions": "الإسنادات",
+    "attributionsBlurb": "أعمالٌ بُني عليها هذا التطبيق",
+    "attribQuran": "نص القرآن",
+    "attribTranslation": "الترجمة",
+    "attribDuas": "الأدعية",
+    "accentColor": "لون التمييز",
+    "accent_green": "أخضر",
+    "accent_teal": "أزرق مخضرّ",
+    "accent_blue": "أزرق",
+    "accent_amber": "كهرماني",
+    "accent_custom": "مخصّص",
+    "accent_customAbbr": "Hex",
+    "accentColorHelp": "يُستخدم في جميع أنحاء التطبيق وفي أداة الشاشة الرئيسية.",
+    "widgetColorFollowsAccentHelp": "تستخدم الأداة لون التمييز نفسه المستخدم في التطبيق. اختره من قسم المظهر.",
+    "widgetColorOwnHelp": "التطبيق يتبع ألوان النظام، والأداة لا تفعل ذلك. اختر لون تمييز الأداة هنا.",
+    "additionalTimes": "أوقات إضافية",
+    "additionalTimesBlurb": "الشروق ومنتصف الليل وأثلاث الليل",
+    "additionalTimesFooter": "تظهر هذه الأوقات في جدول الصلوات والأداة والنشاط المباشر إضافةً إلى الإشعارات، وتستخدم نغمة الإشعار الافتراضية لا الأذان.",
+    "dailyReminders": "تذكيرات يومية",
+    "dailyRemindersBlurb": "آية كل يوم، ورد الختمة اليوم، والكهف والملك",
+    "logSection": "السجل",
+    "sunriseTime": "الشروق",
+    "sunriseTimeHelp": "إظهار الشروق في جدول الصلاة والإشعارات والأداة والنشاط المباشر.",
+    "islamicMidnight": "منتصف الليل",
+    "islamicMidnightHelp": "منتصف الليل بين المغرب والفجر. معطّل افتراضيًا.",
+    "lastThird": "الثلث الأخير من الليل",
+    "lastThirdHelp": "بداية الثلث الأخير من الليل — وقت قيام الليل. معطّل افتراضيًا.",
+    "firstThird": "الثلث الأول من الليل",
+    "firstThirdHelp": "نهاية الثلث الأول من الليل — وعندها يخرج وقت العشاء المختار على مذهب المالكية. معطّل افتراضيًا.",
+    "malikiSecondTimes": "الأوقات الضرورية المالكية",
+    "malikiSecondTimesHelp": "تحصل كل صلاة على سطر في بطاقة اليوم يبيّن متى ينتهي وقتها الاختياري ويبدأ وقتها الضروري. يُحسب على جهازك من إحداثياتك، أيًّا كان مصدر أوقاتك. يعتمد ظل المثل (1:1) للعصر بصرف النظر عن إعداد المذهب لديك، لأن هذا هو الحد المالكي. مُعطَّل افتراضيًا.",
+    "malikiSecondTimesHanafiWarning": "تنبيه: هذه حدود مالكية، لكن العصر عندك مضبوط على المذهب الحنفي الذي يعتمد ظلًّا آخر. سينتهي وقت الظهر الاختياري قبل العصر المعروض تحته بنحو نصف ساعة. أوقف عصر الحنفية إن أردت أن تتوافق البطاقة مع نفسها.",
+    "malikiSecondTimesSource": "من المرشد المعين لابن عاشر، كما ورد في The Guiding Helper، النشيد 11.",
+    "malikiAlerts": "نبّهني",
+    "malikiAlertsHelp": "مُعطَّل لكل الصلوات في البداية. اختر ما تريد التنبيه له فقط — خمسة تنبيهات إضافية يوميًا هي ما يعلّمك تجاهل التطبيق. يتطلب تفعيل الإشعارات.",
+    "malikiAlertsDisabled": "فعِّل الأوقات الثانية المالكية من «أوقات الصلاة»، ثم يمكن التنبيه لها من هنا.",
+    "malikiAlertsNone": "بدون تنبيهات",
+    "malikiAlertsLead": "مقدار التنبيه المسبق",
+    "malikiAlertsLeadTitle": "نبّهني قبل انتهاء الوقت الاختياري",
+    "malikiAlertsAtTime": "عند انتهائه",
+    "malikiSecondTimesModelled": "حدّا الفجر والعصر هما اختفاء النجوم واصفرار الشمس — زاوية تنوب عن أمر يُدرك بالعين، ولذلك تُعلَّم بأنها تقريبية. وحيث لا تطلع الشمس أو لا تغرب أو لا تبلغ الزاوية لا يُعرض شيء بدل التخمين.",
+    "accent_rose": "وردي",
+    "accent_violet": "بنفسجي",
+    "laDesignMarkers": "علامات",
+    "showTour": "عرض جولة التطبيق",
+    "rateApp": "قيّم محراب",
+    "rateAppHelp": "هل تعجبك التطبيق؟ تقييمك يساعد الآخرين في العثور عليه.",
+    "showTourHelp": "أعد عرض الجولة التعريفية السريعة.",
+    "ayahOfDay": "إشعار آية اليوم",
+    "ayahOfDayHelp": "آية تُختار عشوائيًا مع ترجمتها، كل يوم.",
+    "ayahOfDayTime": "وقت الإشعار",
+    "hourDown": "الساعة −",
+    "hourUp": "الساعة +",
+    "khatmahReminder": "تذكير الختمة اليومي",
+    "khatmahReminderHelp": "وِرد اليوم وموضع المتابعة، أثناء وجود ختمة نشطة.",
+    "khatmahReminderNoPlan": "ابدأ ختمة من قسم القرآن لاستخدام هذا.",
+    "resetApp": "إعادة ضبط بيانات التطبيق",
+    "resetAppHelp": "يمحو جميع الإعدادات والبيانات. لا يمكن التراجع.",
+    "batteryWarning": "قد تكون التنبيهات غير موثوقة",
+    "batteryWarningHelp": "قد يؤدي تحسين البطارية إلى تأخير تنبيهات الأذان أو كتمها عندما يكون التطبيق مغلقًا. اضغط لاستثناء التطبيق.",
+    "themeRestartManualTitle": "أعد فتح التطبيق",
+    "themeRestartManualBody": "لا يسمح iOS للتطبيقات بإعادة تشغيل نفسها. أغلق مِحراب تمامًا ثم أعد فتحه ليسري المظهر الجديد.",
+    "liquidGlass": "الزجاج السائل",
+    "liquidGlassHelp": "استخدام ألوان نظام iOS والواجهة الزجاجية الشفافة. يتبع الوضع الفاتح/الداكن تلقائيًا.",
+    "themeRestartTitle": "يلزم إعادة التشغيل",
+    "themeRestartBody": "يتطلب تبديل ألوان النظام إعادة تشغيل التطبيق ليأخذ كل شاشة المظهر الجديد. إعادة التشغيل الآن؟",
+    "themeRestartConfirm": "إعادة التشغيل",
+    "laLockButtonLabel": "زر شاشة القفل",
+    "laLockButtonHelp": "إظهار زر على البطاقة لإخفائها من شاشة القفل والشاشة الدائمة.",
+    "resetTitle": "إعادة تعيين التطبيق؟",
+    "resetBody": "سيؤدي هذا إلى مسح جميع الإعدادات والمواقع المحفوظة وسجل الصلوات وسجل الصيام وحالة التسبيح، ثم يعيدك إلى خطوات البدء. لا يمكن التراجع.",
+    "resetConfirm": "إعادة تعيين كل شيء",
+    "prayerOffsetsCount": "{{count}} معدّلة",
+    "endOfDayLog": "تذكير تسجيل نهاية اليوم",
+    "endOfDayLogHelp": "بعد العشاء بعشر دقائق يسأل إن كنت تريد تسجيل صلوات اليوم الخمس. لو أجبت في الصباح التالي فسيُسجَّل اليوم الصحيح.",
+    "alertModeAdhan": "أذان",
+    "alertModeNotification": "تنبيه",
+    "alertModeSilent": "صامت",
+    "alertModeHint": "يغيّر طريقة تنبيهك بهذه الصلاة",
+    "sectionPrayerTimes": "أوقات الصلاة",
+    "sectionPrayerTimesBlurb": "المصدر وطريقة الحساب والمذهب والتعديلات",
+    "sectionNotifications": "الإشعارات",
+    "sectionNotificationsBlurb": "الأصوات والتنبيهات المسبقة والأوقات الإضافية والنشاط المباشر",
+    "sectionLocation": "الموقع",
+    "sectionLocationBlurb": "مكانك وأماكنك المحفوظة",
+    "sectionAppearance": "المظهر واللغة",
+    "sectionAppearanceBlurb": "السمة واللون وصيغة الوقت واللغة",
+    "sectionWidgets": "الشاشة الرئيسية",
+    "sectionWidgetsBlurb": "ودجة الشاشة الرئيسية",
+    "sectionQuran": "القرآن",
+    "sectionQuranBlurb": "القراءة والترجمة والتفسير والتنزيلات",
+    "sectionAbout": "حول",
+    "sectionAboutBlurb": "الإصدار والمصادر والتراخيص",
+    "malikiRows": "إظهارها في أوقات اليوم",
+    "malikiRowsHelp": "عند الإيقاف، يُنبَّه على الحدود فقط دون إضافة شيء إلى البطاقة أو الشهر.",
+    "malikiEndAlerts": "وعند انتهاء الوقت",
+    "malikiEndAlertsHelp": "تنبيه ثانٍ لحظة صيرورة الصلاة قضاءً. يصل في وقته تمامًا، لا قبله.",
+    "surahRemindersChannel": "تذكير بالسور",
+    "madhab": "المذهب",
+    "madhab_hanafi": "الحنفي",
+    "madhab_maliki": "المالكي",
+    "madhab_shafii": "الشافعي",
+    "madhab_hanbali": "الحنبلي",
+    "madhabCustom": "مخصص",
+    "madhabHelp": "الشافعي والمالكي والحنبلي يعتمدون ظلّ العصر نفسه، فالاختيار بينهم لا يغيّر وقتاً. والمالكي يسمّي صلاة الفجر صبحاً ويتيح الأوقات الثانية.",
+    "dhikrRemindersChannel": "تذكيرات الذكر",
+    "dhikrRemindersSilentChannel": "تذكيرات الذكر (صامتة)",
+    "laDesignNeedsAndroid16": "تتطلب الأنماط Android 16 أو أحدث. يعرض هذا الهاتف البطاقة القياسية: الصلاة والوقت المتبقي وشريط التقدم."
+  },
+  "locationSetup": {
+    "headline": "حدّد موقعك",
+    "sub": "أوقات الصلاة تعتمد على مكانك. اختر أحد الخيارات أدناه — يمكنك تغيير ذلك لاحقًا في الإعدادات.",
+    "useAutomatic": "استخدم موقعي",
+    "searchCoords": "بحث أو إدخال إحداثيات",
+    "manualHeadline": "موقع يدوي",
+    "manualSub": "ابحث واضغط نتيجة للإنهاء — أو اكتب خط العرض والطول أدناه ثم اضغط متابعة.",
+    "decimalCoords": "إحداثيات عشرية"
+  },
+  "provider": {
+    "timesSource": "مصدر الأوقات",
+    "automaticByLocation": "تلقائي حسب الموقع",
+    "modalTitle": "مصدر أوقات الصلاة",
+    "sectionMainstream": "واجهات برمجة شائعة",
+    "sectionRegional": "مصادر وطنية وإقليمية",
+    "autoTitle": "تلقائي",
+    "autoSub": "مصدر السويد داخل السويد؛ AlAdhan في غيرها.",
+    "autoNow": "في موقعك الحالي، هذا يعني {{label}}.",
+    "bestHere": "يناسب موقعك",
+    "outOfRegion": "لا توجد أوقات لموقعك — سيُستخدم {{fallback}} بدلاً منه.",
+    "footer": "تستخدم المصادر الخاصة بالبلدان جداول رسمية أو وطنية حيث ندمجها. قد تُضاف مناطق أخرى مع الوقت."
+  },
+  "providers": {
+    "aladhan": {
+      "desc": "api.aladhan.com — قائمة طرق كبيرة، إحداثيات حول العالم؛ شائع الاستخدام.",
+      "name": "AlAdhan"
+    },
+    "prayertimes_dev": {
+      "desc": "واجهة برمجة مستقلة — زوايا وفروقات على النمط البريطاني؛ حنفي/شافعي؛ إحداثيات عالمية.",
+      "name": "PrayTimes.dev"
+    },
+    "local_adhan": {
+      "desc": "يُحسب على هاتفك بواسطة Batoul Adhan — دون الحاجة إلى خدمة شبكة.",
+      "name": "على الجهاز (Adhan JS)"
+    },
+    "islamiska_forbundet": {
+      "desc": "مواقيت الصلاة للمدن السويدية المدرجة؛ يُربط موقعك بأقرب مدينة في القائمة.",
+      "name": "السويد"
+    },
+    "habous": {
+      "name": "المغرب",
+      "desc": "المواقيت المنشورة من وزارة الأوقاف والشؤون الإسلامية للمدن المغربية المدرجة؛ يُطابَق موقعك مع أقرب مدينة في القائمة."
+    }
+  },
+  "compass": {
+    "needLocationTitle": "الموقع غير جاهز",
+    "needLocationBody": "عيّن موقعًا في الإعدادات أو افتح الرئيسية مرة مع GPS لحساب اتجاه القبلة.",
+    "bearing": "اتجاه القبلة",
+    "fromNorth": "{{deg}}° من الشمال",
+    "qiblaMarker": "القبلة",
+    "phoneFront": "أمام الهاتف",
+    "hint": "أبقِ الهاتف أفقيًا وابتعد عن المعادن. صفِّ سهم القبلة مع «أمام الهاتف» عندما تتجه نحو القبلة.",
+    "signalStrength": "قوة البوصلة",
+    "signalHelp": "تعتمد على مستوى المجال المغناطيسي والثبات. ابتعد عن المعادن والأجهزة إذا بقيت منخفضة.",
+    "signalChecking": "…",
+    "signalOff": "متوقف",
+    "signalWeakTitle": "إشارة البوصلة ضعيفة",
+    "signalVeryWeakTitle": "إشارة البوصلة ضعيفة جدًا",
+    "signalWeakBody": "ابتعد عن المعادن والمغانط والأجهزة الإلكترونية. أزل الملحقات المغناطيسية من الهاتف ثم حرّكه بشكل رقم 8 ببطء لإعادة المعايرة.",
+    "motionDetectedTitle": "ثبّت الهاتف",
+    "motionDetectedBody": "الحركة الزائدة قد تجعل الاتجاه يقفز. أمسك الهاتف بشكل مستوٍ وثابت لعدة ثوانٍ بعيدًا عن المركبات المتحركة أو السماعات.",
+    "motionPermissionTitle": "إذن الحركة مطلوب",
+    "motionPermissionDeniedBody": "تم رفض الوصول إلى البوصلة على iOS. فعّل إذن الحركة واللياقة من إعدادات النظام ثم افتح هذه الشاشة مجددًا.",
+    "openSettings": "فتح الإعدادات",
+    "unsupportedTitle": "البوصلة الحية غير متوفرة",
+    "unsupportedBody": "الجهاز لا يوفّر مقياس مغناطيسية صالحًا (أو فشل الوصول). تم إيقاف البوصلة الحية. استخدم الاتجاه أدناه مع بوصلة ورقية أو خريطة.",
+    "checkingCompass": "جارٍ تشغيل البوصلة…",
+    "checkingCompassWithPrompt": "جارٍ تشغيل البوصلة… إذا ظهر طلب في iOS، اسمح بالوصول إلى الحركة واللياقة.",
+    "north": "ش",
+    "east": "ق",
+    "south": "ج",
+    "west": "غ",
+    "a11yDialLive": "بوصلة القبلة. أدر {{deg}} درجة لمواجهة القبلة.",
+    "a11yDialChecking": "بوصلة القبلة. في انتظار بيانات المستشعر.",
+    "a11yDialUnavailable": "بوصلة القبلة غير متاحة.",
+    "a11yNeedleDeg": "أدر {{deg}} درجة لمواجهة القبلة.",
+    "a11ySignal_good": "إشارة البوصلة: جيدة.",
+    "a11ySignal_weak": "إشارة البوصلة: ضعيفة.",
+    "a11ySignal_very_weak": "إشارة البوصلة: ضعيفة جداً.",
+    "crossCheckTitle": "تحقّق باستخدام تطبيق البوصلة",
+    "crossCheckBody": "بوصلة جهازك مضبوطة على عتاده. للحصول على أدقّ قراءة، افتحها وأدر الجهاز حتى تُظهر {{degrees}}.",
+    "openSystemCompass": "فتح تطبيق البوصلة",
+    "fromNorthLabel": "من الشمال"
+  },
+  "prayer": {
+    "Fajr": "الفجر",
+    "Sunrise": "الشروق",
+    "Dhuhr": "الظهر",
+    "Asr": "العصر",
+    "Maghrib": "المغرب",
+    "Isha": "العشاء",
+    "Fajr_abbr": "فجر",
+    "Sunrise_abbr": "شروق",
+    "Dhuhr_abbr": "ظهر",
+    "Asr_abbr": "عصر",
+    "Maghrib_abbr": "مغرب",
+    "Isha_abbr": "عشاء",
+    "Midnight": "منتصف الليل",
+    "Midnight_abbr": "منتصف",
+    "Lastthird": "الثلث الأخير",
+    "Lastthird_abbr": "قيام",
+    "Firstthird": "الثلث الأول",
+    "Firstthird_abbr": "١/٣",
+    "firstTimeUntil": "الوقت الاختياري إلى {{time}}",
+    "secondTimeUntil": "الوقت الضروري إلى {{time}}",
+    "secondTimeFrom": "الوقت الضروري من {{time}}",
+    "approx": "تقريبًا",
+    "Subh": "الصبح",
+    "Subh_abbr": "الصبح"
+  },
+  "placeSearch": {
+    "label": "ابحث عن مدينة أو عنوان",
+    "placeholder": "مثل: القاهرة، لندن، الرمز البريدي…",
+    "hint": "نتائج من OpenStreetMap (Nominatim). استخدمها باعتدال — لا للترميز الجماعي.",
+    "appliedTitle": "تم تطبيق الموقع",
+    "searchFailed": "فشل البحث",
+    "applied": "تم التطبيق: {{label}}",
+    "noResults": "لا نتائج",
+    "searching": "جارٍ البحث…"
+  },
+  "alertCopy": {
+    "atPrayer": "وقت الصلاة",
+    "prePrayer": "تبدأ خلال {{count}} د",
+    "adhanStopAction": "إيقاف الأذان",
+    "adhanDisableAction": "تعطيل الأذان",
+    "snoozeAction": "تأجيل",
+    "snoozeChoice": "تأجيل {{minutes}} د",
+    "snoozeMinutes": "دقائق",
+    "daruriEndsIn": "ينتهي الوقت الاختياري في {{time}} — بعد {{count}} دقيقة",
+    "daruriEnded": "انتهى الوقت الاختياري في {{until}}",
+    "daruriExpired": "انتهى الوقت — صلِّها قضاءً",
+    "atPrayerBody": "حان وقت {{prayer}}",
+    "nextEvent": "التالي: {{prayer}} في {{time}}"
+  },
+  "locations": {
+    "title": "المواقع المحفوظة",
+    "empty": "أضف مواقع محفوظة لتنتقل بينها بسرعة.",
+    "add": "إضافة موقع جديد",
+    "useAuto": "موقعي",
+    "addPrompt": "سمِّ هذا الموقع",
+    "addPlaceholder": "المنزل، العمل، السفر…",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "use": "استخدام",
+    "delete": "حذف",
+    "limitReached": "بلغتَ الحدّ الأقصى وهو {{max}} من المواقع المحفوظة.",
+    "previousLocation": "الموقع السابق",
+    "invalidCoordsTitle": "إحداثيات غير صالحة",
+    "invalidCoordsBody": "يجب أن يكون خط العرض بين -90 و90، وخط الطول بين -180 و180.",
+    "pickAPlace": "ابحث عن مدينة أو أدخل الإحداثيات أولًا.",
+    "duplicateTitle": "محفوظ مسبقًا",
+    "duplicateBody": "هناك موقع بهذه الإحداثيات محفوظ بالفعل باسم «{{name}}»."
+  },
+  "tasbih": {
+    "subhanallah": "سبحان الله",
+    "alhamdulillah": "الحمد لله",
+    "allahuakbar": "الله أكبر",
+    "lailaha": "لا إله إلا الله",
+    "astaghfirullah": "أستغفر الله",
+    "open": "فتح العدّاد",
+    "increment": "اضغط للعدّ",
+    "reset": "إعادة تعيين",
+    "salahonprophet": "الصلاة على النبي ﷺ",
+    "prev": "السابق",
+    "next": "التالي",
+    "meaning": {
+      "subhanallah": "تنزيه الله عن كل نقص",
+      "alhamdulillah": "الحمد كله لله",
+      "lailaha": "لا معبود بحق إلا الله",
+      "allahuakbar": "الله أكبر من كل شيء",
+      "astaghfirullah": "أطلب المغفرة من الله",
+      "salahonprophet": "اللهم صل على سيدنا محمد"
+    },
+    "setPosition": "المجموعة {{index}} من {{total}}",
+    "ofTarget": "من {{target}}",
+    "tapAnywhere": "انقر في أي مكان",
+    "upNext": "التالي",
+    "resetSet": "إعادة المجموعة",
+    "skip": "تخطي"
+  },
+  "duas": {
+    "cat": {
+      "morning": "الصباح",
+      "evening": "المساء",
+      "afterPrayer": "بعد الصلاة",
+      "food": "الطعام",
+      "distress": "الكرب",
+      "sleep": "النوم",
+      "lavatory": "الخلاء",
+      "garment": "اللباس",
+      "travel": "السفر",
+      "mosque": "المسجد",
+      "gratitude": "الشكر",
+      "forgiveness": "الاستغفار",
+      "weather": "الطقس",
+      "family": "الأهل",
+      "sickness": "المرض",
+      "funeral": "الجنازة",
+      "eid": "العيد",
+      "beforeQuran": "قبل القراءة",
+      "knowledge": "العلم",
+      "protection": "الحماية",
+      "guidance": "الهداية"
+    },
+    "allCategories": "كل الأدعية",
+    "repeat": "قراءة ×{{count}}",
+    "morning_01_ayat_kursi": {
+      "title": "آية الكرسي"
+    },
+    "morning_02_three_quls": {
+      "title": "سور الإخلاص والفلق والناس"
+    },
+    "morning_03_fitra_islam": {
+      "title": "على فطرة الإسلام"
+    },
+    "morning_04_radhitu": {
+      "title": "رضيت بالله ربًّا"
+    },
+    "morning_05_ilm_nafi": {
+      "title": "علم نافع ورزق طيّب وعمل متقبَّل"
+    },
+    "morning_06_bika_asbahna": {
+      "title": "بك أصبحنا"
+    },
+    "morning_07_la_ilaha_illa_allah": {
+      "title": "لا إله إلا الله وحده"
+    },
+    "morning_08_ya_hayyu_ya_qayyum": {
+      "title": "يا حيُّ يا قيُّوم"
+    },
+    "morning_09_sayyid_al_istighfar": {
+      "title": "سيّد الاستغفار"
+    },
+    "morning_10_fatir_as_samawat": {
+      "title": "فاطر السماوات والأرض"
+    },
+    "morning_11_asbahna_walmulku_lillah": {
+      "title": "أصبحنا وأصبح الملك لله"
+    },
+    "morning_12_afw_wa_afiya": {
+      "title": "العفو والعافية"
+    },
+    "morning_13_bismillah_la_yadurr": {
+      "title": "بسم الله الذي لا يضر مع اسمه شيء"
+    },
+    "morning_14_subhan_allah_adada_khalqih": {
+      "title": "سبحان الله عدد خلقه"
+    },
+    "morning_15_afini_fi_badani": {
+      "title": "عافني في بدني وسمعي وبصري"
+    },
+    "morning_16_hasbiy_allah": {
+      "title": "حسبي الله"
+    },
+    "morning_17_ushhiduka": {
+      "title": "أُشهدك في هذا الصباح"
+    },
+    "morning_18_la_ilaha_yuhyi_yumit": {
+      "title": "لا إله إلا الله يحيي ويميت"
+    },
+    "morning_19_subhan_allah_wa_bihamdihi": {
+      "title": "سبحان الله وبحمده"
+    },
+    "morning_20_astaghfirullah": {
+      "title": "أستغفر الله"
+    },
+    "morning_21_subhan_alhamdu_takbir": {
+      "title": "تسبيح، تحميد، تكبير، تهليل"
+    },
+    "evening_01_ayat_kursi": {
+      "title": "آية الكرسي"
+    },
+    "evening_02_three_quls": {
+      "title": "سور الإخلاص والفلق والناس"
+    },
+    "evening_03_fitra_islam": {
+      "title": "على فطرة الإسلام (المساء)"
+    },
+    "evening_04_radhitu": {
+      "title": "رضيت بالله ربًّا"
+    },
+    "evening_05_bika_amsayna": {
+      "title": "بك أمسينا"
+    },
+    "evening_06_la_ilaha_illa_allah": {
+      "title": "لا إله إلا الله وحده"
+    },
+    "evening_07_ya_hayyu_ya_qayyum": {
+      "title": "يا حيُّ يا قيُّوم"
+    },
+    "evening_08_sayyid_al_istighfar": {
+      "title": "سيّد الاستغفار"
+    },
+    "evening_09_fatir_as_samawat": {
+      "title": "فاطر السماوات والأرض"
+    },
+    "evening_10_amsayna_walmulku_lillah": {
+      "title": "أمسينا وأمسى الملك لله"
+    },
+    "evening_11_afw_wa_afiya": {
+      "title": "العفو والعافية"
+    },
+    "evening_12_bismillah_la_yadurr": {
+      "title": "بسم الله الذي لا يضر مع اسمه شيء"
+    },
+    "evening_13_taamat_protection": {
+      "title": "الاستعاذة بكلمات الله التامّة"
+    },
+    "evening_14_afini_fi_badani": {
+      "title": "عافني في بدني وسمعي وبصري"
+    },
+    "evening_15_hasbiy_allah": {
+      "title": "حسبي الله"
+    },
+    "evening_16_ushhiduka": {
+      "title": "أُشهدك في هذا المساء"
+    },
+    "evening_17_la_ilaha_yuhyi_yumit": {
+      "title": "لا إله إلا الله يحيي ويميت"
+    },
+    "evening_18_subhan_allah_wa_bihamdihi": {
+      "title": "سبحان الله وبحمده"
+    },
+    "evening_19_astaghfirullah": {
+      "title": "أستغفر الله"
+    },
+    "evening_20_subhan_alhamdu_takbir": {
+      "title": "تسبيح، تحميد، تكبير، تهليل"
+    },
+    "afterPrayer_astaghfirullah": {
+      "title": "الاستغفار"
+    },
+    "afterPrayer_allahumma_antas_salam": {
+      "title": "اللهمّ أنت السلام"
+    },
+    "afterPrayer_subhanallah_33": {
+      "title": "تسبيح (33 × 3)"
+    },
+    "afterPrayer_three_quls": {
+      "title": "سور الإخلاص والفلق والناس بعد كل صلاة فرض"
+    },
+    "afterPrayer_ayat_kursi": {
+      "title": "آية الكرسي بعد كل صلاة فرض"
+    },
+    "food_before": {
+      "title": "قبل الأكل — بسم الله"
+    },
+    "food_after_min_ghayri_hawlin": {
+      "title": "بعد الأكل — من غير حول مني ولا قوة"
+    },
+    "food_after_atamana_wa_saqana": {
+      "title": "بعد الأكل — أطعمنا وسقانا وجعلنا مسلمين"
+    },
+    "food_after_atama_wa_saqa_makhraj": {
+      "title": "بعد الأكل — أطعمنا وسقانا وجعل له مَخرجًا"
+    },
+    "food_after_atamana_wa_kafana": {
+      "title": "بعد الأكل — أطعمنا وسقانا وكفانا وآوانا"
+    },
+    "food_after_kathiran_tayyiban": {
+      "title": "بعد الأكل — حمدًا كثيرًا طيّبًا مباركًا"
+    },
+    "distress_lahawla": {
+      "title": "لا حول ولا قوة إلا بالله"
+    },
+    "distress_innallaha_maana": {
+      "title": "عند الخوف"
+    },
+    "distress_yaa_hayyu": {
+      "title": "النداء يا حيُّ يا قيُّوم"
+    },
+    "distress_ayatkursi_intro": {
+      "title": "آية الكرسي (حفظ النوم)"
+    },
+    "distress_dua_al_faraj": {
+      "title": "دعاء الفرج"
+    },
+    "distress_dua_al_karb": {
+      "title": "دعاء الكرب"
+    },
+    "sleep_three_quls": {
+      "title": "المعوّذات — الإخلاص والفلق والناس"
+    },
+    "sleep_ayat_kursi": {
+      "title": "آية الكرسي قبل النوم"
+    },
+    "sleep_aslamtu_wajhi": {
+      "title": "أسلمتُ وجهي إليك"
+    },
+    "sleep_bismika_ahya": {
+      "title": "باسمك اللهمّ أحيا وأموت"
+    },
+    "sleep_alhamdu_ahyana": {
+      "title": "عند الاستيقاظ"
+    },
+    "sleep_khalaqta_nafsi": {
+      "title": "أنت خلقت نفسي — فاحفظها أو اغفر لها"
+    },
+    "sleep_rabba_samawat": {
+      "title": "ربّ السماوات والأرض وربّ العرش العظيم"
+    },
+    "sleep_dust_off_bed": {
+      "title": "نفض الفراش والاضطجاع على الجنب الأيمن"
+    },
+    "sleep_takbir_tasbih_tahmid": {
+      "title": "تكبير 34، تسبيح 33، تحميد 33 (خير من خادم)"
+    },
+    "sleep_taamat_protection": {
+      "title": "كلمات الله التامّة من كل شر"
+    },
+    "sleep_taamat_for_children": {
+      "title": "الاستعاذة للأطفال — من كل شيطان وحشرة سامّة"
+    },
+    "sleep_taamat_long": {
+      "title": "عند الفزع أو الكابوس"
+    },
+    "sleep_wajhik_alkarim": {
+      "title": "بوجهك الكريم وكلماتك التامّة"
+    },
+    "sleep_anta_rabbi": {
+      "title": "أنت ربّي — لا تصيبني مصيبة"
+    },
+    "travel_subhanalladhi": {
+      "title": "عند ركوب الدابة أو السيارة"
+    },
+    "travel_journey": {
+      "title": "دعاء السفر — النص الكامل"
+    },
+    "travel_returning": {
+      "title": "عند العودة إلى البيت"
+    },
+    "mosque_entering": {
+      "title": "دخول المسجد"
+    },
+    "mosque_leaving": {
+      "title": "الخروج من المسجد"
+    },
+    "mosque_adhan_response": {
+      "title": "بعد سماع الأذان"
+    },
+    "gratitude_blessing": {
+      "title": "عند الحصول على نعمة"
+    },
+    "gratitude_kindness": {
+      "title": "عند صنع المعروف إليك"
+    },
+    "forgiveness_sayyidul": {
+      "title": "سيّد الاستغفار"
+    },
+    "forgiveness_rabbi_ighfir": {
+      "title": "التوبة إلى الله"
+    },
+    "distress_grief": {
+      "title": "لتفريج الهمّ والغمّ"
+    },
+    "distress_difficulty": {
+      "title": "عند الشدة"
+    },
+    "distress_rain": {
+      "title": "عند نزول المطر"
+    },
+    "weather_during_rain": {
+      "title": "عند بدء نزول المطر"
+    },
+    "weather_after_rain": {
+      "title": "بعد نزول المطر"
+    },
+    "weather_thunder": {
+      "title": "عند سماع الرعد"
+    },
+    "weather_strong_wind": {
+      "title": "عند هبوب الريح الشديدة"
+    },
+    "family_for_offspring": {
+      "title": "للذرية الصالحة"
+    },
+    "family_for_parents": {
+      "title": "للوالدين"
+    },
+    "family_blessing_marriage": {
+      "title": "تهنئة بالزواج"
+    },
+    "family_for_child": {
+      "title": "الاستعاذة للولد"
+    },
+    "sickness_visit": {
+      "title": "زيارة المريض"
+    },
+    "sickness_prayer_for_sick": {
+      "title": "الدعاء للمريض"
+    },
+    "sickness_when_in_pain": {
+      "title": "عند الإحساس بألم في الجسد"
+    },
+    "funeral_inna_lillah": {
+      "title": "عند سماع خبر الوفاة"
+    },
+    "funeral_consolation": {
+      "title": "تعزية أهل الميت"
+    },
+    "funeral_graveyard_visit": {
+      "title": "دخول المقبرة"
+    },
+    "eid_takbir": {
+      "title": "تكبيرات العيد"
+    },
+    "eid_taqabbal": {
+      "title": "تهنئة العيد"
+    },
+    "beforeQuran_taawwudh": {
+      "title": "الاستعاذة قبل القراءة"
+    },
+    "beforeQuran_basmalah": {
+      "title": "البسملة في كل عمل"
+    },
+    "knowledge_seeking": {
+      "title": "الدعاء بزيادة العلم"
+    },
+    "knowledge_understanding": {
+      "title": "الدعاء بالفهم"
+    },
+    "knowledge_majlis_kaffarah": {
+      "title": "كفّارة المجلس"
+    },
+    "protection_morning_evening": {
+      "title": "سيّد الاستغفار المختصر (×3 صباحًا ومساءً)"
+    },
+    "protection_evil_eye": {
+      "title": "الوقاية من العين"
+    },
+    "protection_entering_home": {
+      "title": "دخول البيت"
+    },
+    "protection_leaving_home": {
+      "title": "الخروج من البيت"
+    },
+    "protection_market": {
+      "title": "دخول السوق"
+    },
+    "guidance_istikharah": {
+      "title": "صلاة الاستخارة — النص الكامل"
+    },
+    "guidance_steadfastness": {
+      "title": "الثبات على الدين"
+    },
+    "guidance_rabbana_atina": {
+      "title": "الدعاء بحسنة الدنيا والآخرة"
+    },
+    "guidance_against_being_misled": {
+      "title": "الاستعاذة من الضلالة"
+    },
+    "pronunciation": "النطق",
+    "tapToCount": "اضغط للعد",
+    "shareDua": "مشاركة {{title}}",
+    "lavatory_01_entering": {
+      "title": "دعاء دخول الخلاء"
+    },
+    "lavatory_02_leaving": {
+      "title": "دعاء الخروج من الخلاء"
+    },
+    "garment_01_dressing": {
+      "title": "دعاء لبس الثوب"
+    },
+    "garment_02_new": {
+      "title": "دعاء لبس الثوب الجديد"
+    },
+    "garment_03_for_someone_new": {
+      "title": "الدعاء لمن لبس ثوباً جديداً"
+    },
+    "garment_04_undressing": {
+      "title": "ما يقول إذا وضع الثوب"
+    },
+    "section": {
+      "day": "خلال اليوم",
+      "worship": "العبادة",
+      "out": "في الطريق",
+      "hardship": "عند الشدة",
+      "asking": "الدعاء والطلب"
+    },
+    "countHint": "{{count}} دعاء"
+  },
+  "quran": {
+    "meccan": "مكية",
+    "medinan": "مدنية",
+    "ayahCount": "{{count}} آيات",
+    "notFound": "لم يتم العثور على السورة.",
+    "comingSoon": "سيُتاح النص الكامل لهذه السورة في تحديث لاحق للبيانات.",
+    "pageLabel": "صفحة {{page}}",
+    "switchToTranslation": "التبديل إلى عرض التفسير",
+    "switchToMushaf": "التبديل إلى عرض المصحف",
+    "viewToggleTranslation": "الترجمة",
+    "viewToggleMushaf": "مصحف",
+    "enterFullscreen": "دخول وضع ملء الشاشة",
+    "exitFullscreen": "الخروج من ملء الشاشة",
+    "mushafDownloadTitle": "تحميل المصحف",
+    "mushafDownloadBody": "حجم مصحف المدينة حوالي {{size}} ميجابايت. لم يتم تضمينه في التطبيق — قم بتنزيله مرة واحدة وستبقى الصفحات محفوظة على جهازك.",
+    "mushafDownloadReadCta": "تنزيل والبدء بالقراءة (~{{size}} م.ب)",
+    "mushafDownloadReadHint": "تظهر الصفحات فور وصولها، ويُنزَّل الباقي في الخلفية.",
+    "mushafDownloadStrip": "جارٍ تنزيل المصحف · {{pct}}٪",
+    "juzLabel": "الجزء {{juz}}",
+    "nightMode": "الوضع الليلي",
+    "jumpToPage": "الانتقال إلى صفحة",
+    "pageShort": "ص {{page}}",
+    "go": "انتقال",
+    "mushafDownloadRetryBody": "تعذَّر تنزيل {{count}} من الصفحات. أعد المحاولة لجلب الصفحات الناقصة — كل ما تم تنزيله محفوظ.",
+    "mushafDownloadRetryCta": "إعادة محاولة الصفحات الناقصة",
+    "star": "تمييز هذه الآية بنجمة",
+    "unstar": "إزالة النجمة",
+    "bookmark": "إشارة مرجعية",
+    "bookmarkColor": "لون الإشارة المرجعية {{color}}",
+    "playFromHere": "التشغيل من هنا",
+    "repeatAyah": "تكرار هذه الآية",
+    "buffering": "جارٍ التحميل المؤقت…",
+    "previousAyah": "الآية السابقة",
+    "nextAyah": "الآية التالية",
+    "pause": "إيقاف مؤقت",
+    "play": "تشغيل",
+    "stopPlayback": "إيقاف التشغيل",
+    "playbackSettings": "التلاوة",
+    "reciter": "القارئ",
+    "downloadSurahAudio": "تنزيل صوت {{surah}}",
+    "surahAudioDownloaded": "تم تنزيل الصوت للاستخدام دون اتصال",
+    "downloadingAudio": "جارٍ التنزيل… {{done}}/{{total}}",
+    "downloadSurahAudioShort": "تنزيل هذه السورة للاستماع دون اتصال",
+    "speed": "السرعة",
+    "memorization": "الحفظ",
+    "repeatEachAyah": "تكرار كل آية",
+    "repeatRange": "تكرار النطاق",
+    "pauseBetween": "توقُّف بين التكرارات",
+    "none": "بدون",
+    "hideForReview": "إخفاء أثناء المراجعة",
+    "hideArabic": "النص العربي",
+    "hideTranslation": "الترجمة",
+    "playRangeTitle": "تشغيل نطاق من {{surah}}",
+    "fromAyah": "من الآية",
+    "toAyah": "إلى الآية",
+    "playRange": "تشغيل النطاق",
+    "ayahA11y": "الآية {{ayah}} — انقر لعرض الخيارات",
+    "tapToReveal": "انقر للإظهار",
+    "hideModeActive": "وضع الحفظ: {{what}} مخفي — انقر على آية للإظهار",
+    "loading": "جارٍ التحميل…",
+    "continueReading": "متابعة القراءة",
+    "continueKhatmah": "متابعة الختمة",
+    "readingPin": "متابعة القراءة من هنا",
+    "readingPinned": "متابعة القراءة تبدأ من هنا",
+    "readingMarkerLabel": "القراءة",
+    "khatmahMarkerLabel": "الختمة",
+    "khatmah": "ختمة",
+    "khatmahDaysLeft": "باقي {{count}} يوم",
+    "khatmahDaysLeft_one": "باقي {{count}} يوم",
+    "khatmahProgress": "{{read}} / {{total}} صفحة · اليوم: {{today}}",
+    "khatmahBehind": "متأخر بمقدار {{count}}",
+    "startKhatmah": "بدء ختمة",
+    "khatmahDays": "{{count}} يومًا",
+    "verseOfDay": "آية اليوم",
+    "searchPlaceholder": "البحث في السور والآيات والترجمة…",
+    "tabSurah": "السور",
+    "tabJuz": "الأجزاء",
+    "tabBookmarks": "الإشارات المرجعية",
+    "searchResults": "{{count}} من الآيات المطابقة",
+    "noBookmarks": "لا توجد إشارات مرجعية بعد — انقر على أي آية أثناء القراءة لإضافة إشارة أو نجمة.",
+    "starred": "المميَّزة بنجمة",
+    "shareAsImage": "مشاركة كصورة",
+    "chooseReciter": "اختر القارئ",
+    "searchReciters": "ابحث عن قارئ…",
+    "wordHighlightBadge": "تمييز الكلمات",
+    "changeReciter": "تغيير",
+    "deleteBookmark": "حذف الإشارة المرجعية",
+    "removeStar": "إزالة النجمة",
+    "nightShort": "ليلي",
+    "sepiaShort": "بُنّي",
+    "lightShort": "فاتح",
+    "switchToNight": "التبديل إلى الوضع الليلي",
+    "switchToSepia": "التبديل إلى صفحة بُنّية",
+    "riwayahHafs": "حفص",
+    "riwayahWarsh": "ورش",
+    "switchRiwayah": "التبديل إلى رواية {{name}}",
+    "riwayahReflowTitle": "الصفحات مطابقة، والأسطر قد لا تكون",
+    "riwayahReflowBody": "يبدأ هذا المصحف كل صفحة وينهيها في الموضع نفسه الذي في المطبوع، لكن أسطره يرتّبها جهازك لا المطبعة، فقد لا تنتهي الأسطر في المواضع ذاتها.",
+    "riwayahNeedsHttps": "يجب أن يبدأ الرابط بـ https://",
+    "riwayahServerSaidNo": "أجاب الخادم بالرمز {{status}}.",
+    "riwayahTooLarge": "هذا الملف أكبر بكثير من بيانات مصحف. تحقّق من الرابط.",
+    "riwayahUnreachable": "تعذّر الوصول إلى هذا الرابط. تحقّق من العنوان ومن اتصالك.",
+    "riwayahGotAPage": "أعاد هذا الرابط صفحة وِب لا ملف بيانات. استخدم رابط تنزيل JSON.",
+    "riwayahNotJson": "هذا الملف ليس ملف بيانات.",
+    "riwayahNotAQuran": "هذا الملف ليس قرآنًا كاملًا، فلم يُثبَّت.",
+    "riwayahCouldNotSave": "تعذّر حفظه على هذا الجهاز.",
+    "switchToLight": "التبديل إلى الوضع الفاتح",
+    "ayahOfDayTitle": "آية اليوم",
+    "ayahOfDayChannelName": "آية اليوم",
+    "tafsir": "التفسير",
+    "showTafsir": "عرض التفسير",
+    "tafsirUnavailable": "التفسير غير متاح — اتصل بالإنترنت مرة واحدة لتنزيله.",
+    "khatmahPin": "تعيين كموضعي في الختمة",
+    "khatmahPinned": "موضع الختمة — انقر للإزالة",
+    "khatmahUnpin": "إزالة موضع الختمة",
+    "khatmahContinue": "متابعة",
+    "khatmahReset": "إعادة ضبط",
+    "khatmahResetTitle": "إعادة ضبط الختمة",
+    "khatmahResetToday": "إعادة ضبط قراءة اليوم",
+    "khatmahResetTodayHelp": "يعيد فقط الصفحات المسجلة اليوم.",
+    "khatmahResetAll": "إعادة بدء الختمة",
+    "khatmahResetAllHelp": "العودة إلى بداية الخطة بجدول جديد.",
+    "khatmahDelete": "حذف الختمة",
+    "khatmahDeleteHelp": "يزيل الخطة بالكامل.",
+    "khatmahReminderChannelName": "تذكير الختمة",
+    "khatmahReminderTitle": "الختمة",
+    "khatmahReminderBody": "وِرد اليوم: {{pages}} صفحات — تابع من الصفحة {{page}}.",
+    "audioButton": "الصوت",
+    "khatmahCustom": "مخصص…",
+    "khatmahLengthTitle": "مدة الختمة (أيام)",
+    "khatmahSetUpTitle": "ابدأ ختمة",
+    "khatmahFromPageTitle": "هل بدأت بالفعل؟ ابدأ من صفحة",
+    "khatmahFromPageHint": "من البداية",
+    "khatmahStartCta": "ابدأ",
+    "showMore": "عرض المزيد",
+    "showLess": "عرض أقل",
+    "tafsirEditionHelp": "التفسير الذي يظهر أسفل كل آية. يمكن تغييره أيضًا من أي آية في صفحة القرآن.",
+    "nextPage": "الصفحة التالية",
+    "prevPage": "الصفحة السابقة",
+    "companionTitle": "أسفل كل آية",
+    "companionHelp": "يُطبَّق أينما تُعرض آية — القارئ وآية اليوم وإشعار الآية اليومي. يمكن تغييره أيضًا من صفحة القرآن.",
+    "companionActive": "مفعّل",
+    "mushafReplaceOldBody": "لا تزال نسخة قديمة من المصحف ({{size}} ميجابايت) على جهازك من إصدار سابق. ستُحذف أولاً — ولن يتأثر أي شيء قمت بحفظه.",
+    "shareAsText": "مشاركة النص",
+    "shareChoiceA11y": "مشاركة — اختر نصًا أو بطاقة صورة",
+    "recitation": "التلاوة",
+    "downloadSurahAudioSized": "تنزيل هذه السورة · {{size}}",
+    "tapToPick": "اختر",
+    "tabMarks": "الإشارات",
+    "searchSurahOrPage": "ابحث عن سورة أو صفحة",
+    "reading": "قيد القراءة",
+    "pageScrubber": "انتقل إلى صفحة",
+    "goCta": "انتقال",
+    "downloadChannelName": "تنزيل القرآن",
+    "downloadChannelDesc": "تقدّم تنزيل القرآن.",
+    "downloadingFonts": "جارٍ تنزيل نص القرآن",
+    "downloadingReciter": "جارٍ تنزيل {{name}}",
+    "downloadProgressAyahs": "{{done}} من {{total}} آية",
+    "audioDownloadDoneTitle": "{{name}} جاهز",
+    "audioDownloadDoneBody": "القرآن كاملاً بهذا الصوت على هذا الجهاز، ويعمل الآن دون اتصال.",
+    "audioDownloadIncompleteTitle": "لم يكتمل تنزيل التلاوة",
+    "audioDownloadIncompleteBody": "ما زالت {{count}} آية ناقصة. ابدأ التنزيل مرة أخرى ليكمل من حيث توقف.",
+    "listenTitle": "تلاوة",
+    "tilawahDoorSub": "استمع إلى القرآن",
+    "tilawahBlurb": "تلاوة القرآن — تستمرّ والشاشة مطفأة، وتعمل دون اتصال بعد التنزيل.",
+    "tilawahContinue": "تابع من موضع قراءتك",
+    "tilawahBegin": "ابدأ من",
+    "tilawahAyahOf": "الآية {{done}} من {{total}}",
+    "tilawahShowPage": "إظهار الصفحة",
+    "backToTop": "العودة إلى الأعلى",
+    "tilawahKeepAwake": "إبقاء الشاشة مضاءة",
+    "tilawahSurahSeek": "التنقّل داخل السورة",
+    "tilawahShuffle": "ترتيب عشوائي للسور",
+    "tilawahPrevSurah": "السورة السابقة",
+    "tilawahNextSurah": "السورة التالية",
+    "tilawahAyahWord": "آية",
+    "openInReader": "افتح في شاشة القراءة",
+    "listenSurahMeta": "{{count}} آيات",
+    "listenNowPlaying": "يُشغَّل الآن",
+    "listenContinuous": "تشغيل متواصل",
+    "listenIdle": "لا شيء قيد التشغيل",
+    "listenReciter": "القارئ",
+    "listenSeek": "التنقّل داخل الآية",
+    "listenPrevious": "الآية السابقة",
+    "listenNext": "الآية التالية",
+    "listenSpeed": "السرعة",
+    "listenSleep": "مؤقّت النوم",
+    "listenSleepOff": "إيقاف",
+    "listenSleepSurah": "نهاية السورة",
+    "listenSleepMinutes": "{{count}} د",
+    "listenSleepArmed": "يتوقف بعد {{count}} د تقريبًا",
+    "listenPickSurah": "ابدأ من",
+    "listenDownloadTitle": "احتفظ بـ{{name}} على هذا الجهاز",
+    "listenDownloadBody": "القرآن كاملاً بهذا الصوت، نحو {{size}}. وشاشة القراءة تشغّل الملفات نفسها، فيعمل هناك أيضًا.",
+    "listenDownloadComplete": "مكتمل · {{size}}",
+    "listenDownloadPartial": "{{done}} من {{total}} آية هنا · {{size}}",
+    "listenDownloadStart": "تنزيل",
+    "listenDownloadResume": "متابعة التنزيل",
+    "listenDownloadBusy": "هناك تنزيل آخر جارٍ. واحد في كل مرة، حتى لا يتباطأ أيٌّ منهما.",
+    "downloadProgress": "{{done}} من {{total}} صفحة",
+    "downloadDoneTitle": "القرآن جاهز",
+    "downloadDoneBody": "كل الصفحات على هذا الجهاز، ويمكن القراءة دون اتصال.",
+    "downloadIncompleteTitle": "لم يكتمل التنزيل",
+    "downloadIncompleteBody": "ما زالت {{count}} صفحة ناقصة. افتح القرآن لمتابعة التنزيل من حيث توقف.",
+    "finishDay": "إنهاء قراءة اليوم {{day}} ({{when}})",
+    "finishDayShort": "إنهاء اليوم {{day}} ({{when}})",
+    "khatmahPageProgress": "بقيت {{pages}} صفحة · اليوم {{day}} من {{days}}",
+    "khatmahDayDone": "✓ تمت قراءة اليوم",
+    "khatmahPagesLeftToday": "بقيت {{count}} صفحة اليوم",
+    "khatmahPagesLeftToday_one": "بقيت {{count}} صفحة اليوم",
+    "khatmahExtraPages": "+{{count}} صفحة إضافية",
+    "khatmahExtraPages_one": "+{{count}} صفحة إضافية",
+    "khatmahMarkDone": "تعليم قراءة اليوم {{day}} كمنتهية",
+    "khatmahMarkNext": "✓ إنهاء اليوم {{day}} ({{when}}) أيضًا",
+    "khatmahMarkToday": "✓ تمت قراءة اليوم",
+    "khatmahPrevDay": "‹ اليوم السابق",
+    "riwayahQalun": "قالون",
+    "riwayahShubah": "شعبة",
+    "riwayahPickerTitle": "الرواية",
+    "riwayahPickerOpen": "الرواية: {{name}}. اضغط للتغيير",
+    "riwayahNotOnDevice": "{{name}} — غير موجودة على هذا الجهاز بعد",
+    "riwayahAddIt": "اضغط لإضافتها",
+    "riwayahDefault": "(افتراضي)",
+    "dueToday": "اليوم",
+    "dueTomorrow": "غدًا",
+    "scrubHint": "اسحب لأعلى لتحكّم أدق",
+    "scrubHalf": "نصف السرعة",
+    "scrubQuarter": "ربع السرعة",
+    "scrubFine": "تحكّم دقيق",
+    "translationUnavailable": "لا تتوفر ترجمة لهذه الآية.",
+    "oftenRead": "الأكثر قراءةً",
+    "listenDeleteAudio": "حذف {{name}} من هذا الجهاز",
+    "listenDownloadReciter": "تنزيل {{name}}، نحو {{size}}",
+    "listenDownloadRunning": "جارٍ التنزيل · {{done}} من {{total}}",
+    "shareTafsir": "مشاركة هذا التفسير ({{edition}})",
+    "surahAudioPartial": "{{have}} من {{total}} آية · اضغط لتنزيل الباقي",
+    "deleteSurahAudio": "حذف صوت هذه السورة",
+    "deleteSurahAudioFor": "حذف الصوت المنزَّل لسورة {{surah}}",
+    "audioGap": "الآية {{ayah}} من {{surah}} غير منزَّلة — اتصل بالإنترنت، أو نزِّل هذه السورة للاستماع دون اتصال.",
+    "khatmahMore": "خيارات الختمة الأخرى",
+    "khatmahPrevDayHelp": "إلغاء علامة اليوم والعودة إلى حصة اليوم السابق.",
+    "lastReadRow": "آخر قراءة · {{surah}}، صفحة {{page}}",
+    "autoShort": "تلقائي",
+    "switchToAuto": "اتباع سمة التطبيق",
+    "downloadingSurah": "جارٍ تنزيل {{surah}} · {{name}}",
+    "surahDownloadDoneTitle": "{{surah}} جاهزة",
+    "surahDownloadDoneBody": "تلاوة {{name}} لسورة {{surah}} محفوظة على هذا الجهاز، وتُشغَّل الآن دون اتصال.",
+    "reciterDownloadStrip": "جارٍ تنزيل {{name}} · {{pct}}٪",
+    "surahDownloadStrip": "جارٍ تنزيل {{surah}} · {{pct}}٪"
+  },
+  "mosques": {
+    "searching": "البحث عن مساجد قريبة…",
+    "noneFound": "لم يتم العثور على مساجد قريبة. حاول توسيع نطاق البحث.",
+    "unnamedMosque": "مسجد",
+    "needLocation": "حدّد موقعاً أولاً حتى نتمكن من البحث في المنطقة المجاورة.",
+    "error": "تعذّر الوصول إلى قاعدة بيانات المساجد. حاول مرة أخرى.",
+    "title": "ابحث عن مسجد قريب منك",
+    "bodyWithLocation": "سنفتح تطبيق الخرائط مع بحث عن \"مسجد\" حول موقعك. إذا لم يكن تطبيق الخرائط متاحاً، سنفتح خرائط جوجل في المتصفح.",
+    "bodyNoLocation": "حدّد موقعاً أولاً (الإعدادات ← الموقع). سنفتح تطبيق الخرائط بعد ذلك مع بحث عن \"مسجد\" حوله. إذا لم يكن متاحاً، سنفتح خرائط جوجل في المتصفح.",
+    "openInMapsApp": "افتح الخرائط وابحث عن \"مسجد\""
+  },
+  "journal": {
+    "todayLabel": "اليوم",
+    "streakDays": "أيام متتالية",
+    "onTimeRate": "في الوقت",
+    "totalLogged": "إجمالي المسجَّل",
+    "status": {
+      "on-time": "في الوقت",
+      "late": "متأخر",
+      "missed": "فائتة",
+      "qadha": "قضاء"
+    },
+    "statusShort": {
+      "on-time": "في الوقت",
+      "late": "متأخر",
+      "missed": "فائتة",
+      "qadha": "قضاء"
+    },
+    "encourageEmpty": "سجّل أول صلاة اليوم لبدء يومياتك.",
+    "encourageActive": "كل صلاة مسجَّلة خطوة إلى الأمام.",
+    "encourageStreak": "ما شاء الله، {{count}} يوماً متتالياً في الوقت. واصل.",
+    "notificationToggleTitle": "سجِّل من الإشعار",
+    "notificationToggleOn": "اضغط \"تسجيل الصلاة\" في تنبيه وقت الصلاة للانتقال هنا مباشرة.",
+    "notificationToggleOff": "أضف إجراء \"تسجيل الصلاة\" إلى كل تنبيه لوقت الصلاة.",
+    "notificationToggleA11y": "تفعيل إجراء التسجيل في إشعارات الصلاة",
+    "notePlaceholder": "ملاحظة خاصة (على هذا الجهاز فقط)",
+    "saveNote": "حفظ الملاحظة",
+    "logActionTitle": "سجِّل الصلاة",
+    "logSunnahActionTitle": "تسجيل مع السنة",
+    "loadFailedTitle": "تعذّر تحميل السجل",
+    "loadFailedBody": "بياناتك محفوظة على الجهاز لكن تعذّرت قراءتها الآن. حاول فتح السجل مرة أخرى.",
+    "saveFailedTitle": "تعذّر الحفظ",
+    "saveFailedBody": "يرجى المحاولة مرة أخرى.",
+    "noteLabel": "ملاحظة شخصية (خاصة ومشفّرة)",
+    "notYet": "ليس بعد — لم يحن وقتها",
+    "quickLogMark": "تسجيل صلاة {{prayer}}",
+    "quickLogLogged": "سُجّلت {{prayer}}: {{status}}. اضغط للتراجع",
+    "quickLogNotYet": "لم يدخل وقت {{prayer}} بعد",
+    "passedTitle": "تسجيل {{prayer}} · {{day}}",
+    "passedBody": "مضى وقتها. كيف صُلّيت؟",
+    "passedFirstBody": "مضى وقتها الاختياري ووقتها الضروري ما زال قائمًا. هل صُلّيت في الوقت الأول أم بعده؟"
+  },
+  "events": {
+    "islamicNewYear": "رأس السنة الهجرية",
+    "ashura": "يوم عاشوراء",
+    "mawlid": "المولد النبوي",
+    "isra": "الإسراء والمعراج",
+    "midShaban": "منتصف شعبان",
+    "ramadanBegins": "بداية رمضان",
+    "laylatAlQadr": "ليلة القدر (المُحتفى بها)",
+    "eidAlFitr": "عيد الفطر",
+    "arafah": "يوم عرفة",
+    "eidAlAdha": "عيد الأضحى",
+    "whiteDays": "الأيام البيض",
+    "sixOfShawwal": "ست من شوّال"
+  },
+  "ramadan": {
+    "title": "رمضان",
+    "suhoor": "السحور",
+    "iftar": "الإفطار",
+    "suhoorIn": "ينتهي السحور خلال {{time}}",
+    "iftarIn": "الإفطار بعد {{time}}"
+  },
+  "onboarding": {
+    "skip": "تخطٍّ الآن",
+    "next": "التالي",
+    "done": "تم",
+    "stepLabel": "الخطوة {{current}} من {{total}}",
+    "welcome": {
+      "title": "أهلًا بك",
+      "body": "تطبيق هادئ وخاصّ لمواقيت الصلاة. لا تحليلات ولا متتبّعات، فقط تذكيرات لطيفة بالصلوات الخمس.",
+      "salam": "السلام عليكم ورحمة الله وبركاته."
+    },
+    "location": {
+      "title": "موقعك",
+      "body": "نستخدم موقعك التقريبي لحساب مواقيت الصلاة بدقّة. تبقى الإحداثيات مشفّرة على هذا الجهاز، ولا تغادره أبدًا.",
+      "cta": "استخدام موقعي"
+    },
+    "notifications": {
+      "title": "تنبيهات الصلاة",
+      "body": "يمكننا تنبيهك بهدوء عند دخول كل وقت صلاة. ولك أن تختار صوتًا، أو تضبط تذكيرًا، أو توقف ذلك متى شئت.",
+      "cta": "تفعيل التنبيهات"
+    },
+    "exactAlarms": {
+      "title": "تنبيهات دقيقة التوقيت",
+      "body": "في إصدارات Android الأحدث، تحتاج تنبيهات الصلاة إلى إذن إضافي كي تصل في وقتها، لا متأخّرة بدقائق.",
+      "cta": "السماح بالتنبيهات الدقيقة"
+    },
+    "salamA11y": "السلام عليكم ورحمة الله تعالى وبركاته"
+  },
+  "backup": {
+    "exportSection": "التصدير",
+    "exportHelp": "احفظ إعداداتك والمواقع المحفوظة وسجلّ الصلاة وسجلّ الصيام في ملف JSON، ثم افتحه لاحقًا للاستعادة.",
+    "exportCta": "تصدير نسخة احتياطية",
+    "shareTitle": "نسخة احتياطية لمحراب",
+    "exportFailedTitle": "تعذّر التصدير",
+    "restoreSection": "الاستعادة",
+    "restoreHelp": "الصق نسخة JSON الاحتياطية بالأسفل، ثم اضغط استعادة لمعاينتها. وسيطلب التطبيق تأكيدك قبل التطبيق.",
+    "restorePastePlaceholder": "الصق نسخة JSON الاحتياطية هنا…",
+    "restoreCta": "معاينة الاستعادة",
+    "restorePreviewTitle": "عُثر على نسخة احتياطية",
+    "restorePreviewBody": "{{settings}} إعدادات، و{{presets}} مواقع محفوظة، و{{journal}} مدخلات في السجلّ، و{{fasting}} أيام صيام. سيُطبَّق هذا في الخطوة التالية.",
+    "restoreFailedTitle": "تعذّرت قراءة النسخة الاحتياطية",
+    "notAnEnvelope": "لا يبدو هذا الملف كنسخة احتياطية لمحراب.",
+    "privacyNote": "تبقى النسخ الاحتياطية على جهازك حتى تشاركها بنفسك. ويمكن في تحديث قادم تشفير الإحداثيات ومدخلات السجلّ بكلمة مرور، فاحتفظ بملف النسخة الاحتياطية لنفسك حتى ذلك الحين."
+  },
+  "fasting": {
+    "todayLabel": "اليوم",
+    "ramadanDayLabel": "رمضان · اليوم {{day}}",
+    "statusKept": "تم الصيام — بارك الله فيك.",
+    "statusRecommended": "يوافق هذا التاريخ صياماً مستحباً سنة.",
+    "statusOptional": "لم يُسجَّل صيام اليوم.",
+    "markCta": "سجّل صيام اليوم",
+    "unmarkCta": "إلغاء صيام اليوم",
+    "statRamadan": "رمضان",
+    "statVoluntary": "تطوع",
+    "statStreak": "المتتالية",
+    "gridLabel": "رمضان هذا",
+    "gridDayA11y": "يوم {{day}} {{state}}",
+    "privacyNote": "سجل الصيام يبقى مشفّراً على جهازك.",
+    "encourageEmpty": "سجّل أول صيام لك لبدء التتبع.",
+    "encourageActive": "كل صيام محسوب — تقبَّل الله منك.",
+    "encourageStreak": "ما شاء الله، {{count}} يوماً متتالياً. استمر.",
+    "reminderToggleTitle": "تذكير قبل اليوم بيوم",
+    "reminderToggleOn": "ستصلك تذكرة لطيفة الساعة {{hour}}:00 مساءً قبل كل صيام سنة.",
+    "reminderToggleOff": "احصل على تنبيه مساء اليوم السابق لكل صيام إثنين/خميس ويوم سنة مميز.",
+    "reminderToggleA11y": "تفعيل تذكيرات قبل الصيام بيوم",
+    "upcomingLabel": "سنن الصيام القادمة",
+    "daysAway": "بعد {{count}} يوم",
+    "daysSpan": "{{count}} أيام",
+    "daysCount": "{{count}} أيام",
+    "ramadanCountdownLabel": "يبدأ رمضان بعد",
+    "mondayEncouragement": "الإثنين صيام سنة — تُعرض الأعمال على الله يومي الإثنين والخميس.",
+    "thursdayEncouragement": "الخميس صيام سنة — تُعرض الأعمال على الله يومي الإثنين والخميس.",
+    "monthViewLabel": "كل الصيام المسجَّل",
+    "noLogsYet": "الأيام التي تصومها ستظهر هنا.",
+    "typeRamadan": "رمضان",
+    "typeVoluntary": "تطوعي / سنة",
+    "reminderChannelName": "تذكيرات الصيام",
+    "reminderTitle": "تذكير بالصيام"
+  },
+  "methods": {
+    "0": "الشيعة — الاثنا عشرية",
+    "1": "جامعة العلوم الإسلامية، كراتشي",
+    "2": "المجمع الإسلامي لأمريكا الشمالية (ISNA)",
+    "3": "رابطة العالم الإسلامي",
+    "4": "جامعة أم القرى، مكة المكرمة",
+    "5": "الهيئة المصرية العامة للمساحة",
+    "7": "مؤسسة الجيوفيزياء، جامعة طهران",
+    "8": "منطقة الخليج",
+    "9": "الكويت",
+    "10": "قطر",
+    "11": "سنغافورة",
+    "12": "فرنسا",
+    "13": "تركيا",
+    "14": "روسيا",
+    "15": "لجنة رؤية الهلال العالمية",
+    "21": "المغرب",
+    "auto": "تلقائي (حسب الموقع)"
+  },
+  "attributions": {
+    "groupScripture": "النص",
+    "groupRecitation": "التلاوة",
+    "groupMeaning": "الترجمة والتفسير",
+    "groupTypefaces": "الخطوط",
+    "footer": "كل سطر يقود إلى مصدره.",
+    "quranText": "النص العثماني للقرآن",
+    "mushafImages": "صور صفحات المصحف (604)",
+    "translationEditions": "إصدارات الترجمة (14)",
+    "sahihIntl": "صحيح إنترناشيونال (الإنجليزية)",
+    "pickthall": "بيكثول (الإنجليزية)",
+    "mushafMetadata": "بيانات صفحات المصحف الوصفية",
+    "riwayat": "نصوص ورش وقالون وشعبة (تُنزَّل ولا تأتي مع التطبيق)",
+    "riwayahLines": "هندسة الأسطر المطبوعة لتلك المصاحف",
+    "amiriFonts": "خطوط Amiri و Amiri Quran",
+    "scheherazade": "Scheherazade New",
+    "hisnulMuslim": "أدعية حصن المسلم",
+    "quranGeometry": "بيانات مواضع الآيات (quran.com / مشروع Quran for Android)",
+    "recitation": "صوت التلاوة (42 قارئًا): EveryAyah.com · توقيت الكلمات: quran-align (CC BY 4.0)",
+    "tafsir": "نصوص التفسير: ابن كثير، معارف القرآن، الميسر",
+    "surahHeaderFont": "خط عناوين السور"
+  },
+  "liveActivity": {
+    "title": "الصلاة التالية",
+    "in": "خلال {{remaining}}",
+    "now": "الآن",
+    "soon": "تبدأ قريباً",
+    "channelName": "العد التنازلي للصلاة",
+    "channelDesc": "إشعار مستمر مثبت يعرض العد التنازلي للصلاة التالية.",
+    "fgsText": "العداد التنازلي للصلاة نشط",
+    "justThisOne": "هذه المرة",
+    "inWord": "خلال",
+    "atWord": "عند",
+    "hideOnLock": "إخفاء على شاشة القفل",
+    "showOnLock": "إظهار على شاشة القفل"
+  },
+  "hijri": {
+    "month_1": "محرم",
+    "month_2": "صفر",
+    "month_3": "ربيع الأول",
+    "month_4": "ربيع الآخر",
+    "month_5": "جمادى الأولى",
+    "month_6": "جمادى الآخرة",
+    "month_7": "رجب",
+    "month_8": "شعبان",
+    "month_9": "رمضان",
+    "month_10": "شوال",
+    "month_11": "ذو القعدة",
+    "month_12": "ذو الحجة"
+  },
+  "tour": {
+    "welcomeTitle": "مرحبًا بك في محراب",
+    "welcomeBody": "مواقيت الصلاة والقرآن وأدوات العبادة اليومية — بخصوصية تامة. بلا حسابات ولا متتبّعات.",
+    "timesTitle": "مواقيت الصلاة في لمحة",
+    "timesBody": "مواقيت دقيقة حسب موقعك، مع عدّ تنازلي مباشر للصلاة القادمة. اسحب بطاقة اليوم للاطلاع على الأيام القادمة.",
+    "quranTitle": "القرآن الكريم في أبهى صورة",
+    "quranBody": "اقرأ مصحف المدينة، واستمع إلى التلاوة بأصوات خمسة قرّاء، واحفظ إشارات مرجعية للآيات، وتابع ختمتك.",
+    "customizeTitle": "خصّصه كما يحلو لك",
+    "customizeBody": "أدوات الشاشة الرئيسية، وعدّ تنازلي في النشاط المباشر، وسمات وألوان تمييز — كلها في الإعدادات.",
+    "skip": "تخطي",
+    "next": "التالي",
+    "done": "ابدأ الآن"
+  },
+  "downloads": {
+    "title": "إدارة التنزيلات",
+    "settingsHelp": "صفحات المصحف وصوت التلاوة والتفسير على هذا الجهاز.",
+    "deleteTitle": "حذف التنزيل؟",
+    "deleteBody": "سيُزال {{what}} من هذا الجهاز. يمكنك تنزيله مرة أخرى في أي وقت.",
+    "total": "الإجمالي على الجهاز: {{size}}",
+    "mushaf": "صفحات المصحف",
+    "mushafSub": "604 صفحات مصحف المدينة",
+    "audioSub": "صوت التلاوة",
+    "tafsirSub": "نصوص التفسير المخزنة",
+    "empty": "لا توجد تنزيلات بعد. تظهر هنا صفحات المصحف وصوت التلاوة والتفسير التي تنزلها.",
+    "mushafPages": "{{pages}} من {{total}} صفحة",
+    "legacyMushaf": "صفحات مصحف قديمة",
+    "legacyMushafSub": "بقايا من القارئ السابق. لا شيء يفتحها الآن.",
+    "riwayat": "روايات القراءة",
+    "riwayatFootnote": "لا يتضمّن محراب هذه النصوص ولا يستضيفها. يُجلب الملف من الناشر إلى هذا الجهاز مباشرة، ويُتحقّق منه هنا قبل قراءة أي شيء منه.",
+    "riwayahInstalled": "{{pages}} صفحة · من {{host}}",
+    "riwayahPublisher": "ناشره {{publisher}}. ينسب الفضل إلى {{credits}}.",
+    "riwayahBuiltIn": "مضمّن في محراب. لا شيء لتنزيله ولا شيء لحذفه.",
+    "riwayahOpenSource": "فتح المصدر",
+    "riwayahDownload": "تنزيل",
+    "riwayahFetchHowTo": "سيجلبه مِحراب من الناشر مباشرةً إلى هذا الجهاز، ويفحصه قبل أن يُقرأ منه شيء.",
+    "riwayahAddAFile": "إضافة ملف لديّ بالفعل",
+    "riwayahHowTo": "نزّل ملف JSON من تلك الصفحة، ثم اخترْه بالأسفل. لا حاجة إلى فكّ الضغط.",
+    "riwayahLink": "رابط ملف البيانات",
+    "riwayahInstall": "إضافة هذا المصحف",
+    "riwayahChooseFile": "اختر الملف المنزَّل",
+    "riwayahOrLink": "أو الصق رابطًا مباشرًا للملف:",
+    "riwayahUnreadable": "تعذّرت قراءة هذا الملف.",
+    "riwayahFileTooLarge": "هذا الملف أكبر بكثير من أن يكون مصحفًا.",
+    "riwayahZipUnsupported": "هذا الأرشيف بصيغة لا يستطيع التطبيق فتحها. فُكَّ ضغطه واختر الملف الذي بداخله.",
+    "riwayahZipUnreadable": "تعذّر فتح هذا الأرشيف.",
+    "riwayahNoJsonInZip": "لا يوجد ملف .json داخل هذا الأرشيف."
+  },
+  "dataStats": {
+    "title": "إحصائيات البيانات",
+    "toggle": "عرض إحصائيات البيانات",
+    "toggleHelp": "يعرض في الإعدادات ← أوقات الصلاة مصدر أوقات الصلاة، وحجم البيانات المخزّنة، وتوقيت التحديث.",
+    "source": "المصدر الحالي",
+    "daysStored": "المخزن على الجهاز",
+    "lastUpdated": "آخر تحديث",
+    "nextCheck": "التحقق التالي من التحديث",
+    "serverRun": "آخر تشغيل للخادم",
+    "nextServerRun": "التشغيل التالي للخادم",
+    "never": "—",
+    "daysUnit": "أيام",
+    "sourceCdn": "بيانات الخادم (حديثة)",
+    "sourceSeed": "بيانات مضمّنة دون اتصال",
+    "sourceScrape": "مباشر من Islamiska Förbundet",
+    "sourceAladhan": "AlAdhan",
+    "sourceLocal": "حساب على الجهاز",
+    "sourceUnknown": "غير معروف",
+    "serverOk": "سليم",
+    "serverWarning": "تغطية منخفضة",
+    "serverUnknown": "لم يُتحقق بعد",
+    "unlockedTitle": "تم تفعيل إحصائيات البيانات",
+    "unlockedBody": "تظهر الآن بطاقة الإحصاءات في الإعدادات ← أوقات الصلاة. يمكنك إيقافها في أي وقت أدناه.",
+    "serverCoverage": "تغطية الخادم",
+    "serverSweden": "السويد · Islamiska Förbundet",
+    "serverMorocco": "المغرب · Habous",
+    "inUse": "قيد الاستخدام",
+    "habousWindow": "لا تنشر الوزارة إلا الشهر الهجري الجاري، ولذلك تتناقص هذه المدة يوماً كل يوم وتمتلئ من جديد عند دخول الشهر. وإعادة البناء لا تطيلها."
+  },
+  "log": {
+    "legendPrayers": "0 ← 5 صلوات",
+    "fasted": "صام",
+    "dayA11y": "{{date}}: {{prayers}} صلوات مسجلة{{fast}}",
+    "streakCaption": "سلسلة {{count}} يومًا",
+    "streakBest": "(الأفضل {{best}})",
+    "fastsCaption": "{{count}} صيامًا",
+    "markAllOnTime": "تسجيل الكل في وقتها",
+    "iftarAt": "الإفطار {{time}}",
+    "allUpcoming": "كل القادم",
+    "title": "السجل",
+    "practiceTitle": "سجل العبادة",
+    "previousDay": "اليوم السابق",
+    "nextDay": "اليوم التالي",
+    "backToToday": "العودة إلى اليوم",
+    "fastingTitle": "الصيام",
+    "noFastLogged": "لم يُسجَّل صيام.",
+    "markFasted": "تسجيل الصيام",
+    "unmarkFasted": "إلغاء التسجيل",
+    "showOnHome": "إظهار الرسم في الصفحة الرئيسية",
+    "showOnHomeHelp": "يضيف مربعات مواظبتك إلى شاشة اليوم. معطّل افتراضيًا.",
+    "backfillAction": "املأ الأيام السابقة",
+    "backfillTitle": "ملء الأيام السابقة؟",
+    "backfillBody": "سيسجّل هذا {{prayers}} صلاة عبر {{days}} يومًا ({{range}}) على أنها أُدّيت في وقتها. الأيام التي سجّلتها من قبل تبقى كما هي، ولا يُمسّ يومك الحالي.",
+    "backfillConfirm": "املأها",
+    "backfillNothingTitle": "لا شيء لملئه",
+    "backfillNothingBody": "كل يوم قبل اليوم مسجَّل بالفعل.",
+    "openLogFromHome": "افتح السجل",
+    "swipeHint": "اسحب لتغيير اليوم",
+    "backfillUnreadable": "تعذّرت قراءة سجلّك الآن، فلم يُغيَّر شيء. حاول مرة أخرى.",
+    "backfillRefusedTitle": "لم يُغيَّر شيء",
+    "backfillRefusedBody": "كان ملء تلك الأيام سيغيّر شيئًا سجّلته من قبل، فتوقّفت العملية. سجلّك كما هو.",
+    "fillMonthsAction": "املأ الأشهر الثلاثة الماضية",
+    "fillMonthsTitle": "ملء الأشهر الثلاثة الماضية؟",
+    "fillMonthsBody": "سيسجّل هذا {{prayers}} صلاة في {{days}} يومًا فارغًا ({{range}}) على أنها أُدّيت في وقتها. وتُترك {{skipped}} يومًا كما هي لأن فيها شيئًا مسجّلًا بالفعل — حالة أو ملاحظة أو صيام. ولا يُمسّ يومك الحالي.",
+    "fillMonthsNothingBody": "كل يوم في الأشهر الثلاثة الماضية فيه شيء مسجَّل بالفعل.",
+    "fillSummaryDays": "الأيام",
+    "fillSummaryPrayers": "الصلوات",
+    "backfillPreserved": "الأيام التي سجّلتها من قبل تبقى كما هي، ولا يُمسّ يومك الحالي.",
+    "fillMonthsPreserved": "الأيام التي فيها حالة أو ملاحظة أو صيام تبقى كما هي تمامًا. ولا يُمسّ يومك الحالي.",
+    "fillSummaryLeftAlone": "مُبقاة",
+    "unlogged": "لم تُسجَّل",
+    "resetAction": "إعادة تعيين سجل الصلاة",
+    "resetTitle": "إعادة تعيين سجل الصلاة",
+    "resetBody": "اختر ما تريد مسحه، بالنسبة إلى {{day}}. الصيام وصلوات السنة والذكر سجلات منفصلة ولن تُمَس.",
+    "resetScopeDay": "هذا اليوم",
+    "resetScopeMonth": "هذا الشهر",
+    "resetScopeYear": "هذه السنة",
+    "resetScopeAll": "كل شيء",
+    "resetNothing": "لا شيء",
+    "resetConfirmTitle": "مسح هذه الصلوات؟",
+    "resetConfirm": "امسحها",
+    "resetPreserved": "لن يُمَس الصيام ولا صلوات السنة ولا الذكر. لا يمكن التراجع عن هذا.",
+    "resetRangeAll": "السجل كله",
+    "options": "خيارات",
+    "setUpSync": "إعداد المزامنة",
+    "legendTitle": "ما يعرضه الرسم"
+  },
+  "endOfDay": {
+    "title": "تسجيل صلوات اليوم؟",
+    "body": "سجّل الصلوات الخمس كلّها في وقتها، أو افتح السجل لإدخالها واحدة واحدة.",
+    "action": "تسجيل الكل كمكتمل",
+    "channelName": "سجل نهاية اليوم"
+  },
+  "duaReminders": {
+    "channelName": "أذكار الصباح والمساء",
+    "morningTitle": "أذكار الصباح",
+    "morningBody": "أذكار الصباح — وقتها ممتدّ حتى الشروق.",
+    "eveningTitle": "أذكار المساء",
+    "eveningBody": "أذكار المساء — وقتها ممتدّ حتى الغروب.",
+    "groupTitle": "أذكار الصباح والمساء",
+    "morning": "أذكار الصباح",
+    "morningHelp": "تذكير في وقت الصباح — بعد الفجر وقبل الشروق.",
+    "evening": "أذكار المساء",
+    "eveningHelp": "تذكير في وقت المساء — بعد العصر وقبل المغرب."
+  },
+  "sunnah": {
+    "none": "لا يوجد",
+    "short": "سنة",
+    "ofTotal": "{{done}} من {{total}}",
+    "ofTotalShort": "{{done}}/{{total}}",
+    "a11yNone": "{{prayer}}: لا توجد سنة",
+    "a11yCount": "سنة {{prayer}}: سُجِّل {{done}} من {{total}}",
+    "afterIsha": "بعد العشاء",
+    "witr": "الوتر",
+    "prayed": "صُلِّيت",
+    "logIt": "سجّل",
+    "qiyam": "قيام الليل",
+    "qiyamNote": "لا يُحتسب ضمن السلسلة",
+    "resetQiyam": "إعادة ضبط قيام الليل",
+    "reset": "إعادة ضبط",
+    "addQiyam": "سجّل قيام ليل",
+    "qiyamCountA11y": "قيام الليل المسجّل",
+    "streakCaption": "سلسلة سنن {{count}} يومًا",
+    "legend": "السنن",
+    "qiyamLegend": "قيام الليل",
+    "a11yAll": "كل السنن"
+  },
+  "sync": {
+    "exportSection": "تصدير",
+    "importSection": "استيراد",
+    "exportHelp": "احفظ كل ما سجّلته في ملف تحتفظ به، سواء للانتقال إلى هاتف جديد، أو لمجرد أن يكون موجودًا في مكان آخر.",
+    "exportCta": "تصدير إلى ملف",
+    "exportFailedTitle": "فشل التصدير",
+    "importHelp": "افتح ملف النسخة الاحتياطية، وانسخه كاملًا، ثم الصقه هنا. لن يُحذف شيء مما على هذا الجهاز، بل يُدمج السجلّان معًا.",
+    "importPastePlaceholder": "الصق ملف النسخة الاحتياطية",
+    "importPreviewCta": "تحقّق من الملف",
+    "importApplyCta": "استيراد إلى هذا الجهاز",
+    "importFound": "أُنشئ بتاريخ {{date}}. اختر ما تريد أخذه منه:",
+    "importDoneTitle": "تم الاستيراد",
+    "importNothingNew": "كل ما في ذلك الملف موجود هنا بالفعل.",
+    "importEmptyTitle": "لا شيء لاستيراده",
+    "importFailedTitle": "فشل الاستيراد",
+    "importUnreadableTitle": "تعذّرت قراءة ذلك",
+    "importUnreadableBody": "لا يبدو هذا نسخةً احتياطية من Ibadat 365. الصق محتويات ملف .json كاملةً.",
+    "importedLine": "{{label}}: {{before}} → {{after}}",
+    "privacyNote": "الملف نصّ عادي وغير محمي بكلمة مرور، فهو خاصّ بقدر خصوصية المكان الذي تحفظه فيه. ولا يُرفع أي شيء إلى أي مكان.",
+    "category": {
+      "prayers": "سجل الصلاة",
+      "sunnah": "صلوات السنة",
+      "fasting": "الصيام",
+      "dhikr": "الذكر",
+      "quran": "القرآن",
+      "settings": "الإعدادات",
+      "location": "الموقع"
+    },
+    "categoryHint": {
+      "prayers": "كل صلاة سجّلتها، وملاحظاتك عليها",
+      "sunnah": "السنن والوتر وقيام الليل",
+      "fasting": "أيام الصيام ونيّاتها",
+      "dhikr": "مجموعات التسبيح المكتملة",
+      "quran": "العلامات المرجعية، والآيات المميّزة بنجمة، وخطط الختمة، وآخر قراءة، والقارئ والتفسير",
+      "settings": "المظهر وطريقة الحساب والإشعارات والأدوات",
+      "location": "الأماكن المحفوظة والإحداثيات"
+    },
+    "count": {
+      "prayers": "الصلوات",
+      "fasting": "أيام الصيام",
+      "dhikr": "أيام الذكر",
+      "sunnah": "أيام السنن",
+      "bookmarks": "العلامات",
+      "khatmah": "خطط الختمة"
+    },
+    "settingsRowHint": "إقران جهاز آخر",
+    "pairIntro": "تُبقي المزامنة سجلك متطابقًا على كل أجهزتك. مِحراب لا ينقل شيئًا بنفسه: فهو يحتاج مجلدًا يقوم Nextcloud أو OneDrive أو Dropbox أو Syncthing أو ما شابه بمزامنته بين أجهزتك. يكتب مِحراب ملفًا صغيرًا مشفّرًا هناك، ولا تستطيع قراءته إلا أجهزتك أنت.",
+    "thisDevice": "هذا الجهاز",
+    "deviceNameLabel": "اسم الجهاز",
+    "thisDeviceHelp": "اعرض هذا الرمز على جهازك الآخر أو اكتبه هناك. إنه ليس كلمة مرور — لا بأس بنسخه أو تصويره أو إرساله إلى نفسك.",
+    "codeA11y": "رمز إقران هذا الجهاز",
+    "copyCode": "نسخ الرمز",
+    "copied": "تم نسخ الرمز",
+    "copyFailed": "تعذّر نسخ الرمز",
+    "addDevice": "إضافة جهاز",
+    "addDeviceHelp": "اكتب أو الصق الرمز الظاهر على جهازك الآخر.",
+    "codePlaceholder": "MHRB-…",
+    "pasteCode": "لصق",
+    "addCta": "إقران",
+    "pairWarnTitle": "إقران بالجهاز {{value}}؟",
+    "pairWarnBody": "كل ما هو مسجَّل على ذلك الجهاز سيظهر هنا، وكل ما هنا سيظهر هناك. الدمج لا يحذف شيئًا أبدًا: وعند الاختلاف يُحتفَظ بالأحدث.",
+    "pairConfirm": "إقران",
+    "pairedTitle": "تم الإقران",
+    "pairedBody": "كتب هذا الجهاز مفتاحه في المجلد. افتح محراب على الجهاز الآخر — وبمجرد أن يقرأ المجلد يصير الجهازان مقترنين ويتزامنان.",
+    "errorBadCodeTitle": "لم ينجح هذا الرمز",
+    "errorBadCode": "تحقّق من الرمز وأعد المحاولة. إنه مكتوب في مجموعات من ستة، وحرف واحد خاطئ يكفي لرفضه.",
+    "errorThisDevice": "هذا رمز هذا الجهاز نفسه. أنت بحاجة إلى الرمز الظاهر على الجهاز الآخر.",
+    "errorTooMany": "يمكنك إقران {{max}} أجهزة كحد أقصى. أزل واحدًا أولًا.",
+    "errorSaveTitle": "تعذّر حفظ الإقران",
+    "errorSaveBody": "رفض الجهاز حفظه. أعد المحاولة — لم يتغيّر شيء.",
+    "pairedSection": "الأجهزة المقترنة",
+    "noneYet": "لا توجد أجهزة بعد.",
+    "peerNameLabel": "اسم هذا الجهاز المقترن",
+    "unnamedDevice": "جهاز بلا اسم",
+    "fingerprint": "البصمة {{value}}",
+    "viaCode": "أُضيف هنا",
+    "viaAnnounced": "أُضيف من ذلك الجهاز",
+    "lastSeen": "آخر مزامنة {{when}}",
+    "neverSeen": "لم تتم المزامنة بعد",
+    "remove": "إزالة",
+    "removeTitle": "إزالة {{value}}؟",
+    "removeBody": "سيتوقف هذا الجهاز عن الإرسال إليه وعن قبول ما يأتي منه. أزل هذا الجهاز هناك أيضًا، وإلا ظلّ يحاول.",
+    "notReady": "لا يستطيع هذا الجهاز إعداد المزامنة: لا يملك مصدرًا آمنًا للعشوائية، والمفتاح المُنشأ بدونه لن يكون خاصًا.",
+    "privacyNoteP2p": "رمزك مفتاح عام وليس سرًّا. أما البيانات نفسها فتُشفَّر لأجهزتك المقترنة وحدها، ولا يُرفع شيء إلى أي مكان.",
+    "folderSection": "المجلد",
+    "folderHelp": "اختر مجلدًا تقوم خدمة المزامنة لديك بمزامنته بالفعل على كل جهاز — مجلد في Nextcloud أو OneDrive أو Dropbox أو Syncthing. إن لم يكن هناك ما يزامن ذلك المجلد بين أجهزتك، فلن يصل شيء. يكتب مِحراب ملفًا صغيرًا مشفّرًا هناك ويقرأ ما تركته أجهزتك الأخرى.",
+    "chooseFolder": "اختر مجلدًا",
+    "changeFolder": "تغيير المجلد",
+    "folderChosen": "يستخدم {{value}}",
+    "syncNow": "زامن الآن",
+    "lastSyncedAt": "آخر فحص {{when}}",
+    "neverSynced": "لم يُفحص بعد",
+    "autoTitle": "المزامنة التلقائية",
+    "freqOpen": "عند الفتح",
+    "freqHourly": "كل ساعة",
+    "freqDaily": "يوميًا",
+    "freqOff": "إيقاف",
+    "autoHelp": "لا تعمل المزامنة التلقائية إلا أثناء فتح التطبيق. أما «زامن الآن» فتعمل دائمًا مهما اخترت هنا.",
+    "whatSyncs": "ما الذي يُزامَن",
+    "errorFolderGone": "لم يعد الوصول إلى هذا المجلد ممكنًا. اختره من جديد.",
+    "errorUnsupported": "هذه النسخة لا تدعم مزامنة المجلد.",
+    "syncDoneTitle": "تمت المزامنة",
+    "syncDoneBody": "كل ما كان على أجهزتك الأخرى صار هنا، وما هنا صار هناك.",
+    "syncNothing": "لا جديد. لم تكتب أجهزتك الأخرى شيئًا منذ آخر فحص.",
+    "syncFailedTitle": "لم تكتمل المزامنة",
+    "syncFailedBody": "حدث خطأ ما: {{detail}}",
+    "hint": {
+      "quranTitle": "أتقرأ على أكثر من جهاز؟",
+      "quranBody": "فعِّل المزامنة ليتبعك موضعك وعلاماتك وختمتك من جهاز إلى آخر.",
+      "logTitle": "سجِّل على جهاز، وشاهده على كلها",
+      "logBody": "فعِّل المزامنة ليبقى سجلك واحدًا في كل مكان. لا يُرفع شيء.",
+      "dismiss": "إخفاء هذا",
+      "openHint": "يفتح إعدادات المزامنة"
+    },
+    "pairedNeedsFolder": "اختر مجلدًا أولًا. عبر هذا المجلد يصل الجهازان أحدهما إلى الآخر، وبدونه لا يمكن تبادل شيء.",
+    "folderAppHint": "أنشأ محراب لنفسه مجلدًا باسم {{value}}. تجده في تطبيق الملفات ضمن \"على الآيفون\"، ووجِّه تطبيق المزامنة إليه للوصول إلى أجهزتك الأخرى.",
+    "syncQuietTitle": "لم يصل شيء",
+    "syncNothingArrived": "ملفك موجود في المجلد، لكن لم يظهر فيه شيء من أجهزتك الأخرى. يجب أن يشير الجهازان إلى المجلد نفسه، وأن يكون ما يبقي هذا المجلد متطابقًا بينهما قيد التشغيل.",
+    "syncStale": "ملفك موجود في المجلد، لكن أحدث سجل من {{device}} كُتب {{when}}. إذا كنت قد استخدمت ذلك الجهاز بعد ذلك، فإن ما يبقي المجلد متزامنًا بينكما قد توقف عن نقل الملفات.",
+    "scanCode": "مسح",
+    "scanHint": "وجّه الكاميرا نحو الرمز الظاهر على جهازك الآخر",
+    "scanDeniedTitle": "الكاميرا غير مسموح بها",
+    "scanDeniedBody": "يحتاج محراب إلى الكاميرا لقراءة الرمز. يمكنك السماح بذلك من إعدادات الجهاز، أو كتابة الرمز بدلًا من ذلك.",
+    "scanNoCameraTitle": "لا توجد كاميرا",
+    "scanNoCameraBody": "لا كاميرا في هذا الجهاز للمسح. اكتب الرمز أو الصقه بدلًا من ذلك.",
+    "freq15Min": "كل 15 د",
+    "errorFolderUnwritable": "لا يمكن الكتابة في هذا المجلد. اختر مجلدًا آخر — مجلد أنشأته بنفسك في «المستندات» أو «التنزيلات» هو الأنسب.",
+    "errorFolderTitle": "هذا المجلد لم ينجح"
+  },
+  "stats": {
+    "daysUnit": " يوم",
+    "streakLabel": "تتابع في الوقت",
+    "best": "الأفضل {{best}}",
+    "sunnahLabel": "السنن المؤداة",
+    "thisMonth": "هذا الشهر",
+    "fastedLabel": "صيام",
+    "owedLabel": "صلوات فائتة",
+    "nothingOwed": "لا شيء فائت",
+    "owedShow": "اضغط للعرض",
+    "owedHide": "معروضة ✕",
+    "owedHint": "اضغط على يوم لقضائه",
+    "owedMore": "+{{more}} أخرى",
+    "owedA11y": "{{owed}} صلوات فائتة، اعرضها",
+    "nothingOwedA11y": "لا شيء فائت"
+  },
+  "surahReminders": {
+    "groupTitle": "تذكير بالسور",
+    "kahf": "سورة الكهف يوم الجمعة",
+    "kahfHelp": "مرة كل أسبوع، يوم الجمعة، في الوقت الذي تختاره.",
+    "kahfTitle": "الكهف",
+    "kahfBody": "إنه يوم الجمعة — اقرأ سورة الكهف.",
+    "mulk": "سورة الملك في الليل",
+    "mulkHelp": "كل ليلة في الوقت الذي تختاره — التطبيق لا يعرف موعد نومك، لذلك يسألك.",
+    "mulkTitle": "الملك",
+    "mulkBody": "قبل النوم — اقرأ سورة الملك."
+  },
+  "dhikr": {
+    "remindersTitle": "تذكيرات الذكر",
+    "remindersBlurb": "تذكيراتك أنت، في أي وقت من اليوم",
+    "remindersFooter": "مستقلة عن أوقات الصلاة وتعمل دون اتصال تمامًا — تصل بلا إنترنت وبعد إعادة التشغيل.",
+    "remindersEmpty": "لا تذكيرات بعد. أضف واحدًا لذكرٍ، أو لكلماتٍ من عندك.",
+    "addReminder": "إضافة تذكير",
+    "newReminder": "تذكير جديد",
+    "editReminder": "تعديل التذكير",
+    "deleteReminder": "حذف التذكير",
+    "whichDhikr": "أي ذكر",
+    "ownWords": "كلماتك أنت",
+    "ownWordsHelp": "تذكير يقول ما تكتبه أنت.",
+    "customTitle": "تذكير",
+    "customTitleLabel": "العنوان",
+    "customBodyLabel": "النص",
+    "days": "الأيام",
+    "everyDay": "كل يوم",
+    "sound": "الصوت",
+    "soundDefault": "صوت الإشعار",
+    "soundSilent": "صامت",
+    "soundHelp": "لا يُضمَّن تسجيل صوتي للذكر: التطبيق لا يشحن إلا محتوى يستطيع تسمية مصدره ورخصته، والصوت من ذلك. واختيار تسجيل من عندك هو الخطوة التالية — انظر المسألة #29.",
+    "meaning": {
+      "hawqala": "لا حول ولا قوة إلا بالله",
+      "subhanallahwabihamdih": "سبحان الله وبحمده"
+    }
+  }
+}

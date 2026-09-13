@@ -1,0 +1,660 @@
+// hover-ok: list-row / settings-row / sheet pressables. Hover-state
+// treatment would visually noise these dense surfaces; the touch
+// feedback (pressed opacity / ripple) is the right affordance here.
+import { memo, useCallback, useEffect, useRef, useState } from 'react';
+import {
+  Pressable,
+  ScrollView,
+  Share,
+  StyleSheet,
+  Text,
+  Vibration,
+  View,
+} from 'react-native';
+import { useScrollToTop } from '@react-navigation/native';
+import { useTranslation } from 'react-i18next';
+import { useAppPalette } from '../hooks/useAppPalette';
+import { useBreakpoint } from '../responsive/breakpoints';
+import { CenteredColumn } from '../responsive/CenteredColumn';
+import { useAndroidSubScreenBack } from '../navigation/useAndroidSubScreenBack';
+import { TabBackButton } from '../navigation/TabBackButton';
+import {
+  DUA_SECTIONS,
+  duasByCategory,
+  isDuaCategory,
+  type Dua,
+  type DuaCategory,
+} from '../duas/duas';
+import { cardEdgeStyle } from '../theme/chrome';
+import { BackToTopButton, Group, Row, useBackToTop } from '../components/ui';
+import { ShareIcon } from '../theme/icons';
+import { duaShareText } from '../share/shareText';
+import { TYPE, arabicTextStyle } from '../theme/typography';
+import { TITLE_BAND_MAX_FONT_SCALE, tabularNumeralStyle } from '../theme/textScale';
+import { useTabBarInset } from '../navigation/tabBarInset';
+import { useTabPageTop } from '../navigation/useTabPageTop';
+import { hideTabBar, showTabBar, useTabBarScroll } from '../navigation/tabBarVisibility';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { RADIUS, SPACING } from '../theme/tokens';
+
+/**
+ * Dua library screen — task #26.
+ *
+ * A vertical index of the nineteen categories; tapping one opens its
+ * duas, and back returns to the index. Each dua row shows Arabic +
+ * transliteration + translation + source + repeat count.
+ *
+ * The index replaced a horizontal strip of chips (#33) that could show
+ * about four of the nineteen at a time, on the one screen in the app that
+ * scrolled sideways.
+ */
+/**
+ * Only what this screen needs from the navigator, and optional.
+ *
+ * Taken as a PROP rather than through `useNavigation()`: the hook throws
+ * outside a NavigationContainer, and these screens are rendered bare in
+ * the tests that cover their content. React Navigation passes this to
+ * every screen component anyway, so the prop is the same object the hook
+ * would have found — with the difference that a test can hand over a
+ * fake one and assert what the header was told.
+ */
+type DuasScreenProps = {
+  /** `ibadat365://duas/evening` arrives here — #39. */
+  route?: { params?: { category?: string } };
+  navigation?: {
+    setParams?: (params: { category?: string }) => void;
+    /** Returns its own unsubscribe, which is what the effect cleans up. */
+    addListener?: (event: 'focus', cb: () => void) => (() => void) | undefined;
+  };
+};
+
+export function DuasScreen({ route, navigation }: DuasScreenProps = {}) {
+  // Subscribe to width changes so future master-detail layouts pick up
+  // the new breakpoint without a forced remount. iPad/Mac (#33) baseline.
+  useBreakpoint();
+  const { t, i18n } = useTranslation();
+  const { palette } = useAppPalette();
+  const tabBarInset = useTabBarInset();
+  const pageTop = useTabPageTop();
+  // The bar gets out of the way while reading — see tabBarVisibility.ts.
+  const tabBarScroll = useTabBarScroll();
+  /**
+   * Tapping the tab you are already on returns this screen to the top —
+   * the standard idiom on both platforms, and the only way back up a
+   * long page without a lot of swiping. `useScrollToTop` listens for
+   * `tabPress` and acts only while this screen is focused, so pressing a
+   * DIFFERENT tab still just navigates.
+   */
+  const scrollRef = useRef<ScrollView>(null);
+  useScrollToTop(scrollRef);
+  // Arabic readers don't need a Latin pronunciation guide or an English
+  // meaning — they read the Arabic directly. Hide both supplementary
+  // lines when the app language is Arabic so the row stays clean and
+  // reverent.
+  const isArabic = i18n.language === 'ar';
+  const showTranslit = !isArabic;
+  const showTranslation = !isArabic;
+  /**
+   * WHICH CATEGORY, OR NONE — and none is where the screen opens.
+   *
+   * The categories used to be a horizontal row of chips above the list.
+   * Nineteen of them, and the row showed four: the rest existed only if
+   * you thought to swipe sideways on the one screen in the app that
+   * scrolled that way (#33). A reader cannot pick from a list they cannot
+   * see, and "how many kinds of dua are in here" is the question the
+   * screen is opened with.
+   *
+   * So `null` is the index — every category, one per row, scrolling the
+   * way everything else does — and a category name opens that category.
+   */
+  const linked = route?.params?.category;
+  const [selected, setSelected] = useState<DuaCategory | null>(
+    isDuaCategory(linked) ? linked : null,
+  );
+  /**
+   * A REMINDER OPENS ITS OWN CATEGORY — issue #39.
+   *
+   * The morning and evening adhkār reminders name a window of the day
+   * and the duas that belong in it, and a tap used to land on whatever
+   * screen was last open — the index at best, the Qur'an at worst. The
+   * link carries the category now (`ibadat365://duas/evening`), and this is
+   * where it becomes the open page. The initial state above answers the
+   * cold start, where the screen mounts with the param already on it;
+   * this answers the app that was already running.
+   *
+   * The param is given back as soon as it is used. Without that, a
+   * reader who taps tomorrow's reminder after walking back to the index
+   * would get nothing: the value on the route would not have changed, so
+   * nothing here would fire. Consuming it makes each tap a change.
+   */
+  useEffect(() => {
+    if (!isDuaCategory(linked)) return;
+    setSelected(linked);
+    navigation?.setParams?.({ category: undefined });
+  }, [linked, navigation]);
+  /**
+   * A CATEGORY IS A PAGE OF ITS OWN. Inside one the tab bar goes away —
+   * the reader went INTO something, and a row of tabs under a list of
+   * duas said "you could be anywhere" about a place they had chosen —
+   * and the list gets the bar's height. Back on the index it returns,
+   * and leaving the tab shows it regardless (MainTabs' focus listener).
+   */
+  useEffect(() => {
+    if (selected === null) {
+      showTabBar();
+      return;
+    }
+    hideTabBar();
+    /**
+     * The navigator shows the bar as a tab takes focus, and that focus
+     * arrives AFTER this screen has mounted when a reminder opened a
+     * category directly (#39) — so the page came up with the bar over
+     * it, which no tap from the index has ever done. The same applies
+     * every time the reader leaves for another tab and comes back to a
+     * category still open. Re-assert it where the focus lands rather
+     * than trying to win the race at mount.
+     */
+    return navigation?.addListener?.('focus', hideTabBar);
+  }, [selected, navigation]);
+  const insets = useSafeAreaInsets();
+  // The long lists here: a category is up to a dozen duas, each three
+  // renderings tall once opened. Same arrow as Tilāwah's surah list.
+  const scrollToTop = useCallback(
+    () => scrollRef.current?.scrollTo({ y: 0, animated: true }),
+    [],
+  );
+  const backToTop = useBackToTop(scrollToTop);
+  const resetBackToTop = backToTop.reset;
+  useEffect(() => {
+    resetBackToTop();
+  }, [selected, resetBackToTop]);
+  /**
+   * THE PAGE SAYS WHERE YOU ARE.
+   *
+   * There is no title bar on a tab any more, so the category a reader
+   * opened is named by the page itself: a row at the top with the arrow
+   * up to the index and the category's name, drawn only inside a
+   * category. On the index the tab under the thumb already says "Duas",
+   * and a second "Duas" over the list would say it twice.
+   */
+  /**
+   * Back closes the category before it leaves the tab.
+   *
+   * Intercepted rather than deferred: deferring gives the press to the
+   * system, and on a tab root that means leaving the app — from a
+   * category, which is a screen the reader navigated INTO. One level at a
+   * time is what back means everywhere else here.
+   */
+  useAndroidSubScreenBack(undefined, () => {
+    if (selected === null) return false;
+    setSelected(null);
+    return true;
+  });
+  // Per-dua tap-to-count state — task #94. Persists for the lifetime of
+  // the screen so the user can navigate away from a dua and come back to
+  // resume their count. Reset by tapping the inline reset affordance.
+  const [counts, setCounts] = useState<Record<string, number>>({});
+  /**
+   * Which sections a reader has opened, keyed `<dua id>|<part>`.
+   *
+   * CLOSED TO BEGIN WITH. A category is up to a dozen duas and each was
+   * showing Arabic, a Latin transliteration and an English translation at
+   * once — three renderings of the same words, stacked, so the ONE you
+   * came to read was never on screen by itself and the list took three
+   * times the scrolling it needed. The Arabic is the dua; the other two
+   * are aids, and an aid you have to scroll past is not aiding.
+   *
+   * Screen-lifetime state rather than a preference: which dua you need
+   * the pronunciation of is a question you answer per dua, not once
+   * forever, and it is one tap away.
+   */
+  const [openParts, setOpenParts] = useState<Record<string, boolean>>({});
+  const togglePart = useCallback((key: string) => {
+    setOpenParts(prev => ({ ...prev, [key]: !prev[key] }));
+  }, []);
+
+  const onIncrement = useCallback((id: string, target: number) => {
+    setCounts(prev => {
+      const cur = prev[id] ?? 0;
+      const next = cur + 1;
+      Vibration.vibrate(target > 0 && next === target ? [0, 60, 80, 60, 80, 60] : 20);
+      return { ...prev, [id]: next };
+    });
+  }, []);
+  const onResetCount = useCallback((id: string) => {
+    setCounts(prev => ({ ...prev, [id]: 0 }));
+  }, []);
+
+  /**
+   * Hand a dua to whatever the phone can send it with — issue #24.
+   *
+   * The title and translation are the LOCALIZED ones, the same strings
+   * the card is showing: someone reading Mihrab in Turkish and sending a
+   * dua to their mother is sending it in Turkish, not in the bundled
+   * English that happens to be the fallback.
+   *
+   * The Arabic, the transliteration and the source are the dua's own and
+   * are not translated — the first two because they are the dua, the
+   * third because a citation is a reference, not prose.
+   */
+  const onShare = useCallback(
+    async (dua: Dua) => {
+      try {
+        await Share.share({
+          message: duaShareText({
+            title: t(`duas.${dua.id}.title`, { defaultValue: dua.titleEn }),
+            arabic: dua.arabic,
+            transliteration: dua.transliteration,
+            translation: t(`duas.${dua.id}.translation`, {
+              defaultValue: dua.translation,
+            }),
+            source: dua.source,
+          }),
+        });
+      } catch {
+        /* the sheet was dismissed */
+      }
+    },
+    [t],
+  );
+
+  // No manual header offset (v2.8.5).
+  //
+  // This screen used to add the navigation header's own height to the top
+  // of the chips row. That was correct when Duas was a page pushed onto the
+  // root stack, whose header is `headerTransparent` on iOS so the blur can
+  // extend behind content: without the padding the chips rendered behind
+  // the title bar and were invisible.
+  //
+  // Duas is a TAB now (design review 2e), and the tab navigator's header is
+  // opaque — it already sits above the content rather than over it. The
+  // padding therefore counted the header twice and left a header's worth of
+  // empty band under the title on every platform.
+  return (
+    <View style={[styles.root, { backgroundColor: palette.bg }]}>
+      {/* Tabs are wrapped in a fixed-height row pinned just under the
+          system header, so when the active category has only one or two
+          duas the chips stay at the top instead of vertically centering
+          (#101 follow-up). The dua list ScrollView fills the rest of
+          the screen and starts at a predictable y-offset. */}
+      <ScrollView
+        ref={scrollRef}
+        {...tabBarScroll}
+        onScroll={backToTop.onScroll}
+        scrollEventThrottle={16}
+        style={styles.listScroll}
+        contentContainerStyle={[
+          styles.list,
+          {
+            paddingTop: pageTop,
+            // With the bar away the list runs to the screen's foot, so it
+            // pads the home-indicator inset itself.
+            paddingBottom: selected !== null ? tabBarInset + insets.bottom : tabBarInset,
+          },
+        ]}
+        contentInsetAdjustmentBehavior="never">
+        {/* The gap lives HERE, not on the ScrollView's content container.
+            `contentContainerStyle`'s gap separates the ScrollView's DIRECT
+            children, and since the column went in there has been exactly
+            one of those — so it separated nothing and every dua sat flush
+            against the next, one long slab of cards. The stack is the
+            thing whose children need spacing, so the spacing belongs on
+            the stack. Both props, because CenteredColumn is a plain
+            pass-through on a phone and only grows its inner column on a
+            tablet or a Mac. Same fix as LogScreen; see duaCardSpacing. */}
+        <CenteredColumn innerStyle={styles.stack} style={styles.stack}>
+        {selected !== null ? (
+          <View style={styles.categoryBar}>
+            <TabBackButton
+              onPress={() => setSelected(null)}
+              label={t('duas.allCategories', 'All duas')}
+            />
+            <Text
+              style={[styles.categoryTitle, { color: palette.text }]}
+              numberOfLines={1}
+              maxFontSizeMultiplier={TITLE_BAND_MAX_FONT_SCALE}>
+              {t(`duas.cat.${selected}`)}
+            </Text>
+            {/* The arrow's width again, so the title is centred on the
+                page and not on what is left beside the arrow. */}
+            <View style={styles.categoryBarSpacer} />
+          </View>
+        ) : null}
+        {selected === null
+          ? /* ── THE INDEX ────────────────────────────────────────────
+               Twenty-one categories in five groups, each group one card
+               with hairlines between its rows — the settings idiom this
+               app already reads as "a set of related things", rather
+               than twenty-one floating slabs that read as a list of
+               unrelated ones. The groups are navigational and live in
+               `DUA_SECTIONS`; a test keeps them exhaustive, because a
+               category that falls out of that table falls off the only
+               screen that can reach it. */
+            DUA_SECTIONS.map(section => (
+              <View key={section.id} style={styles.section}>
+                <Text
+                  style={[styles.sectionTitle, { color: palette.muted }]}
+                  maxFontSizeMultiplier={TITLE_BAND_MAX_FONT_SCALE}>
+                  {t(`duas.section.${section.id}`)}
+                </Text>
+                <Group>
+                  {section.categories.map(c => {
+                    const count = duasByCategory(c).length;
+                    return (
+                      <Row
+                        key={c}
+                        title={t(`duas.cat.${c}`)}
+                        accessibilityLabel={t(`duas.cat.${c}`)}
+                        onPress={() => setSelected(c)}
+                        // How many, because a row that only names a
+                        // category says nothing about whether it is
+                        // worth opening.
+                        value={String(count)}
+                        trailing={
+                          <Text
+                            style={[
+                              styles.categoryChevron,
+                              { color: palette.accentSolid },
+                            ]}>
+                            {'\u203A'}
+                          </Text>
+                        }
+                      />
+                    );
+                  })}
+                </Group>
+              </View>
+            ))
+          : duasByCategory(selected).map(dua => (
+          <View
+            key={dua.id}
+            style={[
+              styles.card,
+              { backgroundColor: palette.card, ...cardEdgeStyle(palette) },
+            ]}>
+            {/* The title, and the one action on this card — issue #24.
+                A reader wanted to send a dua to family. On the title line
+                because it names what will be sent: a control at the foot
+                of a card this tall is a long way from the thing it acts
+                on, and further still once the Arabic has been read. */}
+            <View style={styles.titleRow}>
+              <Text
+                style={[styles.title, { color: palette.text }]}
+                maxFontSizeMultiplier={TITLE_BAND_MAX_FONT_SCALE}>
+                {/* Per-dua localized title falls back to bundled English. */}
+                {t(`duas.${dua.id}.title`, { defaultValue: dua.titleEn })}
+              </Text>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={t('duas.shareDua', {
+                  defaultValue: 'Share {{title}}',
+                  title: t(`duas.${dua.id}.title`, {
+                    defaultValue: dua.titleEn,
+                  }),
+                })}
+                hitSlop={10}
+                onPress={() => onShare(dua)}
+                style={({ pressed }) => [
+                  styles.shareBtn,
+                  { opacity: pressed ? 0.6 : 1 },
+                ]}>
+                <ShareIcon size={18} color={palette.muted} />
+              </Pressable>
+            </View>
+            <Text
+              style={[styles.arabic, { color: palette.text }]}
+              accessibilityLabel={dua.arabic}>
+              {dua.arabic}
+            </Text>
+            {/* The two aids, behind their own names.
+
+                Pronunciation is a Latin transliteration for readers who
+                cannot read the Arabic line; both are hidden outright for
+                Arabic readers, who need neither. */}
+            {showTranslit || showTranslation ? (
+              <View style={styles.aidRow}>
+                {showTranslit ? (
+                  <Pressable
+                    accessibilityRole="button"
+                    accessibilityState={{
+                      expanded: !!openParts[`${dua.id}|say`],
+                    }}
+                    onPress={() => togglePart(`${dua.id}|say`)}
+                    style={[
+                      styles.aidChip,
+                      { backgroundColor: palette.controlBg },
+                    ]}>
+                    <Text
+                      style={[styles.aidChipText, { color: palette.accentSolid }]}>
+                      {`${openParts[`${dua.id}|say`] ? '▾' : '▸'} ${t(
+                        'duas.pronunciation',
+                        'Pronunciation',
+                      )}`}
+                    </Text>
+                  </Pressable>
+                ) : null}
+                {showTranslation ? (
+                  <Pressable
+                    accessibilityRole="button"
+                    accessibilityState={{
+                      expanded: !!openParts[`${dua.id}|mean`],
+                    }}
+                    onPress={() => togglePart(`${dua.id}|mean`)}
+                    style={[
+                      styles.aidChip,
+                      { backgroundColor: palette.controlBg },
+                    ]}>
+                    <Text
+                      style={[styles.aidChipText, { color: palette.accentSolid }]}>
+                      {`${openParts[`${dua.id}|mean`] ? '▾' : '▸'} ${t(
+                        'quran.viewToggleTranslation',
+                        'Translation',
+                      )}`}
+                    </Text>
+                  </Pressable>
+                ) : null}
+              </View>
+            ) : null}
+            {showTranslit && openParts[`${dua.id}|say`] ? (
+              <Text
+                style={[styles.translit, { color: palette.muted }]}
+                accessibilityLabel={dua.transliteration}>
+                {dua.transliteration}
+              </Text>
+            ) : null}
+            {showTranslation && openParts[`${dua.id}|mean`] ? (
+              <Text style={[styles.translation, { color: palette.text }]}>
+                {/* Per-dua localized translation falls back to bundled
+                    English. To add another locale, drop entries under
+                    `duas.<id>.translation` in that locale's JSON. Hidden
+                    entirely when the app language is Arabic. */}
+                {t(`duas.${dua.id}.translation`, { defaultValue: dua.translation })}
+              </Text>
+            ) : null}
+            {dua.repeat ? (
+              // Tap-to-count counter for duas with a recommended
+              // repetition (e.g. ×3, ×100). Mirrors the Tasbih pattern:
+              // big number + target, haptic on each tap, reset
+              // affordance, persists across the screen session.
+              <View style={styles.counterRow}>
+                <Pressable
+                  accessibilityRole="button"
+                  accessibilityLabel={t('duas.tapToCount', 'Tap to count')}
+                  accessibilityValue={{
+                    now: counts[dua.id] ?? 0,
+                    min: 0,
+                    max: dua.repeat,
+                    text: `${counts[dua.id] ?? 0} / ${dua.repeat}`,
+                  }}
+                  onPress={() => onIncrement(dua.id, dua.repeat ?? 0)}
+                  style={[
+                    styles.counterBtn,
+                    {
+                      backgroundColor:
+                        (counts[dua.id] ?? 0) >= (dua.repeat ?? 0)
+                          ? palette.accentBg
+                          : palette.bg,
+                      borderColor:
+                        (counts[dua.id] ?? 0) >= (dua.repeat ?? 0)
+                          ? palette.accent
+                          : palette.border,
+                    },
+                  ]}>
+                  <Text
+                    style={[styles.counterValue, tabularNumeralStyle, { color: palette.text }]}>
+                    {counts[dua.id] ?? 0}
+                  </Text>
+                  <Text style={[styles.counterTarget, { color: palette.muted }]}>
+                    / {dua.repeat}
+                  </Text>
+                </Pressable>
+                <Pressable
+                  accessibilityRole="button"
+                  accessibilityLabel={t('tasbih.reset', 'Reset')}
+                  onPress={() => onResetCount(dua.id)}
+                  hitSlop={8}
+                  style={styles.counterReset}>
+                  <Text style={[styles.counterResetLabel, { color: palette.muted }]}>
+                    {t('tasbih.reset', 'Reset')}
+                  </Text>
+                </Pressable>
+              </View>
+            ) : null}
+            <View style={styles.metaRow}>
+              {dua.repeat ? (
+                <Text style={[styles.meta, { color: palette.accent }]}>
+                  {t('duas.repeat', { count: dua.repeat })}
+                </Text>
+              ) : null}
+              <Text style={[styles.meta, styles.source, { color: palette.muted }]}>
+                {t(`duas.${dua.id}.source`, { defaultValue: dua.source })}
+              </Text>
+            </View>
+          </View>
+            ))}
+        </CenteredColumn>
+      </ScrollView>
+      {selected !== null ? (
+        <BackToTopButton
+          visible={backToTop.show}
+          onPress={backToTop.onPress}
+          bottom={insets.bottom + SPACING.lg}
+        />
+      ) : null}
+    </View>
+  );
+}
+
+const _DuasScreenMemo = memo(DuasScreen);
+export { _DuasScreenMemo as DuasScreenMemo };
+
+const styles = StyleSheet.create({
+  root: { flex: 1 },
+  section: { gap: SPACING.sm },
+  sectionTitle: {
+    fontSize: TYPE.label.fontSize,
+    fontWeight: '600',
+    paddingHorizontal: SPACING.xs,
+  },
+  categoryChevron: {
+    fontSize: TYPE.title2.fontSize,
+    lineHeight: 22,
+    includeFontPadding: false,
+    // The count sits next to it, not across the row from it: two things
+    // pinned to opposite edges of a 56pt row is a row with a hole in it.
+    marginStart: -4,
+  },
+  listScroll: { flex: 1 },
+  tabs: { paddingHorizontal: SPACING.lg, paddingVertical: SPACING.md, gap: SPACING.sm, alignItems: 'center' },
+  tab: {
+    paddingHorizontal: SPACING.lg,
+    paddingVertical: SPACING.md,
+    borderRadius: RADIUS.xl,
+    borderWidth: 1,
+    minHeight: 40,
+    justifyContent: 'center',
+  },
+  tabLabel: { fontSize: TYPE.callout.fontSize, fontWeight: '600', lineHeight: 18, includeFontPadding: false },
+  list: { padding: SPACING.lg, paddingTop: 0 },
+  categoryBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SPACING.xs,
+    // The arrow carries its own inset; pull the row back so the glyph
+    // sits on the list's edge rather than a step inside it.
+    marginStart: -SPACING.sm,
+  },
+  categoryTitle: {
+    flex: 1,
+    fontSize: TYPE.title2.fontSize,
+    fontWeight: '700',
+    textAlign: 'center',
+  },
+  // The arrow is 24 + 8 + 4 wide and the row is pulled 8 out, so 28 on the far side balances it.
+  categoryBarSpacer: { width: 28 },
+  stack: { gap: SPACING.md },
+  card: { borderRadius: RADIUS.lg, padding: SPACING.lg, gap: SPACING.sm },
+  titleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    // The title takes the room; the control keeps its own.
+    gap: SPACING.sm,
+  },
+  title: {
+    flexShrink: 1,
+    fontSize: TYPE.title3.fontSize,
+    fontWeight: '600',
+  },
+  // Pushed to the trailing edge, and `marginStart: 'auto'` rather than a
+  // Spacer so a long title shrinks past it instead of pushing it off the
+  // card. Never `Left`/`Right` — this screen is read in Arabic and Urdu.
+  shareBtn: { marginStart: 'auto', padding: 2 },
+  /**
+   * The QURAN face, not the body one.
+   *
+   * A dua as this app prints it is fully vocalised — every harakah, the
+   * quranic annotation marks, the small alif — and a good third of the
+   * corpus is literal Quran (Ayat al-Kursi, the three quls). Amiri body
+   * is a text face; AmiriQuran was cut for exactly this: taller
+   * diacritics that stack without colliding, and mushaf letterforms.
+   *
+   * The leading was ALREADY the Quran face's (2.17x, per the note in
+   * typography.ts), so the page had been paying the taller face's line
+   * spacing while drawing with the shorter face — the worst of both, and
+   * why it read as loose and slightly wrong.
+   */
+  arabic: { fontSize: TYPE.title2.fontSize, lineHeight: 44, textAlign: 'right', writingDirection: 'rtl', ...arabicTextStyle('quran') },
+  /** The two aid toggles, side by side under the Arabic. */
+  aidRow: { flexDirection: 'row', flexWrap: 'wrap', gap: SPACING.sm, marginTop: 2 },
+  aidChip: { paddingHorizontal: SPACING.md, paddingVertical: SPACING.xs, borderRadius: RADIUS.full },
+  aidChipText: { fontSize: TYPE.label.fontSize, fontWeight: '700' },
+  translit: { fontSize: TYPE.callout.fontSize, fontStyle: 'italic' },
+  translation: { fontSize: TYPE.callout.fontSize, lineHeight: 22 },
+  metaRow: { flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap', gap: SPACING.sm, marginTop: SPACING.xs },
+  meta: { fontSize: TYPE.label.fontSize },
+  source: { flexShrink: 1, textAlign: 'right' },
+  counterRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: SPACING.md,
+    marginTop: SPACING.xs,
+  },
+  counterBtn: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    justifyContent: 'center',
+    gap: SPACING.sm,
+    paddingVertical: SPACING.lg,
+    paddingHorizontal: SPACING.lg,
+    borderRadius: RADIUS.md,
+    borderWidth: 1.5,
+  },
+  counterValue: { fontSize: 28, fontWeight: '700' }, // tokens-ok-line: display or Arabic scale, sized by hand
+  counterTarget: { fontSize: TYPE.body.fontSize, fontWeight: '500' },
+  counterReset: {
+    paddingVertical: SPACING.md,
+    paddingHorizontal: SPACING.md,
+  },
+  counterResetLabel: { fontSize: TYPE.footnote.fontSize, fontWeight: '600' },
+});

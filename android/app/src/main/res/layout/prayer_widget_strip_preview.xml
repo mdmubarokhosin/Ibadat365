@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The picker preview.
+
+  Static, and it has to be: the picker never runs the provider, and the real
+  layout starts with its content `gone`, so pointing `previewLayout` at it
+  gives a blank rectangle. This is a hand-built copy of what the widget draws
+  AT THE SIZE IT IS PLACED AT — one launcher row: the six times and the
+  next-prayer line — with the plan's own sample times in it so the entry
+  shows the design rather than describing it.
+
+  NO HEADER ROW. It had one, and the real card stopped drawing one: at 99dp
+  the date and the city are what the strip drops so the next-prayer line is
+  not sliced in half. A preview showing a line the placed widget does not is
+  the picker making a promise the widget breaks the moment it lands. See
+  STRIP_HEADER_DROP_DP. The tall entry — prayer_widget_tall_preview.xml —
+  is where the header, and the graph, are shown.
+
+  HEIGHT IS match_parent, NOT A NUMBER. It declared 110dp, which was the old
+  two-row card's height and is taller than the box the picker lays this out
+  in now — so the footer pair was pushed into the padding and clipped, and
+  the entry advertised a widget with its last line cut off. The picker sizes
+  the box from targetCellWidth/Height; the preview's job is to fill it.
+
+  The padding matches what the real card uses at one row: 6dp top and bottom
+  rather than 14, which is exactly what makes the three sections fit. See
+  bindStripHeader.
+
+  Keep it in step with prayer_widget_strip.xml by hand. There is no way to
+  generate one from the other, and a preview that has drifted from the real
+  thing is a promise the widget then breaks.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_card_preview"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <!--
+      The header the card draws at this size, and the preview did not.
+      One launcher row is ~147dp on a 1080x2400 phone, past
+      STRIP_HEADER_MIN_HEIGHT_DP / COMPACT_MAX_HEIGHT_DP (145dp), so a
+      real 4x1 shows this line. The picker renders this layout in a box of
+      the same height, so leaving it out drew a card nobody gets.
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/widget_preview_header"
+            android:textColor="#9AA0A6"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.06"
+            android:maxLines="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_preview_hijri_full"
+            android:textColor="#9AA0A6"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.06"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="Fajr" android:textColor="#9AA0A6" android:textSize="9sp" android:fontFamily="sans-serif-medium" android:maxLines="1" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="05:10" android:textColor="#E8EAED" android:textSize="17sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:maxLines="1" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="Sunrise" android:textColor="#9AA0A6" android:textSize="9sp" android:fontFamily="sans-serif-medium" android:maxLines="1" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="06:28" android:textColor="#9AA0A6" android:textSize="17sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:maxLines="1" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="Dhuhr" android:textColor="#9AA0A6" android:textSize="9sp" android:fontFamily="sans-serif-medium" android:maxLines="1" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="13:12" android:textColor="#E8EAED" android:textSize="17sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:maxLines="1" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center" android:paddingTop="4dp" android:paddingBottom="4dp" android:background="@drawable/widget_row_highlight">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="Asr" android:textColor="#6BC98A" android:textSize="9sp" android:fontFamily="sans-serif-medium" android:maxLines="1" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="16:57" android:textColor="#6BC98A" android:textSize="17sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:maxLines="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="Maghrib" android:textColor="#9AA0A6" android:textSize="9sp" android:fontFamily="sans-serif-medium" android:maxLines="1" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="19:56" android:textColor="#E8EAED" android:textSize="17sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:maxLines="1" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="Isha" android:textColor="#9AA0A6" android:textSize="9sp" android:fontFamily="sans-serif-medium" android:maxLines="1" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="21:13" android:textColor="#E8EAED" android:textSize="17sp" android:fontFamily="sans-serif-medium" android:includeFontPadding="false" android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="true"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asr"
+            android:textColor="#9AA0A6"
+            android:textSize="12sp"
+            android:maxLines="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="4dp"
+            android:text="@string/widget_preview_in_37"
+            android:textColor="#6BC98A"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/widget_preview_logged"
+            android:textColor="#9AA0A6"
+            android:textSize="12sp"
+            android:maxLines="1" />
+    </LinearLayout>
+</LinearLayout>

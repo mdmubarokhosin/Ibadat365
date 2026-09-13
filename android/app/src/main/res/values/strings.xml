@@ -1,0 +1,229 @@
+<resources>
+    <string name="app_name">Ibadat 365</string>
+    <!-- Picker entries are named for WHAT THEY SHOW, not for how big they
+         are. "Ibadat 365 (Medium)" and "Ibadat 365 (Large)" sat next to each other
+         claiming the same 4x2 footprint, so the only way to find out which
+         one you wanted was to place one and look. -->
+    <string name="widget_name_small">Ibadat 365 · Next prayer</string>
+    <!-- After the phase 0 merge this is the one prayer-times entry: strip at
+         4x2, list at 4x3, list plus the practice graph at 4x4. -->
+    <string name="widget_name_medium">Ibadat 365 · Prayer times</string>
+    <!-- Retired from the picker, kept registered so nobody's placed widget
+         vanishes. See prayer_widget_large_info.xml. -->
+    <string name="widget_name_large">Ibadat 365 · Prayer times (old)</string>
+    <string name="widget_description">Today\'s times in one row, next prayer highlighted</string>
+    <string name="widget_description_small">Just the next prayer and its time. 2×1, resizable.</string>
+    <string name="widget_description_medium">All six times as columns across one wide row, next prayer highlighted. 4×2, resizable.</string>
+    <string name="widget_description_prayer_times">Today\'s six times in one row. Make it taller for the city and the Hijri date, taller again for the practice graph. 4×1 to 4×4.</string>
+    <string name="widget_description_large_retired">The earlier prayer-times widget. It now draws the same design as the current one; there is no reason to place a new one.</string>
+    <string name="widget_description_large">All six times as a list beside the next prayer. 4×3 — shrink it below three rows and it becomes the one-row strip.</string>
+    <string name="widget_name_log">Ibadat 365 · Log today</string>
+    <string name="widget_description_log">Tap a prayer to log it on time, with the countdown to the next. Make it taller for the practice graph. 4×1 to 4×4.</string>
+    <string name="widget_log_today">Today</string>
+    <!-- "2 of 5" — logged out of loggable. -->
+    <string name="widget_log_count">%1$d of %2$d</string>
+    <string name="widget_log_waiting">%1$s not logged yet</string>
+    <!-- Explains the + rather than restating the chip above it. -->
+    <string name="widget_log_tap_to_log">Tap ✓ to log %1$s on time</string>
+    <string name="widget_log_up_to_date">Today is up to date</string>
+    <string name="widget_log_owed">%1$d owed</string>
+    <string name="widget_placeholder_day">Open Ibadat 365 to load times</string>
+    <string name="widget_error">Could not load widget data</string>
+    <string name="widget_configure_title">Prayer widget</string>
+    <string name="widget_configure_background">Background strength</string>
+    <string name="widget_configure_opacity_percent">%1$d%%</string>
+    <string name="widget_configure_highlight">Next prayer highlight</string>
+    <string name="widget_configure_highlight_green">Green</string>
+    <string name="widget_configure_highlight_teal">Teal</string>
+    <string name="widget_configure_highlight_blue">Blue</string>
+    <string name="widget_configure_highlight_amber">Amber</string>
+    <string name="widget_configure_highlight_custom">Custom color</string>
+    <string name="widget_configure_hex_hint">#RRGGBB</string>
+    <string name="widget_configure_save">Save</string>
+    <!-- Live Activity notification strings -->
+    <string name="live_activity_channel_name">Prayer countdown</string>
+    <string name="live_activity_channel_desc">Pinned countdown to the next prayer.</string>
+    <string name="live_activity_fgs_channel_name">Prayer countdown (system)</string>
+    <string name="live_activity_fgs_channel_desc">Internal service channel for the prayer countdown. Not user-facing.</string>
+    <string name="live_activity_countdown_active">Prayer countdown active</string>
+
+    <!-- ── Streak &amp; Practice ────────────────────────────────────────── -->
+    <string name="widget_name_streak">Ibadat 365 · Streak</string>
+    <string name="widget_description_streak">Your on-time streak and the last weeks of the practice graph. 2×2 to 4×2.</string>
+    <string name="widget_streak_title">STREAK</string>
+    <string name="widget_streak_best">Best %1$d</string>
+    <string name="widget_streak_logged">%1$d of 5 today</string>
+    <string name="widget_streak_sunnah">Sunnah %1$d%%</string>
+    <string name="widget_streak_grid_description">Practice graph</string>
+    <string name="widget_placeholder_open_app">Open Ibadat 365</string>
+    <plurals name="widget_streak_days">
+        <item quantity="one">day</item>
+        <item quantity="other">days</item>
+    </plurals>
+    <!-- Deliberately not "owed": this is the whole journal's count, and beside
+         a line about today the word "owed" claims it is today's. -->
+    <plurals name="widget_streak_make_up">
+        <item quantity="one">%1$d to make up</item>
+        <item quantity="other">%1$d to make up</item>
+    </plurals>
+    <plurals name="widget_streak_fasts">
+        <item quantity="one">%1$d fast this month</item>
+        <item quantity="other">%1$d fasts this month</item>
+    </plurals>
+
+    <!-- ── Continue Reading ──────────────────────────────────────────── -->
+    <string name="widget_name_reading">Ibadat 365 · Continue reading</string>
+    <string name="widget_description_reading">Where you left off, and what today\'s khatmah portion asks. 4×1, resizable.</string>
+    <string name="widget_reading_continue">CONTINUE</string>
+    <string name="widget_reading_play">Play from here</string>
+    <string name="widget_reading_khatmah_day">KHATMAH · DAY %1$d/%2$d</string>
+    <string name="widget_reading_position">Page %1$d · Juz %2$d</string>
+    <string name="widget_reading_progress">%1$d of %2$d · %3$d%% read</string>
+    <string name="widget_reading_today_portion">TODAY\'S PORTION</string>
+    <string name="widget_reading_portion_value">%1$d / %2$d</string>
+    <string name="widget_reading_done_today">Done for today</string>
+    <string name="widget_reading_last_read">LAST READ</string>
+    <string name="widget_reading_last_read_prefix">Last read %1$s</string>
+    <string name="widget_reading_today">Today</string>
+    <string name="widget_reading_yesterday">Yesterday</string>
+    <plurals name="widget_reading_days_ago">
+        <item quantity="one">%1$d day ago</item>
+        <item quantity="other">%1$d days ago</item>
+    </plurals>
+    <plurals name="widget_reading_left">
+        <item quantity="one">On track · %1$d page left</item>
+        <item quantity="other">On track · %1$d pages left</item>
+    </plurals>
+    <plurals name="widget_reading_behind">
+        <item quantity="one">%1$d page behind</item>
+        <item quantity="other">%1$d pages behind</item>
+    </plurals>
+    <plurals name="widget_reading_bookmarks">
+        <item quantity="one">%1$d bookmark</item>
+        <item quantity="other">%1$d bookmarks</item>
+    </plurals>
+
+    <!-- ── Tasbih ────────────────────────────────────────────────────── -->
+    <string name="widget_name_tasbih">Ibadat 365 · Tasbih</string>
+    <string name="widget_description_tasbih">Count dhikr without opening the app. 4×2.</string>
+    <string name="widget_tasbih_of">of %1$d</string>
+    <string name="widget_tasbih_today">Today %1$d</string>
+    <string name="widget_tasbih_inc">+1</string>
+    <string name="widget_tasbih_reset">Reset</string>
+    <string name="widget_tasbih_next">Next ›</string>
+    <plurals name="widget_tasbih_rounds">
+        <item quantity="one">%1$d round</item>
+        <item quantity="other">%1$d rounds</item>
+    </plurals>
+
+    <!-- ── Picker previews ───────────────────────────────────────────────
+         The picker never runs a provider, so these are the only words a
+         preview layout can show. Representative, not live. -->
+    <string name="widget_preview_days">days</string>
+    <string name="widget_preview_streak_second">Best 31 · 2 of 5 today · Sunnah 68%</string>
+    <string name="widget_preview_reading_header">KHATMAH · DAY 14/30</string>
+    <string name="widget_preview_reading_surah">Al-Baqarah</string>
+    <string name="widget_preview_reading_position">Page 47 · Juz 3</string>
+    <string name="widget_preview_reading_progress">47 of 604 · 8% read</string>
+    <string name="widget_preview_reading_note">On track · 3 pages left</string>
+    <string name="widget_preview_tasbih_label">SubhanAllah</string>
+    <string name="widget_preview_tasbih_of">of 33</string>
+    <string name="widget_preview_tasbih_today">Today 231 · 2 rounds</string>
+    <!-- The Chronometer's format. "%1$s" is the ticking duration; the word
+         around it is what stops "2:58:00" being read as a clock time. -->
+    <string name="widget_countdown_format">in %1$s</string>
+    <!-- The plan's 4x3 mock carries this under the location. -->
+    <string name="widget_logged_line">%1$d of %2$d logged today</string>
+    <!-- ── Hijri Date ────────────────────────────────────────────────── -->
+    <string name="widget_name_hijri">Ibadat 365 · Hijri date</string>
+    <string name="widget_description_hijri">Today\'s Hijri date, and how far off the next month is. 2×1, resizable.</string>
+    <string name="widget_hijri_day_month">%1$d %2$s</string>
+    <string name="widget_hijri_next">NEXT</string>
+    <string name="widget_hijri_in_days">%1$s · %2$dd</string>
+    <string name="widget_hijri_begins_tomorrow">%1$s · tomorrow</string>
+    <string name="widget_hijri_begins_today">%1$s · today</string>
+    <string name="widget_preview_hijri_date">25 Safar</string>
+    <string name="widget_preview_hijri_next">Rabi I · 5d</string>
+    <!-- Strip footer: sits opposite the countdown, so it has no room to say
+         "today" and no need to — the whole card is today. -->
+    <string name="widget_logged_short">%1$d of %2$d logged</string>
+    <string name="widget_practice_sunnah_month">Sunnah %1$d%% this month</string>
+    <plurals name="widget_practice_fasts">
+        <item quantity="one">%1$d fast</item>
+        <item quantity="other">%1$d fasts</item>
+    </plurals>
+    <!-- Sample content for the picker preview, matching the plan's mock. -->
+    <string name="widget_preview_header">WED, 19 AUG · MAKKAH</string>
+    <string name="widget_preview_hijri_full">25 SAFAR</string>
+    <string name="widget_preview_in_37">in 37 min</string>
+    <string name="widget_preview_logged">2 of 5 logged</string>
+    <!-- The words next to the streak number: "day streak" / "day streak". -->
+    <plurals name="widget_streak_day_label">
+        <item quantity="one">day streak</item>
+        <item quantity="other">day streak</item>
+    </plurals>
+    <string name="widget_next_label">NEXT</string>
+    <string name="widget_in_label">in</string>
+    <!-- The Continue Reading widget before anything has been read. -->
+    <string name="widget_reading_header_start">THE QURAN</string>
+    <string name="widget_reading_start_title">Start reading</string>
+    <string name="widget_reading_start_note">Pick up where you like, or begin a khatmah.</string>
+    <string name="widget_reading_start_note_undownloaded">The translation is ready to read now.</string>
+    <string name="widget_reading_start_tail">No plan needed \u2014 open it and begin.</string>
+    <string name="widget_reading_start_side_title">PAGES</string>
+    <string name="widget_reading_start_side_note">in the whole Qur\'an</string>
+
+    <!-- Labels the iOS widgets draw and Android has no place for: the Lock
+         Screen accessories, the seasonal eyebrows on them, and the titles
+         the system shows for the interactive intents. They live here because
+         the two platforms share one native widget vocabulary — ios/*.lproj
+         is generated from this file — and a phrase translated twice is a
+         phrase that drifts. -->
+    <string name="widget_hijri_title">HIJRI</string>
+    <string name="widget_title_prayer_times">Prayer times</string>
+    <string name="widget_practice_weeks_title">PRACTICE \u00b7 LAST %1$d WEEKS</string>
+    <string name="widget_seasonal_eid">EID</string>
+    <string name="widget_seasonal_jumuah">JUMU\'AH</string>
+    <string name="widget_seasonal_ramadan">RAMADAN</string>
+    <string name="widget_tasbih_complete">complete</string>
+    <string name="widget_tasbih_keep_going">target reached \u00b7 keep going</string>
+    <string name="widget_reading_page_surah">Page %1$d \u00b7 %2$s</string>
+    <string name="widget_reading_read_quran">Read Qur\'an</string>
+    <!-- Shown by the system when someone long-presses a widget button, and
+         in Shortcuts. Verb phrases, not headings. -->
+    <string name="widget_intent_log_prayer">Log prayer</string>
+    <string name="widget_intent_refresh">Refresh widget</string>
+    <string name="widget_intent_tasbih">Count dhikr</string>
+    <!-- The picker blurbs, iOS's own. Android's say "4×2, resizable" because
+         that is what a launcher grid is; iOS has families, not cells, and a
+         widget that offers to be resized on a phone that cannot resize it is
+         worse than a widget that says nothing. Everything else in this file is
+         shared between the two platforms. -->
+    <string name="widget_ios_description_prayer_times">Today\'s prayer times including Sunrise. After Isha, shows tomorrow.</string>
+    <string name="widget_ios_description_hijri">Today\'s Hijri date. On the Lock Screen, with the next prayer.</string>
+    <string name="widget_ios_description_log">Tap a prayer to log it on time. Tap again within a minute to undo.</string>
+    <string name="widget_ios_description_reading">Where you left off, and what today\'s khatmah portion asks.</string>
+    <string name="widget_ios_description_streak">Your on-time streak and the last ten weeks of the graph.</string>
+    <string name="widget_ios_description_tasbih">Count dhikr without opening the app.</string>
+    <string name="widget_reading_no_bookmarks">No bookmarks yet</string>
+    <string name="widget_reading_page_today">Page %1$d \u00b7 %2$d/%3$d today</string>
+    <!-- The Lock Screen's one-line accessory, where the whole widget is a
+         handful of characters: "Streak 12d". -->
+    <string name="widget_streak_inline">Streak %1$dd</string>
+    <!-- Sample lines for the picker previews. The previews are static XML —
+         the picker never runs a provider — so anything the real card composes
+         at runtime has to exist here as a finished sentence. -->
+    <string name="widget_preview_tap_to_log">Tap \u2713 to log Asr on time</string>
+    <string name="widget_preview_practice_second">day streak \u00b7 Best 31 \u00b7 2 of 5 today</string>
+    <!-- The tall picker entries. Android's picker lists one preview per
+         provider at one size, so a widget that means something different at
+         one row and at three needs two entries to say so. -->
+    <string name="widget_name_tall">Ibadat 365 \u00b7 Prayer times (tall)</string>
+    <string name="widget_description_tall">The same six times with the city, the Hijri date and the practice graph. 4\u00d72 \u2014 shrink it and it becomes the one-row strip.</string>
+    <string name="widget_name_log_tall">Ibadat 365 \u00b7 Log today (tall)</string>
+    <string name="widget_description_log_tall">Tap a prayer to log it on time, with the countdown to the next and the practice graph. 4\u00d72 \u2014 shrink it and it becomes the one-row card.</string>
+    <!-- Ibadat 365 · Sky — the hero on the home screen (PrayerWidgetSkyProvider). -->
+    <string name="widget_name_sky">Ibadat 365 · Sky</string>
+    <string name="widget_description_sky">The next prayer under the day\'s sky — night with the moon, dawn, noon, sunset — with the countdown. 2×2 to 4×3.</string>
+    <string name="widget_preview_sky_next">Fajr · 03:38</string>
+</resources>

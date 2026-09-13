@@ -1,0 +1,51 @@
+<!-- Vector drawable for the Mihrab adaptive-icon foreground.
+     Rendered at 108dp × 108dp per the Material adaptive-icon spec, with
+     the artwork scaled to 0.66 of the canvas so the launcher mask (typically
+     a circle/squircle inscribed in a 66dp safe zone) crops only into
+     transparent pixels — the deep teal field comes from the background
+     layer (@color/ic_launcher_background) underneath.
+
+     Geometry mirrors branding/01_mihrab_foreground.svg: outer arch
+     spans y=212..812 (centre 512, matching the canvas centre), so the
+     icon reads visually centred on every launcher mask. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="1024"
+    android:viewportHeight="1024">
+
+    <group
+        android:pivotX="512"
+        android:pivotY="512"
+        android:scaleX="0.66"
+        android:scaleY="0.66">
+
+        <!-- Outer pointed-arch silhouette, cream. -->
+        <path
+            android:pathData="M 312 812 L 312 460 Q 312 356 408 292 L 512 212 L 616 292 Q 712 356 712 460 L 712 812 Z"
+            android:fillColor="#F2E7D2" />
+
+        <!-- Inner arch: niche cutout. Painted in the background's
+             deep teal so it composes seamlessly over @color/ic_launcher_background. -->
+        <path
+            android:pathData="M 360 780 L 360 468 Q 360 380 444 328 L 512 276 L 580 328 Q 664 380 664 468 L 664 780 Z"
+            android:fillColor="#0F4D44" />
+
+        <!-- Eight-pointed star (two squares rotated 45° apart) centred at (512, 560). -->
+        <group
+            android:pivotX="512"
+            android:pivotY="560">
+            <path
+                android:pathData="M 440 488 L 584 488 L 584 632 L 440 632 Z"
+                android:fillColor="#F2E7D2" />
+        </group>
+        <group
+            android:pivotX="512"
+            android:pivotY="560"
+            android:rotation="45">
+            <path
+                android:pathData="M 440 488 L 584 488 L 584 632 L 440 632 Z"
+                android:fillColor="#F2E7D2" />
+        </group>
+    </group>
+</vector>

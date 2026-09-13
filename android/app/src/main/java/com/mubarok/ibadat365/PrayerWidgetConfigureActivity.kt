@@ -1,0 +1,200 @@
+package com.mubarok.ibadat365
+
+import android.appwidget.AppWidgetManager
+import android.content.Context
+import android.content.Intent
+import android.os.Build
+import android.os.Bundle
+import android.view.View
+import android.widget.RadioGroup
+import android.widget.LinearLayout
+import android.widget.SeekBar
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.button.MaterialButton
+import kotlin.math.max
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
+
+/**
+ * Shown when the user adds the widget or opens “Settings” from the widget’s long-press menu.
+ * Writes the same SharedPreferences keys the app and [PrayerWidgetProvider] use.
+ */
+class PrayerWidgetConfigureActivity : AppCompatActivity() {
+
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+
+    val appWidgetId =
+      intent?.extras?.getInt(
+        AppWidgetManager.EXTRA_APPWIDGET_ID,
+        AppWidgetManager.INVALID_APPWIDGET_ID,
+      ) ?: AppWidgetManager.INVALID_APPWIDGET_ID
+    if (appWidgetId == AppWidgetManager.INVALID_APPWIDGET_ID) {
+      finish()
+      return
+    }
+
+    setResult(RESULT_CANCELED)
+    // On Android 15+ edge-to-edge is enforced, so this deprecated call is a
+    // no-op that only trips Play's deprecated-API check; the inset listener
+    // below handles padding on every version. Only call it on older versions.
+    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+      @Suppress("DEPRECATION")
+      WindowCompat.setDecorFitsSystemWindows(window, false)
+    }
+    setContentView(R.layout.activity_prayer_widget_configure)
+
+    val root = findViewById<LinearLayout>(R.id.widget_configure_root)
+    ViewCompat.setOnApplyWindowInsetsListener(root) { v, windowInsets ->
+      val bars = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+      val cutout = windowInsets.getInsets(WindowInsetsCompat.Type.displayCutout())
+      v.setPadding(
+        max(bars.left, cutout.left),
+        max(bars.top, cutout.top),
+        max(bars.right, cutout.right),
+        max(bars.bottom, cutout.bottom),
+      )
+      windowInsets
+    }
+    ViewCompat.requestApplyInsets(root)
+
+    val toolbar = findViewById<MaterialToolbar>(R.id.widget_configure_toolbar)
+    setSupportActionBar(toolbar)
+    toolbar.setNavigationOnClickListener { finish() }
+
+    val prefs = getSharedPreferences(PrayerWidgetProvider.PREFS_NAME, Context.MODE_PRIVATE)
+    val opacityStored =
+      prefs.getInt(PrayerWidgetProvider.PREFS_WIDGET_BG_OPACITY, 88).coerceIn(0, 100)
+    val highlightRaw =
+      prefs.getString(PrayerWidgetProvider.PREFS_WIDGET_HIGHLIGHT_ID, "green")?.trim()
+    // Dynamic (phone accent) is gone (2026-08-27, by request). The stored
+    // flag is not read back into a selection: a widget configured by an
+    // older build opens on the colour it will actually be drawn in, which
+    // for "dynamic" is green — see `readWidgetStyle` in PrayerWidgetProvider.
+    val highlightId =
+      if (highlightRaw.isNullOrEmpty() || highlightRaw.lowercase() == "dynamic") {
+        "green"
+      } else {
+        highlightRaw
+      }
+    val storedHex =
+      prefs.getString(PrayerWidgetProvider.PREFS_WIDGET_HIGHLIGHT_HEX, "")?.trim()
+        ?: ""
+    val seek = findViewById<SeekBar>(R.id.widget_configure_opacity_seek)
+    val opacityLabel = findViewById<TextView>(R.id.widget_configure_opacity_value)
+    seek.max = 100
+    seek.progress = opacityStored
+
+    fun updateOpacityLabel() {
+      val v = seek.progress
+      opacityLabel.text = getString(R.string.widget_configure_opacity_percent, v)
+    }
+    updateOpacityLabel()
+    seek.setOnSeekBarChangeListener(
+      object : SeekBar.OnSeekBarChangeListener {
+        override fun onProgressChanged(
+          sb: SeekBar?,
+          progress: Int,
+          fromUser: Boolean,
+        ) {
+          updateOpacityLabel()
+        }
+
+        override fun onStartTrackingTouch(sb: SeekBar?) {}
+
+        override fun onStopTrackingTouch(sb: SeekBar?) {}
+      },
+    )
+
+    val radioGroup = findViewById<RadioGroup>(R.id.widget_configure_highlight_group)
+    val hexLayout = findViewById<TextInputLayout>(R.id.widget_configure_hex_layout)
+    val hexInput = findViewById<TextInputEditText>(R.id.widget_configure_hex_input)
+
+    val radioId =
+      when (highlightId.lowercase()) {
+        "teal" -> R.id.widget_configure_highlight_teal
+        "blue" -> R.id.widget_configure_highlight_blue
+        "amber" -> R.id.widget_configure_highlight_amber
+        "custom" -> R.id.widget_configure_highlight_custom
+        else -> R.id.widget_configure_highlight_green
+      }
+    radioGroup.check(radioId)
+
+    fun syncHexVisibility() {
+      val custom = radioGroup.checkedRadioButtonId == R.id.widget_configure_highlight_custom
+      hexLayout.visibility = if (custom) View.VISIBLE else View.GONE
+    }
+    hexInput.setText(
+      if (storedHex.matches(Regex("^#([0-9A-Fa-f]{6})$"))) {
+        storedHex
+      } else {
+        "#46A081"
+      },
+    )
+    syncHexVisibility()
+    radioGroup.setOnCheckedChangeListener { _, _ -> syncHexVisibility() }
+
+    findViewById<MaterialButton>(R.id.widget_configure_save).setOnClickListener {
+      val checked = radioGroup.checkedRadioButtonId
+      val hid =
+        when (checked) {
+          R.id.widget_configure_highlight_teal -> "teal"
+          R.id.widget_configure_highlight_blue -> "blue"
+          R.id.widget_configure_highlight_amber -> "amber"
+          R.id.widget_configure_highlight_custom -> "custom"
+          else -> "green"
+        }
+      val hexForStore =
+        if (hid == "custom") {
+          val raw = hexInput.text?.toString()?.trim() ?: ""
+          if (raw.matches(Regex("^#([0-9A-Fa-f]{6})$"))) {
+            raw
+          } else {
+            "#46A081"
+          }
+        } else {
+          ""
+        }
+
+      prefs
+        .edit()
+        .putInt(PrayerWidgetProvider.PREFS_WIDGET_BG_OPACITY, seek.progress)
+        .putString(PrayerWidgetProvider.PREFS_WIDGET_HIGHLIGHT_ID, hid)
+        .putString(PrayerWidgetProvider.PREFS_WIDGET_HIGHLIGHT_HEX, hexForStore)
+        // Written as false rather than left alone: saving here is the one
+        // moment we know the user has looked at this screen, and an older
+        // build's stored `true` would otherwise sit in the store for ever,
+        // waiting for a downgrade to honour it.
+        .putBoolean(PrayerWidgetProvider.PREFS_WIDGET_HIGHLIGHT_DYNAMIC, false)
+        .apply()
+
+      // Every card honours these two settings, so every card has to be
+      // redrawn — not just the prayer-times ones.
+      //
+      // This used to collect PrayerWidgetProvider's ids, ADD the id it was
+      // launched for, and hand the lot to refreshAll. That was wrong twice
+      // over. It left the Streak, Log, Reading, Tasbih and Hijri cards
+      // showing the old colours until something unrelated redrew them. And
+      // refreshAll pushes `buildViews` — the PRAYER-TIMES layout — into
+      // every id it is given, so the moment those five could reach this
+      // screen, saving from a Hijri widget would have drawn a prayer-times
+      // card into it. The line that added `appWidgetId` was defending
+      // against a launcher that had not registered the new widget yet; the
+      // fan-out below re-reads the ids itself, which covers that case
+      // without assuming the widget belongs to any particular provider.
+      PrayerWidgetProvider.requestUpdate(this)
+
+      setResult(
+        RESULT_OK,
+        Intent().putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId),
+      )
+      finish()
+    }
+  }
+
+}

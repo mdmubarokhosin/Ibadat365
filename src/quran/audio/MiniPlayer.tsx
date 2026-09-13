@@ -1,0 +1,311 @@
+/**
+ * Mini player — QR-16, restyled in v2.7.27.
+ *
+ * A floating card (matches the app-wide card chrome: rounded corners,
+ * soft shadow in light themes, border in dark) pinned above the bottom
+ * edge whenever recitation is active. One row: ayah reference + tappable
+ * reciter name (opens the reciter picker), prev / play-pause / next /
+ * stop. The play button is the single accent-filled control — everything
+ * else stays quiet (design principle 4). A hairline progress track along
+ * the top edge follows the current ayah.
+ *
+ * v2.8.4 (design review 2f): speed and repeat report themselves as two
+ * small chips beside the reciter, stop is a filled square set apart from
+ * the transport glyphs it used to sit flush against, and the play button
+ * is a squircle in the sheet's radius family rather than the one perfectly
+ * round control in the reader.
+ */
+import { useEffect, useState } from 'react';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { useTranslation } from 'react-i18next';
+import { useProgressWhileActive } from './useProgressWhileActive';
+import { useAppPalette } from '../../hooks/useAppPalette';
+import { cardEdgeStyle } from '../../theme/chrome';
+import { findSurah } from '../quran';
+import { findReciter } from './reciters';
+import { ReciterPickerSheet } from './ReciterPickerSheet';
+import { useQuranState } from '../quranState';
+import {
+  pausePlayback,
+  resumePlayback,
+  skipToNextAyah,
+  skipToPreviousAyah,
+  stopPlayback,
+  usePlaybackStatus,
+} from './playback';
+import { RADIUS, SPACING } from '../../theme/tokens';
+import { TYPE } from '../../theme/typography';
+
+/**
+ * `page` is passed in rather than derived, because only the reader knows
+ * which page is on screen — playback knows an ayah, and an ayah spans
+ * pages differently in every riwayah. When it is given, the card carries
+ * the page number and the page's own medallion stands down: the card is
+ * pinned over exactly where that medallion sits, so the two were saying
+ * the same thing a centimetre apart with one of them behind glass.
+ */
+export function MiniPlayer({
+  page,
+  onPressPage,
+}: {
+  page?: number;
+  onPressPage?: () => void;
+} = {}) {
+  const { t } = useTranslation();
+  const { palette } = useAppPalette();
+  const { active, playing, loading, reciterId, gap } = usePlaybackStatus();
+  const { prefs } = useQuranState();
+  // Only while someone is looking — see the hook. Listening from the
+  // reader with the screen off used to keep this polling for the whole
+  // recitation, to move a hairline in a pocket.
+  const { position, duration } = useProgressWhileActive(500);
+  const [pickerVisible, setPickerVisible] = useState(false);
+
+  // Stopping playback unmounts this card. The reciter picker is an RN
+  // <Modal> — an activity-window dialog, not an in-tree view — so it must
+  // be hidden BEFORE it is unmounted, or the dismissed-but-never-dropped
+  // window keeps swallowing every touch in the app.
+  useEffect(() => {
+    if (!active) setPickerVisible(false);
+  }, [active]);
+
+  if (!active) {
+    // One last render with the sheet explicitly hidden, so RN dismisses it
+    // the ordinary way; the effect above then drops it on the next commit.
+    return pickerVisible ? (
+      <ReciterPickerSheet
+        visible={false}
+        onClose={() => setPickerVisible(false)}
+      />
+    ) : null;
+  }
+
+  const meta = findSurah(active.surah);
+  const reciter = findReciter(reciterId);
+  const progress =
+    duration > 0 ? Math.min(1, Math.max(0, position / duration)) : 0;
+
+  const sideBtn = (glyph: string, label: string, onPress: () => void) => (
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      hitSlop={8}
+      onPress={onPress}
+      style={styles.sideBtn}>
+      <Text style={[styles.sideGlyph, { color: palette.text }]}>{glyph}</Text>
+    </Pressable>
+  );
+
+  return (
+    <View
+      style={[
+        styles.card,
+        { backgroundColor: palette.card, ...cardEdgeStyle(palette) },
+      ]}>
+      {/* Ayah progress hairline. */}
+      <View style={[styles.track, { backgroundColor: palette.accentBg }]}>
+        <View
+          style={[
+            styles.fill,
+            {
+              backgroundColor: palette.accentSolid,
+              width: `${progress * 100}%`,
+            },
+          ]}
+        />
+      </View>
+
+      {/* ── WHY IT STOPPED — issue #30 ─────────────────────────────────
+          A track's source is the local file when there is one and a URL
+          when there is not. Offline, a gap in the download is a request
+          that fails and a player that stops, and the reader is left
+          guessing between a bad connection and a bad download. The app
+          knows which, and knows the ayah. It says so. */}
+      {gap ? (
+        <Text style={[styles.gap, { color: palette.danger }]}>
+          {t('quran.audioGap', {
+            defaultValue:
+              '{{surah}} {{ayah}} is not downloaded — connect, or download this surah for offline use.',
+            surah: findSurah(gap.surah)?.romanized ?? gap.surah,
+            ayah: gap.ayah,
+          })}
+        </Text>
+      ) : null}
+
+      <View style={styles.row}>
+        <View style={styles.info}>
+          <Text
+            numberOfLines={1}
+            style={[styles.title, { color: palette.text }]}>
+            {`${meta?.romanized ?? ''} ${active.surah}:${active.ayah}`}
+          </Text>
+          <View style={styles.subRow}>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={t('quran.chooseReciter', 'Choose reciter')}
+              hitSlop={6}
+              onPress={() => setPickerVisible(true)}>
+              <Text
+                numberOfLines={1}
+                style={[styles.sub, { color: palette.accentSolid }]}>
+                {loading ? t('quran.buffering', 'Buffering…') : reciter.name}
+              </Text>
+            </Pressable>
+            {/* Speed and repeat are set in the sheet and were then invisible:
+                you could be at 1.5× with 3× repeats and nothing on screen
+                said so. They are the two settings most likely to be left on
+                by accident, so they report themselves here. */}
+            {page != null ? (
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={t('quran.jumpToPage', 'Go to page')}
+                hitSlop={6}
+                onPress={onPressPage}
+                style={[
+                  styles.stateChip,
+                  { backgroundColor: palette.controlBg },
+                ]}>
+                <Text
+                  style={[styles.stateChipLabel, { color: palette.text }]}
+                  accessibilityLanguage="en-US">
+                  {t('quran.pageShort', {
+                    defaultValue: 'p. {{page}}',
+                    page,
+                  })}
+                </Text>
+              </Pressable>
+            ) : null}
+            {prefs.playbackRate !== 1 ? (
+              <View style={[styles.stateChip, { backgroundColor: palette.controlBg }]}>
+                <Text style={[styles.stateChipLabel, { color: palette.text }]}>
+                  {`${prefs.playbackRate}×`}
+                </Text>
+              </View>
+            ) : null}
+            {prefs.repeat.eachAyah > 1 ? (
+              <View style={[styles.stateChip, { backgroundColor: palette.controlBg }]}>
+                <Text style={[styles.stateChipLabel, { color: palette.text }]}>
+                  {`↻ ${prefs.repeat.eachAyah}`}
+                </Text>
+              </View>
+            ) : null}
+          </View>
+        </View>
+
+        {sideBtn('⏮︎', t('quran.previousAyah', 'Previous ayah'), () => {
+          void skipToPreviousAyah();
+        })}
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={
+            playing ? t('quran.pause', 'Pause') : t('quran.play', 'Play')
+          }
+          hitSlop={6}
+          onPress={() => {
+            void (playing ? pausePlayback() : resumePlayback());
+          }}
+          style={[styles.playBtn, { backgroundColor: palette.accentSolid }]}>
+          {/* U+275A pair for pause — U+23F8 renders as a colored emoji on
+              Android even with the FE0E variation selector. */}
+          <Text style={styles.playGlyph}>{playing ? '❚❚' : '▶︎'}</Text>
+        </Pressable>
+        {sideBtn('⏭︎', t('quran.nextAyah', 'Next ayah'), () => {
+          void skipToNextAyah();
+        })}
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={t('quran.stopPlayback', 'Stop playback')}
+          hitSlop={8}
+          onPress={() => {
+            void stopPlayback();
+          }}
+          // Stop is destructive and sat flush against two harmless transport
+          // glyphs. A filled square separates it from them.
+          style={[styles.stopBtn, { backgroundColor: palette.controlBg }]}>
+          <Text style={[styles.closeGlyph, { color: palette.muted }]}>✕</Text>
+        </Pressable>
+      </View>
+
+      <ReciterPickerSheet
+        visible={pickerVisible}
+        onClose={() => setPickerVisible(false)}
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  gap: {
+    fontSize: TYPE.label.fontSize,
+    lineHeight: 16,
+    paddingHorizontal: SPACING.md,
+    paddingTop: SPACING.sm,
+  },
+  card: {
+    marginHorizontal: SPACING.md,
+    marginBottom: SPACING.md,
+    borderRadius: RADIUS.lg,
+    overflow: 'hidden',
+    /**
+     * THE PLAYER IS NOT THE THING THAT GIVES WAY.
+     *
+     * It is a flex sibling below the muṣḥaf's pager, and the pager is
+     * `flex: 1` — so in a short window (a phone on its side, ~300dp of
+     * height) the two negotiate, and this card came out shorter than its
+     * own row. With `overflow: 'hidden'` on it, that reads exactly as
+     * reported: a white band across the transport, with the ayah name and
+     * the play button cut through the middle.
+     *
+     * The card's height is its content's. The pager is the one with room
+     * to give — it is a scrolling column, and a page that is fifteen
+     * points shorter is still a page.
+     */
+    flexShrink: 0,
+  },
+  track: { height: 3, width: '100%' },
+  fill: { height: '100%' },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: SPACING.md,
+    paddingVertical: SPACING.sm,
+    gap: 2,
+  },
+  info: { flex: 1, marginEnd: SPACING.sm },
+  subRow: { flexDirection: 'row', alignItems: 'center', gap: SPACING.sm, marginTop: 1 },
+  stateChip: { paddingHorizontal: SPACING.sm, paddingVertical: 1, borderRadius: RADIUS.sm },
+  stateChipLabel: {
+    fontSize: TYPE.caption.fontSize,
+    fontWeight: '700',
+    fontVariant: ['tabular-nums'],
+  },
+  stopBtn: {
+    width: 34,
+    height: 34,
+    borderRadius: RADIUS.md,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginStart: SPACING.sm,
+  },
+  title: { fontSize: TYPE.callout.fontSize, fontWeight: '700', fontVariant: ['tabular-nums'] },
+  sub: { fontSize: TYPE.caption.fontSize, fontWeight: '600' },
+  sideBtn: { paddingHorizontal: SPACING.sm, paddingVertical: SPACING.sm },
+  sideGlyph: { fontSize: TYPE.title3.fontSize, fontWeight: '700' },
+  closeGlyph: { fontSize: TYPE.callout.fontSize, fontWeight: '700' },
+  playBtn: {
+    // A squircle at the sheet's radius family, not the reader's only
+    // perfectly round control.
+    width: 40,
+    height: 40,
+    borderRadius: RADIUS.lg,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: SPACING.xs,
+  },
+  playGlyph: {
+    color: '#ffffff',
+    fontSize: TYPE.callout.fontSize,
+    fontWeight: '700',
+    letterSpacing: 1,
+  },
+});

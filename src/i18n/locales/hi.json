@@ -1,0 +1,1779 @@
+{
+  "app": {
+    "name": "मेहराब",
+    "tagline": "प्रार्थना के समय, क़िबला कम्पास, क़ुरआन, दुआएँ और ज़िक्र — पूरी तरह ऑफ़लाइन, एक ही ऐप में।"
+  },
+  "nav": {
+    "home": "मेहराब",
+    "settings": "सेटिंग्स",
+    "month": "महीना",
+    "shareMonth": "माह साझा करें",
+    "compass": "किबला",
+    "tasbih": "तस्बीह",
+    "duas": "दुआएँ",
+    "quran": "क़ुरआन",
+    "journal": "नमाज़ डायरी",
+    "backup": "बैकअप",
+    "fasting": "रोज़ा",
+    "today": "आज",
+    "sync": "उपकरणों के बीच समन्वय"
+  },
+  "a11y": {
+    "openSettings": "खुली सेटिंग",
+    "openMonth": "माह दृश्य खोलें",
+    "openCompass": "किबला कम्पास खोलें",
+    "openTimesSource": "प्रार्थना समय का स्रोत बदलें",
+    "countdownTo": "इस नमाज़ तक की उलटी गिनती दिखाएँ",
+    "countdownHere": "उलटी गिनती इसी नमाज़ पर है। अगली पर लौटने के लिए टैप करें।"
+  },
+  "common": {
+    "change": "परिवर्तन",
+    "tryAgain": "पुनः प्रयास करें",
+    "retry": "पुन: प्रयास करें",
+    "continue": "जारी रखना",
+    "back": "पीछे",
+    "play": "चलाएँ",
+    "pause": "रोकें",
+    "stop": "बंद करें",
+    "loading": "लोड हो रहा है...",
+    "automatic": "स्वचालित",
+    "openSettings": "सेटिंग्स खोलें",
+    "cancel": "रद्द करें",
+    "ok": "ठीक है",
+    "today": "आज",
+    "close": "बंद करें",
+    "share": "साझा करें",
+    "done": "हो गया",
+    "delete": "हटाएँ",
+    "cancelled": "रद्द किया गया।",
+    "listJoin": " और ",
+    "confirmDelete": "हटाने के लिए फिर दबाएँ",
+    "learnMore": "और जानें"
+  },
+  "home": {
+    "loadingPrayer": "प्रार्थना का समय लोड हो रहा है...",
+    "nextPrayer": "अगली प्रार्थना",
+    "nextIn": "{{time}} में",
+    "hanafiSuffix": "हनफ़ी अस्र",
+    "monthTimesLink": "पूरे महीने के लिए प्रार्थना का समय",
+    "localFallbackNotice": "स्थानीय गणना — अपडेट के लिए कनेक्ट करें",
+    "lastGpsCoordsNotice": "अंतिम ज्ञात स्थान का उपयोग — GPS अनुपलब्ध",
+    "exactAlarmDenied": "सटीक समय के लिए नमाज़ अलर्ट को सटीक अलार्म अनुमति चाहिए। अनुमति देने के लिए टैप करें।",
+    "notifPermDenied": "अधिसूचना अनुमति अस्वीकृत — नमाज़ अलर्ट काम नहीं करेंगे। सेटिंग्स खोलने के लिए टैप करें।",
+    "updatingLocation": "स्थान अपडेट हो रहा है",
+    "today": "आज",
+    "tomorrow": "कल",
+    "savedLocationLabel": "{{name}}",
+    "switchLocation": "स्थान बदलें",
+    "autoBadge": "ऑटो",
+    "locating": "स्थान खोजा जा रहा…",
+    "backToToday": "आज पर वापस",
+    "updatedAt": "अपडेट {{when}}",
+    "daysStored": "{{count}} दिनों का डेटा संग्रहीत",
+    "quranShortcut": "क़ुरआन खोलें",
+    "dayStrip": "एक दिन चुनें",
+    "nextPrayerIn": "{{prayer}} में",
+    "firstPrayer": "पहली नमाज़ {{prayer}} · {{time}}",
+    "todaySummary": "आज",
+    "prayersLogged": "{{total}} में से {{count}} नमाज़ें दर्ज",
+    "noFastToday": "कोई रोज़ा दर्ज नहीं",
+    "dhikrSets": "{{count}} ज़िक्र सेट पूरे",
+    "fastKept": {
+      "ramadan": "रमज़ान का रोज़ा रखा",
+      "voluntary": "सुन्नत रोज़ा रखा",
+      "qadha": "क़ज़ा रोज़ा रखा"
+    },
+    "readItIn": "{{surah}} में पढ़ें",
+    "continueAt": "जारी रखें · {{surah}} {{ref}}",
+    "khatmahDay": "ख़त्म दिन {{day}} / {{total}}",
+    "khatmahDaysToGo": "{{count}} दिन बाकी",
+    "pagesLeftToday": "आज {{count}} पृष्ठ बाकी",
+    "pageNumber": "पृष्ठ {{page}}",
+    "readingDone": "आज का पाठ पूरा",
+    "readOn": "पढ़ते रहें",
+    "qiblaChipA11y": "क़िबला {{degrees}} डिग्री",
+    "qiblaChipHint": "क़िबला कम्पास खोलता है",
+    "alertOverrideOnce": "{{mode}} सिर्फ़ इस बार · रीसेट",
+    "alertOverrideA11y": "{{prayer}} सिर्फ़ इस बार {{mode}} पर है",
+    "alertOverrideResetHint": "{{mode}} वापस लाता है",
+    "yesterday": "कल (बीता)",
+    "startReading": "पढ़ना शुरू करें",
+    "startReadingHint": "अल-फ़ातिहा, पृष्ठ 1"
+  },
+  "errors": {
+    "locationNeededTitle": "स्थान की आवश्यकता है",
+    "locationNeededBody": "प्रार्थना के समय अपनी अनुमानित स्थिति का उपयोग करें। सिस्टम सेटिंग्स में स्थान पहुंच प्रदान करें, फिर पुनः प्रयास करें।",
+    "locationErrorTitle": "स्थान त्रुटि",
+    "apiErrorTitle": "समय लोड नहीं किया जा सका",
+    "coordLat": "अक्षांश -90 और 90 के बीच होना चाहिए.",
+    "coordLng": "देशांतर -180 और 180 के बीच होना चाहिए.",
+    "gpsPermission": "डिवाइस स्थान का उपयोग करने के लिए स्थान अनुमति आवश्यक है.",
+    "gpsRead": "जीपीएस स्थिति नहीं पढ़ सका.",
+    "gpsRequest": "स्थान का अनुरोध नहीं किया जा सका."
+  },
+  "month": {
+    "locationNotReadyTitle": "स्थान तैयार नहीं है",
+    "locationNotReadyBody": "होम खोलें और आज के समय को एक बार लोड करें ताकि यह स्क्रीन आपकी जीपीएस स्थिति का उपयोग कर सके।",
+    "thisMonth": "इस महीने",
+    "standardView": "मानक",
+    "shareView": "साझा करने योग्य",
+    "shareMonth": "चित्र साझा करें",
+    "loadError": "महीना लोड नहीं हो सका.",
+    "empty": "दिखाने के लिए कोई पंक्ति नहीं.",
+    "refreshData": "संग्रहीत डेटा को ताज़ा करें",
+    "refreshing": "ताज़ा...",
+    "monthsStored": "{{count}} महीने संग्रहीत",
+    "dayOfWeek": "दिन",
+    "date": "तारीख",
+    "hijri": "हिजरी",
+    "gregorian": "ग्रेगोरियन",
+    "prayerTimes": "प्रार्थना का समय",
+    "daruriLegend": "फ़ज्र, अस्र और ईशा के नीचे की छोटी पंक्ति बताती है कि उनका पहला (पसंदीदा) समय कब खत्म होता है। ज़ुहर का अस्र के शुरू होने पर और मग़रिब का ईशा के शुरू होने पर खत्म होता है, इसलिए वे दोनों स्वयं ये कॉलम हैं। फ़ज्र और अस्र की सीमाएँ अनुमानित हैं।"
+  },
+  "share": {
+    "tagline": "नमाज़ के समय, क़िबला और क़ुरआन",
+    "timesFor": "{{place}} के लिए नमाज़ के समय",
+    "scanForApp": "ऐप पाने के लिए स्कैन करें",
+    "asrHanafi": "अस्र: हनफ़ी",
+    "asrStandard": "अस्र: मानक",
+    "source": "समय {{source}} से",
+    "footerNote": "गणना किए गए समय। अंतर होने पर अपनी स्थानीय मस्जिद का पालन करें।",
+    "sheetLanguage": "शीट की भाषा",
+    "exportImage": "छवि साझा करें",
+    "exportPdf": "PDF साझा करें (A4)",
+    "pitch": "मुफ़्त और विज्ञापन-रहित। नमाज़ के समय, क़िबला, तिलावत और अनुवाद के साथ क़ुरआन, और ख़त्म ट्रैकर।"
+  },
+  "settings": {
+    "laDesignLabel": "शैली",
+    "laDesignTimeline": "टाइमलाइन",
+    "laDesignCountdown": "उलटी गिनती",
+    "appearance": "उपस्थिति",
+    "theme": "विषय",
+    "themeSystem": "प्रणाली",
+    "themeLight": "रोशनी",
+    "themeDark": "अँधेरा",
+    "themeHelp": "सिस्टम आपके डिवाइस के लाइट या डार्क मोड से मेल खाता है। ऐप में प्लेटफ़ॉर्म पैलेट का उपयोग करने के लिए सिस्टम रंग चालू करें (एंड्रॉइड पर मटेरियल यू सहित)। बटन और एक्सेंट आपके फ़ोन के प्राथमिक रंग का अनुसरण करते हैं ताकि गतिशील रंग उपलब्ध होने पर ऐप आपके वॉलपेपर से मेल खाए।",
+    "clockFormat": "समय प्रारूप",
+    "clockFormatAuto": "स्वचालित",
+    "clockFormat12": "12 घंटे",
+    "clockFormat24": "24 घंटे",
+    "clockFormatHelp": "स्वचालित आपके डिवाइस की घड़ी सेटिंग का पालन करता है। नमाज़ के समय, मासिक तालिका और विजेट सभी एक ही प्रारूप का उपयोग करते हैं।",
+    "clockFormatExample": "उदाहरण: {{time}}",
+    "systemDynamicColors": "सिस्टम रंग",
+    "systemDynamicColorsHelp": "थीम सिस्टम होने पर ऐप में आपके डिवाइस के अर्थपूर्ण और गतिशील रंगों का उपयोग करता है। डार्क मोड चालू होने पर शुद्ध काला (OLED) अभी भी पृष्ठभूमि को काला कर देता है।",
+    "pureBlack": "शुद्ध काला (OLED)",
+    "pureBlackHelp": "OLED डिस्प्ले के लिए डार्क मोड में असली काला बैकग्राउंड।",
+    "dataSource": "डेटा स्रोत",
+    "provider": "प्रार्थना समय प्रदाता",
+    "providerAutoLine": "स्वचालित · {{label}}",
+    "providerAutoHelp": "स्वीडन में, प्रार्थना के समय स्वीडन स्रोत (सूचीबद्ध शहर) का उपयोग किया जाता है; स्वीडन के बाहर, अलाधन। एक प्रदाता को लॉक करने के लिए नीचे एक स्रोत चुनें।",
+    "providerOverridden": "{{picked}} के पास आपके स्थान के समय नहीं हैं, इसलिए {{used}} उत्तर दे रहा है।",
+    "location": "जगह",
+    "automatic": "स्वचालित",
+    "manual": "नियमावली",
+    "manualSearchHelp": "किसी खोज परिणाम को तुरंत लागू करने के लिए उस पर टैप करें, या निर्देशांक संपादित करें और नीचे लागू करें दबाएं।",
+    "coordsLabel": "निर्देशांक (दशमलव डिग्री)",
+    "latPlaceholder": "अक्षांश",
+    "lngPlaceholder": "देशान्तर",
+    "applyCoords": "निर्देशांक लागू करें",
+    "calculation": "गणना",
+    "calcHiddenSweden": "स्वीडन सूचीबद्ध शहर के अनुसार प्रार्थना समय का उपयोग करता है। आपकी स्थिति उस शहर से मेल खाने के लिए रिवर्स-जियोकोडेड है; केवल स्वीडन के लिए.",
+    "calcHiddenPraytimes": "PrayTimes.dev अपने स्वयं के प्रकाशित नियम लागू करता है (praytimes.dev देखें)। यहां केवल मदहब/असर स्कूल लागू होता है; विधि सूची छिपी हुई है.",
+    "method": "तरीका",
+    "methodModalTitle": "गणना विधि",
+    "hanafiAsr": "हनफ़ी अस्र",
+    "hanafiAsrHelp": "असर के लिए छाया की लंबाई बड़ी (स्कूल = 1)",
+    "notifications": "सूचनाएं",
+    "prayerAlerts": "प्रार्थना अलर्ट",
+    "prayerAlertsHelp": "पांच दैनिक प्रार्थनाओं (फज्र-ईशा) के लिए निर्धारित। एंड्रॉइड को विश्वसनीय समय के लिए सटीक-अलार्म पहुंच की आवश्यकता हो सकती है।",
+    "prePrayerReminder": "अग्रिम अनुस्मारक",
+    "prePrayerReminderHelp": "प्रत्येक प्रार्थना से पहले वैकल्पिक दूसरी अधिसूचना।",
+    "prePrayerReminderModalTitle": "प्रार्थना से कुछ मिनट पहले",
+    "prePrayerReminderOff": "बंद",
+    "prePrayerReminderOption": "{{count}} मिनट पहले",
+    "liveActivity": "लाइव गतिविधि",
+    "liveActivityHelp": "अगली नमाज़ की उलटी गिनती और दिन के बाकी समय दिखाने वाली पिन की गई सूचना।",
+    "liveActivityExperimental": "iOS पर प्रयोगात्मक।",
+    "liveActivityCustomize": "अनुकूलित करें",
+    "liveActivityCompact": "कॉम्पैक्ट मोड",
+    "liveActivityCompactHelp": "केवल उलटी गिनती दिखाएँ; नमाज़ की सूची छिपाएँ।",
+    "liveActivityShowSunriseLabel": "सूर्योदय दिखाएँ",
+    "liveActivityShowHijriLabel": "हिजरी तारीख़ दिखाएँ",
+    "liveActivityShowLocationLabel": "स्थान दिखाएँ",
+    "language": "भाषा",
+    "languageHelp": "अंग्रेजी, स्वीडिश, या अरबी। अरबी दाएं से बाएं लेआउट का उपयोग करता है।",
+    "langEn": "अंग्रेज़ी",
+    "langSv": "स्वीडिश",
+    "langAr": "अरबी",
+    "homeScreenWidget": "होम स्क्रीन विजेट",
+    "widgetBackgroundOpacity": "विजेट पृष्ठभूमि ताकत (एंड्रॉइड)",
+    "widgetHighlight": "अगली प्रार्थना हाइलाइट रंग",
+    "widgetHighlight_green": "हरा",
+    "widgetHighlight_teal": "टील",
+    "widgetHighlight_blue": "नीला",
+    "widgetHighlight_amber": "अंबर",
+    "widgetHighlight_custom": "कस्टम रंग",
+    "widgetHighlight_customAbbr": "…",
+    "widgetHighlightHexPlaceholder": "#6बीसी98ए",
+    "widgetConfigureHint": "आप एंड्रॉइड पर समान विकल्पों को समायोजित करने के लिए विजेट → सेटिंग्स (गियर) को भी स्पर्श करके रख सकते हैं।",
+    "notificationSound": "चेतावनी ध्वनि",
+    "adhanAlarmStream": "अज़ान को अलार्म की तरह बजाएँ",
+    "adhanAlarmStreamHelp": "अलार्म वॉल्यूम का उपयोग करता है, इसलिए फ़ोन साइलेंट या वाइब्रेट पर होने पर भी अज़ान सुनाई देती है। डू नॉट डिस्टर्ब को नहीं हटाता।",
+    "notificationSoundModalTitle": "चेतावनी ध्वनि का चयन करें",
+    "notificationSoundDefault": "डिफ़ॉल्ट नोटिफिकेशन",
+    "notificationSoundDefaultHelp": "आपके डिवाइस की डिफ़ॉल्ट अधिसूचना ध्वनि का उपयोग करता है।",
+    "notificationSoundAbdulBasit": "अज़ान - अब्दुल बासित",
+    "notificationSoundAbdulGhaffar": "अदन - अब्दुल गफ्फार",
+    "notificationSoundAbdulHakam": "अदन - अब्दुल हकम",
+    "notificationSoundMakkah": "अज़ान - मक्का",
+    "notificationSoundMadina": "अज़ान - मदीना",
+    "notificationSoundAqsa": "अज़ान - अल-अक्सा",
+    "notificationSoundEgypt": "अज़ान - मिस्र",
+    "notificationSoundHalab": "अज़ान - हलब",
+    "notificationSoundAlHussaini": "अज़ान - अल-हुसैनी",
+    "notificationSoundBakirBash": "अदन-बाकिर बाश",
+    "notificationSoundHafez": "अज़ान - हाफ़िज़",
+    "notificationSoundHafizMurad": "अज़ान - हाफ़िज़ मुराद",
+    "notificationSoundMinshawi": "अज़ान - मिनशॉवी",
+    "notificationSoundNaghshbandi": "अज़ान - नग़शबंदी",
+    "notificationSoundSaber": "अज़ान - कृपाण",
+    "notificationSoundSharifDoman": "अज़ान - शरीफ डोमन",
+    "notificationSoundYusufIslam": "अज़ान - यूसुफ इस्लाम",
+    "notificationSoundVoiceHelp": "इस ऐप बिल्ड में बिल्ट-इन वॉयस शामिल है।",
+    "notificationSoundCustom": "आपकी अपनी अज़ान",
+    "notificationSoundCustomHelp": "इस डिवाइस से एक ऑडियो फ़ाइल चुनें।",
+    "notificationSoundCustomImporting": "आयात हो रहा है…",
+    "notificationSoundCustomRemove": "अपनी अज़ान हटाएँ",
+    "notificationSoundCustomTrimmed": "सूचनाएँ पहले 30 सेकंड बजाती हैं; ऐप खुली होने पर पूरी रिकॉर्डिंग बजती है।",
+    "versionInstalled": "स्थापित संस्करण: {{version}}",
+    "adhanPreviewTitle": "अज़ान पूर्वावलोकन",
+    "adhanPreviewBody": "",
+    "prayerOffsets": "प्रति प्रार्थना समायोजन",
+    "prayerOffsetsTitle": "प्रति प्रार्थना समायोजन",
+    "prayerOffsetsHelp": "अपनी स्थानीय मस्जिद से मेल खाने के लिए प्रत्येक प्रार्थना ±{{max}} मिनट बदलें।",
+    "prayerOffsetsNone": "कोई समायोजन नहीं",
+    "prayerOffsetsCount_one": "{{count}} नमाज़ का समय बदला गया",
+    "prayerOffsetsCount_other": "{{count}} नमाज़ों का समय बदला गया",
+    "prayerOffsetsIncrease": "{{prayer}} का अंतर बढ़ाएँ",
+    "prayerOffsetsDecrease": "{{prayer}} का अंतर घटाएँ",
+    "prayerOffsetsReset": "सभी रीसेट करें",
+    "dataAndPrivacy": "डेटा और गोपनीयता",
+    "replayOnboarding": "ऑनबोर्डिंग फिर देखें",
+    "replayOnboardingHelp": "स्वागत प्रवाह देखें।",
+    "attributions": "श्रेय",
+    "attributionsBlurb": "किनके काम से यह ऐप बना है",
+    "attribQuran": "क़ुरआन का पाठ",
+    "attribTranslation": "अनुवाद",
+    "attribDuas": "दुआएं",
+    "accentColor": "एक्सेंट रंग",
+    "accent_green": "हरा",
+    "accent_teal": "फ़िरोज़ी",
+    "accent_blue": "नीला",
+    "accent_amber": "अंबर",
+    "accent_custom": "अपनी पसंद",
+    "accent_customAbbr": "Hex",
+    "accentColorHelp": "पूरे ऐप और होम-स्क्रीन विजेट में उपयोग किया जाता है।",
+    "widgetColorFollowsAccentHelp": "विजेट ऐप जैसा ही एक्सेंट रंग इस्तेमाल करता है। इसे “रूप-रंग” में चुनें।",
+    "widgetColorOwnHelp": "ऐप आपके सिस्टम रंगों का अनुसरण कर रहा है, विजेट नहीं। विजेट का हाइलाइट रंग यहाँ चुनें।",
+    "additionalTimes": "अतिरिक्त समय",
+    "additionalTimesBlurb": "सूर्योदय, मध्यरात्रि और रात के तिहाई",
+    "additionalTimesFooter": "ये सूचनाओं के साथ-साथ नमाज़ तालिका, विजेट और लाइव गतिविधि में भी दिखते हैं, और अज़ान के बजाय डिफ़ॉल्ट ध्वनि का उपयोग करते हैं।",
+    "dailyReminders": "दैनिक अनुस्मारक",
+    "dailyRemindersBlurb": "हर दिन एक आयत, आज का ख़त्म हिस्सा, अल-कहफ़ और अल-मुल्क",
+    "logSection": "लॉग",
+    "sunriseTime": "सूर्योदय",
+    "sunriseTimeHelp": "नमाज़ तालिका, सूचनाओं, विजेट और Live Activity में सूर्योदय दिखाएँ।",
+    "islamicMidnight": "इस्लामी आधी रात",
+    "islamicMidnightHelp": "मग़रिब और फ़ज्र के बीच रात का मध्यबिंदु। डिफ़ॉल्ट रूप से बंद।",
+    "lastThird": "रात का अंतिम तिहाई भाग",
+    "lastThirdHelp": "रात के अंतिम तिहाई की शुरुआत — क़ियाम अल-लैल का समय। डिफ़ॉल्ट रूप से बंद।",
+    "firstThird": "रात की पहली तिहाई",
+    "firstThirdHelp": "रात की पहली तिहाई का अंत — मालिकी गणना में यहाँ ईशा अपने पसंदीदा समय से बाहर हो जाती है। डिफ़ॉल्ट रूप से बंद।",
+    "malikiSecondTimes": "मालिकी दूसरा समय",
+    "malikiSecondTimesHelp": "हर नमाज़ के लिए आज के कार्ड पर एक पंक्ति बताएगी कि उसका पसंदीदा समय (इख़्तियारी) कब बंद होता है और देर वाला समय (ज़रूरी) कब शुरू होता है। आपके निर्देशांक से आपके ही डिवाइस पर गणना, स्रोत चाहे कोई भी हो। अस्र के लिए आपकी मज़हब सेटिंग से स्वतंत्र 1:1 छाया, क्योंकि मालिकी सीमा यही है। डिफ़ॉल्ट रूप से बंद।",
+    "malikiSecondTimesHanafiWarning": "ध्यान दें: ये मालिकी सीमाएँ हैं, पर आपकी अस्र हनफ़ी पर सेट है, जो अलग छाया इस्तेमाल करती है। ज़ुहर का पहला समय नीचे दिखाई गई अस्र से लगभग आधा घंटा पहले खत्म होगा। कार्ड आपस में मेल खाए, इसके लिए हनफ़ी अस्र बंद करें।",
+    "malikiSecondTimesSource": "अल-मुर्शिद अल-मुईन (इब्न आशिर) से, The Guiding Helper के गीत 11 में।",
+    "malikiAlerts": "मुझे सूचित करें",
+    "malikiAlertsHelp": "शुरुआत में हर नमाज़ के लिए बंद। केवल वही चुनें जिनके बारे में बताया जाना चाहते हैं — दिन में पाँच और सूचनाएँ वह तरीका है जिससे ऐप आपको खुद को अनदेखा करना सिखाता है। सूचनाएँ चालू होनी चाहिए।",
+    "malikiAlertsDisabled": "नमाज़ के समय में मालिकी दूसरे समय चालू करें, फिर उनकी सूचना यहाँ दी जा सकती है।",
+    "malikiAlertsNone": "कोई सूचना नहीं",
+    "malikiAlertsLead": "कितनी पहले",
+    "malikiAlertsLeadTitle": "पहला समय खत्म होने से पहले बताएँ",
+    "malikiAlertsAtTime": "जब खत्म हो",
+    "malikiSecondTimesModelled": "फ़ज्र और अस्र की सीमाएँ तारों का ओझल होना और सूरज का पीला पड़ना हैं — आँख के निर्णय के बदले एक कोण। इसलिए वे अनुमानित चिह्नित हैं। जहाँ सूरज न उगता हो, न डूबता हो, या उस कोण तक न पहुँचता हो, वहाँ अनुमान के बजाय कुछ नहीं दिखाया जाता।",
+    "accent_rose": "गुलाबी",
+    "accent_violet": "बैंगनी",
+    "laDesignMarkers": "मार्कर",
+    "showTour": "ऐप टूर दिखाएँ",
+    "rateApp": "मिहराब को रेट करें",
+    "rateAppHelp": "ऐप पसंद आया? रेटिंग दूसरों को इसे खोजने में मदद करती है।",
+    "showTourHelp": "त्वरित फ़ीचर टूर फिर से देखें।",
+    "ayahOfDay": "दैनिक आयत सूचना",
+    "ayahOfDayHelp": "हर दिन एक यादृच्छिक चुनी गई आयत और उसका अनुवाद।",
+    "ayahOfDayTime": "सूचना का समय",
+    "hourDown": "घंटा −",
+    "hourUp": "घंटा +",
+    "khatmahReminder": "दैनिक ख़त्मा अनुस्मारक",
+    "khatmahReminderHelp": "ख़त्मा सक्रिय रहते हुए आज का हिस्सा और कहाँ से जारी रखें।",
+    "khatmahReminderNoPlan": "इसे इस्तेमाल करने के लिए कुरान टैब में एक खत्म शुरू करें।",
+    "resetApp": "ऐप डेटा रीसेट करें",
+    "resetAppHelp": "सभी सेटिंग्स और डेटा मिटा देता है। पूर्ववत नहीं हो सकता।",
+    "batteryWarning": "अलर्ट अविश्वसनीय हो सकते हैं",
+    "batteryWarningHelp": "बैटरी ऑप्टिमाइज़ेशन ऐप बंद होने पर अज़ान अलर्ट में देरी या उन्हें मौन कर सकता है। Ibadat 365 को बाहर रखने के लिए टैप करें।",
+    "themeRestartManualTitle": "ऐप फिर से खोलें",
+    "themeRestartManualBody": "iOS ऐप्स को स्वयं पुनः आरंभ नहीं करने देता। नई थीम लागू करने के लिए ऐप बंद करके फिर खोलें।",
+    "liquidGlass": "लिक्विड ग्लास",
+    "liquidGlassHelp": "iOS सिस्टम रंग और पारदर्शी ग्लास क्रोम अपनाएँ। लाइट/डार्क स्वतः अनुसरण करता है।",
+    "themeRestartTitle": "पुनः आरंभ आवश्यक",
+    "themeRestartBody": "सिस्टम रंग बदलने पर हर स्क्रीन को नई थीम लेने के लिए ऐप पुनः आरंभ करना होगा। अभी करें?",
+    "themeRestartConfirm": "पुनः आरंभ",
+    "laLockButtonLabel": "लॉक स्क्रीन बटन",
+    "laLockButtonHelp": "कार्ड पर एक बटन दिखाएँ जो उसे लॉक स्क्रीन और ओलवेज़-ऑन डिसप्ले से छिपा दे।",
+    "resetTitle": "ऐप रीसेट करें?",
+    "resetBody": "यह सभी सेटिंग्स, सहेजे स्थान, लॉग, रोज़े का रिकॉर्ड और तस्बीह स्थिति मिटा देगा और आपको शुरुआती चरणों में ले जाएगा। इसे पूर्ववत नहीं किया जा सकता।",
+    "resetConfirm": "सब कुछ रीसेट करें",
+    "prayerOffsetsCount": "{{count}} समायोजित",
+    "endOfDayLog": "दिन के अंत में लॉग अनुस्मारक",
+    "endOfDayLogHelp": "ईशा के दस मिनट बाद पूछता है कि दिन की पाँच नमाज़ें दर्ज करें या नहीं। अगली सुबह उत्तर देने पर भी सही दिन दर्ज होता है।",
+    "alertModeAdhan": "अज़ान",
+    "alertModeNotification": "सूचना",
+    "alertModeSilent": "मौन",
+    "alertModeHint": "यह नमाज़ आपको कैसे सूचित करे, बदलता है",
+    "sectionPrayerTimes": "नमाज़ के समय",
+    "sectionPrayerTimesBlurb": "स्रोत, गणना विधि, मज़हब, समायोजन",
+    "sectionNotifications": "सूचनाएँ",
+    "sectionNotificationsBlurb": "ध्वनियाँ, अग्रिम अनुस्मारक, अतिरिक्त समय, लाइव गतिविधि",
+    "sectionLocation": "स्थान",
+    "sectionLocationBlurb": "आप कहाँ हैं, और सहेजे गए स्थान",
+    "sectionAppearance": "रूप और भाषा",
+    "sectionAppearanceBlurb": "थीम, रंग, समय प्रारूप, भाषा",
+    "sectionWidgets": "होम स्क्रीन",
+    "sectionWidgetsBlurb": "होम स्क्रीन विजेट",
+    "sectionQuran": "क़ुरआन",
+    "sectionQuranBlurb": "पठन, अनुवाद, तफ़सीर, डाउनलोड",
+    "sectionAbout": "परिचय",
+    "sectionAboutBlurb": "संस्करण, स्रोत, लाइसेंस",
+    "malikiRows": "दिन के वक़्तों में दिखाएँ",
+    "malikiRowsHelp": "बंद होने पर सिर्फ़ सूचना दी जाती है — कार्ड या महीने में कुछ नहीं जुड़ता।",
+    "malikiEndAlerts": "और जब वक़्त ख़त्म हो",
+    "malikiEndAlertsHelp": "जिस पल नमाज़ क़ज़ा होती है, दूसरी सूचना। ठीक उसी वक़्त, कभी पहले नहीं।",
+    "surahRemindersChannel": "सूरह रिमाइंडर",
+    "madhab": "मज़हब",
+    "madhab_hanafi": "हनफ़ी",
+    "madhab_maliki": "मालिकी",
+    "madhab_shafii": "शाफ़िई",
+    "madhab_hanbali": "हंबली",
+    "madhabCustom": "कस्टम",
+    "madhabHelp": "शाफ़िई, मालिकी और हंबली अस्र की एक ही छाया लेते हैं, इसलिए इनमें चुनाव से कोई समय नहीं बदलता। मालिकी फ़ज्र की फ़र्ज़ को सुब्ह कहता है और दूसरे समय भी देता है।",
+    "dhikrRemindersChannel": "ज़िक्र रिमाइंडर",
+    "dhikrRemindersSilentChannel": "ज़िक्र रिमाइंडर (मौन)",
+    "laDesignNeedsAndroid16": "स्टाइल के लिए Android 16 या नया चाहिए। यह फ़ोन मानक कार्ड दिखाता है: नमाज़, बचा समय और एक प्रगति बार।"
+  },
+  "locationSetup": {
+    "headline": "अपना स्थान निर्धारित करें",
+    "sub": "प्रार्थना का समय इस बात पर निर्भर करता है कि आप कहां हैं। नीचे दिए गए विकल्पों में से एक चुनें - आप इसे बाद में सेटिंग्स में बदल सकते हैं।",
+    "useAutomatic": "मेरा स्थान इस्तेमाल करें",
+    "searchCoords": "निर्देशांक खोजें या दर्ज करें",
+    "manualHeadline": "मैन्युअल स्थान",
+    "manualSub": "समाप्त करने के लिए परिणाम खोजें और टैप करें - या नीचे अक्षांश और देशांतर टाइप करें और जारी रखें दबाएं।",
+    "decimalCoords": "दशमलव निर्देशांक"
+  },
+  "provider": {
+    "timesSource": "टाइम्स स्रोत",
+    "automaticByLocation": "स्थान के अनुसार स्वचालित",
+    "modalTitle": "प्रार्थना समय स्रोत",
+    "sectionMainstream": "मुख्यधारा एपीआई",
+    "sectionRegional": "राष्ट्रीय एवं क्षेत्रीय स्रोत",
+    "autoTitle": "स्वचालित",
+    "autoSub": "स्वीडन में स्वीडन स्रोत; अल-अज़ान अन्यत्र।",
+    "autoNow": "आप इस समय जहाँ हैं, वहाँ यह {{label}} है।",
+    "bestHere": "आपके स्थान के अनुकूल",
+    "outOfRegion": "आपके स्थान के लिए समय नहीं हैं — इसके बजाय {{fallback}} का उपयोग होगा।",
+    "footer": "देश-विशिष्ट स्रोत आधिकारिक या राष्ट्रीय प्रार्थना तालिकाओं का उपयोग करते हैं जहां हम उन्हें एकीकृत करते हैं। समय के साथ और अधिक क्षेत्र जोड़े जा सकते हैं."
+  },
+  "providers": {
+    "aladhan": {
+      "desc": "api.aladhan.com — विधियों की बड़ी सूची, विश्वव्यापी निर्देशांक; व्यापक रूप से उपयोग।",
+      "name": "AlAdhan"
+    },
+    "prayertimes_dev": {
+      "desc": "स्वतंत्र API — यूके-शैली कोण और ऑफ़सेट; हनफ़ी/शाफ़ी; विश्वव्यापी निर्देशांक।",
+      "name": "PrayTimes.dev"
+    },
+    "local_adhan": {
+      "desc": "आपके फ़ोन पर Batoul Adhan से गणना — कोई नेटवर्क API नहीं।",
+      "name": "डिवाइस पर (Adhan JS)"
+    },
+    "islamiska_forbundet": {
+      "desc": "सूचीबद्ध स्वीडिश शहरों के लिए नमाज़ का समय; आपका स्थान सूची के निकटतम शहर से मिलाया जाता है।",
+      "name": "स्वीडन"
+    },
+    "habous": {
+      "name": "मोरक्को",
+      "desc": "हबूस एवं इस्लामी मामलों के मंत्रालय द्वारा सूचीबद्ध मोरक्कन शहरों के लिए प्रकाशित समय; आपका स्थान सूची के निकटतम शहर से मिलाया जाता है।"
+    }
+  },
+  "compass": {
+    "needLocationTitle": "स्थान तैयार नहीं है",
+    "needLocationBody": "सेटिंग्स में एक स्थान सेट करें या जीपीएस के साथ एक बार होम खोलें ताकि हम किबला दिशा की गणना कर सकें।",
+    "bearing": "किबला असर",
+    "fromNorth": "उत्तर से {{deg}}°",
+    "qiblaMarker": "किबला",
+    "phoneFront": "फ़ोन सामने",
+    "hint": "फ़ोन को सपाट पकड़ें और धातु से दूर रखें। जब आप किबला की ओर मुख करें तो किबला तीर को \"फोन के सामने\" के साथ संरेखित करें।",
+    "signalStrength": "कम्पास संकेत",
+    "signalHelp": "चुंबकीय क्षेत्र स्तर और स्थिरता के आधार पर। यदि यह कम रहता है तो धातु और इलेक्ट्रॉनिक्स से दूर हो जाएं।",
+    "signalChecking": "…",
+    "signalOff": "बंद",
+    "signalWeakTitle": "कंपास सिग्नल कमजोर है",
+    "signalVeryWeakTitle": "कंपास सिग्नल बहुत कमजोर है",
+    "signalWeakBody": "धातु, चुम्बक और इलेक्ट्रॉनिक्स से दूर जाएँ। चुंबकीय फ़ोन सहायक उपकरण निकालें, फिर पुन: अंशांकन करने के लिए धीमी आकृति-8 गति बनाएं।",
+    "motionDetectedTitle": "फ़ोन को स्थिर रखें",
+    "motionDetectedBody": "बहुत अधिक हलचल से दिशा में उछाल आ सकता है। चलते वाहनों या स्पीकर से दूर, कुछ सेकंड के लिए फ़ोन को सीधा और स्थिर रखें।",
+    "motionPermissionTitle": "मोशन अनुमति आवश्यक है",
+    "motionPermissionDeniedBody": "iOS पर कंपास एक्सेस अस्वीकृत है. सिस्टम सेटिंग्स में मोशन और फिटनेस एक्सेस की अनुमति दें, फिर इस स्क्रीन को फिर से खोलें।",
+    "openSettings": "खुली सेटिंग",
+    "unsupportedTitle": "लाइव कंपास अनुपलब्ध",
+    "unsupportedBody": "यह उपकरण प्रयोग करने योग्य मैग्नेटोमीटर प्रदान नहीं करता (या पहुंच विफल रही)। लाइव कंपास बंद है. भौतिक कंपास या मानचित्र के साथ नीचे दिए गए बियरिंग का उपयोग करें।",
+    "checkingCompass": "कम्पास प्रारंभ हो रहा है...",
+    "checkingCompassWithPrompt": "कंपास प्रारंभ हो रहा है... यदि iOS पर संकेत दिया जाए, तो मोशन और फिटनेस एक्सेस की अनुमति दें।",
+    "north": "एन",
+    "east": "ई",
+    "south": "एस",
+    "west": "डब्ल्यू",
+    "a11yDialLive": "क़िबला कम्पास। क़िबला की ओर मुख करने के लिए {{deg}} डिग्री घुमाएँ।",
+    "a11yDialChecking": "क़िबला कम्पास। सेंसर डेटा की प्रतीक्षा है।",
+    "a11yDialUnavailable": "क़िबला कम्पास उपलब्ध नहीं।",
+    "a11yNeedleDeg": "क़िबला की ओर मुख करने के लिए {{deg}} डिग्री घुमाएँ।",
+    "a11ySignal_good": "कम्पास सिग्नल: अच्छा।",
+    "a11ySignal_weak": "कम्पास सिग्नल: कमज़ोर। खुली जगह में जाने का प्रयास करें।",
+    "a11ySignal_very_weak": "कम्पास सिग्नल: बहुत कमज़ोर। सटीकता सीमित हो सकती है।",
+    "crossCheckTitle": "अपने कम्पास ऐप से मिलान करें",
+    "crossCheckBody": "आपके डिवाइस का अपना कम्पास उसके हार्डवेयर के अनुरूप है। सबसे सटीक रीडिंग के लिए उसे खोलें और तब तक घूमें जब तक वह {{degrees}} न दिखाए।",
+    "openSystemCompass": "कम्पास ऐप खोलें",
+    "fromNorthLabel": "उत्तर से"
+  },
+  "prayer": {
+    "Fajr": "फज्र",
+    "Sunrise": "सूर्योदय",
+    "Dhuhr": "धुहर",
+    "Asr": "अस्र",
+    "Maghrib": "मग़रिब",
+    "Isha": "ईशा",
+    "Fajr_abbr": "फज्र",
+    "Sunrise_abbr": "सूर्य",
+    "Dhuhr_abbr": "धुहर",
+    "Asr_abbr": "अस्र",
+    "Maghrib_abbr": "मगरि",
+    "Isha_abbr": "ईशा",
+    "Midnight": "इस्लामी आधी रात",
+    "Midnight_abbr": "मध्य",
+    "Lastthird": "अंतिम तिहाई",
+    "Lastthird_abbr": "क़ियाम",
+    "Firstthird": "पहली तिहाई",
+    "Firstthird_abbr": "1/3",
+    "firstTimeUntil": "पहला समय {{time}} तक",
+    "secondTimeUntil": "दूसरा समय {{time}} तक",
+    "secondTimeFrom": "दूसरा समय {{time}} से",
+    "approx": "लगभग",
+    "Subh": "सुब्ह",
+    "Subh_abbr": "सुब्ह"
+  },
+  "placeSearch": {
+    "label": "शहर या पता खोजें",
+    "placeholder": "जैसे काहिरा, लंदन, डाक कोड...",
+    "hint": "OpenStreetMap (Nominatim) से परिणाम। सम्मानपूर्वक उपयोग करें - थोक जियोकोडिंग के लिए नहीं।",
+    "appliedTitle": "स्थान लागू किया गया",
+    "searchFailed": "खोज विफल रही",
+    "applied": "लागू: {{label}}",
+    "noResults": "कोई परिणाम नहीं",
+    "searching": "खोज रहा हूँ..."
+  },
+  "alertCopy": {
+    "atPrayer": "प्रार्थना का समय",
+    "prePrayer": "{{count}} मिनट में शुरू होता है",
+    "adhanStopAction": "अज़ान बंद करो",
+    "adhanDisableAction": "अज़ान अक्षम करें",
+    "snoozeAction": "स्नूज़",
+    "snoozeChoice": "{{minutes}} मिनट बाद",
+    "snoozeMinutes": "मिनट",
+    "daruriEndsIn": "पहला समय {{time}} पर खत्म — {{count}} मिनट में",
+    "daruriEnded": "पहला समय {{until}} पर खत्म हो गया",
+    "daruriExpired": "वक़्त ख़त्म हो गया — इसे क़ज़ा पढ़ें",
+    "atPrayerBody": "{{prayer}} का समय हो गया है",
+    "nextEvent": "अगला: {{prayer}} {{time}} पर"
+  },
+  "locations": {
+    "title": "सहेजी गई जगहें",
+    "empty": "जगहें सहेज लें ताकि आप उनके बीच जल्दी बदल सकें।",
+    "add": "नया स्थान जोड़ें",
+    "useAuto": "मेरा स्थान",
+    "addPrompt": "इस जगह को नाम दें",
+    "addPlaceholder": "घर, दफ़्तर, सफ़र…",
+    "cancel": "रद्द करें",
+    "save": "सहेजें",
+    "use": "इस्तेमाल करें",
+    "delete": "हटाएँ",
+    "limitReached": "ज़्यादा से ज़्यादा {{max}} जगहें ही सहेजी जा सकती हैं।",
+    "previousLocation": "पिछला स्थान",
+    "invalidCoordsTitle": "अमान्य निर्देशांक",
+    "invalidCoordsBody": "अक्षांश -90 से 90 और देशांतर -180 से 180 के बीच होना चाहिए।",
+    "pickAPlace": "पहले कोई शहर खोजें या निर्देशांक दर्ज करें।",
+    "duplicateTitle": "पहले से सहेजा गया",
+    "duplicateBody": "इन निर्देशांकों पर एक स्थान पहले से \"{{name}}\" के रूप में सहेजा गया है।"
+  },
+  "tasbih": {
+    "subhanallah": "SubhanAllah",
+    "alhamdulillah": "Alhamdulillah",
+    "allahuakbar": "Allahu Akbar",
+    "lailaha": "La ilaha illa Allah",
+    "astaghfirullah": "Astaghfirullah",
+    "open": "गिनती खोलें",
+    "increment": "गिनने के लिए टैप करें",
+    "reset": "रीसेट",
+    "salahonprophet": "नबी ﷺ पर दरूद",
+    "prev": "पिछला",
+    "next": "अगला",
+    "meaning": {
+      "subhanallah": "अल्लाह पवित्र है",
+      "alhamdulillah": "सारी प्रशंसा अल्लाह के लिए है",
+      "lailaha": "अल्लाह के सिवा कोई पूज्य नहीं",
+      "allahuakbar": "अल्लाह सबसे महान है",
+      "astaghfirullah": "मैं अल्लाह से क्षमा माँगता हूँ",
+      "salahonprophet": "हे अल्लाह, हमारे स्वामी मुहम्मद पर दरूद भेज"
+    },
+    "setPosition": "सेट {{index}} / {{total}}",
+    "ofTarget": "/ {{target}}",
+    "tapAnywhere": "कहीं भी टैप करें",
+    "upNext": "अगला",
+    "resetSet": "सेट रीसेट करें",
+    "skip": "छोड़ें"
+  },
+  "duas": {
+    "cat": {
+      "morning": "सुबह",
+      "evening": "शाम",
+      "afterPrayer": "नमाज़ के बाद",
+      "food": "भोजन",
+      "distress": "विपदा",
+      "sleep": "नींद",
+      "lavatory": "शौचालय",
+      "garment": "वस्त्र",
+      "travel": "यात्रा",
+      "mosque": "मस्जिद",
+      "gratitude": "कृतज्ञता",
+      "forgiveness": "क्षमा",
+      "weather": "मौसम",
+      "family": "परिवार",
+      "sickness": "बीमारी",
+      "funeral": "जनाज़ा",
+      "eid": "ईद",
+      "beforeQuran": "क़ुरआन से पहले",
+      "knowledge": "ज्ञान",
+      "protection": "रक्षा",
+      "guidance": "मार्गदर्शन"
+    },
+    "allCategories": "सभी दुआएँ",
+    "repeat": "पढ़ें ×{{count}}",
+    "morning_01_ayat_kursi": {
+      "title": "आयतुल कुर्सी"
+    },
+    "morning_02_three_quls": {
+      "title": "सूरह अल-इख़्लास, अल-फ़लक़, अन-नास"
+    },
+    "morning_03_fitra_islam": {
+      "title": "इस्लाम की फ़ितरत पर"
+    },
+    "morning_04_radhitu": {
+      "title": "अल्लाह को रब मानकर प्रसन्न"
+    },
+    "morning_05_ilm_nafi": {
+      "title": "लाभदायक ज्ञान, अच्छी रोज़ी, क़बूल आमाल"
+    },
+    "morning_06_bika_asbahna": {
+      "title": "तेरे साथ हमने सुबह की"
+    },
+    "morning_07_la_ilaha_illa_allah": {
+      "title": "अल्लाह के सिवा कोई इलाह नहीं, वही अकेला"
+    },
+    "morning_08_ya_hayyu_ya_qayyum": {
+      "title": "ऐ हय्य ऐ क़य्यूम"
+    },
+    "morning_09_sayyid_al_istighfar": {
+      "title": "सय्यिदुल इस्तिग़फार"
+    },
+    "morning_10_fatir_as_samawat": {
+      "title": "आकाशों और धरती का रचयिता"
+    },
+    "morning_11_asbahna_walmulku_lillah": {
+      "title": "हम और सत्ता अल्लाह के लिए सुबह में आए"
+    },
+    "morning_12_afw_wa_afiya": {
+      "title": "माफ़ी और आफ़ियत"
+    },
+    "morning_13_bismillah_la_yadurr": {
+      "title": "अल्लाह के नाम पर — जिसके नाम के साथ कोई चीज़ नुक़्सान नहीं देती"
+    },
+    "morning_14_subhan_allah_adada_khalqih": {
+      "title": "अल्लाह पाक है — उसकी मख़लूक़ की संख्या के बराबर"
+    },
+    "morning_15_afini_fi_badani": {
+      "title": "मुझे शरीर, श्रवण और दृष्टि में आफ़ियत दे"
+    },
+    "morning_16_hasbiy_allah": {
+      "title": "अल्लाह मेरे लिए काफ़ी है"
+    },
+    "morning_17_ushhiduka": {
+      "title": "इस सुबह मैं तुझे गवाह बनाता हूँ"
+    },
+    "morning_18_la_ilaha_yuhyi_yumit": {
+      "title": "अल्लाह के सिवा कोई इलाह नहीं — वह जिलाता और मारता है"
+    },
+    "morning_19_subhan_allah_wa_bihamdihi": {
+      "title": "अल्लाह पाक है और उसकी प्रशंसा है"
+    },
+    "morning_20_astaghfirullah": {
+      "title": "मैं अल्लाह से बख़शिश माँगता हूँ"
+    },
+    "morning_21_subhan_alhamdu_takbir": {
+      "title": "तस्बीह, तहमीद, तकबीर, तहलील"
+    },
+    "evening_01_ayat_kursi": {
+      "title": "आयतुल कुर्सी"
+    },
+    "evening_02_three_quls": {
+      "title": "सूरह अल-इख़्लास, अल-फ़लक़, अन-नास"
+    },
+    "evening_03_fitra_islam": {
+      "title": "इस्लाम की फ़ितरत पर (शाम)"
+    },
+    "evening_04_radhitu": {
+      "title": "अल्लाह को रब मानकर प्रसन्न"
+    },
+    "evening_05_bika_amsayna": {
+      "title": "तेरे साथ हमने शाम की"
+    },
+    "evening_06_la_ilaha_illa_allah": {
+      "title": "अल्लाह के सिवा कोई इलाह नहीं, वही अकेला"
+    },
+    "evening_07_ya_hayyu_ya_qayyum": {
+      "title": "ऐ हय्य ऐ क़य्यूम"
+    },
+    "evening_08_sayyid_al_istighfar": {
+      "title": "सय्यिदुल इस्तिग़फार"
+    },
+    "evening_09_fatir_as_samawat": {
+      "title": "आकाशों और धरती का रचयिता"
+    },
+    "evening_10_amsayna_walmulku_lillah": {
+      "title": "हम और सत्ता अल्लाह के लिए शाम में आए"
+    },
+    "evening_11_afw_wa_afiya": {
+      "title": "माफ़ी और आफ़ियत"
+    },
+    "evening_12_bismillah_la_yadurr": {
+      "title": "अल्लाह के नाम पर — जिसके नाम के साथ कोई चीज़ नुक़्सान नहीं देती"
+    },
+    "evening_13_taamat_protection": {
+      "title": "अल्लाह के पूर्ण कलिमों की पनाह"
+    },
+    "evening_14_afini_fi_badani": {
+      "title": "मुझे शरीर, श्रवण और दृष्टि में आफ़ियत दे"
+    },
+    "evening_15_hasbiy_allah": {
+      "title": "अल्लाह मेरे लिए काफ़ी है"
+    },
+    "evening_16_ushhiduka": {
+      "title": "इस शाम मैं तुझे गवाह बनाता हूँ"
+    },
+    "evening_17_la_ilaha_yuhyi_yumit": {
+      "title": "अल्लाह के सिवा कोई इलाह नहीं — वह जिलाता और मारता है"
+    },
+    "evening_18_subhan_allah_wa_bihamdihi": {
+      "title": "अल्लाह पाक है और उसकी प्रशंसा है"
+    },
+    "evening_19_astaghfirullah": {
+      "title": "मैं अल्लाह से बख़शिश माँगता हूँ"
+    },
+    "evening_20_subhan_alhamdu_takbir": {
+      "title": "तस्बीह, तहमीद, तकबीर, तहलील"
+    },
+    "afterPrayer_astaghfirullah": {
+      "title": "क्षमा माँगना"
+    },
+    "afterPrayer_allahumma_antas_salam": {
+      "title": "या अल्लाह, तू सलाम है"
+    },
+    "afterPrayer_subhanallah_33": {
+      "title": "तस्बीह (33 × 3)"
+    },
+    "afterPrayer_three_quls": {
+      "title": "हर फ़र्ज़ नमाज़ के बाद सूरह इख़्लास, फ़लक़, नास"
+    },
+    "afterPrayer_ayat_kursi": {
+      "title": "हर फ़र्ज़ नमाज़ के बाद आयतुल कुर्सी"
+    },
+    "food_before": {
+      "title": "खाने से पहले — बिस्मिल्लाह"
+    },
+    "food_after_min_ghayri_hawlin": {
+      "title": "खाने के बाद — मेरी शक्ति या सामर्थ्य के बिना"
+    },
+    "food_after_atamana_wa_saqana": {
+      "title": "खाने के बाद — जिसने खिलाया, पिलाया और हमें मुसलमान बनाया"
+    },
+    "food_after_atama_wa_saqa_makhraj": {
+      "title": "खाने के बाद — खिलाया, पिलाया और निष्कासन का मार्ग बनाया"
+    },
+    "food_after_atamana_wa_kafana": {
+      "title": "खाने के बाद — खिलाया, पिलाया, काफ़ी किया और शरण दी"
+    },
+    "food_after_kathiran_tayyiban": {
+      "title": "खाने के बाद — प्रचुर, उत्तम, बरकतवाली प्रशंसा"
+    },
+    "distress_lahawla": {
+      "title": "अल्लाह के सिवा कोई ज़ोर और क़ुव्वत नहीं"
+    },
+    "distress_innallaha_maana": {
+      "title": "डर के समय"
+    },
+    "distress_yaa_hayyu": {
+      "title": "हय्य व क़य्यूम को पुकारना"
+    },
+    "distress_ayatkursi_intro": {
+      "title": "आयतुल कुर्सी (नींद की हिफ़ाज़त)"
+    },
+    "distress_dua_al_faraj": {
+      "title": "दुआ-ए-फ़रज (चिंता व दुख से राहत)"
+    },
+    "distress_dua_al_karb": {
+      "title": "कष्ट के समय की दुआ"
+    },
+    "sleep_three_quls": {
+      "title": "मुअव्विज़ात — इख़्लास, फ़लक़, नास"
+    },
+    "sleep_ayat_kursi": {
+      "title": "सोने से पहले आयतुल कुर्सी"
+    },
+    "sleep_aslamtu_wajhi": {
+      "title": "मैंने अपना मुख तेरे हवाले किया"
+    },
+    "sleep_bismika_ahya": {
+      "title": "या अल्लाह, तेरे नाम पर मैं जीता और मरता हूँ"
+    },
+    "sleep_alhamdu_ahyana": {
+      "title": "जागते समय"
+    },
+    "sleep_khalaqta_nafsi": {
+      "title": "तूने मेरी जान बनाई — हिफ़ाज़त कर या बख़्श दे"
+    },
+    "sleep_rabba_samawat": {
+      "title": "आकाशों, धरती और महान अरश का रब"
+    },
+    "sleep_dust_off_bed": {
+      "title": "बिस्तर झाड़ कर दाहिनी करवट लेटना"
+    },
+    "sleep_takbir_tasbih_tahmid": {
+      "title": "तकबीर ३४, तस्बीह ३३, तहमीद ३३ (नौकर से बेहतर)"
+    },
+    "sleep_taamat_protection": {
+      "title": "अल्लाह के मुकम्मल कलिमे — हर बुराई से"
+    },
+    "sleep_taamat_for_children": {
+      "title": "बच्चों की पनाह — हर शैतान व नुक़्सानदेह मख़लूक़ से"
+    },
+    "sleep_taamat_long": {
+      "title": "घबराहट या बुरे ख्वाब से जागने पर"
+    },
+    "sleep_wajhik_alkarim": {
+      "title": "तेरे करीम चेहरे और तेरे कामिल कलिमों के वसीले से"
+    },
+    "sleep_anta_rabbi": {
+      "title": "तू मेरा रब है — कोई आफ़त मुझ तक न पहुँचेगी"
+    },
+    "travel_subhanalladhi": {
+      "title": "सवारी पर सवार होते समय"
+    },
+    "travel_journey": {
+      "title": "सफ़र के लिए — पूरा पाठ"
+    },
+    "travel_returning": {
+      "title": "घर लौटते समय"
+    },
+    "mosque_entering": {
+      "title": "मस्जिद में प्रवेश करते समय"
+    },
+    "mosque_leaving": {
+      "title": "मस्जिद से निकलते समय"
+    },
+    "mosque_adhan_response": {
+      "title": "अज़ान सुनने के बाद"
+    },
+    "gratitude_blessing": {
+      "title": "नेमत पाने पर"
+    },
+    "gratitude_kindness": {
+      "title": "जब कोई आपके साथ भलाई करे"
+    },
+    "forgiveness_sayyidul": {
+      "title": "सय्यिदुल इस्तिग़फार"
+    },
+    "forgiveness_rabbi_ighfir": {
+      "title": "अल्लाह की ओर तौबा"
+    },
+    "distress_grief": {
+      "title": "गम और चिंता से राहत के लिए"
+    },
+    "distress_difficulty": {
+      "title": "मुश्किल के समय"
+    },
+    "distress_rain": {
+      "title": "बारिश बरसते समय"
+    },
+    "weather_during_rain": {
+      "title": "बारिश शुरू होने पर"
+    },
+    "weather_after_rain": {
+      "title": "बारिश के बाद"
+    },
+    "weather_thunder": {
+      "title": "बादल की गरज सुनकर"
+    },
+    "weather_strong_wind": {
+      "title": "तेज़ हवा चलते समय"
+    },
+    "family_for_offspring": {
+      "title": "नेक संतान के लिए"
+    },
+    "family_for_parents": {
+      "title": "माता-पिता के लिए"
+    },
+    "family_blessing_marriage": {
+      "title": "शादी की मुबारकबाद"
+    },
+    "family_for_child": {
+      "title": "बच्चे के लिए पनाह माँगना"
+    },
+    "sickness_visit": {
+      "title": "बीमार की इयादत"
+    },
+    "sickness_prayer_for_sick": {
+      "title": "मरीज़ के लिए दुआ"
+    },
+    "sickness_when_in_pain": {
+      "title": "शरीर में दर्द महसूस होने पर"
+    },
+    "funeral_inna_lillah": {
+      "title": "मौत की ख़बर सुनने पर"
+    },
+    "funeral_consolation": {
+      "title": "मातम मनाने वालों को सांत्वना"
+    },
+    "funeral_graveyard_visit": {
+      "title": "क़ब्रिस्तान में जाते समय"
+    },
+    "eid_takbir": {
+      "title": "ईद की तकबीर"
+    },
+    "eid_taqabbal": {
+      "title": "ईद की मुबारकबाद"
+    },
+    "beforeQuran_taawwudh": {
+      "title": "तिलावत से पहले तअव्वुज़"
+    },
+    "beforeQuran_basmalah": {
+      "title": "हर काम की शुरुआत में बिस्मिल्लाह"
+    },
+    "knowledge_seeking": {
+      "title": "इल्म में बढ़ोतरी की दुआ"
+    },
+    "knowledge_understanding": {
+      "title": "समझ के लिए दुआ"
+    },
+    "knowledge_majlis_kaffarah": {
+      "title": "मजलिस की कफ़्फ़ारत"
+    },
+    "protection_morning_evening": {
+      "title": "सय्यिदुल इस्तिग़फार संक्षेप (×3 सुबह व शाम)"
+    },
+    "protection_evil_eye": {
+      "title": "नज़र-ए-बद से बचाव"
+    },
+    "protection_entering_home": {
+      "title": "घर में दाख़िल होते समय"
+    },
+    "protection_leaving_home": {
+      "title": "घर से निकलते समय"
+    },
+    "protection_market": {
+      "title": "बाज़ार में दाख़िल होते समय"
+    },
+    "guidance_istikharah": {
+      "title": "सलात अल-इस्तिख़ारा — पूरा पाठ"
+    },
+    "guidance_steadfastness": {
+      "title": "दीन पर अडिगता के लिए"
+    },
+    "guidance_rabbana_atina": {
+      "title": "दुनिया व आख़िरत की भलाई की दुआ"
+    },
+    "guidance_against_being_misled": {
+      "title": "गुमराही से बचाव की दुआ"
+    },
+    "pronunciation": "उच्चारण",
+    "tapToCount": "गिनने के लिए टैप करें",
+    "shareDua": "{{title}} साझा करें",
+    "lavatory_01_entering": {
+      "title": "शौचालय में प्रवेश करते समय"
+    },
+    "lavatory_02_leaving": {
+      "title": "शौचालय से बाहर आते समय"
+    },
+    "garment_01_dressing": {
+      "title": "वस्त्र पहनते समय"
+    },
+    "garment_02_new": {
+      "title": "नया वस्त्र"
+    },
+    "garment_03_for_someone_new": {
+      "title": "नए वस्त्र पहनने वाले के लिए"
+    },
+    "garment_04_undressing": {
+      "title": "वस्त्र उतारते समय"
+    },
+    "section": {
+      "day": "दिन भर",
+      "worship": "इबादत",
+      "out": "सफ़र में",
+      "hardship": "जब मुश्किल हो",
+      "asking": "दुआ माँगना"
+    },
+    "countHint": "{{count}} दुआएँ"
+  },
+  "quran": {
+    "meccan": "मक्की",
+    "medinan": "मदनी",
+    "ayahCount": "{{count}} आयतें",
+    "notFound": "सूरह नहीं मिली।",
+    "comingSoon": "इस सूरह का पूरा पाठ अगले डेटा अपडेट में आएगा।",
+    "pageLabel": "पृष्ठ {{page}}",
+    "switchToTranslation": "तफ़सीर दृश्य पर जाएँ",
+    "switchToMushaf": "मसहफ़ दृश्य पर जाएँ",
+    "viewToggleTranslation": "अनुवाद",
+    "viewToggleMushaf": "मुसहफ़",
+    "enterFullscreen": "पूर्ण स्क्रीन",
+    "exitFullscreen": "पूर्ण स्क्रीन छोड़ें",
+    "mushafDownloadTitle": "मुसहफ़ डाउनलोड करें",
+    "mushafDownloadBody": "मदीना मसहफ़ लगभग {{size}} एमबी का है। ऐप में शामिल नहीं है — एक बार डाउनलोड करें, पृष्ठ डिवाइस पर सहेजे रहेंगे।",
+    "mushafDownloadReadCta": "डाउनलोड करें और पढ़ना शुरू करें (~{{size}} MB)",
+    "mushafDownloadReadHint": "पृष्ठ आते ही दिखते हैं; बाकी पृष्ठभूमि में डाउनलोड होते हैं।",
+    "mushafDownloadStrip": "मुसहफ़ डाउनलोड हो रहा है · {{pct}}%",
+    "juzLabel": "पारा {{juz}}",
+    "nightMode": "नाइट मोड",
+    "jumpToPage": "पृष्ठ पर जाएँ",
+    "pageShort": "पृ. {{page}}",
+    "go": "जाएँ",
+    "mushafDownloadRetryBody": "{{count}} पृष्ठ डाउनलोड नहीं हुए। छूटे हुए पृष्ठ पाने के लिए पुनः प्रयास करें — पहले से डाउनलोड किया गया सब कुछ सुरक्षित रहेगा।",
+    "mushafDownloadRetryCta": "छूटे पृष्ठ पुनः प्रयास करें",
+    "star": "इस आयत को तारांकित करें",
+    "unstar": "तारा हटाएँ",
+    "bookmark": "बुकमार्क",
+    "bookmarkColor": "बुकमार्क रंग {{color}}",
+    "playFromHere": "यहाँ से चलाएँ",
+    "repeatAyah": "इस आयत को दोहराएँ",
+    "buffering": "बफ़र हो रहा है…",
+    "previousAyah": "पिछली आयत",
+    "nextAyah": "अगली आयत",
+    "pause": "रोकें",
+    "play": "चलाएँ",
+    "stopPlayback": "प्लेबैक बंद करें",
+    "playbackSettings": "तिलावत",
+    "reciter": "क़ारी",
+    "downloadSurahAudio": "{{surah}} का ऑडियो डाउनलोड करें",
+    "surahAudioDownloaded": "ऑफ़लाइन उपयोग के लिए ऑडियो डाउनलोड हो गया",
+    "downloadingAudio": "डाउनलोड हो रहा है… {{done}}/{{total}}",
+    "downloadSurahAudioShort": "ऑफ़लाइन सुनने के लिए यह सूरह डाउनलोड करें",
+    "speed": "गति",
+    "memorization": "हिफ़्ज़",
+    "repeatEachAyah": "हर आयत दोहराएँ",
+    "repeatRange": "चयनित भाग दोहराएँ",
+    "pauseBetween": "दोहराव के बीच विराम",
+    "none": "कोई नहीं",
+    "hideForReview": "दोहराते समय छिपाएँ",
+    "hideArabic": "अरबी",
+    "hideTranslation": "अनुवाद",
+    "playRangeTitle": "{{surah}} का एक भाग चलाएँ",
+    "fromAyah": "आयत से",
+    "toAyah": "आयत तक",
+    "playRange": "भाग चलाएँ",
+    "ayahA11y": "आयत {{ayah}} — विकल्पों के लिए टैप करें",
+    "tapToReveal": "दिखाने के लिए टैप करें",
+    "hideModeActive": "हिफ़्ज़ मोड: {{what}} छिपा है — दिखाने के लिए आयत पर टैप करें",
+    "loading": "लोड हो रहा है…",
+    "continueReading": "पढ़ना जारी रखें",
+    "continueKhatmah": "ख़त्मा जारी रखें",
+    "readingPin": "यहाँ से पढ़ना जारी रखें",
+    "readingPinned": "पढ़ना जारी रखना यहाँ से शुरू होता है",
+    "readingMarkerLabel": "पढ़ाई",
+    "khatmahMarkerLabel": "ख़त्मा",
+    "khatmah": "ख़त्म",
+    "khatmahDaysLeft": "{{count}} दिन शेष",
+    "khatmahDaysLeft_one": "{{count}} दिन शेष",
+    "khatmahProgress": "{{read}} / {{total}} पृष्ठ · आज: {{today}}",
+    "khatmahBehind": "{{count}} की भरपाई बाकी",
+    "startKhatmah": "ख़त्म शुरू करें",
+    "khatmahDays": "{{count}} दिन",
+    "verseOfDay": "आज की आयत",
+    "searchPlaceholder": "सूरह, आयत, अनुवाद खोजें…",
+    "tabSurah": "सूरह",
+    "tabJuz": "पारा",
+    "tabBookmarks": "बुकमार्क",
+    "searchResults": "{{count}} आयतें मिलीं",
+    "noBookmarks": "अभी कोई बुकमार्क नहीं — पढ़ते समय किसी आयत पर टैप करके उसे बुकमार्क या तारांकित करें।",
+    "starred": "तारांकित",
+    "shareAsImage": "छवि के रूप में साझा करें",
+    "chooseReciter": "क़ारी चुनें",
+    "searchReciters": "क़ारी खोजें…",
+    "wordHighlightBadge": "शब्द हाइलाइट",
+    "changeReciter": "बदलें",
+    "deleteBookmark": "बुकमार्क हटाएँ",
+    "removeStar": "तारा हटाएँ",
+    "nightShort": "रात",
+    "sepiaShort": "सेपिया",
+    "lightShort": "उजला",
+    "switchToNight": "रात वाले पृष्ठ पर जाएँ",
+    "switchToSepia": "सेपिया पृष्ठ पर जाएँ",
+    "riwayahHafs": "हफ़्स",
+    "riwayahWarsh": "वर्श",
+    "switchRiwayah": "{{name}} क़िरअत पर जाएँ",
+    "riwayahReflowTitle": "पृष्ठ वही, पंक्तियाँ शायद अलग",
+    "riwayahReflowBody": "यह मुसहफ़ हर पृष्ठ को छपी हुई प्रति की तरह ठीक वहीं शुरू और ख़त्म करता है, लेकिन इसकी पंक्तियाँ छपाई से नहीं ली जातीं — आपका उपकरण उन्हें सजाता है, इसलिए वे हमेशा उन्हीं जगहों पर नहीं टूटेंगी।",
+    "riwayahNeedsHttps": "लिंक https:// से शुरू होना चाहिए",
+    "riwayahServerSaidNo": "सर्वर ने {{status}} लौटाया।",
+    "riwayahTooLarge": "यह फ़ाइल मुसहफ़ के डेटा से कहीं बड़ी है। लिंक जाँचें।",
+    "riwayahUnreachable": "उस लिंक तक नहीं पहुँचा जा सका। पता और अपना कनेक्शन जाँचें।",
+    "riwayahGotAPage": "उस लिंक से वेब पृष्ठ आया, डेटा फ़ाइल नहीं। JSON डाउनलोड का लिंक इस्तेमाल करें।",
+    "riwayahNotJson": "यह डेटा फ़ाइल नहीं है।",
+    "riwayahNotAQuran": "यह फ़ाइल पूरा क़ुरआन नहीं है, इसलिए इंस्टॉल नहीं की गई।",
+    "riwayahCouldNotSave": "इसे इस उपकरण पर सहेजा नहीं जा सका।",
+    "switchToLight": "उजले पृष्ठ पर जाएँ",
+    "ayahOfDayTitle": "आज की आयत",
+    "ayahOfDayChannelName": "आज की आयत",
+    "tafsir": "तफ़सीर",
+    "showTafsir": "तफ़सीर दिखाएँ",
+    "tafsirUnavailable": "तफ़सीर उपलब्ध नहीं — डाउनलोड करने के लिए एक बार इंटरनेट से जुड़ें।",
+    "khatmahPin": "मेरी ख़त्मा स्थिति के रूप में सेट करें",
+    "khatmahPinned": "ख़त्मा स्थिति — हटाने के लिए टैप करें",
+    "khatmahUnpin": "ख़त्मा स्थिति हटाएँ",
+    "khatmahContinue": "जारी रखें",
+    "khatmahReset": "रीसेट",
+    "khatmahResetTitle": "ख़त्मा रीसेट करें",
+    "khatmahResetToday": "आज की पढ़ाई रीसेट करें",
+    "khatmahResetTodayHelp": "केवल आज दर्ज पृष्ठ वापस करता है।",
+    "khatmahResetAll": "ख़त्मा फिर से शुरू करें",
+    "khatmahResetAllHelp": "नए कार्यक्रम के साथ योजना की शुरुआत से।",
+    "khatmahDelete": "ख़त्मा हटाएँ",
+    "khatmahDeleteHelp": "योजना को पूरी तरह हटा देता है।",
+    "khatmahReminderChannelName": "ख़त्मा अनुस्मारक",
+    "khatmahReminderTitle": "ख़त्मा",
+    "khatmahReminderBody": "आज का हिस्सा: {{pages}} पृष्ठ — पृष्ठ {{page}} से जारी रखें।",
+    "audioButton": "ऑडियो",
+    "khatmahCustom": "कस्टम…",
+    "khatmahLengthTitle": "ख़त्म की अवधि (दिन)",
+    "khatmahSetUpTitle": "ख़त्म शुरू करें",
+    "khatmahFromPageTitle": "पहले से पढ़ रहे हैं? इस पृष्ठ से शुरू करें",
+    "khatmahFromPageHint": "शुरुआत से",
+    "khatmahStartCta": "शुरू करें",
+    "showMore": "और दिखाएँ",
+    "showLess": "कम दिखाएँ",
+    "tafsirEditionHelp": "प्रत्येक आयत के नीचे दिखाई गई तफ़सीर। इसे क़ुरआन पृष्ठ की किसी भी आयत से भी बदला जा सकता है।",
+    "nextPage": "अगला पृष्ठ",
+    "prevPage": "पिछला पृष्ठ",
+    "companionTitle": "हर आयत के नीचे",
+    "companionHelp": "जहाँ भी आयत दिखाई जाती है वहाँ लागू — रीडर, आज की आयत और दैनिक आयत सूचना। क़ुरआन पेज से भी बदला जा सकता है।",
+    "companionActive": "सक्रिय",
+    "mushafReplaceOldBody": "पिछले संस्करण की मुसहफ़ की एक पुरानी प्रति ({{size}} एमबी) अब भी आपके डिवाइस पर है। उसे पहले हटा दिया जाएगा — आपका सहेजा हुआ कुछ भी प्रभावित नहीं होगा।",
+    "shareAsText": "पाठ साझा करें",
+    "shareChoiceA11y": "साझा करें — पाठ या छवि कार्ड चुनें",
+    "recitation": "तिलावत",
+    "downloadSurahAudioSized": "यह सूरह डाउनलोड करें · {{size}}",
+    "tapToPick": "चुनें",
+    "tabMarks": "निशान",
+    "searchSurahOrPage": "सूरह या पृष्ठ खोजें",
+    "reading": "पढ़ रहे हैं",
+    "pageScrubber": "पृष्ठ पर जाएँ",
+    "goCta": "जाएँ",
+    "downloadChannelName": "क़ुरआन डाउनलोड",
+    "downloadChannelDesc": "क़ुरआन डाउनलोड होने की प्रगति।",
+    "downloadingFonts": "क़ुरआन का पाठ डाउनलोड हो रहा है",
+    "downloadingReciter": "{{name}} डाउनलोड हो रहा है",
+    "downloadProgressAyahs": "{{total}} में से {{done}} आयतें",
+    "audioDownloadDoneTitle": "{{name}} तैयार है",
+    "audioDownloadDoneBody": "इस आवाज़ में पूरा क़ुरआन इस डिवाइस पर है। अब यह बिना कनेक्शन के चलता है।",
+    "audioDownloadIncompleteTitle": "तिलावत डाउनलोड पूरी नहीं हुई",
+    "audioDownloadIncompleteBody": "{{count}} आयतें अब भी बाकी हैं। दोबारा शुरू करें, यह वहीं से जारी रहेगा।",
+    "listenTitle": "तिलावत",
+    "tilawahDoorSub": "क़ुरआन सुनें",
+    "tilawahBlurb": "क़ुरआन की तिलावत — स्क्रीन बंद होने पर भी चलती रहती है, और डाउनलोड के बाद बिना कनेक्शन के भी चलती है।",
+    "tilawahContinue": "जहाँ पढ़ रहे थे वहीं से आगे",
+    "tilawahBegin": "शुरू करें",
+    "tilawahAyahOf": "{{total}} में से आयत {{done}}",
+    "tilawahShowPage": "पृष्ठ दिखाएँ",
+    "backToTop": "ऊपर वापस जाएँ",
+    "tilawahKeepAwake": "स्क्रीन चालू रखें",
+    "tilawahSurahSeek": "सूरह के भीतर आगे-पीछे",
+    "tilawahShuffle": "सूरह शफ़ल करें",
+    "tilawahPrevSurah": "पिछली सूरह",
+    "tilawahNextSurah": "अगली सूरह",
+    "tilawahAyahWord": "आयत",
+    "openInReader": "रीडर में खोलें",
+    "listenSurahMeta": "{{count}} आयतें",
+    "listenNowPlaying": "अभी चल रहा है",
+    "listenContinuous": "लगातार चल रहा है",
+    "listenIdle": "कुछ नहीं चल रहा",
+    "listenReciter": "क़ारी",
+    "listenSeek": "आयत के भीतर आगे-पीछे",
+    "listenPrevious": "पिछली आयत",
+    "listenNext": "अगली आयत",
+    "listenSpeed": "गति",
+    "listenSleep": "स्लीप टाइमर",
+    "listenSleepOff": "बंद",
+    "listenSleepSurah": "सूरह के अंत पर",
+    "listenSleepMinutes": "{{count}} मिनट",
+    "listenSleepArmed": "लगभग {{count}} मिनट में रुक जाएगा",
+    "listenPickSurah": "यहाँ से शुरू करें",
+    "listenDownloadTitle": "{{name}} को इस डिवाइस पर रखें",
+    "listenDownloadBody": "इस आवाज़ में पूरा क़ुरआन, लगभग {{size}}। रीडर भी यही फ़ाइलें चलाता है, इसलिए वहाँ भी काम करेगा।",
+    "listenDownloadComplete": "पूरा · {{size}}",
+    "listenDownloadPartial": "{{total}} में से {{done}} आयतें यहाँ · {{size}}",
+    "listenDownloadStart": "डाउनलोड",
+    "listenDownloadResume": "डाउनलोड जारी रखें",
+    "listenDownloadBusy": "कुछ और डाउनलोड हो रहा है। एक बार में एक, ताकि कोई धीमा न पड़े।",
+    "downloadProgress": "{{total}} में से {{done}} पृष्ठ",
+    "downloadDoneTitle": "क़ुरआन तैयार है",
+    "downloadDoneBody": "सभी पृष्ठ इस डिवाइस पर हैं। अब बिना इंटरनेट के पढ़ा जा सकता है।",
+    "downloadIncompleteTitle": "डाउनलोड पूरा नहीं हुआ",
+    "downloadIncompleteBody": "{{count}} पृष्ठ अब भी बाकी हैं। जहाँ रुका था वहाँ से जारी रखने के लिए क़ुरआन खोलें।",
+    "finishDay": "दिन {{day}} का पाठ पूरा करें ({{when}})",
+    "finishDayShort": "दिन {{day}} पूरा करें ({{when}})",
+    "khatmahPageProgress": "{{pages}} पृष्ठ शेष · दिन {{day}} / {{days}}",
+    "khatmahDayDone": "✓ आज का पाठ पूरा हुआ",
+    "khatmahPagesLeftToday": "आज {{count}} पृष्ठ बाकी",
+    "khatmahPagesLeftToday_one": "आज {{count}} पृष्ठ बाकी",
+    "khatmahExtraPages": "+{{count}} पृष्ठ अतिरिक्त",
+    "khatmahExtraPages_one": "+{{count}} पृष्ठ अतिरिक्त",
+    "khatmahMarkDone": "दिन {{day}} का पाठ पूरा चिह्नित करें",
+    "khatmahMarkNext": "✓ दिन {{day}} ({{when}}) भी पूरा करें",
+    "khatmahMarkToday": "✓ आज का पाठ पूरा हुआ",
+    "khatmahPrevDay": "‹ पिछला दिन",
+    "riwayahQalun": "क़ालून",
+    "riwayahShubah": "शुबा",
+    "riwayahPickerTitle": "पठन परंपरा",
+    "riwayahPickerOpen": "पठन परंपरा: {{name}}। बदलने के लिए टैप करें।",
+    "riwayahNotOnDevice": "{{name}} — अभी इस डिवाइस पर नहीं है",
+    "riwayahAddIt": "जोड़ने के लिए टैप करें",
+    "riwayahDefault": "(डिफ़ॉल्ट)",
+    "dueToday": "आज",
+    "dueTomorrow": "कल",
+    "scrubHint": "बारीक नियंत्रण के लिए ऊपर खिसकाएँ",
+    "scrubHalf": "आधी गति",
+    "scrubQuarter": "चौथाई गति",
+    "scrubFine": "सूक्ष्म नियंत्रण",
+    "translationUnavailable": "इस आयत का कोई अनुवाद नहीं है।",
+    "oftenRead": "अक्सर पढ़ी जाने वाली",
+    "listenDeleteAudio": "{{name}} को इस डिवाइस से हटाएँ",
+    "listenDownloadReciter": "{{name}} डाउनलोड करें, लगभग {{size}}",
+    "listenDownloadRunning": "डाउनलोड हो रहा है · {{total}} में से {{done}}",
+    "shareTafsir": "यह तफ़सीर साझा करें ({{edition}})",
+    "surahAudioPartial": "{{total}} में से {{have}} आयतें · बाकी डाउनलोड करने के लिए टैप करें",
+    "deleteSurahAudio": "इस सूरह का ऑडियो हटाएँ",
+    "deleteSurahAudioFor": "{{surah}} का डाउनलोड किया ऑडियो हटाएँ",
+    "audioGap": "{{surah}} {{ayah}} डाउनलोड नहीं है — कनेक्ट करें, या ऑफ़लाइन सुनने के लिए यह सूरह डाउनलोड करें।",
+    "khatmahMore": "ख़त्म के और विकल्प",
+    "khatmahPrevDayHelp": "आज का निशान हटाएँ और पिछले दिन के हिस्से पर वापस जाएँ।",
+    "lastReadRow": "अंतिम पठन · {{surah}}, पृष्ठ {{page}}",
+    "autoShort": "स्वतः",
+    "switchToAuto": "ऐप की थीम का अनुसरण करें",
+    "downloadingSurah": "{{surah}} डाउनलोड हो रही है · {{name}}",
+    "surahDownloadDoneTitle": "{{surah}} तैयार है",
+    "surahDownloadDoneBody": "{{name}} द्वारा {{surah}} की तिलावत इस डिवाइस पर है। अब यह बिना कनेक्शन के चलती है।",
+    "reciterDownloadStrip": "{{name}} डाउनलोड हो रहा है · {{pct}}%",
+    "surahDownloadStrip": "{{surah}} डाउनलोड हो रही है · {{pct}}%"
+  },
+  "mosques": {
+    "searching": "पास की मस्जिदें ढूँढी जा रही हैं…",
+    "noneFound": "पास कोई मस्जिद नहीं मिली। दायरा बढ़ाएँ।",
+    "unnamedMosque": "मस्जिद",
+    "needLocation": "पहले कोई स्थान सेट करें ताकि हम आस-पास खोज सकें।",
+    "error": "मस्जिद डेटाबेस से संपर्क नहीं हो सका। पुनः प्रयास करें।",
+    "title": "अपने पास कोई मस्जिद ढूँढें",
+    "bodyWithLocation": "हम आपके मानचित्र ऐप में आपके स्थान के पास \"mosque\" खोज खोलेंगे। यदि उपलब्ध न हो तो ब्राउज़र में गूगल मैप्स खोलेंगे।",
+    "bodyNoLocation": "पहले कोई स्थान सेट करें (सेटिंग्स → स्थान)। फिर हम उसके आसपास \"mosque\" खोज के साथ मानचित्र ऐप खोलेंगे। न हो तो ब्राउज़र में गूगल मैप्स खोलेंगे।",
+    "openInMapsApp": "मानचित्र खोलें और \"mosque\" खोजें"
+  },
+  "journal": {
+    "todayLabel": "आज",
+    "streakDays": "लगातार दिन",
+    "onTimeRate": "समय पर",
+    "totalLogged": "कुल दर्ज",
+    "status": {
+      "on-time": "समय पर",
+      "late": "देर से",
+      "missed": "छूटी",
+      "qadha": "क़ज़ा"
+    },
+    "statusShort": {
+      "on-time": "समय पर",
+      "late": "देर से",
+      "missed": "छूटी",
+      "qadha": "क़ज़ा"
+    },
+    "encourageEmpty": "अपनी डायरी शुरू करने के लिए आज की पहली नमाज़ चिह्नित करें।",
+    "encourageActive": "दर्ज की गई हर नमाज़ एक क़दम आगे है।",
+    "encourageStreak": "माशा अल्लाह, लगातार {{count}} दिन समय पर। जारी रखें।",
+    "notificationToggleTitle": "सूचना से दर्ज करें",
+    "notificationToggleOn": "नमाज़-समय की सूचना पर \"नमाज़ दर्ज करें\" पर टैप करके सीधे यहाँ आएँ।",
+    "notificationToggleOff": "हर नमाज़-समय की सूचना में \"नमाज़ दर्ज करें\" क्रिया जोड़ें।",
+    "notificationToggleA11y": "नमाज़ सूचनाओं में डायरी क्रिया सक्षम करें",
+    "notePlaceholder": "निजी नोट (केवल इस डिवाइस पर)",
+    "saveNote": "नोट सहेजें",
+    "logActionTitle": "नमाज़ दर्ज करें",
+    "logSunnahActionTitle": "सुन्नत सहित दर्ज करें",
+    "loadFailedTitle": "लॉग लोड नहीं हो सका",
+    "loadFailedBody": "आपका डेटा डिवाइस पर सुरक्षित है पर अभी पढ़ा नहीं जा सका। लॉग दोबारा खोलें।",
+    "saveFailedTitle": "सहेजा नहीं जा सका",
+    "saveFailedBody": "कृपया फिर प्रयास करें।",
+    "noteLabel": "निजी टिप्पणी (गोपनीय, एन्क्रिप्टेड)",
+    "notYet": "अभी नहीं — इसका समय नहीं आया",
+    "quickLogMark": "{{prayer}} को पढ़ी गई के रूप में चिह्नित करें",
+    "quickLogLogged": "{{prayer}} दर्ज: {{status}}। पूर्ववत करने के लिए टैप करें",
+    "quickLogNotYet": "{{prayer}} का समय अभी नहीं आया",
+    "passedTitle": "{{prayer}} दर्ज करें · {{day}}",
+    "passedBody": "इसका समय बीत चुका है। यह कैसे पढ़ी गई?",
+    "passedFirstBody": "इसका पहला समय बीत चुका है और दूसरा अभी चल रहा है। क्या यह पहले समय में पढ़ी गई, या उसके बाद?"
+  },
+  "events": {
+    "islamicNewYear": "इस्लामी नववर्ष",
+    "ashura": "आशूरा का दिन",
+    "mawlid": "मौलिद-उन-नबी",
+    "isra": "इस्रा और मेराज",
+    "midShaban": "अर्ध-शाबान",
+    "ramadanBegins": "रमज़ान शुरू",
+    "laylatAlQadr": "लैलतुल क़द्र (पालन की जाने वाली)",
+    "eidAlFitr": "ईद-उल-फ़ितर",
+    "arafah": "अरफ़ात का दिन",
+    "eidAlAdha": "ईद-उल-अज़हा",
+    "whiteDays": "अय्यामे बीज़ (श्वेत दिन)",
+    "sixOfShawwal": "शव्वाल के छह रोज़े"
+  },
+  "ramadan": {
+    "title": "रमज़ान",
+    "suhoor": "सहरी",
+    "iftar": "इफ़्तार",
+    "suhoorIn": "सहरी {{time}} में समाप्त होगी",
+    "iftarIn": "इफ़्तार {{time}} में"
+  },
+  "onboarding": {
+    "skip": "अभी रहने दें",
+    "next": "आगे",
+    "done": "हो गया",
+    "stepLabel": "{{total}} में से चरण {{current}}",
+    "welcome": {
+      "title": "ख़ुश आमदीद",
+      "body": "नमाज़ के समय की एक शांत और निजी ऐप। न कोई एनालिटिक्स, न ट्रैकर — बस पाँच वक़्त की नमाज़ों की सुकून भरी याददिहानी।",
+      "salam": "आप पर शांति हो, अल्लाह की रहमत और उसकी बरकतें।"
+    },
+    "location": {
+      "title": "आपकी जगह",
+      "body": "नमाज़ के सही समय निकालने के लिए हम आपकी अनुमानित जगह इस्तेमाल करते हैं। निर्देशांक इसी डिवाइस पर एन्क्रिप्टेड रहते हैं — वे इसे कभी नहीं छोड़ते।",
+      "cta": "मेरी जगह इस्तेमाल करें"
+    },
+    "notifications": {
+      "title": "नमाज़ की सूचनाएँ",
+      "body": "हम हर नमाज़ के वक़्त आपको धीरे से बता सकते हैं। आप आवाज़ चुन सकते हैं, याददिहानी लगा सकते हैं, या इसे कभी भी बंद कर सकते हैं।",
+      "cta": "सूचनाएँ चालू करें"
+    },
+    "exactAlarms": {
+      "title": "ठीक समय पर सूचनाएँ",
+      "body": "नए Android पर नमाज़ की सूचनाओं के लिए एक अलग अनुमति चाहिए, ताकि वे कुछ मिनट देर से नहीं, बल्कि ठीक समय पर आएँ।",
+      "cta": "सटीक सूचनाओं की अनुमति दें"
+    },
+    "salamA11y": "अस्सलामु अलैकुम व रहमतुल्लाहि ताआला व बरकातुह"
+  },
+  "backup": {
+    "exportSection": "एक्सपोर्ट",
+    "exportHelp": "अपनी सेटिंग्स, सहेजी गई जगहें, नमाज़ की डायरी और रोज़ों का रिकॉर्ड एक JSON फ़ाइल में सहेजें। बहाल करने के लिए बाद में इसे खोलें।",
+    "exportCta": "बैकअप एक्सपोर्ट करें",
+    "shareTitle": "मेहराब बैकअप",
+    "exportFailedTitle": "एक्सपोर्ट नहीं हो सका",
+    "restoreSection": "बहाली",
+    "restoreHelp": "नीचे बैकअप JSON पेस्ट करें और झलक देखने के लिए बहाल करें पर टैप करें। लागू करने से पहले ऐप आपसे पुष्टि करेगी।",
+    "restorePastePlaceholder": "बैकअप JSON यहाँ पेस्ट करें…",
+    "restoreCta": "बहाली की झलक देखें",
+    "restorePreviewTitle": "बैकअप मिला",
+    "restorePreviewBody": "{{settings}} सेटिंग्स, {{presets}} सहेजी गई जगहें, {{journal}} डायरी प्रविष्टियाँ, {{fasting}} रोज़े के दिन। इसे अगले चरण में लागू करें।",
+    "restoreFailedTitle": "बैकअप पढ़ा नहीं जा सका",
+    "notAnEnvelope": "यह फ़ाइल मेहराब बैकअप जैसी नहीं दिखती।",
+    "privacyNote": "जब तक आप ख़ुद साझा न करें, बैकअप आपके डिवाइस पर ही रहते हैं। आगे किसी अपडेट में निर्देशांक और डायरी प्रविष्टियाँ पासवर्ड से एन्क्रिप्ट की जा सकेंगी — तब तक अपनी बैकअप फ़ाइल निजी रखें।"
+  },
+  "fasting": {
+    "todayLabel": "आज",
+    "ramadanDayLabel": "रमज़ान · दिन {{day}}",
+    "statusKept": "रोज़ा पूरा — बारकल्लाहु फ़ीक।",
+    "statusRecommended": "इस तारीख़ पर एक सुन्नत नफ़्ल रोज़ा है।",
+    "statusOptional": "आज कोई रोज़ा दर्ज नहीं।",
+    "markCta": "आज को रोज़ा के रूप में दर्ज करें",
+    "unmarkCta": "आज की चिह्न हटाएँ",
+    "statRamadan": "रमज़ान",
+    "statVoluntary": "नफ़्ल",
+    "statStreak": "लगातार",
+    "gridLabel": "इस रमज़ान",
+    "gridDayA11y": "दिन {{day}} {{state}}",
+    "privacyNote": "रोज़ों का इतिहास आपके डिवाइस पर एन्क्रिप्टेड रहता है।",
+    "encourageEmpty": "ट्रैकिंग शुरू करने के लिए अपना पहला रोज़ा दर्ज करें।",
+    "encourageActive": "हर रोज़ा महत्वपूर्ण है। अल्लाह क़ुबूल फ़रमाए।",
+    "encourageStreak": "माशा अल्लाह, लगातार {{count}} दिन। जारी रखें।",
+    "reminderToggleTitle": "एक दिन पहले अनुस्मारक",
+    "reminderToggleOn": "हर सुन्नत रोज़े से एक रात पहले {{hour}}:00 बजे आपको एक कोमल सूचना मिलेगी।",
+    "reminderToggleOff": "हर सोमवार/गुरुवार और विशेष रोज़े के दिन से पहले रात सूचना पाएँ।",
+    "reminderToggleA11y": "रोज़े से एक दिन पहले अनुस्मारक चालू करें",
+    "upcomingLabel": "आने वाले सुन्नत रोज़े",
+    "daysAway": "{{count}} दिन में",
+    "daysSpan": "{{count}} दिन",
+    "daysCount": "{{count}} दिन",
+    "ramadanCountdownLabel": "रमज़ान शुरू होने में",
+    "mondayEncouragement": "सोमवार सुन्नत रोज़ा है — सोम और गुरुवार को आमाल अल्लाह के सामने पेश किए जाते हैं।",
+    "thursdayEncouragement": "गुरुवार सुन्नत रोज़ा है — सोम और गुरुवार को आमाल अल्लाह के सामने पेश किए जाते हैं।",
+    "monthViewLabel": "सभी दर्ज रोज़े",
+    "noLogsYet": "जो दिन आप रखेंगे वे यहाँ दिखाई देंगे।",
+    "typeRamadan": "रमज़ान",
+    "typeVoluntary": "नफ़्ल / सुन्नत",
+    "reminderChannelName": "रोज़े की याद दिलाना",
+    "reminderTitle": "रोज़े की याद"
+  },
+  "methods": {
+    "0": "शिया — इस्ना अशरी",
+    "1": "यूनिवर्सिटी ऑफ़ इस्लामिक साइंसेज़, कराची",
+    "2": "इस्लामिक सोसाइटी ऑफ़ नॉर्थ अमेरिका (ISNA)",
+    "3": "मुस्लिम वर्ल्ड लीग",
+    "4": "उम्मुल क़ुरा विश्वविद्यालय, मक्का",
+    "5": "मिस्र सर्वेक्षण प्राधिकरण",
+    "7": "जियोफिज़िक्स संस्थान, तेहरान विश्वविद्यालय",
+    "8": "खाड़ी क्षेत्र",
+    "9": "कुवैत",
+    "10": "क़तर",
+    "11": "सिंगापुर",
+    "12": "फ़्रांस",
+    "13": "तुर्की",
+    "14": "रूस",
+    "15": "विश्व चाँद-दर्शन समिति",
+    "21": "मोरक्को",
+    "auto": "स्वचालित (स्थान अनुसार)"
+  },
+  "attributions": {
+    "groupScripture": "पाठ",
+    "groupRecitation": "तिलावत",
+    "groupMeaning": "अनुवाद और तफ़सीर",
+    "groupTypefaces": "फ़ॉन्ट",
+    "footer": "हर पंक्ति अपने स्रोत से जुड़ी है।",
+    "quranText": "क़ुरआन — उस्मानी पाठ",
+    "mushafImages": "मसहफ़ पृष्ठ चित्र (604)",
+    "translationEditions": "अनुवाद संस्करण (14)",
+    "sahihIntl": "साहिह इंटरनेशनल (अंग्रेज़ी)",
+    "pickthall": "पिकथॉल (अंग्रेज़ी)",
+    "mushafMetadata": "मसहफ़ पृष्ठ मेटाडेटा",
+    "riwayat": "वर्श, कालून और शुबा पाठ (डाउनलोड किए गए, शामिल नहीं)",
+    "riwayahLines": "उन मुसहफ़ों की मुद्रित पंक्ति ज्यामिति",
+    "amiriFonts": "Amiri व Amiri Quran फ़ॉन्ट",
+    "scheherazade": "Scheherazade New",
+    "hisnulMuslim": "हिस्न अल-मुस्लिम की दुआएँ",
+    "quranGeometry": "आयत स्थिति डेटा (quran.com / Quran for Android प्रोजेक्ट)",
+    "recitation": "तिलावत ऑडियो (42 क़ारी): EveryAyah.com · शब्द समय: quran-align (CC BY 4.0)",
+    "tafsir": "तफ़सीर: इब्न कसीर, मआरिफ़-उल-क़ुरआन, अल-मुयस्सर",
+    "surahHeaderFont": "सूरह शीर्षक कैलिग्राफी"
+  },
+  "liveActivity": {
+    "title": "अगली नमाज़",
+    "in": "{{remaining}} में",
+    "now": "अभी",
+    "soon": "जल्द शुरू हो रही है",
+    "channelName": "नमाज़ की उलटी गिनती",
+    "channelDesc": "अगली नमाज़ की उलटी गिनती दिखाने वाली पिन की गई जारी सूचना।",
+    "fgsText": "नमाज़ काउंटडाउन सक्रिय",
+    "justThisOne": "इस बार",
+    "inWord": "में",
+    "atWord": "पर",
+    "hideOnLock": "लॉक स्क्रीन पर छिपाएँ",
+    "showOnLock": "लॉक स्क्रीन पर दिखाएँ"
+  },
+  "hijri": {
+    "month_1": "मुहर्रम",
+    "month_2": "सफ़र",
+    "month_3": "रबी अल-अव्वल",
+    "month_4": "रबी अल-सानी",
+    "month_5": "जुमादा अल-अव्वल",
+    "month_6": "जुमादा अल-सानी",
+    "month_7": "रजब",
+    "month_8": "शाबान",
+    "month_9": "रमज़ान",
+    "month_10": "शव्वाल",
+    "month_11": "ज़ुल-क़ादा",
+    "month_12": "ज़ुल-हिज्जा"
+  },
+  "tour": {
+    "welcomeTitle": "मिहराब में आपका स्वागत है",
+    "welcomeBody": "नमाज़ के समय, क़ुरआन और रोज़ाना की इबादत के साधन — पूरी तरह निजी। न कोई अकाउंट, न कोई ट्रैकर।",
+    "timesTitle": "एक नज़र में नमाज़ के समय",
+    "timesBody": "आपके स्थान के लिए सटीक समय, अगली नमाज़ की लाइव उलटी गिनती के साथ। आने वाले दिनों को देखने के लिए दिन के कार्ड को स्वाइप करें।",
+    "quranTitle": "क़ुरआन, ख़ूबसूरती के साथ",
+    "quranBody": "मदीना मुसहफ़ पढ़ें, पाँच क़ारियों की तिलावत सुनें, आयतें बुकमार्क करें और अपना ख़त्म ट्रैक करें।",
+    "customizeTitle": "इसे अपना बनाएँ",
+    "customizeBody": "होम स्क्रीन विजेट, लाइव गतिविधि उलटी गिनती, थीम और एक्सेंट रंग — सब कुछ सेटिंग्स में।",
+    "skip": "छोड़ें",
+    "next": "अगला",
+    "done": "शुरू करें"
+  },
+  "downloads": {
+    "title": "डाउनलोड प्रबंधित करें",
+    "settingsHelp": "इस डिवाइस पर मुसहफ़ पृष्ठ, तिलावत ऑडियो और तफ़सीर।",
+    "deleteTitle": "डाउनलोड हटाएँ?",
+    "deleteBody": "{{what}} इस डिवाइस से हटा दिया जाएगा। आप इसे कभी भी फिर से डाउनलोड कर सकते हैं।",
+    "total": "डिवाइस पर कुल: {{size}}",
+    "mushaf": "मुसहफ़ पृष्ठ",
+    "mushafSub": "604 मदीना पृष्ठ",
+    "audioSub": "तिलावत ऑडियो",
+    "tafsirSub": "संचित तफ़सीर",
+    "empty": "अभी कुछ डाउनलोड नहीं हुआ। डाउनलोड किए गए मुसहफ़ पृष्ठ, ऑडियो और तफ़सीर यहाँ दिखेंगे।",
+    "mushafPages": "{{total}} में से {{pages}} पृष्ठ",
+    "legacyMushaf": "पुराने मुसहफ़ पृष्ठ",
+    "legacyMushafSub": "पिछले रीडर से बचे हुए। अब इन्हें कुछ भी नहीं खोलता।",
+    "riwayat": "क़िरअतें",
+    "riwayatFootnote": "मिहराब इन ग्रंथों को न तो शामिल करता है और न होस्ट करता है। फ़ाइल प्रकाशक से सीधे इसी उपकरण पर आती है, और उसमें से कुछ पढ़ने से पहले यहीं जाँची जाती है।",
+    "riwayahInstalled": "{{pages}} पृष्ठ · {{host}} से",
+    "riwayahPublisher": "प्रकाशक {{publisher}}। श्रेय {{credits}} को।",
+    "riwayahBuiltIn": "मिहराब में शामिल। न कुछ डाउनलोड करना है, न मिटाना।",
+    "riwayahOpenSource": "स्रोत खोलें",
+    "riwayahDownload": "डाउनलोड करें",
+    "riwayahFetchHowTo": "मिहराब इसे प्रकाशक से सीधे इस डिवाइस पर लाएगा, और उसमें से कुछ भी पढ़ने से पहले उसकी जाँच करेगा।",
+    "riwayahAddAFile": "मेरे पास पहले से मौजूद फ़ाइल जोड़ें",
+    "riwayahHowTo": "उस पृष्ठ से JSON फ़ाइल डाउनलोड करें, फिर उसे नीचे चुनें। वह ज़िप में रह सकती है।",
+    "riwayahLink": "डेटा फ़ाइल का लिंक",
+    "riwayahInstall": "यह मुसहफ़ जोड़ें",
+    "riwayahChooseFile": "डाउनलोड की गई फ़ाइल चुनें",
+    "riwayahOrLink": "या फ़ाइल का सीधा लिंक चिपकाएँ:",
+    "riwayahUnreadable": "वह फ़ाइल पढ़ी नहीं जा सकी।",
+    "riwayahFileTooLarge": "यह फ़ाइल मुसहफ़ होने के लिए कहीं ज़्यादा बड़ी है।",
+    "riwayahZipUnsupported": "यह संग्रह ऐसे रूप में है जिसे यह ऐप नहीं खोल सकता। इसे खोलकर भीतर की फ़ाइल चुनें।",
+    "riwayahZipUnreadable": "यह संग्रह खोला नहीं जा सका।",
+    "riwayahNoJsonInZip": "उस संग्रह के भीतर कोई .json फ़ाइल नहीं है।"
+  },
+  "dataStats": {
+    "title": "डेटा आँकड़े",
+    "toggle": "डेटा आँकड़े दिखाएँ",
+    "toggleHelp": "सेटिंग्स → नमाज़ के समय में दिखाता है कि नमाज़ के समय कहाँ से आते हैं, कितना संग्रहीत है और अपडेट कब होता है।",
+    "source": "वर्तमान स्रोत",
+    "daysStored": "डिवाइस पर संग्रहीत",
+    "lastUpdated": "अंतिम अपडेट",
+    "nextCheck": "अगली अपडेट जाँच",
+    "serverRun": "अंतिम सर्वर रन",
+    "nextServerRun": "अगला सर्वर रन",
+    "never": "—",
+    "daysUnit": "दिन",
+    "sourceCdn": "सर्वर डेटासेट (ताज़ा)",
+    "sourceSeed": "ऑफ़लाइन अंतर्निहित डेटा",
+    "sourceScrape": "लाइव Islamiska Förbundet",
+    "sourceAladhan": "AlAdhan",
+    "sourceLocal": "डिवाइस पर गणना",
+    "sourceUnknown": "अज्ञात",
+    "serverOk": "ठीक है",
+    "serverWarning": "कम कवरेज",
+    "serverUnknown": "अभी तक जाँचा नहीं गया",
+    "unlockedTitle": "डेटा आँकड़े सक्षम",
+    "unlockedBody": "एक सांख्यिकी कार्ड अब सेटिंग्स → नमाज़ के समय में दिखता है। नीचे से कभी भी बंद करें।",
+    "serverCoverage": "सर्वर कवरेज",
+    "serverSweden": "स्वीडन · Islamiska Förbundet",
+    "serverMorocco": "मोरक्को · Habous",
+    "inUse": "उपयोग में",
+    "habousWindow": "मंत्रालय केवल चल रहा हिजरी माह ही प्रकाशित करता है, इसलिए यह अवधि हर दिन एक दिन घटती है और माह बदलने पर फिर भर जाती है। दोबारा बनाने से यह लंबी नहीं होती।"
+  },
+  "log": {
+    "legendPrayers": "0 → 5 नमाज़ें",
+    "fasted": "रोज़ा",
+    "dayA11y": "{{date}}: {{prayers}} नमाज़ें दर्ज{{fast}}",
+    "streakCaption": "{{count}} दिन की लय",
+    "streakBest": "(सर्वाधिक {{best}})",
+    "fastsCaption": "{{count}} रोज़े",
+    "markAllOnTime": "सभी समय पर चिह्नित करें",
+    "iftarAt": "इफ़्तार {{time}}",
+    "allUpcoming": "सभी आगामी",
+    "title": "लॉग",
+    "practiceTitle": "अभ्यास",
+    "previousDay": "पिछला दिन",
+    "nextDay": "अगला दिन",
+    "backToToday": "आज पर लौटें",
+    "fastingTitle": "रोज़ा",
+    "noFastLogged": "कोई रोज़ा दर्ज नहीं।",
+    "markFasted": "रोज़ा दर्ज करें",
+    "unmarkFasted": "हटाएँ",
+    "showOnHome": "होम पर ग्राफ़ दिखाएँ",
+    "showOnHomeHelp": "आपके अभ्यास के वर्ग आज की स्क्रीन पर जोड़ता है। डिफ़ॉल्ट रूप से बंद।",
+    "backfillAction": "पिछले दिन भरें",
+    "backfillTitle": "पिछले दिन भर दें?",
+    "backfillBody": "इससे {{days}} दिनों ({{range}}) की {{prayers}} नमाज़ें समय पर अदा की गई के रूप में दर्ज होंगी। जो दिन आपने पहले दर्ज किए हैं वे वैसे ही रहेंगे, और आज का दिन नहीं बदलेगा।",
+    "backfillConfirm": "भर दें",
+    "backfillNothingTitle": "भरने के लिए कुछ नहीं",
+    "backfillNothingBody": "आज से पहले का हर दिन पहले से दर्ज है।",
+    "openLogFromHome": "लॉग खोलें",
+    "swipeHint": "दिन बदलने के लिए स्वाइप करें",
+    "backfillUnreadable": "आपका लॉग अभी पढ़ा नहीं जा सका, इसलिए कुछ भी नहीं बदला। कृपया फिर कोशिश करें।",
+    "backfillRefusedTitle": "कुछ नहीं बदला",
+    "backfillRefusedBody": "उन दिनों को भरने से वह बदल जाता जो आप पहले दर्ज कर चुके थे, इसलिए इसे रोक दिया गया। आपका लॉग जस का तस है।",
+    "fillMonthsAction": "पिछले तीन महीने भरें",
+    "fillMonthsTitle": "पिछले तीन महीने भर दें?",
+    "fillMonthsBody": "इससे {{days}} खाली दिनों ({{range}}) की {{prayers}} नमाज़ें समय पर अदा की गई के रूप में दर्ज होंगी। {{skipped}} दिन वैसे ही रहेंगे क्योंकि उनमें पहले से कुछ दर्ज है — स्थिति, नोट या रोज़ा। आज का दिन नहीं बदलेगा।",
+    "fillMonthsNothingBody": "पिछले तीन महीनों के हर दिन में पहले से कुछ दर्ज है।",
+    "fillSummaryDays": "दिन",
+    "fillSummaryPrayers": "नमाज़ें",
+    "backfillPreserved": "जो दिन आपने पहले दर्ज किए हैं वे वैसे ही रहेंगे, और आज का दिन नहीं बदलेगा।",
+    "fillMonthsPreserved": "जिन दिनों में पहले से स्थिति, नोट या रोज़ा दर्ज है वे बिल्कुल वैसे ही रहते हैं। आज का दिन नहीं बदलेगा।",
+    "fillSummaryLeftAlone": "अछूते",
+    "unlogged": "दर्ज नहीं",
+    "resetAction": "नमाज़ का रिकॉर्ड रीसेट करें",
+    "resetTitle": "नमाज़ का रिकॉर्ड रीसेट करें",
+    "resetBody": "{{day}} के सापेक्ष चुनें कि कितना मिटाना है। रोज़े, सुन्नत नमाज़ें और ज़िक्र अलग रिकॉर्ड हैं और उन्हें छुआ नहीं जाएगा।",
+    "resetScopeDay": "यह दिन",
+    "resetScopeMonth": "यह महीना",
+    "resetScopeYear": "यह साल",
+    "resetScopeAll": "सब कुछ",
+    "resetNothing": "कुछ नहीं",
+    "resetConfirmTitle": "ये नमाज़ें मिटाएँ?",
+    "resetConfirm": "मिटाएँ",
+    "resetPreserved": "रोज़े, सुन्नत नमाज़ें और ज़िक्र छुए नहीं जाएँगे। इसे वापस नहीं लाया जा सकता।",
+    "resetRangeAll": "पूरा रिकॉर्ड",
+    "options": "विकल्प",
+    "setUpSync": "सिंक सेट अप करें",
+    "legendTitle": "ग्राफ़ क्या दिखाता है"
+  },
+  "endOfDay": {
+    "title": "आज की नमाज़ें दर्ज करें?",
+    "body": "पाँचों को समय पर अदा के रूप में चिह्नित करें, या लॉग खोलकर एक-एक करके भरें।",
+    "action": "सभी को पूर्ण दर्ज करें",
+    "channelName": "दिन के अंत का लॉग"
+  },
+  "duaReminders": {
+    "channelName": "सुबह और शाम के अज़कार",
+    "morningTitle": "सुबह के अज़कार",
+    "morningBody": "सुबह की दुआएँ — इनका वक़्त सूर्योदय तक है।",
+    "eveningTitle": "शाम के अज़कार",
+    "eveningBody": "शाम की दुआएँ — इनका वक़्त सूर्यास्त तक है।",
+    "groupTitle": "सुबह और शाम के अज़कार",
+    "morning": "सुबह की दुआएँ",
+    "morningHelp": "सुबह के वक़्त में एक याद दिलावा — फज्र के बाद, सूर्योदय से पहले।",
+    "evening": "शाम की दुआएँ",
+    "eveningHelp": "शाम के वक़्त में एक याद दिलावा — अस्र के बाद, सूर्यास्त से पहले।"
+  },
+  "sunnah": {
+    "none": "कोई नहीं",
+    "short": "सुन्नत",
+    "ofTotal": "{{total}} में से {{done}}",
+    "ofTotalShort": "{{done}}/{{total}}",
+    "a11yNone": "{{prayer}}: कोई सुन्नत नहीं",
+    "a11yCount": "{{prayer}} सुन्नत: {{total}} में से {{done}} दर्ज",
+    "afterIsha": "इशा के बाद",
+    "witr": "वित्र",
+    "prayed": "पढ़ी गई",
+    "logIt": "दर्ज करें",
+    "qiyam": "क़ियाम अल-लैल",
+    "qiyamNote": "श्रृंखला में नहीं गिना जाता",
+    "resetQiyam": "क़ियाम अल-लैल रीसेट करें",
+    "reset": "रीसेट",
+    "addQiyam": "एक क़ियाम अल-लैल दर्ज करें",
+    "qiyamCountA11y": "दर्ज क़ियाम अल-लैल",
+    "streakCaption": "{{count}} दिन सुन्नत",
+    "legend": "सुन्नत",
+    "qiyamLegend": "रात की नमाज़",
+    "a11yAll": "सारी सुन्नत"
+  },
+  "sync": {
+    "exportSection": "निर्यात",
+    "importSection": "आयात",
+    "exportHelp": "आपने जो कुछ दर्ज किया है, वह सब एक ऐसी फ़ाइल में सहेज लें जो आपके पास रहे — नए फ़ोन पर ले जाने के लिए, या बस इसलिए कि वह कहीं और भी मौजूद रहे।",
+    "exportCta": "फ़ाइल में निर्यात करें",
+    "exportFailedTitle": "एक्सपोर्ट नहीं हुआ",
+    "importHelp": "बैकअप फ़ाइल खोलें, उसका पूरा हिस्सा कॉपी करें और यहाँ पेस्ट करें। इस डिवाइस पर जो पहले से है, वह मिटता नहीं — दोनों रिकॉर्ड मिला दिए जाते हैं।",
+    "importPastePlaceholder": "बैकअप फ़ाइल पेस्ट करें",
+    "importPreviewCta": "फ़ाइल जाँचें",
+    "importApplyCta": "इस डिवाइस में आयात करें",
+    "importFound": "{{date}} को बनाई गई। चुनें कि इसमें से क्या लेना है:",
+    "importDoneTitle": "आयात हो गया",
+    "importNothingNew": "उस फ़ाइल में जो कुछ था, वह सब यहाँ पहले से मौजूद था।",
+    "importEmptyTitle": "इम्पोर्ट करने को कुछ नहीं",
+    "importFailedTitle": "इम्पोर्ट नहीं हुआ",
+    "importUnreadableTitle": "यह पढ़ा नहीं जा सका",
+    "importUnreadableBody": "यह Ibadat 365 का बैकअप नहीं लगता। .json फ़ाइल की पूरी सामग्री पेस्ट करें।",
+    "importedLine": "{{label}}: {{before}} → {{after}}",
+    "privacyNote": "फ़ाइल सादे टेक्स्ट में है और पासवर्ड से सुरक्षित नहीं है — यह उतनी ही निजी है जितनी वह जगह जहाँ आप इसे रखते हैं। कुछ भी कभी अपलोड नहीं होता।",
+    "category": {
+      "prayers": "नमाज़ लॉग",
+      "sunnah": "सुन्नत नमाज़",
+      "fasting": "रोज़ा",
+      "dhikr": "ज़िक्र",
+      "quran": "क़ुरआन",
+      "settings": "सेटिंग्स",
+      "location": "स्थान"
+    },
+    "categoryHint": {
+      "prayers": "आपकी दर्ज की हुई हर नमाज़, और आपके नोट",
+      "sunnah": "सुन्नत, वित्र और क़ियाम-उल-लैल",
+      "fasting": "रखे गए रोज़े और उनकी नीयत",
+      "dhikr": "पूरे किए गए तस्बीह के दौर",
+      "quran": "बुकमार्क, तारांकित आयतें, ख़त्म-ए-क़ुरआन की योजनाएँ, आख़िरी पढ़ा हुआ, क़ारी और तफ़्सीर",
+      "settings": "रूप-रंग, गणना विधि, सूचनाएँ और विजेट",
+      "location": "सहेजी गई जगहें और निर्देशांक"
+    },
+    "count": {
+      "prayers": "नमाज़ें",
+      "fasting": "रोज़े",
+      "dhikr": "ज़िक्र के दिन",
+      "sunnah": "सुन्नत के दिन",
+      "bookmarks": "बुकमार्क",
+      "khatmah": "ख़त्म योजनाएँ"
+    },
+    "settingsRowHint": "दूसरा उपकरण जोड़ें",
+    "pairIntro": "सिंक आपके रिकॉर्ड को हर डिवाइस पर एक जैसा रखता है। मिहराब खुद कुछ नहीं भेजता: उसे ऐसा फ़ोल्डर चाहिए जिसे Nextcloud, OneDrive, Dropbox, Syncthing या ऐसा ही कुछ पहले से आपकी डिवाइसों के बीच मिलाकर रखता हो। मिहराब वहाँ एक छोटी एन्क्रिप्टेड फ़ाइल लिखता है, जिसे केवल आपकी अपनी डिवाइसें पढ़ सकती हैं।",
+    "thisDevice": "यह उपकरण",
+    "deviceNameLabel": "उपकरण का नाम",
+    "thisDeviceHelp": "यह कोड अपने दूसरे उपकरण को दिखाएँ, या वहाँ टाइप करें। यह पासवर्ड नहीं है — इसे कॉपी करना, फ़ोटो लेना या ख़ुद को भेजना सुरक्षित है।",
+    "codeA11y": "इस उपकरण का जोड़ीदार कोड",
+    "copyCode": "कोड कॉपी करें",
+    "copied": "कोड कॉपी हो गया",
+    "copyFailed": "कोड कॉपी नहीं हो सका",
+    "addDevice": "उपकरण जोड़ें",
+    "addDeviceHelp": "अपने दूसरे उपकरण पर दिख रहा कोड टाइप करें या चिपकाएँ।",
+    "codePlaceholder": "MHRB-…",
+    "pasteCode": "चिपकाएँ",
+    "addCta": "जोड़ें",
+    "pairWarnTitle": "उपकरण {{value}} से जोड़ें?",
+    "pairWarnBody": "उस उपकरण पर दर्ज सब कुछ यहाँ दिखेगा, और यहाँ का सब कुछ वहाँ दिखेगा। मिलान कभी कुछ मिटाता नहीं: जहाँ दोनों अलग हों, वहाँ नई प्रविष्टि रखी जाती है।",
+    "pairConfirm": "जोड़ें",
+    "pairedTitle": "जुड़ गया",
+    "pairedBody": "इस उपकरण ने अपनी कुंजी फ़ोल्डर में लिख दी है। दूसरे उपकरण पर मिहराब खोलें — जैसे ही वह फ़ोल्डर पढ़ेगा, दोनों जुड़ जाएँगे और समन्वय शुरू हो जाएगा।",
+    "errorBadCodeTitle": "यह कोड काम नहीं आया",
+    "errorBadCode": "कोड जाँचें और फिर कोशिश करें। यह छह-छह के समूहों में लिखा होता है, और एक भी ग़लत अक्षर उसे अस्वीकार करा देता है।",
+    "errorThisDevice": "यह इसी उपकरण का अपना कोड है। आपको दूसरे उपकरण पर दिखने वाला कोड चाहिए।",
+    "errorTooMany": "आप अधिकतम {{max}} उपकरण जोड़ सकते हैं। पहले एक हटाएँ।",
+    "errorSaveTitle": "जोड़ी सहेजी नहीं जा सकी",
+    "errorSaveBody": "उपकरण ने इसे सहेजने से मना कर दिया। फिर कोशिश करें — कुछ भी नहीं बदला।",
+    "pairedSection": "जुड़े हुए उपकरण",
+    "noneYet": "अभी कोई उपकरण नहीं।",
+    "peerNameLabel": "इस जुड़े उपकरण का नाम",
+    "unnamedDevice": "बिना नाम का उपकरण",
+    "fingerprint": "पहचान {{value}}",
+    "viaCode": "यहाँ जोड़ा गया",
+    "viaAnnounced": "उस उपकरण से जुड़ा",
+    "lastSeen": "अंतिम समन्वय {{when}}",
+    "neverSeen": "अभी समन्वित नहीं",
+    "remove": "हटाएँ",
+    "removeTitle": "{{value}} हटाएँ?",
+    "removeBody": "यह उपकरण उसे भेजना और उससे लेना बंद कर देगा। इस उपकरण को वहाँ से भी हटाएँ, वरना वह कोशिश करता रहेगा।",
+    "notReady": "यह उपकरण समन्वय स्थापित नहीं कर सकता: इसके पास यादृच्छिकता का सुरक्षित स्रोत नहीं है, और उसके बिना बनी कुंजी निजी नहीं होगी।",
+    "privacyNoteP2p": "आपका कोड एक सार्वजनिक कुंजी है, कोई रहस्य नहीं। डेटा स्वयं केवल आपके जुड़े उपकरणों के लिए एन्क्रिप्ट होता है, और कहीं कुछ अपलोड नहीं होता।",
+    "folderSection": "फ़ोल्डर",
+    "folderHelp": "ऐसा फ़ोल्डर चुनें जिसे आपकी सिंक सेवा पहले से हर डिवाइस पर मिलाकर रखती हो — Nextcloud, OneDrive, Dropbox या Syncthing का फ़ोल्डर। अगर उस फ़ोल्डर को आपकी डिवाइसों के बीच कुछ भी सिंक नहीं कर रहा, तो कुछ भी नहीं पहुँचेगा। मिहराब वहाँ एक छोटी एन्क्रिप्टेड फ़ाइल लिखता है और आपकी दूसरी डिवाइसों की छोड़ी हुई फ़ाइलें पढ़ता है।",
+    "chooseFolder": "फ़ोल्डर चुनें",
+    "changeFolder": "फ़ोल्डर बदलें",
+    "folderChosen": "{{value}} इस्तेमाल हो रहा है",
+    "syncNow": "अभी समन्वय करें",
+    "lastSyncedAt": "पिछली जाँच {{when}}",
+    "neverSynced": "अभी जाँचा नहीं गया",
+    "autoTitle": "अपने आप समन्वय करें",
+    "freqOpen": "खुलने पर",
+    "freqHourly": "हर घंटे",
+    "freqDaily": "रोज़ाना",
+    "freqOff": "बंद",
+    "autoHelp": "अपने आप समन्वय तभी चलता है जब ऐप खुला हो। यहाँ जो भी चुनें, “अभी समन्वय करें” हमेशा काम करता है।",
+    "whatSyncs": "क्या-क्या समन्वित होता है",
+    "errorFolderGone": "उस फ़ोल्डर तक अब पहुँच नहीं है। उसे फिर से चुनें।",
+    "errorUnsupported": "यह बिल्ड फ़ोल्डर समन्वय नहीं कर सकता।",
+    "syncDoneTitle": "समन्वित",
+    "syncDoneBody": "आपके दूसरे उपकरणों का सब कुछ अब यहाँ है, और यहाँ का सब कुछ वहाँ।",
+    "syncNothing": "कुछ नया नहीं। पिछली जाँच के बाद से आपके दूसरे उपकरणों ने कुछ नहीं लिखा।",
+    "syncFailedTitle": "समन्वय पूरा नहीं हुआ",
+    "syncFailedBody": "कुछ गड़बड़ हुई: {{detail}}",
+    "hint": {
+      "quranTitle": "क्या आप एक से ज़्यादा उपकरणों पर पढ़ते हैं?",
+      "quranBody": "समन्वय सेट करें और आपका पन्ना, बुकमार्क और ख़त्म आपके साथ चलेंगे।",
+      "logTitle": "एक उपकरण पर दर्ज करें, सब पर देखें",
+      "logBody": "समन्वय सेट करें ताकि आपका रिकॉर्ड हर जगह एक जैसा रहे। कुछ भी अपलोड नहीं होता।",
+      "dismiss": "इसे छिपाएँ",
+      "openHint": "समन्वय सेटिंग्स खोलता है"
+    },
+    "pairedNeedsFolder": "पहले एक फ़ोल्डर चुनें। दोनों उपकरण उसी फ़ोल्डर से एक-दूसरे तक पहुँचते हैं, और उसके बिना कुछ भी आदान-प्रदान नहीं हो सकता।",
+    "folderAppHint": "मिहराब ने अपने लिए {{value}} नाम का फ़ोल्डर बनाया है। इसे Files ऐप में \"मेरे iPhone पर\" के नीचे पाएँ, और अपने दूसरे उपकरणों तक पहुँचने के लिए अपनी सिंक ऐप को उसी पर लगाएँ।",
+    "syncQuietTitle": "कुछ नहीं आया",
+    "syncNothingArrived": "आपकी फ़ाइल फ़ोल्डर में है, लेकिन आपके दूसरे उपकरणों से वहाँ कुछ नहीं आया। दोनों उपकरणों को एक ही फ़ोल्डर की ओर होना चाहिए, और जो चीज़ उस फ़ोल्डर को दोनों के बीच एक जैसा रखती है वह चलनी चाहिए।",
+    "syncStale": "आपकी फ़ाइल फ़ोल्डर में है, लेकिन {{device}} का नवीनतम रिकॉर्ड {{when}} को लिखा गया था। यदि आपने उसके बाद वह डिवाइस इस्तेमाल किया है, तो जो चीज़ फ़ोल्डर को मिलाकर रखती है उसने फ़ाइलें ले जाना बंद कर दिया है।",
+    "scanCode": "स्कैन",
+    "scanHint": "कैमरा अपने दूसरे उपकरण पर दिख रहे कोड की ओर करें",
+    "scanDeniedTitle": "कैमरे की अनुमति नहीं",
+    "scanDeniedBody": "कोड पढ़ने के लिए मिहराब को कैमरा चाहिए। आप उपकरण की सेटिंग्स में अनुमति दे सकते हैं, या कोड टाइप कर सकते हैं।",
+    "scanNoCameraTitle": "कैमरा नहीं है",
+    "scanNoCameraBody": "इस उपकरण में स्कैन करने के लिए कैमरा नहीं है। कोड टाइप या चिपकाएँ।",
+    "freq15Min": "हर 15 मिनट",
+    "errorFolderUnwritable": "उस फ़ोल्डर में लिखा नहीं जा सकता। कोई दूसरा चुनें — Documents या Downloads में आपका बनाया फ़ोल्डर सबसे अच्छा रहता है।",
+    "errorFolderTitle": "वह फ़ोल्डर काम नहीं आया"
+  },
+  "stats": {
+    "daysUnit": " दिन",
+    "streakLabel": "समय पर लगातार",
+    "best": "सर्वश्रेष्ठ {{best}}",
+    "sunnahLabel": "सुन्नत अदा",
+    "thisMonth": "इस माह",
+    "fastedLabel": "रोज़े",
+    "owedLabel": "क़ज़ा नमाज़ें",
+    "nothingOwed": "कोई क़ज़ा नहीं",
+    "owedShow": "देखने के लिए टैप करें",
+    "owedHide": "दिखाया जा रहा ✕",
+    "owedHint": "क़ज़ा अदा करने के लिए दिन पर टैप करें",
+    "owedMore": "+{{more}} और",
+    "owedA11y": "{{owed}} क़ज़ा नमाज़ें, दिखाएँ",
+    "nothingOwedA11y": "कोई क़ज़ा नहीं"
+  },
+  "surahReminders": {
+    "groupTitle": "सूरह रिमाइंडर",
+    "kahf": "जुमे को सूरह अल-कहफ़",
+    "kahfHelp": "हफ़्ते में एक बार, जुमे को, आपके चुने हुए समय पर।",
+    "kahfTitle": "अल-कहफ़",
+    "kahfBody": "आज जुमा है — सूरह अल-कहफ़ पढ़ें।",
+    "mulk": "रात में सूरह अल-मुल्क",
+    "mulkHelp": "हर रात आपके चुने हुए समय पर — ऐप को नहीं पता आप कब सोते हैं, इसलिए वह पूछता है।",
+    "mulkTitle": "अल-मुल्क",
+    "mulkBody": "सोने से पहले — सूरह अल-मुल्क पढ़ें।"
+  },
+  "dhikr": {
+    "remindersTitle": "ज़िक्र रिमाइंडर",
+    "remindersBlurb": "आपके अपने रिमाइंडर, दिन के किसी भी समय",
+    "remindersFooter": "नमाज़ के समय से स्वतंत्र और पूरी तरह ऑफ़लाइन — बिना कनेक्शन और रीस्टार्ट के बाद भी चलते हैं।",
+    "remindersEmpty": "अभी कोई रिमाइंडर नहीं। किसी ज़िक्र के लिए, या अपने शब्दों के लिए एक जोड़ें।",
+    "addReminder": "रिमाइंडर जोड़ें",
+    "newReminder": "नया रिमाइंडर",
+    "editReminder": "रिमाइंडर संपादित करें",
+    "deleteReminder": "रिमाइंडर हटाएँ",
+    "whichDhikr": "कौन-सा ज़िक्र",
+    "ownWords": "आपके अपने शब्द",
+    "ownWordsHelp": "एक रिमाइंडर जो वही कहेगा जो आप लिखेंगे।",
+    "customTitle": "रिमाइंडर",
+    "customTitleLabel": "शीर्षक",
+    "customBodyLabel": "पाठ",
+    "days": "दिन",
+    "everyDay": "हर दिन",
+    "sound": "ध्वनि",
+    "soundDefault": "सूचना ध्वनि",
+    "soundSilent": "मौन",
+    "soundHelp": "ज़िक्र की कोई रिकॉर्डिंग साथ नहीं आती: ऐप केवल वही सामग्री देता है जिसका स्रोत और लाइसेंस वह बता सके, और इसमें आवाज़ भी शामिल है। अपनी रिकॉर्डिंग चुनना अगला कदम है — इशू #29 देखें।",
+    "meaning": {
+      "hawqala": "अल्लाह के सिवा न कोई शक्ति है और न सामर्थ्य",
+      "subhanallahwabihamdih": "अल्लाह पाक है, और उसी की प्रशंसा है"
+    }
+  }
+}

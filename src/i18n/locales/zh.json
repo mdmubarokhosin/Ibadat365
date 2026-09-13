@@ -1,0 +1,1779 @@
+{
+  "app": {
+    "name": "米哈拉布",
+    "tagline": "礼拜时间、朝向罗盘、古兰经、祈祷词与赞念 — 完全离线，集于一身。"
+  },
+  "nav": {
+    "home": "米哈拉布",
+    "settings": "设置",
+    "month": "月",
+    "shareMonth": "分享月",
+    "compass": "朝拜",
+    "tasbih": "念珠",
+    "duas": "祈祷文",
+    "quran": "《古兰经》",
+    "journal": "礼拜日记",
+    "backup": "备份",
+    "fasting": "斋戒",
+    "today": "今天",
+    "sync": "在设备之间同步"
+  },
+  "a11y": {
+    "openSettings": "打开设置",
+    "openMonth": "打开月视图",
+    "openCompass": "打开朝拜指南针",
+    "openTimesSource": "更改祈祷时间来源",
+    "countdownTo": "倒计时改为这次礼拜",
+    "countdownHere": "倒计时正指向这次礼拜。点按可回到下一次。"
+  },
+  "common": {
+    "change": "改变",
+    "tryAgain": "再试一次",
+    "retry": "重试",
+    "continue": "继续",
+    "back": "后退",
+    "play": "播放",
+    "pause": "暂停",
+    "stop": "停止",
+    "loading": "加载中…",
+    "automatic": "自动的",
+    "openSettings": "打开设置",
+    "cancel": "取消",
+    "ok": "确定",
+    "today": "今天",
+    "close": "关闭",
+    "share": "分享",
+    "done": "完成",
+    "delete": "删除",
+    "cancelled": "已取消。",
+    "listJoin": " 与 ",
+    "confirmDelete": "再次点按以删除",
+    "learnMore": "了解更多"
+  },
+  "home": {
+    "loadingPrayer": "正在加载祈祷时间...",
+    "nextPrayer": "下一个祷告",
+    "nextIn": "在{{time}}",
+    "hanafiSuffix": "哈乃斐晡礼",
+    "monthTimesLink": "整个月的祈祷时间",
+    "localFallbackNotice": "本地计算 — 连接网络以刷新",
+    "lastGpsCoordsNotice": "使用上次已知位置 — GPS 不可用",
+    "exactAlarmDenied": "祈祷提醒需要精确闹钟权限以确保时间准确。点击授权。",
+    "notifPermDenied": "通知权限被拒绝 — 祈祷提醒将无法发出。点击打开设置。",
+    "updatingLocation": "正在更新位置",
+    "today": "今天",
+    "tomorrow": "明天",
+    "savedLocationLabel": "{{name}}",
+    "switchLocation": "切换位置",
+    "autoBadge": "自动",
+    "locating": "定位中…",
+    "backToToday": "回到今天",
+    "updatedAt": "更新于 {{when}}",
+    "daysStored": "已存储 {{count}} 天",
+    "quranShortcut": "打开古兰经",
+    "dayStrip": "选择日期",
+    "nextPrayerIn": "距{{prayer}}还有",
+    "firstPrayer": "第一次礼拜 {{prayer}} · {{time}}",
+    "todaySummary": "今天",
+    "prayersLogged": "已记录 {{count}}/{{total}} 次礼拜",
+    "noFastToday": "未记录斋戒",
+    "dhikrSets": "已完成 {{count}} 组迪克尔",
+    "fastKept": {
+      "ramadan": "已守斋月斋戒",
+      "voluntary": "已守圣行斋戒",
+      "qadha": "已守补斋"
+    },
+    "readItIn": "在{{surah}}中阅读",
+    "continueAt": "继续 · {{surah}} {{ref}}",
+    "khatmahDay": "通读第 {{day}}/{{total}} 天",
+    "khatmahDaysToGo": "还剩 {{count}} 天",
+    "pagesLeftToday": "今天还剩 {{count}} 页",
+    "pageNumber": "第 {{page}} 页",
+    "readingDone": "今日阅读已完成",
+    "readOn": "继续阅读",
+    "qiblaChipA11y": "朝拜方向 {{degrees}} 度",
+    "qiblaChipHint": "打开朝拜方向指南针",
+    "alertOverrideOnce": "{{mode}}（仅此一次）· 重置",
+    "alertOverrideA11y": "{{prayer}} 仅此一次设为{{mode}}",
+    "alertOverrideResetHint": "恢复为{{mode}}",
+    "yesterday": "昨天",
+    "startReading": "开始阅读",
+    "startReadingHint": "法谛海，第 1 页"
+  },
+  "errors": {
+    "locationNeededTitle": "需要位置",
+    "locationNeededBody": "祈祷时间使用您的大概位置。在系统设置中授予位置访问权限，然后重试。",
+    "locationErrorTitle": "位置错误",
+    "apiErrorTitle": "无法加载时间",
+    "coordLat": "纬度必须介于 -90 到 90 之间。",
+    "coordLng": "经度必须介于 -180 到 180 之间。",
+    "gpsPermission": "使用设备位置需要位置权限。",
+    "gpsRead": "无法读取 GPS 位置。",
+    "gpsRequest": "无法请求位置。"
+  },
+  "month": {
+    "locationNotReadyTitle": "位置未准备好",
+    "locationNotReadyBody": "打开主页并加载一次今天的时间，以便此屏幕可以使用您的 GPS 位置。",
+    "thisMonth": "本月",
+    "standardView": "标准",
+    "shareView": "可分享",
+    "shareMonth": "分享图片",
+    "loadError": "无法加载月份。",
+    "empty": "没有可显示的行。",
+    "refreshData": "刷新存储的数据",
+    "refreshing": "清爽...",
+    "monthsStored": "存储 {{count}} 个月",
+    "dayOfWeek": "天",
+    "date": "日期",
+    "hijri": "回历",
+    "gregorian": "公历",
+    "prayerTimes": "祈祷时间",
+    "daruriLegend": "晨礼、晡礼、宵礼下方的小字，是各自首选时段结束的时刻。晌礼在晡礼开始时结束、昏礼在宵礼开始时结束，因此这两者就是那两列本身。晨礼与晡礼的为近似值。"
+  },
+  "share": {
+    "tagline": "礼拜时间、朝向与《古兰经》",
+    "timesFor": "{{place}}的礼拜时间",
+    "scanForApp": "扫码获取应用",
+    "asrHanafi": "晡礼：哈乃斐",
+    "asrStandard": "晡礼：通行",
+    "source": "时间来自 {{source}}",
+    "footerNote": "为计算所得时间。若有出入，请以当地清真寺为准。",
+    "sheetLanguage": "页面语言",
+    "exportImage": "分享图片",
+    "exportPdf": "分享 PDF（A4）",
+    "pitch": "免费、无广告。礼拜时间、朝向、带诵读与翻译的《古兰经》，以及诵读进度追踪。"
+  },
+  "settings": {
+    "laDesignLabel": "样式",
+    "laDesignTimeline": "时间轴",
+    "laDesignCountdown": "倒计时",
+    "appearance": "外貌",
+    "theme": "主题",
+    "themeSystem": "系统",
+    "themeLight": "光",
+    "themeDark": "黑暗的",
+    "themeHelp": "系统与您的设备浅色或深色模式相匹配。打开系统颜色以使用应用程序中的平台调色板（包括 Android 上的 Material You）。按钮和强调色遵循手机的主要颜色，因此当动态颜色可用时，应用程序会与您的壁纸相匹配。",
+    "clockFormat": "时间格式",
+    "clockFormatAuto": "自动",
+    "clockFormat12": "12 小时制",
+    "clockFormat24": "24 小时制",
+    "clockFormatHelp": "自动模式跟随设备自身的时钟设置。礼拜时间、月历表格和小组件都使用同一种格式。",
+    "clockFormatExample": "例如：{{time}}",
+    "systemDynamicColors": "系统颜色",
+    "systemDynamicColorsHelp": "当主题为“系统”时，在应用程序中使用设备的语义和动态颜色。当深色模式开启时，纯黑色 (OLED) 仍然会使背景变暗。",
+    "pureBlack": "纯黑（OLED）",
+    "pureBlackHelp": "OLED 显示器深色模式下的纯黑色背景。",
+    "dataSource": "数据来源",
+    "provider": "祈祷时间提供者",
+    "providerAutoLine": "自动·{{label}}",
+    "providerAutoHelp": "在瑞典，祈祷时间使用瑞典来源（列出的城市）；瑞典郊外的 AlAdhan。选择下面的来源来锁定一个提供商。",
+    "providerOverridden": "{{picked}} 没有你所在位置的时间，因此改由 {{used}} 提供。",
+    "location": "地点",
+    "automatic": "自动",
+    "manual": "手动的",
+    "manualSearchHelp": "点击搜索结果即可立即应用它，或编辑坐标并按下面的“应用”。",
+    "coordsLabel": "坐标（十进制）",
+    "latPlaceholder": "纬度",
+    "lngPlaceholder": "经度",
+    "applyCoords": "应用坐标",
+    "calculation": "计算",
+    "calcHiddenSweden": "瑞典使用每个列出的城市的祈​​祷时间。您的位置经过反向地理编码以匹配该城市；仅适用于瑞典。",
+    "calcHiddenPraytimes": "PrayTimes.dev 应用其自己发布的规则（请参阅praytimes.dev）。这里只有 Madhab / Asr 学校适用；方法列表被隐藏。",
+    "method": "方法",
+    "methodModalTitle": "计算方法",
+    "hanafiAsr": "哈乃斐晡礼",
+    "hanafiAsrHelp": "Asr 的阴影长度更大（学校 = 1）",
+    "notifications": "通知",
+    "prayerAlerts": "祷告提醒",
+    "prayerAlertsHelp": "安排每日五次祈祷（Fajr-Isha）。 Android 可能需要精确的警报访问才能实现可靠的计时。",
+    "prePrayerReminder": "提前提醒",
+    "prePrayerReminderHelp": "每次祈祷前可选的第二次通知。",
+    "prePrayerReminderModalTitle": "祈祷前几分钟",
+    "prePrayerReminderOff": "离开",
+    "prePrayerReminderOption": "{{count}} 分钟前",
+    "liveActivity": "实时活动",
+    "liveActivityHelp": "已固定通知，显示距下一次礼拜的倒计时以及今日其余礼拜时间。",
+    "liveActivityExperimental": "在 iOS 上为实验性功能。",
+    "liveActivityCustomize": "自定义",
+    "liveActivityCompact": "紧凑模式",
+    "liveActivityCompactHelp": "仅显示倒计时；隐藏礼拜列表。",
+    "liveActivityShowSunriseLabel": "显示日出",
+    "liveActivityShowHijriLabel": "显示伊斯兰历日期",
+    "liveActivityShowLocationLabel": "显示位置",
+    "language": "语言",
+    "languageHelp": "英语、瑞典语或阿拉伯语。阿拉伯语使用从右到左的布局。",
+    "langEn": "英语",
+    "langSv": "瑞典",
+    "langAr": "阿拉伯",
+    "homeScreenWidget": "主屏幕小部件",
+    "widgetBackgroundOpacity": "小部件背景强度（Android）",
+    "widgetHighlight": "下一个祈祷突出显示颜色",
+    "widgetHighlight_green": "绿色的",
+    "widgetHighlight_teal": "青色",
+    "widgetHighlight_blue": "蓝色的",
+    "widgetHighlight_amber": "琥珀色",
+    "widgetHighlight_custom": "定制颜色",
+    "widgetHighlight_customAbbr": "……",
+    "widgetHighlightHexPlaceholder": "#6BC98A",
+    "widgetConfigureHint": "您还可以触摸并按住小部件 → 设置（齿轮）来调整 Android 上的相同选项。",
+    "notificationSound": "警报声",
+    "adhanAlarmStream": "以闹钟方式播放宣礼",
+    "adhanAlarmStreamHelp": "使用闹钟音量，因此手机静音或振动时也能听到宣礼。不会覆盖“勿扰”模式。",
+    "notificationSoundModalTitle": "选择警报声音",
+    "notificationSoundDefault": "默认通知",
+    "notificationSoundDefaultHelp": "使用您设备的默认通知声音。",
+    "notificationSoundAbdulBasit": "宣礼 - 阿卜杜勒·巴西特",
+    "notificationSoundAbdulGhaffar": "阿丹-阿卜杜勒·加法尔",
+    "notificationSoundAbdulHakam": "宣礼 - 阿卜杜勒·哈卡姆",
+    "notificationSoundMakkah": "宣礼 - 麦加",
+    "notificationSoundMadina": "宣礼 - 麦地那",
+    "notificationSoundAqsa": "拜德汗 - 阿克萨清真寺",
+    "notificationSoundEgypt": "宰牲节 - 埃及",
+    "notificationSoundHalab": "拜德汗 - 哈拉布",
+    "notificationSoundAlHussaini": "侯赛尼 (Al-Hussaini)",
+    "notificationSoundBakirBash": "宣礼 - 巴基尔·巴什",
+    "notificationSoundHafez": "阿丹-哈菲兹",
+    "notificationSoundHafizMurad": "宣礼 - 哈菲兹·穆拉德",
+    "notificationSoundMinshawi": "拜德汗 - 明沙维",
+    "notificationSoundNaghshbandi": "宣礼 - 纳格什班迪",
+    "notificationSoundSaber": "宣礼 - 军刀",
+    "notificationSoundSharifDoman": "阿丹 - 谢里夫·多曼",
+    "notificationSoundYusufIslam": "宣礼 - 优素福·伊斯兰",
+    "notificationSoundVoiceHelp": "此应用程序版本中包含内置语音。",
+    "notificationSoundCustom": "自定义宣礼",
+    "notificationSoundCustomHelp": "从此设备中选择一个音频文件。",
+    "notificationSoundCustomImporting": "正在导入…",
+    "notificationSoundCustomRemove": "移除自定义宣礼",
+    "notificationSoundCustomTrimmed": "通知播放前 30 秒；应用打开时播放完整录音。",
+    "versionInstalled": "安装版本：{{version}}",
+    "adhanPreviewTitle": "宣礼预览",
+    "adhanPreviewBody": "",
+    "prayerOffsets": "逐项礼拜微调",
+    "prayerOffsetsTitle": "逐项礼拜微调",
+    "prayerOffsetsHelp": "将每个礼拜调整 ±{{max}} 分钟以匹配本地清真寺。",
+    "prayerOffsetsNone": "未微调",
+    "prayerOffsetsCount_one": "已调整 {{count}} 番礼拜",
+    "prayerOffsetsCount_other": "已调整 {{count}} 番礼拜",
+    "prayerOffsetsIncrease": "增加{{prayer}}的时间偏移",
+    "prayerOffsetsDecrease": "减少{{prayer}}的时间偏移",
+    "prayerOffsetsReset": "全部重置",
+    "dataAndPrivacy": "数据与隐私",
+    "replayOnboarding": "重新显示引导",
+    "replayOnboardingHelp": "浏览欢迎流程。",
+    "attributions": "署名",
+    "attributionsBlurb": "这款应用由谁的作品构成",
+    "attribQuran": "《古兰经》原文",
+    "attribTranslation": "翻译",
+    "attribDuas": "杜阿",
+    "accentColor": "强调色",
+    "accent_green": "绿色",
+    "accent_teal": "青色",
+    "accent_blue": "蓝色",
+    "accent_amber": "琥珀色",
+    "accent_custom": "自定义",
+    "accent_customAbbr": "Hex",
+    "accentColorHelp": "用于整个应用程序和主屏幕小部件。",
+    "widgetColorFollowsAccentHelp": "小组件使用与应用相同的强调色。可在「外观」中选择。",
+    "widgetColorOwnHelp": "应用会跟随系统颜色，而小组件不会。请在此选择小组件的高亮颜色。",
+    "additionalTimes": "其他时间",
+    "additionalTimesBlurb": "日出、午夜与夜的三分之一",
+    "additionalTimesFooter": "除通知外，这些时刻也会出现在礼拜时间表、小组件和实时活动中，并使用默认提示音而非宣礼。",
+    "dailyReminders": "每日提醒",
+    "dailyRemindersBlurb": "每日一节经文、今日的诵读份额、《山洞章》与《国权章》",
+    "logSection": "记录",
+    "sunriseTime": "日出",
+    "sunriseTimeHelp": "在礼拜时间表、通知、小组件和 Live Activity 中显示日出。",
+    "islamicMidnight": "伊斯兰午夜",
+    "islamicMidnightHelp": "马格里布与法吉尔之间夜晚的中点。默认关闭。",
+    "lastThird": "夜晚的最后三分之一",
+    "lastThirdHelp": "夜晚最后三分之一的开始——夜间礼拜（Qiyam al-Layl）的时间。默认关闭。",
+    "firstThird": "夜晚的前三分之一",
+    "firstThirdHelp": "夜晚前三分之一的终点——按马立克派的算法，宵礼在此离开其首选时段。默认关闭。",
+    "malikiSecondTimes": "马立克派第二时段",
+    "malikiSecondTimesHelp": "每次礼拜都会在「今天」卡片上多一行，说明其首选时段（ikhtiyari）何时结束、延后时段（daruri）何时开始。无论礼拜时间来自哪个来源，都在你的设备上依据你的坐标计算。晡礼一律采用 1:1 影长，不受你所选教法学派影响，因为这才是马立克派的界线。默认关闭。",
+    "malikiSecondTimesHanafiWarning": "请注意：这些是马立克派的界线，但你的晡礼设为哈乃斐派，采用不同的影长。晌礼的首选时段会比下方显示的晡礼早约半小时结束。若希望卡片前后一致，请关闭哈乃斐派晡礼。",
+    "malikiSecondTimesSource": "依据伊本·阿希尔《Al-Murshid al-Muin》，见 The Guiding Helper 第 11 章。",
+    "malikiAlerts": "提醒我",
+    "malikiAlertsHelp": "起初每次礼拜都关闭。只挑你确实想被告知的——每天多五条通知，正是一个应用教会你忽略它的方式。需要先开启通知。",
+    "malikiAlertsDisabled": "在“礼拜时间”中开启马立克派的第二时间，之后即可在此处提醒。",
+    "malikiAlertsNone": "不提醒",
+    "malikiAlertsLead": "提前多久",
+    "malikiAlertsLeadTitle": "在首选时段结束前提醒我",
+    "malikiAlertsAtTime": "结束时",
+    "malikiSecondTimesModelled": "晨礼与晡礼的界线是星辰隐没和日色转黄——用一个角度来代替肉眼的判断，因此标示为近似值。太阳不升起、不落下，或始终达不到该角度的地方，宁可留白，也不给出猜测。",
+    "accent_rose": "玫瑰红",
+    "accent_violet": "紫罗兰",
+    "laDesignMarkers": "标记",
+    "showTour": "显示应用导览",
+    "rateApp": "为 Ibadat 365 评分",
+    "rateAppHelp": "喜欢这个应用吗？评分能帮助更多人发现它。",
+    "showTourHelp": "重新播放功能导览。",
+    "ayahOfDay": "每日经文通知",
+    "ayahOfDayHelp": "每天随机挑选一节经文及其译文。",
+    "ayahOfDayTime": "通知时间",
+    "hourDown": "小时 −",
+    "hourUp": "小时 +",
+    "khatmahReminder": "每日完读提醒",
+    "khatmahReminderHelp": "完读计划进行期间，提示今日份额及继续位置。",
+    "khatmahReminderNoPlan": "在“古兰经”标签页开始一次诵读计划后可用。",
+    "resetApp": "重置应用数据",
+    "resetAppHelp": "清除所有设置和数据。无法撤销。",
+    "batteryWarning": "提醒可能不可靠",
+    "batteryWarningHelp": "电池优化可能在应用关闭时延迟或静音宣礼提醒。点按以将 Ibadat 365 排除在外。",
+    "themeRestartManualTitle": "请重新打开应用",
+    "themeRestartManualBody": "iOS 不允许应用自行重启。请彻底退出 Ibadat 365 再重新打开，新主题才会生效。",
+    "liquidGlass": "流体玻璃",
+    "liquidGlassHelp": "采用 iOS 系统配色与半透明玻璃界面，自动跟随浅色/深色模式。",
+    "themeRestartTitle": "需要重启",
+    "themeRestartBody": "切换系统配色需要重启应用，所有界面才会应用新主题。现在重启吗？",
+    "themeRestartConfirm": "重启",
+    "laLockButtonLabel": "锁屏按钮",
+    "laLockButtonHelp": "在卡片上显示一个按钮，用于将其从锁屏和常亮显示中隐藏。",
+    "resetTitle": "重置应用？",
+    "resetBody": "这将清除所有设置、已保存地点、记录条目、斋戒记录与念珠状态，并回到初始引导。此操作无法撤销。",
+    "resetConfirm": "全部重置",
+    "prayerOffsetsCount": "已调整 {{count}} 项",
+    "endOfDayLog": "一天结束时的记录提醒",
+    "endOfDayLogHelp": "宵礼后十分钟询问是否记录当天的五番拜功。第二天早上回应，仍会记入正确的日期。",
+    "alertModeAdhan": "宣礼",
+    "alertModeNotification": "提示音",
+    "alertModeSilent": "静音",
+    "alertModeHint": "更改此番礼拜的提醒方式",
+    "sectionPrayerTimes": "礼拜时间",
+    "sectionPrayerTimesBlurb": "来源、计算方法、教法学派、微调",
+    "sectionNotifications": "通知",
+    "sectionNotificationsBlurb": "提示音、提前提醒、额外时刻、实时活动",
+    "sectionLocation": "位置",
+    "sectionLocationBlurb": "你在哪里，以及已保存的地点",
+    "sectionAppearance": "外观与语言",
+    "sectionAppearanceBlurb": "主题、强调色、时间格式、语言",
+    "sectionWidgets": "主屏幕",
+    "sectionWidgetsBlurb": "主屏幕小部件",
+    "sectionQuran": "《古兰经》",
+    "sectionQuranBlurb": "阅读、译文、经注、下载",
+    "sectionAbout": "关于",
+    "sectionAboutBlurb": "版本、来源、许可",
+    "malikiRows": "在当天的时间中显示",
+    "malikiRowsHelp": "关闭时只发送提醒——不会在卡片或月历中添加任何内容。",
+    "malikiEndAlerts": "以及时间结束时",
+    "malikiEndAlertsHelp": "在礼拜成为盖达的那一刻发出第二条通知。就在那个时刻，绝不提前。",
+    "surahRemindersChannel": "章节提醒",
+    "madhab": "教法学派",
+    "madhab_hanafi": "哈乃斐",
+    "madhab_maliki": "马立克",
+    "madhab_shafii": "沙斐仪",
+    "madhab_hanbali": "罕百里",
+    "madhabCustom": "自定义",
+    "madhabHelp": "沙斐仪、马立克与罕百里采用相同的晡礼影长，在三者之间选择不会改变任何时间。马立克还将破晓的主命拜称为晨礼，并提供第二时间。",
+    "dhikrRemindersChannel": "齐克尔提醒",
+    "dhikrRemindersSilentChannel": "齐克尔提醒（静音）",
+    "laDesignNeedsAndroid16": "样式需要 Android 16 或更高版本。此手机显示标准卡片：礼拜、剩余时间和进度条。"
+  },
+  "locationSetup": {
+    "headline": "设置您的位置",
+    "sub": "祈祷时间取决于您所在的位置。选择以下选项之一 - 您可以稍后在“设置”中更改此选项。",
+    "useAutomatic": "使用我的位置",
+    "searchCoords": "搜索或输入坐标",
+    "manualHeadline": "手动定位",
+    "manualSub": "搜索并点击结果即可完成 - 或在下面输入纬度和经度，然后按继续。",
+    "decimalCoords": "十进制坐标"
+  },
+  "provider": {
+    "timesSource": "时代来源",
+    "automaticByLocation": "按位置自动",
+    "modalTitle": "祈祷时间来源",
+    "sectionMainstream": "主流API",
+    "sectionRegional": "国家和地区来源",
+    "autoTitle": "自动的",
+    "autoSub": "瑞典 来源瑞典；阿尔阿丹在其他地方。",
+    "autoNow": "在你现在的位置，那就是 {{label}}。",
+    "bestHere": "适合你所在的位置",
+    "outOfRegion": "没有你所在位置的时间——将改用 {{fallback}}。",
+    "footer": "特定国家/地区的来源使用官方或国家祈祷表，我们将它们整合在一起。随着时间的推移，可能会添加更多区域。"
+  },
+  "providers": {
+    "aladhan": {
+      "desc": "api.aladhan.com — 方法列表丰富，覆盖全球；使用极为广泛。",
+      "name": "AlAdhan"
+    },
+    "prayertimes_dev": {
+      "desc": "独立 API — 英式角度与偏移；哈乃斐/沙菲仪；全球坐标。",
+      "name": "PrayTimes.dev"
+    },
+    "local_adhan": {
+      "desc": "在您的手机上使用 Batoul Adhan 计算 — 无需联网 API。",
+      "name": "本机计算 (Adhan JS)"
+    },
+    "islamiska_forbundet": {
+      "desc": "为列表中瑞典城市提供礼拜时间；您的位置会匹配到列表中最近的城市。",
+      "name": "瑞典"
+    },
+    "habous": {
+      "name": "摩洛哥",
+      "desc": "摩洛哥宗教基金与伊斯兰事务部为所列城市发布的礼拜时间；您的位置将匹配到列表中最近的城市。"
+    }
+  },
+  "compass": {
+    "needLocationTitle": "位置未准备好",
+    "needLocationBody": "在“设置”中设置位置或使用 GPS 打开“主页”一次，以便我们可以计算朝拜方向。",
+    "bearing": "朝拜轴承",
+    "fromNorth": "距北 {{deg}}°",
+    "qiblaMarker": "朝拜",
+    "phoneFront": "手机正面",
+    "hint": "将手机平放并远离金属。当您面向朝拜时，将朝拜箭头与“手机正面”对齐。",
+    "signalStrength": "指南针信号",
+    "signalHelp": "基于磁场水平和稳定性。如果金属和电子产品保持低水平，请远离它们。",
+    "signalChecking": "……",
+    "signalOff": "离开",
+    "signalWeakTitle": "指南针信号弱",
+    "signalVeryWeakTitle": "指南针信号很弱",
+    "signalWeakBody": "远离金属、磁铁和电子产品。取下磁性手机配件，然后缓慢地进行 8 字形动作以重新校准。",
+    "motionDetectedTitle": "拿稳手机",
+    "motionDetectedBody": "过多的运动会导致方向跳跃。将手机平放并静止几秒钟，远离移动的车辆或扬声器。",
+    "motionPermissionTitle": "需要移动许可",
+    "motionPermissionDeniedBody": "iOS 上的指南针访问被拒绝。在系统设置中允许运动与健身访问，然后重新打开此屏幕。",
+    "openSettings": "打开设置",
+    "unsupportedTitle": "实时指南针不可用",
+    "unsupportedBody": "该设备不提供可用的磁力计（或访问失败）。实时罗盘已关闭。将下面的方位与物理指南针或地图结合使用。",
+    "checkingCompass": "启动指南针...",
+    "checkingCompassWithPrompt": "正在启动指南针...如果 iOS 上出现提示，请允许运动和健身访问。",
+    "north": "氮",
+    "east": "乙",
+    "south": "S",
+    "west": "瓦",
+    "a11yDialLive": "朝拜指南针。旋转 {{deg}} 度以面向朝拜方向。",
+    "a11yDialChecking": "朝拜指南针。正在等待传感器数据。",
+    "a11yDialUnavailable": "朝拜指南针不可用。",
+    "a11yNeedleDeg": "旋转 {{deg}} 度以面向朝拜方向。",
+    "a11ySignal_good": "指南针信号：良好。",
+    "a11ySignal_weak": "指南针信号：弱。请尝试移动到开阔区域。",
+    "a11ySignal_very_weak": "指南针信号：很弱。精度可能受限。",
+    "crossCheckTitle": "用你的指南针应用核对",
+    "crossCheckBody": "设备自带的指南针针对其硬件做过校准。若要获得最准确的读数，请打开它并转动，直到显示 {{degrees}}。",
+    "openSystemCompass": "打开指南针应用",
+    "fromNorthLabel": "距北"
+  },
+  "prayer": {
+    "Fajr": "晨礼",
+    "Sunrise": "日出",
+    "Dhuhr": "晌礼",
+    "Asr": "晡礼",
+    "Maghrib": "昏礼",
+    "Isha": "宵礼",
+    "Fajr_abbr": "晨礼",
+    "Sunrise_abbr": "日出",
+    "Dhuhr_abbr": "晌礼",
+    "Asr_abbr": "晡礼",
+    "Maghrib_abbr": "昏礼",
+    "Isha_abbr": "宵礼",
+    "Midnight": "伊斯兰午夜",
+    "Midnight_abbr": "午夜",
+    "Lastthird": "最后三分之一",
+    "Lastthird_abbr": "夜祷",
+    "Firstthird": "前三分之一",
+    "Firstthird_abbr": "1/3",
+    "firstTimeUntil": "首选时段至 {{time}}",
+    "secondTimeUntil": "必要时段至 {{time}}",
+    "secondTimeFrom": "第二时段自 {{time}}",
+    "approx": "约",
+    "Subh": "晨礼",
+    "Subh_abbr": "晨礼"
+  },
+  "placeSearch": {
+    "label": "搜索城市或地址",
+    "placeholder": "例如开罗、伦敦、邮政编码……",
+    "hint": "OpenStreetMap（Nominatim）的结果。尊重地使用 - 不适用于批量地理编码。",
+    "appliedTitle": "申请地点",
+    "searchFailed": "搜索失败",
+    "applied": "应用：{{label}}",
+    "noResults": "没有结果",
+    "searching": "正在寻找..."
+  },
+  "alertCopy": {
+    "atPrayer": "祈祷时间",
+    "prePrayer": "{{count}} 分钟后开始",
+    "adhanStopAction": "停止宣礼",
+    "adhanDisableAction": "禁用宣礼",
+    "snoozeAction": "稍后提醒",
+    "snoozeChoice": "延后 {{minutes}} 分钟",
+    "snoozeMinutes": "分钟",
+    "daruriEndsIn": "首选时段 {{time}} 结束——还有 {{count}} 分钟",
+    "daruriEnded": "首选时段已于 {{until}} 结束",
+    "daruriExpired": "时间已过——请作为盖达补礼",
+    "atPrayerBody": "{{prayer}}时间到了",
+    "nextEvent": "下一个：{{prayer}} {{time}}"
+  },
+  "locations": {
+    "title": "已保存的地点",
+    "empty": "添加常用地点，方便在它们之间快速切换。",
+    "add": "添加新位置",
+    "useAuto": "我的位置",
+    "addPrompt": "为这个地点起个名字",
+    "addPlaceholder": "家、公司、旅途……",
+    "cancel": "取消",
+    "save": "保存",
+    "use": "使用",
+    "delete": "删除",
+    "limitReached": "已达到 {{max}} 个已保存地点的上限。",
+    "previousLocation": "上一个位置",
+    "invalidCoordsTitle": "坐标无效",
+    "invalidCoordsBody": "纬度须在 -90 到 90 之间，经度在 -180 到 180 之间。",
+    "pickAPlace": "请先搜索城市或输入坐标。",
+    "duplicateTitle": "已保存",
+    "duplicateBody": "该坐标的地点已保存为“{{name}}”。"
+  },
+  "tasbih": {
+    "subhanallah": "SubhanAllah",
+    "alhamdulillah": "Alhamdulillah",
+    "allahuakbar": "Allahu Akbar",
+    "lailaha": "La ilaha illa Allah",
+    "astaghfirullah": "Astaghfirullah",
+    "open": "打开计数",
+    "increment": "轻点计数",
+    "reset": "重置",
+    "salahonprophet": "对先知 ﷺ 的祝福",
+    "prev": "上一个",
+    "next": "下一个",
+    "meaning": {
+      "subhanallah": "赞主清净",
+      "alhamdulillah": "一切赞颂全归真主",
+      "lailaha": "万物非主，唯有真主",
+      "allahuakbar": "真主至大",
+      "astaghfirullah": "我向真主求恕",
+      "salahonprophet": "主啊，求你赐福我们的先知穆罕默德"
+    },
+    "setPosition": "第 {{index}} 组 / 共 {{total}} 组",
+    "ofTarget": "/ {{target}}",
+    "tapAnywhere": "点按任意位置",
+    "upNext": "接下来",
+    "resetSet": "重置本组",
+    "skip": "跳过"
+  },
+  "duas": {
+    "cat": {
+      "morning": "晨",
+      "evening": "晚",
+      "afterPrayer": "拜后",
+      "food": "饮食",
+      "distress": "困境",
+      "sleep": "睡眠",
+      "lavatory": "如厕",
+      "garment": "穿衣",
+      "travel": "旅行",
+      "mosque": "清真寺",
+      "gratitude": "感恩",
+      "forgiveness": "求恕",
+      "weather": "天气",
+      "family": "家庭",
+      "sickness": "疾病",
+      "funeral": "葬礼",
+      "eid": "开斋节",
+      "beforeQuran": "诵读前",
+      "knowledge": "知识",
+      "protection": "保护",
+      "guidance": "引导"
+    },
+    "allCategories": "全部祈祷文",
+    "repeat": "诵读 ×{{count}}",
+    "morning_01_ayat_kursi": {
+      "title": "宝座经文（Ayat al-Kursi）"
+    },
+    "morning_02_three_quls": {
+      "title": "《忠诚》《破晓》《世人》三章"
+    },
+    "morning_03_fitra_islam": {
+      "title": "依伊斯兰天然之本性"
+    },
+    "morning_04_radhitu": {
+      "title": "满意以安拉为主"
+    },
+    "morning_05_ilm_nafi": {
+      "title": "有益的知识、佳美的给养、被接受的功修"
+    },
+    "morning_06_bika_asbahna": {
+      "title": "凭你我们进入早晨"
+    },
+    "morning_07_la_ilaha_illa_allah": {
+      "title": "万物非主，唯有安拉"
+    },
+    "morning_08_ya_hayyu_ya_qayyum": {
+      "title": "永生主啊，自立主啊"
+    },
+    "morning_09_sayyid_al_istighfar": {
+      "title": "求恕之主（Sayyid al-Istighfar）"
+    },
+    "morning_10_fatir_as_samawat": {
+      "title": "创造天地的主"
+    },
+    "morning_11_asbahna_walmulku_lillah": {
+      "title": "我们与一切主权为安拉而入清晨"
+    },
+    "morning_12_afw_wa_afiya": {
+      "title": "宽恕与平安"
+    },
+    "morning_13_bismillah_la_yadurr": {
+      "title": "奉安拉之名 — 凭其尊名，万物无害"
+    },
+    "morning_14_subhan_allah_adada_khalqih": {
+      "title": "赞颂安拉，与其造物之数相同"
+    },
+    "morning_15_afini_fi_badani": {
+      "title": "使我身体、听觉、视觉皆得平安"
+    },
+    "morning_16_hasbiy_allah": {
+      "title": "安拉足以使我满足"
+    },
+    "morning_17_ushhiduka": {
+      "title": "我于此晨以你为证"
+    },
+    "morning_18_la_ilaha_yuhyi_yumit": {
+      "title": "万物非主，唯有安拉，他主宰生与死"
+    },
+    "morning_19_subhan_allah_wa_bihamdihi": {
+      "title": "赞颂安拉清净，赞美归于他"
+    },
+    "morning_20_astaghfirullah": {
+      "title": "求安拉宽恕"
+    },
+    "morning_21_subhan_alhamdu_takbir": {
+      "title": "赞颂、感赞、诵大、唯一颂"
+    },
+    "evening_01_ayat_kursi": {
+      "title": "宝座经文（Ayat al-Kursi）"
+    },
+    "evening_02_three_quls": {
+      "title": "《忠诚》《破晓》《世人》三章"
+    },
+    "evening_03_fitra_islam": {
+      "title": "依伊斯兰天然之本性（夜）"
+    },
+    "evening_04_radhitu": {
+      "title": "满意以安拉为主"
+    },
+    "evening_05_bika_amsayna": {
+      "title": "凭你我们进入黄昏"
+    },
+    "evening_06_la_ilaha_illa_allah": {
+      "title": "万物非主，唯有安拉"
+    },
+    "evening_07_ya_hayyu_ya_qayyum": {
+      "title": "永生主啊，自立主啊"
+    },
+    "evening_08_sayyid_al_istighfar": {
+      "title": "求恕之主（Sayyid al-Istighfar）"
+    },
+    "evening_09_fatir_as_samawat": {
+      "title": "创造天地的主"
+    },
+    "evening_10_amsayna_walmulku_lillah": {
+      "title": "我们与一切主权为安拉而入夜"
+    },
+    "evening_11_afw_wa_afiya": {
+      "title": "宽恕与平安"
+    },
+    "evening_12_bismillah_la_yadurr": {
+      "title": "奉安拉之名 — 凭其尊名，万物无害"
+    },
+    "evening_13_taamat_protection": {
+      "title": "以安拉至全的尊词为庇护"
+    },
+    "evening_14_afini_fi_badani": {
+      "title": "使我身体、听觉、视觉皆得平安"
+    },
+    "evening_15_hasbiy_allah": {
+      "title": "安拉足以使我满足"
+    },
+    "evening_16_ushhiduka": {
+      "title": "我于此夜以你为证"
+    },
+    "evening_17_la_ilaha_yuhyi_yumit": {
+      "title": "万物非主，唯有安拉，他主宰生与死"
+    },
+    "evening_18_subhan_allah_wa_bihamdihi": {
+      "title": "赞颂安拉清净，赞美归于他"
+    },
+    "evening_19_astaghfirullah": {
+      "title": "求安拉宽恕"
+    },
+    "evening_20_subhan_alhamdu_takbir": {
+      "title": "赞颂、感赞、诵大、唯一颂"
+    },
+    "afterPrayer_astaghfirullah": {
+      "title": "求恕"
+    },
+    "afterPrayer_allahumma_antas_salam": {
+      "title": "主啊，你是和平之源"
+    },
+    "afterPrayer_subhanallah_33": {
+      "title": "赞颂 (33 × 3)"
+    },
+    "afterPrayer_three_quls": {
+      "title": "每次主命拜后诵《忠诚》《破晓》《世人》"
+    },
+    "afterPrayer_ayat_kursi": {
+      "title": "每次主命拜后诵宝座经文"
+    },
+    "food_before": {
+      "title": "进食前 — 奉真主名"
+    },
+    "food_after_min_ghayri_hawlin": {
+      "title": "餐后 — 非凭我的力量与能力"
+    },
+    "food_after_atamana_wa_saqana": {
+      "title": "餐后 — 主赐我饮食并使我成为穆斯林"
+    },
+    "food_after_atama_wa_saqa_makhraj": {
+      "title": "餐后 — 主赐饮食，并使之有出处"
+    },
+    "food_after_atamana_wa_kafana": {
+      "title": "餐后 — 主赐饮食、足用与庇护"
+    },
+    "food_after_kathiran_tayyiban": {
+      "title": "餐后 — 多而美好、蒙福的赞美"
+    },
+    "distress_lahawla": {
+      "title": "除安拉外，无任何力量与能力"
+    },
+    "distress_innallaha_maana": {
+      "title": "心生畏惧时"
+    },
+    "distress_yaa_hayyu": {
+      "title": "呼唤永生者"
+    },
+    "distress_ayatkursi_intro": {
+      "title": "宝座经文（夜眠庇护）"
+    },
+    "distress_dua_al_faraj": {
+      "title": "解忧之祷 (Dua al-Faraj)"
+    },
+    "distress_dua_al_karb": {
+      "title": "困顿之际的祷词"
+    },
+    "sleep_three_quls": {
+      "title": "三章护身 — 《忠诚》《破晓》《世人》"
+    },
+    "sleep_ayat_kursi": {
+      "title": "睡前诵宝座经文"
+    },
+    "sleep_aslamtu_wajhi": {
+      "title": "我已将我的颜面交付于你"
+    },
+    "sleep_bismika_ahya": {
+      "title": "主啊，奉你的尊名我生与死"
+    },
+    "sleep_alhamdu_ahyana": {
+      "title": "醒来时"
+    },
+    "sleep_khalaqta_nafsi": {
+      "title": "你造化了我的灵魂 — 庇护或宽恕它"
+    },
+    "sleep_rabba_samawat": {
+      "title": "诸天、大地与至大宝座的主"
+    },
+    "sleep_dust_off_bed": {
+      "title": "掸床后右侧而卧"
+    },
+    "sleep_takbir_tasbih_tahmid": {
+      "title": "诵大34、赞颂33、感赞33（胜于仆役）"
+    },
+    "sleep_taamat_protection": {
+      "title": "安拉至全的尊词，免一切伤害"
+    },
+    "sleep_taamat_for_children": {
+      "title": "孩童护佑 — 防一切恶魔与有害之物"
+    },
+    "sleep_taamat_long": {
+      "title": "惊醒或噩梦后"
+    },
+    "sleep_wajhik_alkarim": {
+      "title": "凭你尊贵的颜面与至全的尊词"
+    },
+    "sleep_anta_rabbi": {
+      "title": "你是我的主 — 灾难不会临到我"
+    },
+    "travel_subhanalladhi": {
+      "title": "登上交通工具时"
+    },
+    "travel_journey": {
+      "title": "出行祷词 — 完整文本"
+    },
+    "travel_returning": {
+      "title": "归家时"
+    },
+    "mosque_entering": {
+      "title": "进入清真寺时"
+    },
+    "mosque_leaving": {
+      "title": "离开清真寺时"
+    },
+    "mosque_adhan_response": {
+      "title": "听到宣礼之后"
+    },
+    "gratitude_blessing": {
+      "title": "蒙赐恩惠时"
+    },
+    "gratitude_kindness": {
+      "title": "他人施惠于你时"
+    },
+    "forgiveness_sayyidul": {
+      "title": "求恕之主 (Sayyid al-Istighfar)"
+    },
+    "forgiveness_rabbi_ighfir": {
+      "title": "向安拉忏悔"
+    },
+    "distress_grief": {
+      "title": "为消除忧愁与不安"
+    },
+    "distress_difficulty": {
+      "title": "困境之时"
+    },
+    "distress_rain": {
+      "title": "降雨时"
+    },
+    "weather_during_rain": {
+      "title": "雨初降时"
+    },
+    "weather_after_rain": {
+      "title": "雨过之后"
+    },
+    "weather_thunder": {
+      "title": "听见雷声时"
+    },
+    "weather_strong_wind": {
+      "title": "强风刮起时"
+    },
+    "family_for_offspring": {
+      "title": "为清廉的子嗣祈祷"
+    },
+    "family_for_parents": {
+      "title": "为父母祈祷"
+    },
+    "family_blessing_marriage": {
+      "title": "婚礼祝贺时"
+    },
+    "family_for_child": {
+      "title": "为孩子求庇护"
+    },
+    "sickness_visit": {
+      "title": "探望病人"
+    },
+    "sickness_prayer_for_sick": {
+      "title": "为病人祷告"
+    },
+    "sickness_when_in_pain": {
+      "title": "身体感到疼痛时"
+    },
+    "funeral_inna_lillah": {
+      "title": "闻讣告时"
+    },
+    "funeral_consolation": {
+      "title": "安慰丧家"
+    },
+    "funeral_graveyard_visit": {
+      "title": "进入墓园时"
+    },
+    "eid_takbir": {
+      "title": "开斋节诵大"
+    },
+    "eid_taqabbal": {
+      "title": "节日问候"
+    },
+    "beforeQuran_taawwudh": {
+      "title": "诵读前求护"
+    },
+    "beforeQuran_basmalah": {
+      "title": "每事开端的奉名词"
+    },
+    "knowledge_seeking": {
+      "title": "求增益学识"
+    },
+    "knowledge_understanding": {
+      "title": "求心领神会"
+    },
+    "knowledge_majlis_kaffarah": {
+      "title": "会议收束（kaffarat al-majlis）"
+    },
+    "protection_morning_evening": {
+      "title": "求恕之主简短版（×3 晨夜）"
+    },
+    "protection_evil_eye": {
+      "title": "防恶眼之祷"
+    },
+    "protection_entering_home": {
+      "title": "进家时"
+    },
+    "protection_leaving_home": {
+      "title": "出家时"
+    },
+    "protection_market": {
+      "title": "进入市场时"
+    },
+    "guidance_istikharah": {
+      "title": "求决之拜（Salat al-Istikharah）— 完整文本"
+    },
+    "guidance_steadfastness": {
+      "title": "为信仰之坚定"
+    },
+    "guidance_rabbana_atina": {
+      "title": "为今世与后世之美善"
+    },
+    "guidance_against_being_misled": {
+      "title": "为免于迷失之祷"
+    },
+    "pronunciation": "读音",
+    "tapToCount": "点击计数",
+    "shareDua": "分享{{title}}",
+    "lavatory_01_entering": {
+      "title": "进入厕所时"
+    },
+    "lavatory_02_leaving": {
+      "title": "离开厕所时"
+    },
+    "garment_01_dressing": {
+      "title": "穿衣服时"
+    },
+    "garment_02_new": {
+      "title": "新衣服"
+    },
+    "garment_03_for_someone_new": {
+      "title": "对穿新衣者说"
+    },
+    "garment_04_undressing": {
+      "title": "脱衣服时"
+    },
+    "section": {
+      "day": "一日之间",
+      "worship": "功修",
+      "out": "出门在外",
+      "hardship": "艰难之时",
+      "asking": "祈求"
+    },
+    "countHint": "{{count}} 条杜阿"
+  },
+  "quran": {
+    "meccan": "麦加",
+    "medinan": "麦地那",
+    "ayahCount": "{{count}} 节",
+    "notFound": "未找到此章。",
+    "comingSoon": "本章全文将在后续数据更新中提供。",
+    "pageLabel": "第 {{page}} 页",
+    "switchToTranslation": "切换到经注视图",
+    "switchToMushaf": "切换到经文视图",
+    "viewToggleTranslation": "译文",
+    "viewToggleMushaf": "穆斯哈夫",
+    "enterFullscreen": "全屏",
+    "exitFullscreen": "退出全屏",
+    "mushafDownloadTitle": "下载穆斯哈夫",
+    "mushafDownloadBody": "麦地那经文约 {{size}} MB，不随应用打包。下载一次后页面将缓存在设备上。",
+    "mushafDownloadReadCta": "下载并开始阅读（约 {{size}} MB）",
+    "mushafDownloadReadHint": "页面到达即显示，其余在后台下载。",
+    "mushafDownloadStrip": "正在下载古兰经 · {{pct}}%",
+    "juzLabel": "第 {{juz}} 卷",
+    "nightMode": "夜间模式",
+    "jumpToPage": "跳转到页面",
+    "pageShort": "第 {{page}} 页",
+    "go": "前往",
+    "mushafDownloadRetryBody": "{{count}} 页未能下载。重试以获取缺失的页面——已下载的内容将保留。",
+    "mushafDownloadRetryCta": "重试缺失页面",
+    "star": "为此节加星标",
+    "unstar": "移除星标",
+    "bookmark": "书签",
+    "bookmarkColor": "书签颜色 {{color}}",
+    "playFromHere": "从这里播放",
+    "repeatAyah": "重复此节",
+    "buffering": "缓冲中…",
+    "previousAyah": "上一节",
+    "nextAyah": "下一节",
+    "pause": "暂停",
+    "play": "播放",
+    "stopPlayback": "停止播放",
+    "playbackSettings": "诵读",
+    "reciter": "诵读者",
+    "downloadSurahAudio": "下载 {{surah}} 的音频",
+    "surahAudioDownloaded": "音频已下载，可离线使用",
+    "downloadingAudio": "下载中… {{done}}/{{total}}",
+    "downloadSurahAudioShort": "下载此章以便离线收听",
+    "speed": "速度",
+    "memorization": "背诵",
+    "repeatEachAyah": "重复每节",
+    "repeatRange": "重复选定范围",
+    "pauseBetween": "重复之间的停顿",
+    "none": "无",
+    "hideForReview": "复习时隐藏",
+    "hideArabic": "阿拉伯语",
+    "hideTranslation": "译文",
+    "playRangeTitle": "播放 {{surah}} 的选定范围",
+    "fromAyah": "起始节",
+    "toAyah": "结束节",
+    "playRange": "播放范围",
+    "ayahA11y": "第 {{ayah}} 节 — 点按查看操作",
+    "tapToReveal": "点按显示",
+    "hideModeActive": "背诵模式：已隐藏{{what}} — 点按经文以显示",
+    "loading": "加载中…",
+    "continueReading": "继续阅读",
+    "continueKhatmah": "继续完读",
+    "readingPin": "从这里继续阅读",
+    "readingPinned": "继续阅读从这里开始",
+    "readingMarkerLabel": "阅读",
+    "khatmahMarkerLabel": "完读",
+    "khatmah": "古兰经完读",
+    "khatmahDaysLeft": "剩余 {{count}} 天",
+    "khatmahDaysLeft_one": "剩余 {{count}} 天",
+    "khatmahProgress": "{{read}} / {{total}} 页 · 今日：{{today}}",
+    "khatmahBehind": "需补读 {{count}}",
+    "startKhatmah": "开始完读",
+    "khatmahDays": "{{count}} 天",
+    "verseOfDay": "每日一节",
+    "searchPlaceholder": "搜索章、节、译文…",
+    "tabSurah": "章",
+    "tabJuz": "卷",
+    "tabBookmarks": "书签",
+    "searchResults": "找到 {{count}} 节",
+    "noBookmarks": "暂无书签 — 阅读时点按任意经文即可添加书签或星标。",
+    "starred": "已加星标",
+    "shareAsImage": "以图片分享",
+    "chooseReciter": "选择诵读者",
+    "searchReciters": "搜索诵读者…",
+    "wordHighlightBadge": "逐词高亮",
+    "changeReciter": "更换",
+    "deleteBookmark": "删除书签",
+    "removeStar": "移除星标",
+    "nightShort": "夜间",
+    "sepiaShort": "褐色",
+    "lightShort": "明亮",
+    "switchToNight": "切换到夜间页面",
+    "switchToSepia": "切换到褐色页面",
+    "riwayahHafs": "哈夫斯",
+    "riwayahWarsh": "瓦尔什",
+    "switchRiwayah": "切换到{{name}}诵读法",
+    "riwayahReflowTitle": "页码一致，行数可能不同",
+    "riwayahReflowBody": "本《古兰经》每一页的起止与印刷版完全一致，但行的排布由您的设备完成，而非取自印刷版，因此断行位置不一定相同。",
+    "riwayahNeedsHttps": "链接必须以 https:// 开头",
+    "riwayahServerSaidNo": "服务器返回 {{status}}。",
+    "riwayahTooLarge": "该文件远大于一份抄本数据。请检查链接。",
+    "riwayahUnreachable": "无法访问该链接。请检查地址和网络连接。",
+    "riwayahGotAPage": "该链接返回的是网页，不是数据文件。请使用 JSON 下载链接。",
+    "riwayahNotJson": "该文件不是数据文件。",
+    "riwayahNotAQuran": "该文件不是完整的《古兰经》，因此未安装。",
+    "riwayahCouldNotSave": "无法保存到本设备。",
+    "switchToLight": "切换到明亮页面",
+    "ayahOfDayTitle": "每日经文",
+    "ayahOfDayChannelName": "每日经文",
+    "tafsir": "经注",
+    "showTafsir": "显示经注",
+    "tafsirUnavailable": "经注不可用 — 请联网一次以下载。",
+    "khatmahPin": "设为我的完读位置",
+    "khatmahPinned": "完读位置 — 点按以移除",
+    "khatmahUnpin": "移除完读位置",
+    "khatmahContinue": "继续",
+    "khatmahReset": "重置",
+    "khatmahResetTitle": "重置完读计划",
+    "khatmahResetToday": "重置今日阅读",
+    "khatmahResetTodayHelp": "仅撤销今天记录的页数。",
+    "khatmahResetAll": "重新开始完读",
+    "khatmahResetAllHelp": "回到计划的起点并重新排期。",
+    "khatmahDelete": "删除完读计划",
+    "khatmahDeleteHelp": "完全移除该计划。",
+    "khatmahReminderChannelName": "完读提醒",
+    "khatmahReminderTitle": "完读",
+    "khatmahReminderBody": "今日份额：{{pages}} 页 — 从第 {{page}} 页继续。",
+    "audioButton": "音频",
+    "khatmahCustom": "自定义…",
+    "khatmahLengthTitle": "完整诵读时长（天）",
+    "khatmahSetUpTitle": "开始一次完整诵读",
+    "khatmahFromPageTitle": "已经在读了？从此页开始",
+    "khatmahFromPageHint": "从头开始",
+    "khatmahStartCta": "开始",
+    "showMore": "显示更多",
+    "showLess": "显示更少",
+    "tafsirEditionHelp": "显示在每节经文下方的经注。也可在《古兰经》页面的任意经文处更改。",
+    "nextPage": "下一页",
+    "prevPage": "上一页",
+    "companionTitle": "每节经文下方",
+    "companionHelp": "适用于显示经文的所有位置——阅读器、每日经文和每日经文通知。也可在古兰经页面更改。",
+    "companionActive": "当前使用",
+    "mushafReplaceOldBody": "设备上仍保留着旧版本的经文副本（{{size}} MB）。它会先被删除——你保存的任何内容都不受影响。",
+    "shareAsText": "分享文本",
+    "shareChoiceA11y": "分享 — 选择文本或图片卡片",
+    "recitation": "诵读",
+    "downloadSurahAudioSized": "下载本章 · {{size}}",
+    "tapToPick": "选择",
+    "tabMarks": "标记",
+    "searchSurahOrPage": "搜索章或页码",
+    "reading": "正在阅读",
+    "pageScrubber": "跳转页面",
+    "goCta": "前往",
+    "downloadChannelName": "古兰经下载",
+    "downloadChannelDesc": "古兰经下载进度。",
+    "downloadingFonts": "正在下载古兰经文本",
+    "downloadingReciter": "正在下载 {{name}}",
+    "downloadProgressAyahs": "{{total}} 节中的 {{done}} 节",
+    "audioDownloadDoneTitle": "{{name}} 已就绪",
+    "audioDownloadDoneBody": "这位诵读者的全本《古兰经》已在本机，现在无需联网即可播放。",
+    "audioDownloadIncompleteTitle": "诵读未下载完成",
+    "audioDownloadIncompleteBody": "还差 {{count}} 节。重新开始即可从中断处继续。",
+    "listenTitle": "诵读",
+    "tilawahDoorSub": "聆听《古兰经》",
+    "tilawahBlurb": "《古兰经》的诵读——熄屏后继续播放，下载后无需联网也能听。",
+    "tilawahContinue": "从上次阅读处继续",
+    "tilawahBegin": "开始诵读",
+    "tilawahAyahOf": "第 {{done}} 节，共 {{total}} 节",
+    "tilawahShowPage": "显示页面",
+    "backToTop": "回到顶部",
+    "tilawahKeepAwake": "保持屏幕常亮",
+    "tilawahSurahSeek": "在本章内拖动",
+    "tilawahShuffle": "随机播放各章",
+    "tilawahPrevSurah": "上一章",
+    "tilawahNextSurah": "下一章",
+    "tilawahAyahWord": "节",
+    "openInReader": "在阅读器中打开",
+    "listenSurahMeta": "{{count}} 节",
+    "listenNowPlaying": "正在播放",
+    "listenContinuous": "连续播放",
+    "listenIdle": "当前没有播放",
+    "listenReciter": "诵读者",
+    "listenSeek": "在本节内拖动",
+    "listenPrevious": "上一节",
+    "listenNext": "下一节",
+    "listenSpeed": "速度",
+    "listenSleep": "睡眠定时",
+    "listenSleepOff": "关闭",
+    "listenSleepSurah": "本章结束时",
+    "listenSleepMinutes": "{{count}} 分钟",
+    "listenSleepArmed": "约 {{count}} 分钟后暂停",
+    "listenPickSurah": "从此开始",
+    "listenDownloadTitle": "将 {{name}} 保留在本机",
+    "listenDownloadBody": "这位诵读者的全本《古兰经》，约 {{size}}。阅读器播放的是同样的文件，因此那里也能用。",
+    "listenDownloadComplete": "已完成 · {{size}}",
+    "listenDownloadPartial": "{{total}} 节中的 {{done}} 节已在本机 · {{size}}",
+    "listenDownloadStart": "下载",
+    "listenDownloadResume": "继续下载",
+    "listenDownloadBusy": "另一项下载正在进行。一次只下载一项，以免相互拖慢。",
+    "downloadProgress": "{{total}} 页中的 {{done}} 页",
+    "downloadDoneTitle": "古兰经已就绪",
+    "downloadDoneBody": "所有页面都已在本机，现在无需联网即可阅读。",
+    "downloadIncompleteTitle": "下载未完成",
+    "downloadIncompleteBody": "仍缺 {{count}} 页。打开古兰经即可从中断处继续。",
+    "finishDay": "完成第 {{day}} 天的诵读（{{when}}）",
+    "finishDayShort": "完成第 {{day}} 天（{{when}}）",
+    "khatmahPageProgress": "还剩 {{pages}} 页 · 第 {{day}} 天，共 {{days}} 天",
+    "khatmahDayDone": "✓ 今日诵读已完成",
+    "khatmahPagesLeftToday": "今天还剩 {{count}} 页",
+    "khatmahPagesLeftToday_one": "今天还剩 {{count}} 页",
+    "khatmahExtraPages": "+{{count}} 页额外",
+    "khatmahExtraPages_one": "+{{count}} 页额外",
+    "khatmahMarkDone": "将第 {{day}} 天的诵读标记为完成",
+    "khatmahMarkNext": "✓ 也完成第 {{day}} 天（{{when}}）",
+    "khatmahMarkToday": "✓ 今日诵读已完成",
+    "khatmahPrevDay": "‹ 前一天",
+    "riwayahQalun": "嘉隆",
+    "riwayahShubah": "舒尔拜",
+    "riwayahPickerTitle": "诵读传统",
+    "riwayahPickerOpen": "诵读传统：{{name}}。点按可更换。",
+    "riwayahNotOnDevice": "{{name}} — 尚未下载到本设备",
+    "riwayahAddIt": "点按以添加",
+    "riwayahDefault": "(默认)",
+    "dueToday": "今天",
+    "dueTomorrow": "明天",
+    "scrubHint": "向上滑动以精细调节",
+    "scrubHalf": "半速",
+    "scrubQuarter": "四分之一速",
+    "scrubFine": "精细调节",
+    "translationUnavailable": "此节暂无译文。",
+    "oftenRead": "常读章节",
+    "listenDeleteAudio": "从本设备删除{{name}}",
+    "listenDownloadReciter": "下载{{name}}，约 {{size}}",
+    "listenDownloadRunning": "正在下载 · {{total}} 中的 {{done}}",
+    "shareTafsir": "分享此经注（{{edition}}）",
+    "surahAudioPartial": "{{total}} 节中已有 {{have}} 节 · 点按下载其余部分",
+    "deleteSurahAudio": "删除此章的音频",
+    "deleteSurahAudioFor": "删除已下载的 {{surah}} 音频",
+    "audioGap": "{{surah}} {{ayah}} 尚未下载——请联网，或下载此章以便离线收听。",
+    "khatmahMore": "更多完读计划选项",
+    "khatmahPrevDayHelp": "撤销今天的标记，回到前一天的进度。",
+    "lastReadRow": "上次读到 · {{surah}}，第 {{page}} 页",
+    "autoShort": "自动",
+    "switchToAuto": "跟随应用主题",
+    "downloadingSurah": "正在下载 {{surah}} · {{name}}",
+    "surahDownloadDoneTitle": "{{surah}} 已就绪",
+    "surahDownloadDoneBody": "{{name}} 诵读的 {{surah}} 已保存在本设备，现在无需联网即可播放。",
+    "reciterDownloadStrip": "正在下载 {{name}} · {{pct}}%",
+    "surahDownloadStrip": "正在下载 {{surah}} · {{pct}}%"
+  },
+  "mosques": {
+    "searching": "正在查找附近的清真寺…",
+    "noneFound": "附近未找到清真寺，可扩大搜索范围。",
+    "unnamedMosque": "清真寺",
+    "needLocation": "请先设置位置，以便我们在附近搜索。",
+    "error": "无法连接清真寺数据库，请重试。",
+    "title": "查找附近的清真寺",
+    "bodyWithLocation": "我们将在您的位置附近打开地图应用，搜索 \"mosque\"。如果没有可用的地图应用，将在浏览器中打开 Google 地图。",
+    "bodyNoLocation": "请先设置位置（设置 → 位置）。然后我们将围绕该位置打开地图应用搜索 \"mosque\"。如果没有，可在浏览器中打开 Google 地图。",
+    "openInMapsApp": "打开地图并搜索 \"mosque\""
+  },
+  "journal": {
+    "todayLabel": "今天",
+    "streakDays": "连续天数",
+    "onTimeRate": "准时",
+    "totalLogged": "共记录",
+    "status": {
+      "on-time": "准时",
+      "late": "迟到",
+      "missed": "错过",
+      "qadha": "补做 (qadha)"
+    },
+    "statusShort": {
+      "on-time": "准时",
+      "late": "迟到",
+      "missed": "错过",
+      "qadha": "补做"
+    },
+    "encourageEmpty": "标记今天的第一次礼拜以开始你的记录。",
+    "encourageActive": "每一次记录的礼拜都是向前的一步。",
+    "encourageStreak": "马沙安拉，连续 {{count}} 天准时。继续保持。",
+    "notificationToggleTitle": "从通知记录",
+    "notificationToggleOn": "在礼拜时间通知中点按\"记录礼拜\"以直接跳到此处。",
+    "notificationToggleOff": "在每个礼拜时间通知中加入\"记录礼拜\"操作。",
+    "notificationToggleA11y": "在礼拜通知中启用记录操作",
+    "notePlaceholder": "私密备注（仅在本设备）",
+    "saveNote": "保存备注",
+    "logActionTitle": "记录礼拜",
+    "logSunnahActionTitle": "记录含圣行",
+    "loadFailedTitle": "无法加载记录",
+    "loadFailedBody": "你的数据在设备上是安全的，但此刻无法读取。请重新打开记录。",
+    "saveFailedTitle": "无法保存",
+    "saveFailedBody": "请重试。",
+    "noteLabel": "私人笔记（私密、已加密）",
+    "notYet": "还未到——时间尚未到来",
+    "quickLogMark": "将{{prayer}}标记为已礼",
+    "quickLogLogged": "{{prayer}}已记录：{{status}}。点按可撤销",
+    "quickLogNotYet": "{{prayer}}时间尚未到",
+    "passedTitle": "记录{{prayer}} · {{day}}",
+    "passedBody": "时间已过。这次礼拜是怎么完成的？",
+    "passedFirstBody": "首选时段已过，必要时段仍在。这次礼拜是在首选时段内，还是之后？"
+  },
+  "events": {
+    "islamicNewYear": "伊斯兰新年",
+    "ashura": "阿舒拉日",
+    "mawlid": "圣纪节",
+    "isra": "夜行登霄",
+    "midShaban": "舍尔邦月之半",
+    "ramadanBegins": "斋月开始",
+    "laylatAlQadr": "盖德尔夜（习用之夜）",
+    "eidAlFitr": "开斋节",
+    "arafah": "阿拉法日",
+    "eidAlAdha": "宰牲节",
+    "whiteDays": "白日（每月13–15）",
+    "sixOfShawwal": "闪瓦勒月六日斋"
+  },
+  "ramadan": {
+    "title": "斋月",
+    "suhoor": "封斋饭",
+    "iftar": "开斋",
+    "suhoorIn": "封斋将于 {{time}} 后结束",
+    "iftarIn": "{{time}} 后开斋"
+  },
+  "onboarding": {
+    "skip": "暂时跳过",
+    "next": "下一步",
+    "done": "完成",
+    "stepLabel": "第 {{current}} 步，共 {{total}} 步",
+    "welcome": {
+      "title": "欢迎",
+      "body": "一款安静而私密的礼拜时间应用。没有分析统计，没有追踪器，只有五番主命拜的平和提醒。",
+      "salam": "愿平安、真主的慈悯与祝福与你同在。"
+    },
+    "location": {
+      "title": "你的位置",
+      "body": "我们用你的大致位置来推算准确的礼拜时间。坐标以加密方式留在这台设备上，不会离开它。",
+      "cta": "使用我的位置"
+    },
+    "notifications": {
+      "title": "礼拜提醒",
+      "body": "我们可以在每番礼拜的时间安静地提醒你。你可以选择提示音、设置提前提醒，也可以随时关闭。",
+      "cta": "开启提醒"
+    },
+    "exactAlarms": {
+      "title": "准时提醒",
+      "body": "在较新的 Android 上，礼拜提醒需要一项额外权限，才能准时送达，而不是晚上几分钟。",
+      "cta": "允许准时提醒"
+    },
+    "salamA11y": "愿真主的平安、慈悲与吉庆与你们同在"
+  },
+  "backup": {
+    "exportSection": "导出",
+    "exportHelp": "将你的设置、已保存的地点、礼拜记录和封斋记录保存为一个 JSON 文件。日后打开它即可恢复。",
+    "exportCta": "导出备份",
+    "shareTitle": "Ibadat 365 备份",
+    "exportFailedTitle": "无法导出",
+    "restoreSection": "恢复",
+    "restoreHelp": "在下方粘贴备份 JSON，然后点按「恢复」预览内容。应用会在应用更改前先与你确认。",
+    "restorePastePlaceholder": "在此粘贴备份 JSON……",
+    "restoreCta": "预览恢复内容",
+    "restorePreviewTitle": "已找到备份",
+    "restorePreviewBody": "{{settings}} 项设置、{{presets}} 个已保存地点、{{journal}} 条记录、{{fasting}} 天封斋。将在下一步应用。",
+    "restoreFailedTitle": "无法解析备份",
+    "notAnEnvelope": "该文件不像是 Ibadat 365 的备份。",
+    "privacyNote": "在你主动分享之前，备份只留在你的设备上。坐标和记录条目将在日后的更新中支持密码加密，在此之前请把备份文件保管好。"
+  },
+  "fasting": {
+    "todayLabel": "今天",
+    "ramadanDayLabel": "斋月 · 第 {{day}} 天",
+    "statusKept": "已守斋 — 愿真主赐福于你。",
+    "statusRecommended": "今日恰逢圣行自愿斋戒。",
+    "statusOptional": "今天尚未记录任何斋戒。",
+    "markCta": "将今天标记为已斋戒",
+    "unmarkCta": "取消标记今天",
+    "statRamadan": "斋月",
+    "statVoluntary": "自愿",
+    "statStreak": "连续",
+    "gridLabel": "本斋月",
+    "gridDayA11y": "第 {{day}} 天 {{state}}",
+    "privacyNote": "斋戒记录在您的设备上保持加密。",
+    "encourageEmpty": "记录你的第一次斋戒以开始追踪。",
+    "encourageActive": "每一次斋戒都珍贵。愿安拉接受。",
+    "encourageStreak": "马沙安拉，连续 {{count}} 天，继续保持。",
+    "reminderToggleTitle": "前一天提醒",
+    "reminderToggleOn": "每次圣行斋戒前一天晚上 {{hour}}:00 你会收到温和的提醒。",
+    "reminderToggleOff": "在每个周一/周四以及特别斋戒日的前一晚收到提醒。",
+    "reminderToggleA11y": "启用斋戒前一天的提醒",
+    "upcomingLabel": "即将到来的圣行斋戒",
+    "daysAway": "{{count}} 天后",
+    "daysSpan": "{{count}} 天",
+    "daysCount": "{{count}} 天",
+    "ramadanCountdownLabel": "距离斋月开始还有",
+    "mondayEncouragement": "周一是圣行斋戒——周一与周四时，善行将呈给真主。",
+    "thursdayEncouragement": "周四是圣行斋戒——周一与周四时，善行将呈给真主。",
+    "monthViewLabel": "全部已记录的斋戒",
+    "noLogsYet": "你坚持的斋戒日将显示在此处。",
+    "typeRamadan": "斋月",
+    "typeVoluntary": "自愿 / 圣行",
+    "reminderChannelName": "斋戒提醒",
+    "reminderTitle": "斋戒提醒"
+  },
+  "methods": {
+    "0": "什叶派 — 十二伊玛目",
+    "1": "伊斯兰科学大学（卡拉奇）",
+    "2": "北美伊斯兰协会（ISNA）",
+    "3": "穆斯林世界联盟",
+    "4": "乌姆库拉大学（麦加）",
+    "5": "埃及测量总局",
+    "7": "德黑兰大学地球物理学研究所",
+    "8": "海湾地区",
+    "9": "科威特",
+    "10": "卡塔尔",
+    "11": "新加坡",
+    "12": "法国",
+    "13": "土耳其",
+    "14": "俄罗斯",
+    "15": "世界月相观测委员会",
+    "21": "摩洛哥",
+    "auto": "自动（按位置）"
+  },
+  "attributions": {
+    "groupScripture": "经文",
+    "groupRecitation": "诵读",
+    "groupMeaning": "翻译与经注",
+    "groupTypefaces": "字体",
+    "footer": "每一行都链接到它的来源。",
+    "quranText": "《古兰经》奥斯曼体经文",
+    "mushafImages": "《麦地那经》页面图像（604）",
+    "translationEditions": "译本（14）",
+    "sahihIntl": "Sahih International（英文）",
+    "pickthall": "Pickthall（英文）",
+    "mushafMetadata": "麦地那经页面元数据",
+    "riwayat": "Warsh、Qālūn 与 Shuʿbah 经文（下载获取，非内置）",
+    "riwayahLines": "这些开本的印刷行几何数据",
+    "amiriFonts": "Amiri 与 Amiri Quran 字体",
+    "scheherazade": "Scheherazade New",
+    "hisnulMuslim": "《穆斯林堡垒》中的祷词",
+    "quranGeometry": "经文位置数据（quran.com / Quran for Android 项目）",
+    "recitation": "诵读音频（42位诵读者）：EveryAyah.com · 逐词时间：quran-align（CC BY 4.0）",
+    "tafsir": "经注文本：伊本·凯西尔、Maarif-ul-Quran、简明经注",
+    "surahHeaderFont": "章名书法"
+  },
+  "liveActivity": {
+    "title": "下一次礼拜",
+    "in": "{{remaining}} 后",
+    "now": "现在",
+    "soon": "即将开始",
+    "channelName": "礼拜倒计时",
+    "channelDesc": "持续固定的通知，显示距下一次礼拜的倒计时。",
+    "fgsText": "礼拜倒计时进行中",
+    "justThisOne": "仅此次",
+    "inWord": "还有",
+    "atWord": "于",
+    "hideOnLock": "在锁屏上隐藏",
+    "showOnLock": "在锁屏上显示"
+  },
+  "hijri": {
+    "month_1": "穆哈兰姆月",
+    "month_2": "色法尔月",
+    "month_3": "赖比尔·敖外鲁月",
+    "month_4": "赖比尔·阿色尼月",
+    "month_5": "主马达·敖外鲁月",
+    "month_6": "主马达·阿色尼月",
+    "month_7": "赖哲卜月",
+    "month_8": "舍尔邦月",
+    "month_9": "莱麦丹月",
+    "month_10": "闪瓦鲁月",
+    "month_11": "都尔喀尔德月",
+    "month_12": "都尔黑哲月"
+  },
+  "tour": {
+    "welcomeTitle": "欢迎使用 Ibadat 365",
+    "welcomeBody": "礼拜时间、《古兰经》以及日常功修工具——隐私为本。无需账户，没有跟踪器。",
+    "timesTitle": "礼拜时间一目了然",
+    "timesBody": "根据您的位置提供精准时间，并实时倒计时至下一次礼拜。滑动日期卡片即可预览未来几天。",
+    "quranTitle": "精美呈现的《古兰经》",
+    "quranBody": "阅读麦地那版《古兰经》，聆听五位诵读者的诵读，收藏经文，并记录您的古兰经完读进度。",
+    "customizeTitle": "打造专属体验",
+    "customizeBody": "主屏幕小组件、实时活动倒计时、主题与强调色——尽在设置中。",
+    "skip": "跳过",
+    "next": "下一步",
+    "done": "开始使用"
+  },
+  "downloads": {
+    "title": "管理下载",
+    "settingsHelp": "此设备上的穆斯哈夫页面、诵读音频与经注。",
+    "deleteTitle": "删除下载？",
+    "deleteBody": "{{what}} 将从此设备移除。您可以随时重新下载。",
+    "total": "设备上共计：{{size}}",
+    "mushaf": "穆斯哈夫页面",
+    "mushafSub": "604 页麦地那版",
+    "audioSub": "诵读音频",
+    "tafsirSub": "已缓存的经注",
+    "empty": "尚无下载。下载的穆斯哈夫页面、音频与经注会显示在这里。",
+    "mushafPages": "{{total}} 页中的 {{pages}} 页",
+    "legacyMushaf": "旧版穆斯哈夫页面",
+    "legacyMushafSub": "旧版阅读器遗留。现在没有任何功能会打开它们。",
+    "riwayat": "诵读传统",
+    "riwayatFootnote": "Ibadat 365 不包含也不托管这些文本。文件由出版方直接下载到本设备，并在读取任何内容之前先在此校验。",
+    "riwayahInstalled": "{{pages}} 页 · 来自 {{host}}",
+    "riwayahPublisher": "由 {{publisher}} 出版，署名 {{credits}}。",
+    "riwayahBuiltIn": "已内置于 Ibadat 365。无需下载，也无法删除。",
+    "riwayahOpenSource": "打开来源",
+    "riwayahDownload": "下载",
+    "riwayahFetchHowTo": "Ibadat 365 会从出版方直接下载到本设备，并在读取任何内容之前进行校验。",
+    "riwayahAddAFile": "添加我已有的文件",
+    "riwayahHowTo": "从该页面下载 JSON 文件，然后在下面选择它。可以保持压缩包状态。",
+    "riwayahLink": "数据文件链接",
+    "riwayahInstall": "添加此《古兰经》抄本",
+    "riwayahChooseFile": "选择已下载的文件",
+    "riwayahOrLink": "或粘贴文件的直接链接：",
+    "riwayahUnreadable": "无法读取该文件。",
+    "riwayahFileTooLarge": "该文件远大于一部经本应有的大小。",
+    "riwayahZipUnsupported": "该压缩包的格式本应用无法打开。请解压后选择里面的文件。",
+    "riwayahZipUnreadable": "无法打开该压缩包。",
+    "riwayahNoJsonInZip": "该压缩包内没有 .json 文件。"
+  },
+  "dataStats": {
+    "title": "数据统计",
+    "toggle": "显示数据统计",
+    "toggleHelp": "在“设置 → 礼拜时间”中显示礼拜时间的来源、已存储的数据量以及刷新时间。",
+    "source": "当前来源",
+    "daysStored": "已存储于设备",
+    "lastUpdated": "上次更新",
+    "nextCheck": "下次更新检查",
+    "serverRun": "上次服务器运行",
+    "nextServerRun": "下次服务器运行",
+    "never": "—",
+    "daysUnit": "天",
+    "sourceCdn": "服务器数据（最新）",
+    "sourceSeed": "离线内置数据",
+    "sourceScrape": "实时 Islamiska Förbundet",
+    "sourceAladhan": "AlAdhan",
+    "sourceLocal": "设备本地计算",
+    "sourceUnknown": "未知",
+    "serverOk": "正常",
+    "serverWarning": "覆盖不足",
+    "serverUnknown": "尚未检查",
+    "unlockedTitle": "已启用数据统计",
+    "unlockedBody": "统计卡片现显示在“设置 → 礼拜时间”中。可随时在下方关闭。",
+    "serverCoverage": "服务器覆盖天数",
+    "serverSweden": "瑞典 · Islamiska Förbundet",
+    "serverMorocco": "摩洛哥 · Habous",
+    "inUse": "使用中",
+    "habousWindow": "该部只公布当前的希吉来月，因此这一区间每天缩短一天，并在月份更替时重新填满。重新构建并不能让它更长。"
+  },
+  "log": {
+    "legendPrayers": "0 → 5 次礼拜",
+    "fasted": "已斋戒",
+    "dayA11y": "{{date}}：已记录 {{prayers}} 次礼拜{{fast}}",
+    "streakCaption": "连续 {{count}} 天",
+    "streakBest": "(最长 {{best}})",
+    "fastsCaption": "{{count}} 次斋戒",
+    "markAllOnTime": "全部标记为准时",
+    "iftarAt": "开斋 {{time}}",
+    "allUpcoming": "全部即将到来",
+    "title": "记录",
+    "practiceTitle": "功修记录",
+    "previousDay": "前一天",
+    "nextDay": "后一天",
+    "backToToday": "回到今天",
+    "fastingTitle": "斋戒",
+    "noFastLogged": "未记录斋戒。",
+    "markFasted": "标记为已斋戒",
+    "unmarkFasted": "取消标记",
+    "showOnHome": "在主页显示图表",
+    "showOnHomeHelp": "在“今天”页面显示你的功修方格。默认关闭。",
+    "backfillAction": "补录之前的日子",
+    "backfillTitle": "补录之前的日子？",
+    "backfillBody": "这会把 {{days}} 天（{{range}}）内的 {{prayers}} 次礼拜记录为按时完成。你已经记录过的日子保持不变，今天不会被改动。",
+    "backfillConfirm": "补录",
+    "backfillNothingTitle": "没有需要补录的",
+    "backfillNothingBody": "今天之前的每一天都已记录。",
+    "openLogFromHome": "打开记录",
+    "swipeHint": "滑动以切换日期",
+    "backfillUnreadable": "此刻无法读取你的记录，因此没有做任何改动。请再试一次。",
+    "backfillRefusedTitle": "没有做任何改动",
+    "backfillRefusedBody": "补录这些日子会改动你已经记录过的内容，因此已停止。你的记录未受影响。",
+    "fillMonthsAction": "补录过去三个月",
+    "fillMonthsTitle": "补录过去三个月？",
+    "fillMonthsBody": "这会把 {{days}} 个空白日子（{{range}}）内的 {{prayers}} 次礼拜记录为按时完成。{{skipped}} 天保持不变，因为它们已经有内容——状态、备注或斋戒。今天不会被改动。",
+    "fillMonthsNothingBody": "过去三个月的每一天都已经有记录。",
+    "fillSummaryDays": "天",
+    "fillSummaryPrayers": "次礼拜",
+    "backfillPreserved": "你已经记录过的日子保持不变，今天不会被改动。",
+    "fillMonthsPreserved": "已经有状态、备注或斋戒的日子会原样保留。今天不会被改动。",
+    "fillSummaryLeftAlone": "保持不变",
+    "unlogged": "未填写",
+    "resetAction": "重置礼拜记录",
+    "resetTitle": "重置礼拜记录",
+    "resetBody": "以 {{day}} 为基准，选择要清除的范围。斋戒、圣行拜和赞念属于各自独立的记录，不会被清除。",
+    "resetScopeDay": "这一天",
+    "resetScopeMonth": "本月",
+    "resetScopeYear": "今年",
+    "resetScopeAll": "全部",
+    "resetNothing": "没有",
+    "resetConfirmTitle": "清除这些礼拜记录？",
+    "resetConfirm": "清除",
+    "resetPreserved": "斋戒、圣行拜和赞念不会受影响。此操作无法撤销。",
+    "resetRangeAll": "整个记录",
+    "options": "选项",
+    "setUpSync": "设置同步",
+    "legendTitle": "图表说明"
+  },
+  "endOfDay": {
+    "title": "记录今天的拜功吗？",
+    "body": "将五番全部标记为按时礼拜，或打开记录逐一填写。",
+    "action": "全部记为已完成",
+    "channelName": "一天结束记录"
+  },
+  "duaReminders": {
+    "channelName": "晨间与晚间祈祷词",
+    "morningTitle": "晨间祈祷词",
+    "morningBody": "晨间的祈祷词——时间持续到日出。",
+    "eveningTitle": "晚间祈祷词",
+    "eveningBody": "晚间的祈祷词——时间持续到日落。",
+    "groupTitle": "晨间与晚间祈祷词",
+    "morning": "晨间祈祷词",
+    "morningHelp": "在晨间时段的提醒——晨礼之后，日出之前。",
+    "evening": "晚间祈祷词",
+    "eveningHelp": "在晚间时段的提醒——晡礼之后，日落之前。"
+  },
+  "sunnah": {
+    "none": "无",
+    "short": "圣行拜",
+    "ofTotal": "{{total}} 中的 {{done}}",
+    "ofTotalShort": "{{done}}/{{total}}",
+    "a11yNone": "{{prayer}}：无圣行拜",
+    "a11yCount": "{{prayer}} 圣行拜：已记录 {{total}} 中的 {{done}}",
+    "afterIsha": "宵礼之后",
+    "witr": "威特尔拜",
+    "prayed": "已礼",
+    "logIt": "记录",
+    "qiyam": "夜间拜",
+    "qiyamNote": "不计入连续天数",
+    "resetQiyam": "重置夜间拜",
+    "reset": "重置",
+    "addQiyam": "记录一次夜间拜",
+    "qiyamCountA11y": "已记录的夜间拜",
+    "streakCaption": "{{count}} 天圣行拜",
+    "legend": "圣行拜",
+    "qiyamLegend": "夜间拜",
+    "a11yAll": "全部圣行拜"
+  },
+  "sync": {
+    "exportSection": "导出",
+    "importSection": "导入",
+    "exportHelp": "把你记录下来的一切保存为一个由你自己保管的文件——用来换新手机，或者只是让它在别处也有一份。",
+    "exportCta": "导出为文件",
+    "exportFailedTitle": "导出失败",
+    "importHelp": "打开备份文件，全选复制，再粘贴到这里。设备上已有的内容不会被删除——两份记录会合并在一起。",
+    "importPastePlaceholder": "粘贴备份文件",
+    "importPreviewCta": "检查文件",
+    "importApplyCta": "导入到本设备",
+    "importFound": "创建于 {{date}}。选择要从中取用的内容：",
+    "importDoneTitle": "已导入",
+    "importNothingNew": "那个文件里的内容这里都已经有了。",
+    "importEmptyTitle": "没有可导入的内容",
+    "importFailedTitle": "导入失败",
+    "importUnreadableTitle": "无法读取",
+    "importUnreadableBody": "这看起来不像 Ibadat 365 的备份。请粘贴 .json 文件的全部内容。",
+    "importedLine": "{{label}}: {{before}} → {{after}}",
+    "privacyNote": "文件是纯文本，也没有密码保护——它有多私密，取决于你把它存放在哪里。任何内容都不会被上传。",
+    "category": {
+      "prayers": "礼拜记录",
+      "sunnah": "圣行拜",
+      "fasting": "斋戒",
+      "dhikr": "赞念",
+      "quran": "古兰经",
+      "settings": "设置",
+      "location": "位置"
+    },
+    "categoryHint": {
+      "prayers": "你记录过的每一番礼拜，以及你的笔记",
+      "sunnah": "圣行拜、威特尔拜和夜间拜",
+      "fasting": "封斋的日子及其举意",
+      "dhikr": "已完成的赞念轮次",
+      "quran": "书签、收藏的经文、通读计划、上次读到的位置、诵读者和经注",
+      "settings": "外观、计算方法、通知和小组件",
+      "location": "已保存的地点和坐标"
+    },
+    "count": {
+      "prayers": "礼拜",
+      "fasting": "封斋",
+      "dhikr": "赞念天数",
+      "sunnah": "圣行天数",
+      "bookmarks": "书签",
+      "khatmah": "通读计划"
+    },
+    "settingsRowHint": "配对另一台设备",
+    "pairIntro": "同步让你的记录在每台设备上保持一致。Ibadat 365 自己不会传输任何东西：它需要一个已由 Nextcloud、OneDrive、Dropbox、Syncthing 或类似服务在你的设备之间保持同步的文件夹。Ibadat 365 会在其中写入一个很小的加密文件，只有你自己的设备才能读取。",
+    "thisDevice": "本设备",
+    "deviceNameLabel": "设备名称",
+    "thisDeviceHelp": "把这个码拿给你的另一台设备看，或在那边输入。它不是密码——可以放心复制、拍照或发给自己。",
+    "codeA11y": "本设备的配对码",
+    "copyCode": "复制配对码",
+    "copied": "已复制配对码",
+    "copyFailed": "无法复制配对码",
+    "addDevice": "添加设备",
+    "addDeviceHelp": "输入或粘贴另一台设备上显示的配对码。",
+    "codePlaceholder": "MHRB-…",
+    "pasteCode": "粘贴",
+    "addCta": "配对",
+    "pairWarnTitle": "与设备 {{value}} 配对？",
+    "pairWarnBody": "那台设备上记录的一切都会出现在这里，这里的一切也会出现在那里。合并从不删除：两边不一致时，保留较新的那条。",
+    "pairConfirm": "配对",
+    "pairedTitle": "已配对",
+    "pairedBody": "本设备已把自己的密钥写入文件夹。在另一台设备上打开米哈拉布——它一读到该文件夹，两台设备就都完成配对并开始同步。",
+    "errorBadCodeTitle": "这个配对码无效",
+    "errorBadCode": "请核对后重试。配对码每六位一组，只要错一个字符就会被拒绝。",
+    "errorThisDevice": "这是本设备自己的配对码。你需要的是另一台设备上显示的那个。",
+    "errorTooMany": "最多可配对 {{max}} 台设备。请先移除一台。",
+    "errorSaveTitle": "无法保存配对",
+    "errorSaveBody": "设备拒绝保存。请重试——什么都没有改动。",
+    "pairedSection": "已配对的设备",
+    "noneYet": "还没有设备。",
+    "peerNameLabel": "这台已配对设备的名称",
+    "unnamedDevice": "未命名设备",
+    "fingerprint": "指纹 {{value}}",
+    "viaCode": "在此添加",
+    "viaAnnounced": "由那台设备添加",
+    "lastSeen": "上次同步 {{when}}",
+    "neverSeen": "尚未同步",
+    "remove": "移除",
+    "removeTitle": "移除 {{value}}？",
+    "removeBody": "本设备将不再向它发送，也不再接受它发来的内容。也请在那台设备上移除本设备，否则它会一直尝试。",
+    "notReady": "本设备无法设置同步：它没有安全的随机源，没有随机源生成的密钥并不私密。",
+    "privacyNoteP2p": "你的配对码是公钥，不是秘密。数据本身只为你已配对的设备加密，不会上传到任何地方。",
+    "folderSection": "文件夹",
+    "folderHelp": "选择一个你的同步服务已经在每台设备上保持一致的文件夹——Nextcloud、OneDrive、Dropbox 或 Syncthing 的文件夹。如果没有任何服务在你的设备之间同步该文件夹，就什么也传不过去。Ibadat 365 会在其中写入一个很小的加密文件，并读取其他设备留下的文件。",
+    "chooseFolder": "选择文件夹",
+    "changeFolder": "更换文件夹",
+    "folderChosen": "正在使用 {{value}}",
+    "syncNow": "立即同步",
+    "lastSyncedAt": "上次检查 {{when}}",
+    "neverSynced": "尚未检查",
+    "autoTitle": "自动同步",
+    "freqOpen": "打开时",
+    "freqHourly": "每小时",
+    "freqDaily": "每天",
+    "freqOff": "关闭",
+    "autoHelp": "自动同步只在应用打开时运行。无论这里选什么，“立即同步”始终可用。",
+    "whatSyncs": "同步哪些内容",
+    "errorFolderGone": "已无法访问那个文件夹。请重新选择。",
+    "errorUnsupported": "此版本无法使用文件夹同步。",
+    "syncDoneTitle": "已同步",
+    "syncDoneBody": "你其他设备上的内容现在都在这里，这里的内容也在那边。",
+    "syncNothing": "没有新内容。自上次检查以来，你的其他设备没有写入任何东西。",
+    "syncFailedTitle": "同步未完成",
+    "syncFailedBody": "出了点问题：{{detail}}",
+    "hint": {
+      "quranTitle": "在不止一台设备上阅读？",
+      "quranBody": "设置同步，你读到的位置、书签和通读计划都会跟着你在设备之间移动。",
+      "logTitle": "在一台设备上记录，在所有设备上看到",
+      "logBody": "设置同步，让你的记录在各处保持一致。不会上传任何内容。",
+      "dismiss": "隐藏",
+      "openHint": "打开同步设置"
+    },
+    "pairedNeedsFolder": "请先选择一个文件夹。两台设备正是通过它彼此联系，没有文件夹就无法交换任何内容。",
+    "folderAppHint": "米哈拉布为自己创建了名为 {{value}} 的文件夹。在\"文件\"应用的\"我的 iPhone\"下可以找到它，把你的同步应用指向它就能连上其他设备。",
+    "syncQuietTitle": "什么也没收到",
+    "syncNothingArrived": "你的文件已在文件夹里，但你其他设备的文件没有出现在那里。两台设备必须指向同一个文件夹，并且在它们之间保持该文件夹一致的程序必须在运行。",
+    "syncStale": "你的文件在该文件夹中，但来自 {{device}} 的最新记录写于 {{when}}。如果此后你使用过那台设备，那么保持该文件夹同步的机制已经不再传输文件了。",
+    "scanCode": "扫码",
+    "scanHint": "把摄像头对准另一台设备上显示的配对码",
+    "scanDeniedTitle": "未允许使用摄像头",
+    "scanDeniedBody": "米哈拉布需要摄像头来读取配对码。你可以在设备设置中允许，或者直接输入配对码。",
+    "scanNoCameraTitle": "没有摄像头",
+    "scanNoCameraBody": "本设备没有可用于扫码的摄像头。请输入或粘贴配对码。",
+    "freq15Min": "每15分钟",
+    "errorFolderUnwritable": "无法写入该文件夹。请另选一个——你自己在「文档」或「下载」中新建的文件夹最合适。",
+    "errorFolderTitle": "这个文件夹不行"
+  },
+  "stats": {
+    "daysUnit": " 天",
+    "streakLabel": "准时连续",
+    "best": "最佳 {{best}}",
+    "sunnahLabel": "已做圣行",
+    "thisMonth": "本月",
+    "fastedLabel": "封斋",
+    "owedLabel": "待补拜功",
+    "nothingOwed": "无待补",
+    "owedShow": "点按查看",
+    "owedHide": "显示中 ✕",
+    "owedHint": "点按某天进行补拜",
+    "owedMore": "+{{more}} 更多",
+    "owedA11y": "{{owed}} 项待补拜功，显示",
+    "nothingOwedA11y": "无待补"
+  },
+  "surahReminders": {
+    "groupTitle": "章节提醒",
+    "kahf": "主麻日诵读《山洞章》",
+    "kahfHelp": "每周一次，在主麻日，于你选择的时间。",
+    "kahfTitle": "山洞章",
+    "kahfBody": "今天是主麻日——诵读《山洞章》。",
+    "mulk": "夜间诵读《国权章》",
+    "mulkHelp": "每晚在你选择的时间——应用不知道你何时入睡，所以由你决定。",
+    "mulkTitle": "国权章",
+    "mulkBody": "睡前——诵读《国权章》。"
+  },
+  "dhikr": {
+    "remindersTitle": "齐克尔提醒",
+    "remindersBlurb": "你自己的提醒，一天中任意时间",
+    "remindersFooter": "与礼拜时间无关，且完全离线——无网络时以及重启后照常提醒。",
+    "remindersEmpty": "还没有提醒。为某个齐克尔，或为你自己的文字添加一个。",
+    "addReminder": "添加提醒",
+    "newReminder": "新建提醒",
+    "editReminder": "编辑提醒",
+    "deleteReminder": "删除提醒",
+    "whichDhikr": "哪一段齐克尔",
+    "ownWords": "你自己的文字",
+    "ownWordsHelp": "提醒会显示你写下的内容。",
+    "customTitle": "提醒",
+    "customTitleLabel": "标题",
+    "customBodyLabel": "文字",
+    "days": "日期",
+    "everyDay": "每天",
+    "sound": "声音",
+    "soundDefault": "通知声音",
+    "soundSilent": "静音",
+    "soundHelp": "应用不附带齐克尔录音：它只发布能说明来源与授权的内容，人声亦然。选择你自己的录音是下一步——见议题 #29。",
+    "meaning": {
+      "hawqala": "除安拉外，无能无力",
+      "subhanallahwabihamdih": "赞主清净，一切赞颂归于他"
+    }
+  }
+}
